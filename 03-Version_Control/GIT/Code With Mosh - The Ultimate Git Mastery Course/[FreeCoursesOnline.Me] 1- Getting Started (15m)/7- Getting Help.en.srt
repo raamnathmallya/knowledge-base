@@ -1,0 +1,59 @@
+1
+00:00:03,990 --> 00:00:06,240
+Let me show you a few different
+ways to get help about Git
+
+2
+00:00:06,240 --> 00:00:09,120
+commands. Let's say you want to
+learn more about the config
+
+3
+00:00:09,120 --> 00:00:14,430
+command, you can simply google
+Git config. On this page, you
+
+4
+00:00:14,430 --> 00:00:17,490
+can see the full documentation
+of this command, you can see
+
+5
+00:00:17,490 --> 00:00:22,080
+various options and how they
+work. We can also access the
+
+6
+00:00:22,080 --> 00:00:25,680
+same page on the terminal
+window, we simply type Git
+
+7
+00:00:25,770 --> 00:00:30,480
+config, dash dash help. This is
+exactly the same information you
+
+8
+00:00:30,480 --> 00:00:34,590
+saw a second ago. Here, we can
+press space to go to the next
+
+9
+00:00:34,590 --> 00:00:39,330
+page, and cue to exit. Now if
+you don't need a full blown
+
+10
+00:00:39,330 --> 00:00:44,730
+help, just a quick refresher,
+you can type Git config dash H
+
+11
+00:00:45,030 --> 00:00:49,020
+and this gives us a short
+summary of this command and its
+
+12
+00:00:49,020 --> 00:00:49,650
+options.
+

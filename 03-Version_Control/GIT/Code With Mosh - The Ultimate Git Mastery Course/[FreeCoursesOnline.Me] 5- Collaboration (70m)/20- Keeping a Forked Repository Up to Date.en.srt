@@ -1,0 +1,413 @@
+1
+00:00:03,990 --> 00:00:07,290
+So here's the repository for an
+open source project, we fork
+
+2
+00:00:07,290 --> 00:00:10,800
+this repository to contribute to
+it. Now there is a problem. This
+
+3
+00:00:10,800 --> 00:00:13,860
+forked repository is not
+connected to the original or the
+
+4
+00:00:13,860 --> 00:00:17,370
+base repository. So from time to
+time, it can get out of sync
+
+5
+00:00:17,370 --> 00:00:20,490
+with the base repository. If
+other people contribute to the
+
+6
+00:00:20,490 --> 00:00:23,970
+base repository and add new
+commits to the master branch, we
+
+7
+00:00:23,970 --> 00:00:26,460
+are not going to be aware of
+those new commits. In this
+
+8
+00:00:26,460 --> 00:00:28,680
+lesson, I'm going to show you
+how to keep this forked
+
+9
+00:00:28,680 --> 00:00:32,280
+repository up to date. So in
+this local repository on our
+
+10
+00:00:32,280 --> 00:00:35,220
+machine, we have a reference to
+our forked repository called
+
+11
+00:00:35,280 --> 00:00:38,670
+origin. Right, we can add
+another reference to the base
+
+12
+00:00:38,670 --> 00:00:41,910
+repository, and then use the
+pull command to bring in the new
+
+13
+00:00:41,910 --> 00:00:44,970
+commits. And then we can push
+them to our forked repository.
+
+14
+00:00:45,090 --> 00:00:48,630
+As simple as that. Let's see
+this in action. Earlier, we
+
+15
+00:00:48,630 --> 00:00:51,570
+briefly talked about the remote
+command. With this command, we
+
+16
+00:00:51,570 --> 00:00:54,630
+can manage the remote
+repositories. So currently, we
+
+17
+00:00:54,630 --> 00:00:58,440
+have a single remote that is
+origin, we can run git remote
+
+18
+00:00:58,650 --> 00:01:02,430
+dash V, that is short for
+variables to see more details
+
+19
+00:01:02,520 --> 00:01:05,610
+about these remote repositories.
+So here, we have two channels,
+
+20
+00:01:05,760 --> 00:01:09,180
+fetch for getting the objects
+and push for pushing objects,
+
+21
+00:01:09,600 --> 00:01:14,370
+both these channels are mapped
+to this URL. Now to add a new
+
+22
+00:01:14,370 --> 00:01:19,290
+remote, we type Git remote add,
+we give it a name, like base, or
+
+23
+00:01:19,380 --> 00:01:22,020
+a lot of people like to call it
+upstream, you can call it
+
+24
+00:01:22,020 --> 00:01:24,630
+whatever you want, it doesn't
+really matter. Now wanted to
+
+25
+00:01:24,630 --> 00:01:29,610
+grab the URL of the base or the
+original repository. So here on
+
+26
+00:01:29,610 --> 00:01:32,880
+my personal GitHub account,
+here's our Villa repository, I'm
+
+27
+00:01:32,880 --> 00:01:38,850
+going to grab the URL, and then
+paste it over here. Good. Now,
+
+28
+00:01:39,090 --> 00:01:42,150
+let's look at our remote
+repositories. So we have origin
+
+29
+00:01:42,210 --> 00:01:46,320
+and upstream. Once again, we can
+run remote dash v. So you can
+
+30
+00:01:46,320 --> 00:01:50,610
+see origin is pointing to Bitly
+in my Code with Mosh account,
+
+31
+00:01:51,030 --> 00:01:55,200
+hereas upstream is pointing to
+it name, in my personal
+
+32
+00:01:55,200 --> 00:01:58,500
+ccount, okay. Now, let's say we
+ade a mistake, and we want to
+
+33
+00:01:58,500 --> 00:02:02,130
+ename this remote repository.
+e simply type Git remote
+
+34
+00:02:02,310 --> 00:02:07,440
+ename, and we want to rename
+pstream to base that's better.
+
+35
+00:02:07,860 --> 00:02:10,950
+f you're done with a remote, we
+an simply remove it, we type
+
+36
+00:02:10,980 --> 00:02:15,360
+it remote, RM, and then we type
+he name. Alright, so we're done
+
+37
+00:02:15,360 --> 00:02:18,660
+ere. Now I'm going to go to my
+riginal or the base repository,
+
+38
+00:02:18,960 --> 00:02:23,250
+nd make a new commit. So here
+n my personal account, I'm
+
+39
+00:02:23,250 --> 00:02:29,820
+oing to edit this README file.
+o let's add a new line of code
+
+40
+00:02:30,660 --> 00:02:38,340
+nd then make a commit. Good. So
+e added a new commit to the
+
+41
+00:02:38,340 --> 00:02:41,430
+aster branch of the base
+epository. Now I'm going to
+
+42
+00:02:41,430 --> 00:02:46,230
+witch to my forked repository.
+ow on my code with my account,
+
+43
+00:02:46,620 --> 00:02:50,250
+ook over here, GitHub is saying
+hat this branch, our master
+
+44
+00:02:50,250 --> 00:02:54,270
+ranch, is one commit behind the
+aster of the base repository.
+
+45
+00:02:55,200 --> 00:02:57,960
+o back in the terminal, we need
+o use the fetch or the pull
+
+46
+00:02:57,960 --> 00:03:01,260
+ommand to bring in the new
+ommits. So I'm going to use
+
+47
+00:03:01,260 --> 00:03:04,500
+etch for now, the earlier the
+ection, we use the fetch
+
+48
+00:03:04,500 --> 00:03:07,830
+ommand, without specifying the
+ame of the remote, I told you
+
+49
+00:03:07,830 --> 00:03:10,800
+hat if we don't supply the name
+f the remote, by default,
+
+50
+00:03:11,100 --> 00:03:13,500
+rigin will be assume. Now in
+his case, we don't want to
+
+51
+00:03:13,500 --> 00:03:16,140
+etch the commits from origin,
+ecause that is a forked
+
+52
+00:03:16,140 --> 00:03:18,990
+epository, we want to get the
+ew commits from the base
+
+53
+00:03:18,990 --> 00:03:25,110
+epository. So here we type
+ase. Good. So we got a new
+
+54
+00:03:25,110 --> 00:03:29,520
+ranch called base slash master.
+ow let's look at our history.
+
+55
+00:03:32,130 --> 00:03:35,610
+o here's our local master
+ranch. And here's the master
+
+56
+00:03:35,610 --> 00:03:39,960
+ranch of the base repository.
+o our local master is behind
+
+57
+00:03:39,960 --> 00:03:42,780
+he master of the base
+epository. So we should merge
+
+58
+00:03:42,780 --> 00:03:47,700
+ase slash master into our local
+aster. So first, we switch to
+
+59
+00:03:47,700 --> 00:03:52,980
+aster and then run git merge
+ase slash master. Now, in this
+
+60
+00:03:52,980 --> 00:03:56,280
+ase, because the local master
+s not diverged from the remote
+
+61
+00:03:56,280 --> 00:03:59,430
+aster, we're going to have a
+ast forward merge, take a look.
+
+62
+00:03:59,640 --> 00:04:03,000
+here you go. Fast forward. Now,
+et's look at the history one
+
+63
+00:04:03,000 --> 00:04:08,640
+ore time. Okay, so now our
+ocal master and base slash
+
+64
+00:04:08,640 --> 00:04:12,300
+aster are pointing to the same
+ommit beautiful. So our local
+
+65
+00:04:12,300 --> 00:04:15,240
+epository is in sync with the
+ase repository. Now I'm going
+
+66
+00:04:15,270 --> 00:04:20,310
+o push the changes into our
+orked repository. So git push.
+
+67
+00:04:22,590 --> 00:04:25,710
+ow, back on my Code with Mosh a
+count on GitHub, when I r
+
+68
+00:04:25,710 --> 00:04:28,920
+fresh the page, this notice is g
+ing to go away. Take a look. N
+
+69
+00:04:30,630 --> 00:04:34,200
+w, GitHub is saying that this b
+anch is even with the master o
+
+70
+00:04:34,470 --> 00:04:37,530
+the base repository, b
+autiful. So this is how we can k
+
+71
+00:04:37,530 --> 00:04:41,640
+ep a fork repository up to d
+te. Now back to the terminal, i
+
+72
+00:04:41,820 --> 00:04:44,790
+'s always a good practice to m
+rge the master branch into y
+
+73
+00:04:44,790 --> 00:04:47,220
+ur local feature branch, b
+cause this will reduce the c
+
+74
+00:04:47,220 --> 00:04:49,950
+ance for conflicts in the f
+ture. If there are changes in t
+
+75
+00:04:49,950 --> 00:04:52,950
+e master that will affect your w
+rk. You want to make sure that y
+
+76
+00:04:52,950 --> 00:04:56,400
+ur work is on top of those c
+anges. So we're going to s
+
+77
+00:04:56,400 --> 00:04:58,170
+itch to our bug fix branch.
+
+78
+00:05:00,000 --> 00:05:03,180
+And then run git merge Master,
+we're going to bring in the
+
+79
+00:05:03,180 --> 00:05:07,110
+changes in master into the
+current branch. That look, we
+
+80
+00:05:07,110 --> 00:05:10,560
+have a conflict. So by resolving
+the conflicts locally at this
+
+81
+00:05:10,560 --> 00:05:13,920
+point in time, we'll reduce the
+chance for future conflicts when
+
+82
+00:05:13,920 --> 00:05:16,740
+the maintainer of the project
+wants to merge and close our
+
+83
+00:05:16,740 --> 00:05:17,490
+pull requests.
+

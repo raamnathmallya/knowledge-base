@@ -1,0 +1,44 @@
+1
+00:00:03,990 --> 00:00:05,910
+In this section we're going to
+work with a project or a
+
+2
+00:00:05,910 --> 00:00:08,670
+repository called Venus, which
+you can download right below
+
+3
+00:00:08,670 --> 00:00:11,880
+this video. It's basically a git
+course represented as a bunch of
+
+4
+00:00:11,880 --> 00:00:15,990
+plain text files. So here we
+have audience objectives, sales
+
+5
+00:00:15,990 --> 00:00:20,340
+page, sections, and Table of
+Contents txt. This project or
+
+6
+00:00:20,340 --> 00:00:23,190
+this repository has some history
+that we can work with throughout
+
+7
+00:00:23,190 --> 00:00:25,980
+this section. So download the
+zip file below this video,
+
+8
+00:00:26,130 --> 00:00:28,680
+extract the content someone AI
+or machine (?) and when yo
+
+9
+00:00:28,680 --> 00:00:30,030
+'re ready, watch the next les
+

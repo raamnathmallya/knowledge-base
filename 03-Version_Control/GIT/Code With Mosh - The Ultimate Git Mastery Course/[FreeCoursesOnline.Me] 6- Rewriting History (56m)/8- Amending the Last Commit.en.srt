@@ -1,0 +1,249 @@
+1
+00:00:04,110 --> 00:00:06,840
+There are a lot of cases where
+we make a commit. But then we
+
+2
+00:00:06,840 --> 00:00:10,320
+realized that we made a mistake,
+perhaps we left a typo, or we
+
+3
+00:00:10,320 --> 00:00:13,830
+accidentally included a file in
+our commit. In these situations,
+
+4
+00:00:13,890 --> 00:00:16,980
+we don't really need to make
+another commit, we can amend or
+
+5
+00:00:16,980 --> 00:00:22,410
+modify the last commit, let me
+show you. So let's echo cafes to
+
+6
+00:00:22,560 --> 00:00:29,610
+map. txt. Now, let's make a
+commit. And say, render cafes on
+
+7
+00:00:29,610 --> 00:00:33,930
+the map. Good. Now, let's say we
+made a mistake. And we should
+
+8
+00:00:33,930 --> 00:00:38,760
+have echoed blue cafes on map
+dot txt. So let's open map.txt
+
+9
+00:00:40,410 --> 00:00:44,880
+and make the required changes,
+blue cafes. Good. Now, back in
+
+10
+00:00:44,880 --> 00:00:48,810
+the terminal, first, we need to
+a stage the changes. So git add,
+
+11
+00:00:49,110 --> 00:00:54,840
+period. Good. Now to amend the
+last commit, we type git commit
+
+12
+00:00:54,990 --> 00:01:01,140
+dash dash MN, we can supply a
+new message, or I can just enter
+
+13
+00:01:01,590 --> 00:01:04,920
+and accept the previous message.
+I'm happy with the message. So
+
+14
+00:01:05,220 --> 00:01:09,360
+let's close this back in the
+terminal. Our last commit is
+
+15
+00:01:09,360 --> 00:01:13,020
+Amanda. Just remember, we didn't
+really modify the last commit.
+
+16
+00:01:13,320 --> 00:01:16,710
+Because as I told you before,
+commits and Git are immutable.
+
+17
+00:01:16,980 --> 00:01:20,310
+So even though on the surface we
+amended the last commit, git
+
+18
+00:01:20,310 --> 00:01:24,420
+actually created a new commit.
+Okay, now, let's look at the
+
+19
+00:01:24,420 --> 00:01:29,310
+history. So here's our last
+commit. Let's look at the
+
+20
+00:01:29,310 --> 00:01:34,530
+content of this commit. So git
+show head. Take a look. Now w
+
+21
+00:01:34,530 --> 00:01:39,270
+have blue cafe's. As anothe
+example, let's say we forgot t
+
+22
+00:01:39,270 --> 00:01:42,480
+include a file and the las
+commit. How can we do that? Th
+
+23
+00:01:42,480 --> 00:01:48,270
+exact same way. So I'm going t
+echo hello to file one dot txt
+
+24
+00:01:49,260 --> 00:01:56,130
+Now, let's stage the changes
+And amend the last commit. We'r
+
+25
+00:01:56,130 --> 00:02:00,000
+going to accept the sam
+message. So let's move on. Now
+
+26
+00:02:00,900 --> 00:02:03,840
+Let's look at the history on
+more time. Here's our las
+
+27
+00:02:03,840 --> 00:02:06,990
+commit, we didn't add a
+additional commit. Let's look a
+
+28
+00:02:06,990 --> 00:02:11,730
+the content of the last commit
+So here we have two changes. W
+
+29
+00:02:11,760 --> 00:02:15,900
+introduced a new file, file on
+dot txt with this content. An
+
+30
+00:02:16,560 --> 00:02:21,060
+we added this new line to map
+txt. Perfect. Now let's say
+
+31
+00:02:21,060 --> 00:02:24,810
+e accidentally included file o
+e.txt in the last commit, how c
+
+32
+00:02:24,810 --> 00:02:28,200
+n we remove it? Well, earlier w
+talked about resetting the h
+
+33
+00:02:28,200 --> 00:02:31,740
+ad, I talked about three
+ifferent options, soft, mixed
+
+34
+00:02:31,800 --> 00:02:35,340
+nd hard. I told you that if we
+se the mixed option, it is
+
+35
+00:02:35,340 --> 00:02:38,340
+oing to unstaged our changes,
+ut all of our changes are going
+
+36
+00:02:38,340 --> 00:02:42,120
+o stay in our working
+irectory. So I'm going to reset
+
+37
+00:02:42,660 --> 00:02:48,480
+he head using the mixed option
+o head tilda one now our wor
+
+38
+00:02:48,480 --> 00:02:53,160
+ing directory is dirty. So let
+s run a short status. We hav
+
+39
+00:02:53,160 --> 00:02:56,370
+two changes. We have some mod
+fications to map dot txt, and
+
+40
+00:02:56,790 --> 00:03:00,690
+a new untracked file. Let's say
+we don't need file one. So we
+
+41
+00:03:00,690 --> 00:03:04,170
+an run git clean fd. We talk
+d about this earlier in the cour
+
+42
+00:03:04,170 --> 00:03:07,470
+e. With this we can remove untr
+cked files from our working dire
+
+43
+00:03:07,470 --> 00:03:11,400
+tory. Alright, so file one is g
+ne. And we are left with the
+
+44
+00:03:11,400 --> 00:03:16,740
+hanges in map dot txt. So let'
+stage two changes, and then
+
+45
+00:03:16,740 --> 00:03:19,920
+ake a commit. Here, I'm not g
+ing to use them at option becau
+
+46
+00:03:20,160 --> 00:03:22,950
+e we've removed the last commi
+by resetting the head point
+
+47
+00:03:22,950 --> 00:03:26,280
+r. So here we should creat
+a new commit and say render
+
+48
+00:03:26,400 --> 00:03:31,590
+cafe's on the map. So this i
+how we can amend the last c
+
+49
+00:03:31,590 --> 00:03:35,130
+mmit. But how can we amend
+n earlier commit? We'll talk a
+
+50
+00:03:35,130 --> 00:03:36,210
+out that next.
+

@@ -1,0 +1,269 @@
+1
+00:00:03,990 --> 00:00:07,410
+Now let's look at the git tools
+built in to GitKracken. So here
+
+2
+00:00:07,410 --> 00:00:10,740
+on the homepage of GitKracken,
+we go to open a repository.
+
+3
+00:00:11,400 --> 00:00:14,700
+Here, we can open an existing
+repository. We can also clone a
+
+4
+00:00:14,700 --> 00:00:17,250
+repository. I'm going to talk
+about that in the future. But
+
+5
+00:00:17,250 --> 00:00:20,130
+this is basically useful when we
+have a repository somewhere
+
+6
+00:00:20,130 --> 00:00:22,830
+else. Let's see on GitHub, and
+you want to take a copy of the
+
+7
+00:00:22,830 --> 00:00:25,470
+repository and put it on our
+machine. Again, we're going to
+
+8
+00:00:25,470 --> 00:00:28,590
+talk about this in the future.
+We can also initialize a new
+
+9
+00:00:28,590 --> 00:00:31,770
+repository. For this demo, I'm
+going to open our moon
+
+10
+00:00:31,770 --> 00:00:37,680
+repository. So open repository,
+go to our folder, and then open,
+
+11
+00:00:38,790 --> 00:00:41,910
+good. So over here we can see
+all the commits we have created
+
+12
+00:00:41,910 --> 00:00:45,780
+so far, we can see the author of
+each commit, the commit message,
+
+13
+00:00:46,110 --> 00:00:49,410
+and the date and time when the
+commit was created. Now we can
+
+14
+00:00:49,410 --> 00:00:53,070
+click on each commit to see more
+details. So for this commit, we
+
+15
+00:00:53,070 --> 00:00:57,060
+can see the commit ID. Here's
+the commit message, the author,
+
+16
+00:00:57,270 --> 00:01:01,440
+date and time and the summary of
+changes. So in this commit, we
+
+17
+00:01:01,470 --> 00:01:04,950
+added one new file, which is
+file one dot j s. Here we have
+
+18
+00:01:04,950 --> 00:01:08,910
+multiple views, we have the list
+view and tree view. If you have
+
+19
+00:01:08,910 --> 00:01:11,550
+changed multiple files in
+different folders, tree view is
+
+20
+00:01:11,550 --> 00:01:15,900
+very helpful. We can also select
+View All files, to see all the
+
+21
+00:01:15,900 --> 00:01:19,560
+files in our project. At this
+point in time, if you uncheck
+
+22
+00:01:19,560 --> 00:01:22,470
+this, we only see the change
+bias. And by change, I'm talking
+
+23
+00:01:22,470 --> 00:01:26,340
+about additions, modifications
+and deletions. Now we can click
+
+24
+00:01:26,340 --> 00:01:30,210
+on each file to get a diff of
+that file. So once again, we're
+
+25
+00:01:30,210 --> 00:01:32,400
+dealing with a new file here.
+That's why we don't have any
+
+26
+00:01:32,400 --> 00:01:37,170
+code on the left side. Here we
+have two tabs, the feel and file
+
+27
+00:01:37,170 --> 00:01:40,860
+view. If we switch to file view,
+we can see the snapshot of this
+
+28
+00:01:40,860 --> 00:01:44,940
+file in this commit at this
+point in time. Now, let's go
+
+29
+00:01:44,940 --> 00:01:48,060
+back to diff view. We also have
+different ways of comparing the
+
+30
+00:01:48,060 --> 00:01:51,150
+changes. So currently, we're
+looking at the split view, which
+
+31
+00:01:51,150 --> 00:01:55,050
+gives us the before and after
+code. We also have a line view,
+
+32
+00:01:55,110 --> 00:01:58,320
+which is exactly like what we
+get on the terminal. We also
+
+33
+00:01:58,320 --> 00:02:02,040
+have hunk view If you're dealing
+with a large file with a bunch
+
+34
+00:02:02,040 --> 00:02:05,340
+of changes in different parts of
+this file hunk view is an easy
+
+35
+00:02:05,340 --> 00:02:08,460
+way to see the changes in
+ach section. Now let's make a
+
+36
+00:02:08,460 --> 00:02:12,120
+new commit. So we have to go bac
+to VS code or our favorite ed
+
+37
+00:02:12,120 --> 00:02:15,510
+tor to make the changes. Because
+GitKracken is just a GUI too
+
+38
+00:02:15,570 --> 00:02:19,170
+. It's not a code editor. So I
+m going to go back to VS cod
+
+39
+00:02:19,770 --> 00:02:25,770
+, open file one dotJ s and write
+a new line of code here, save t
+
+40
+00:02:25,770 --> 00:02:30,090
+e changes. Now, back in
+GitKracken let's close thi
+
+41
+00:02:30,090 --> 00:02:33,570
+window. Over here, you can se
+we have one change in ou
+
+42
+00:02:33,570 --> 00:02:37,230
+working directory. We can clic
+on this button to view th
+
+43
+00:02:37,230 --> 00:02:41,250
+changes. So file one dot js i
+changed. And currently it'
+
+44
+00:02:41,280 --> 00:02:44,910
+unstaged. We can click on thi
+file to see a summary of th
+
+45
+00:02:44,910 --> 00:02:47,790
+changes. So this is the new lin
+that we have introduced
+
+46
+00:02:47,880 --> 00:02:53,850
+Beautiful. Now we can go ove
+here and stage this file o
+
+47
+00:02:53,970 --> 00:02:58,830
+stage all changes. Now this fil
+isn't a staging area. If we mad
+
+48
+00:02:58,830 --> 00:03:02,880
+a mistake, we can always ask O
+stage this file, super easy. So
+
+49
+00:03:03,600 --> 00:03:07,830
+let's save the file and the
+type a commit message, let's sa
+
+50
+00:03:08,070 --> 00:03:13,110
+refactor code. And now let'
+make a new commit. It's a
+
+51
+00:03:13,110 --> 00:03:16,290
+simple as that. So this is ho
+we can use GitKracken to create
+
+52
+00:03:16,290 --> 00:03:19,410
+snapshots of our project, but
+there is a lot more to Git
+
+53
+00:03:19,410 --> 00:03:21,690
+racken and we're going to c
+ver that in the future s
+
+54
+00:03:21,690 --> 00:03:22,290
+ctions.
+

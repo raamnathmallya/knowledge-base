@@ -1,0 +1,639 @@
+1
+00:00:03,990 --> 00:00:06,660
+Quite often as part of
+implementing a feature or fixing
+
+2
+00:00:06,660 --> 00:00:09,570
+a bug, we would like other team
+members feedback about our code.
+
+3
+00:00:09,960 --> 00:00:12,870
+This is where we use pull
+requests. With a pull request,
+
+4
+00:00:13,020 --> 00:00:15,900
+we essentially open a discussion
+the team before merging and
+
+5
+00:00:15,900 --> 00:00:18,570
+branch into Master, let me walk
+you through a real scenario.
+
+6
+00:00:18,930 --> 00:00:21,930
+Let's say Amy is going to
+implement a new feature. So here
+
+7
+00:00:21,930 --> 00:00:25,110
+on Amy's machine, I'm going to
+start a new branch, add a commit
+
+8
+00:00:25,110 --> 00:00:29,070
+to it, and then push it to
+GitHub. So Git switch,dash C
+
+9
+00:00:29,100 --> 00:00:34,110
+feature slash login, Dallas,
+Echo Hello, two, file three dot
+
+10
+00:00:34,110 --> 00:00:40,530
+txt stays the file, make a
+comment and say, write hello to
+
+11
+00:00:40,530 --> 00:00:45,510
+file three. Now let's push this
+branch. So git push the first
+
+12
+00:00:45,510 --> 00:00:48,930
+time we should use doshu. To set
+the upstream branch. We're going
+
+13
+00:00:48,930 --> 00:00:53,070
+to push this to origin and call
+it feature slash login. Now I
+
+14
+00:00:53,070 --> 00:00:55,560
+need to enter my credentials
+because the cache has expired.
+
+15
+00:00:58,050 --> 00:01:00,870
+All right, beautiful. Now here
+on GitHub, we see this message
+
+16
+00:01:00,960 --> 00:01:04,410
+feature slash login had recent
+pushes one minute ago, we can
+
+17
+00:01:04,410 --> 00:01:07,740
+compare and create a pull
+request. Alternatively, we can
+
+18
+00:01:07,740 --> 00:01:11,490
+go to the pull request tab and
+create a new pull request from
+
+19
+00:01:11,490 --> 00:01:16,110
+here. On this page, we have to
+select two branches, the base
+
+20
+00:01:16,110 --> 00:01:19,830
+branch, which is often Master,
+and the target branch, which is
+
+21
+00:01:19,830 --> 00:01:23,970
+our feature branch. So before
+merging this branch into Master,
+
+22
+00:01:24,120 --> 00:01:26,850
+we want to start a pull request
+or a discussion of the team.
+
+23
+00:01:27,630 --> 00:01:29,970
+Now, because we're dealing with
+a simple change, only a single
+
+24
+00:01:29,970 --> 00:01:33,540
+commit and no conflicts, we can
+see that we can automatically
+
+25
+00:01:33,540 --> 00:01:36,900
+merge the changes. Quite often
+that's not the case, we often
+
+26
+00:01:36,900 --> 00:01:39,330
+have conflicts that we have to
+resolve. We'll talk about that
+
+27
+00:01:39,330 --> 00:01:43,260
+later. Now over here, we can see
+the summary of changes. So we
+
+28
+00:01:43,260 --> 00:01:46,980
+have one commit, one file
+change, zero comments and one
+
+29
+00:01:46,980 --> 00:01:50,340
+contributor. Here's the command
+that we just pushed, right hello
+
+30
+00:01:50,340 --> 00:01:53,910
+to five three. Over here, we can
+see the summary of changes. So
+
+31
+00:01:54,270 --> 00:01:58,500
+we are this line in five, three
+dot txt. Beautiful. Now, let's
+
+32
+00:01:58,500 --> 00:02:01,680
+go ahead and create the pull
+request. In this case, because
+
+33
+00:02:01,680 --> 00:02:04,800
+we have a single commit, GitHub
+used our commit message as the
+
+34
+00:02:04,800 --> 00:02:07,500
+title for this pull request, I'm
+going to change this to
+
+35
+00:02:07,500 --> 00:02:10,710
+something more descriptive. So
+we're implementing a new
+
+36
+00:02:10,710 --> 00:02:15,240
+feature. for social login, we
+want to allow the user to login
+
+37
+00:02:15,240 --> 00:02:21,420
+via Facebook. So social login,
+that's better. Here, we can
+
+38
+00:02:21,420 --> 00:02:24,330
+write some details about this
+pull request, and see if there
+
+39
+00:02:24,330 --> 00:02:27,270
+are things that we want other
+people to review. Specifically,
+
+40
+00:02:27,510 --> 00:02:31,080
+we can list them here. Now let's
+go ahead and create this pull
+
+41
+00:02:31,080 --> 00:02:35,430
+request. All right, here's our
+pull request. Beautiful. It's
+
+42
+00:02:35,430 --> 00:02:38,700
+saying Code with Mosh wants to
+erge one commit into master
+
+43
+00:02:38,700 --> 00:02:42,780
+rom feature slash login. Now,
+et's say I'm Amy, so I'm going
+
+44
+00:02:42,780 --> 00:02:48,030
+o add mosh as a reviewer. So
+ver here, here, we can see all
+
+45
+00:02:48,030 --> 00:02:50,220
+he collaborators in this
+roject. Earlier in this
+
+46
+00:02:50,220 --> 00:02:54,060
+ection, I told you how to add
+ollaborators. So I'm going to
+
+47
+00:02:54,060 --> 00:03:00,000
+dd mosh yet. Now we have a
+ellow icon here saying we are
+
+48
+00:03:00,030 --> 00:03:03,360
+waiting request a review from
+osh hamadani. So Mosh is goi
+
+49
+00:03:03,360 --> 00:03:06,600
+g to get an email saying ame
+is your review. Now I'm goi
+
+50
+00:03:06,600 --> 00:03:09,300
+g to open another browser win
+ow on behalf of Mosh. Alri
+
+51
+00:03:11,910 --> 00:03:15,030
+ht, here's Mosh's screen. On thi
+page, we're going to go to pul
+
+52
+00:03:15,030 --> 00:03:20,040
+requests. We have one open p
+ll requests. So let's take a
+
+53
+00:03:20,040 --> 00:03:24,270
+look. Look at this messag
+. Code with Mosh request
+
+54
+00:03:24,360 --> 00:03:28,020
+d your review on this pull re
+uest. So I can go ahead and add
+
+55
+00:03:28,200 --> 00:03:33,750
+my review. Now this box pops un
+er this button review changes
+
+56
+00:03:33,750 --> 00:03:37,710
+I find this confusing, so I al
+ays like to click away to clos
+
+57
+00:03:37,770 --> 00:03:40,530
+it and get back to it later.
+ere we can see the summary
+
+58
+00:03:40,530 --> 00:03:43,410
+of all the changes. So in this
+case, we have a single file fi
+
+59
+00:03:43,410 --> 00:03:47,160
+e, three, and we have this ne
+line in this file, we can add
+
+60
+00:03:47,160 --> 00:03:50,130
+comments to individual lines b
+clicking on this icon. I can s
+
+61
+00:03:50,700 --> 00:03:55,830
+y this line is good, but it's be
+ter. If you capitalize, ah, of
+
+62
+00:03:55,980 --> 00:04:00,120
+ourse, I can write a rich re
+iew using bold and italic
+
+63
+00:04:00,120 --> 00:04:03,810
+tuff. But let's not worry a
+out it. So let's start our rev
+
+64
+00:04:03,810 --> 00:04:07,530
+ew. So I added one comment
+to this line of code. And of
+
+65
+00:04:07,530 --> 00:04:11,040
+ourse I could add many more co
+ments. Now I'm going to finish
+
+66
+00:04:11,040 --> 00:04:14,970
+y review and write a general
+description saying please
+
+67
+00:04:15,330 --> 00:04:21,630
+ake these changes and do another
+push. I can mark this as comment
+
+68
+00:04:21,630 --> 00:04:25,140
+I can approve this pull request
+or I can request more changes
+
+69
+00:04:25,140 --> 00:04:28,260
+I'm going to request more ch
+nges and submit my review.
+
+70
+00:04:28,260 --> 00:04:33,930
+Good. Now we are on the convers
+tion tab, we can see the timelin
+
+71
+00:04:33,930 --> 00:04:37,200
+of things that have happene
+. So initially, Amy started
+
+72
+00:04:37,200 --> 00:04:41,070
+this pull request with his det
+ils. Here's the initial commit,
+
+73
+00:04:41,070 --> 00:04:44,670
+right hello to five three,
+hen Amy or this gets called
+
+74
+00:04:44,670 --> 00:04:48,030
+ith multiple requests that a
+eview and then Mosh Hamedani
+
+75
+00:04:48,030 --> 00:04:51,480
+requested changes. And here are
+the details about this changes.
+
+76
+00:04:51,480 --> 00:04:55,140
+So the general comment, as well
+s comments the individu
+
+77
+00:04:55,140 --> 00:04:57,900
+l lines of code. Also over her
+
+78
+00:04:59,160 --> 00:05:02,640
+we see this red icon can't sing
+much hamadani requested changes.
+
+79
+00:05:03,450 --> 00:05:06,510
+Now back on Amy's machine, let's
+make a change and do another
+
+80
+00:05:06,510 --> 00:05:11,790
+push. So I'm going to echo Hello
+with a capital H 253 dot txt,
+
+81
+00:05:12,870 --> 00:05:16,050
+then I'm going to stage and
+commit all the changes, say
+
+82
+00:05:16,050 --> 00:05:23,580
+capitalize, hello, then let's do
+a push. So Amy did a push. Now
+
+83
+00:05:23,580 --> 00:05:28,140
+back on GitHub, she can come
+over here and request Mosh to
+
+84
+00:05:28,140 --> 00:05:31,020
+eview the code again. So this
+ill send Mosh a new n
+
+85
+00:05:31,020 --> 00:05:34,920
+tification and you email, B
+lla, come back here and see t
+
+86
+00:05:34,920 --> 00:05:37,500
+is message one more time code w
+th Mosh request said your re
+
+87
+00:05:37,500 --> 00:05:41,700
+iew on this pull request. So I
+an add my second review. Once ag
+
+88
+00:05:41,700 --> 00:05:45,960
+in, I like to click away and se
+the updated code. So I think th
+
+89
+00:05:45,960 --> 00:05:49,710
+s is great. I'm going to take th
+s file as reviewed. And then su
+
+90
+00:05:50,250 --> 00:05:53,850
+mit my final review. So I'm go
+ng to say everything looks pe
+
+91
+00:05:53,850 --> 00:06:00,240
+fect. Let's go ahead with me
+ging. And then I can select ap
+
+92
+00:06:00,270 --> 00:06:04,590
+rove and submit the review. Al
+ight, the changes are ap
+
+93
+00:06:04,590 --> 00:06:09,780
+roved beautiful. Now up here on
+the conversation tab. Next to th
+
+94
+00:06:09,780 --> 00:06:12,810
+s reviewer. Now we have a ti
+k so we can go ahead with me
+
+95
+00:06:12,810 --> 00:06:18,270
+ging. To do that. Go down be
+ow, and we have this button me
+
+96
+00:06:18,510 --> 00:06:21,960
+ge pull request. Here's a qu
+stion who should merge this pu
+
+97
+00:06:21,960 --> 00:06:25,260
+l request? Well, there are tw
+opinions. Some teams believe th
+
+98
+00:06:25,260 --> 00:06:28,110
+t the person who started a pu
+l request should not be able to
+
+99
+00:06:28,110 --> 00:06:31,140
+close it, the pull request wi
+l always be close by someone el
+
+100
+00:06:31,140 --> 00:06:34,680
+e. Otherwise, these pull re
+uests are meaningless. Anyone ca
+
+101
+00:06:34,680 --> 00:06:37,290
+start and close them. But th
+re's also a different opinion ou
+
+102
+00:06:37,290 --> 00:06:40,230
+there. Some people argue th
+t the person who started a pu
+
+103
+00:06:40,230 --> 00:06:43,620
+l request knows about that is
+ue the most. So when it comes to
+
+104
+00:06:43,620 --> 00:06:46,530
+merging, most likely we're go
+ng to have conflict, it's re
+
+105
+00:06:46,530 --> 00:06:49,860
+lly helpful to have that pe
+son on board. So they argue th
+
+106
+00:06:49,860 --> 00:06:52,590
+t the person who opens a pull re
+uest should be the one cl
+
+107
+00:06:52,740 --> 00:06:56,070
+sing it as well. So there's re
+lly no right or wrong, it re
+
+108
+00:06:56,070 --> 00:06:59,220
+lly depends on your team's cu
+ture. Now, here we have a few op
+
+109
+00:06:59,220 --> 00:07:04,110
+ions. We can create a merge co
+mit, we can squash on merge, or
+
+110
+00:07:04,560 --> 00:07:07,650
+we can rebase and merge. We co
+ered all these options be
+
+111
+00:07:07,650 --> 00:07:14,820
+ore. So I'm going to go with a
+imple merge commit. All ri
+
+112
+00:07:14,820 --> 00:07:17,580
+ht, our pull requests su
+cessfully merged and closed. No
+
+113
+00:07:17,910 --> 00:07:21,690
+we can delete this branch. Go
+d. If you made a mistake, we ca
+
+114
+00:07:21,690 --> 00:07:25,860
+always come back here and re
+tore the branch back on his ma
+
+115
+00:07:25,860 --> 00:07:29,550
+hine, let's switch to master an
+then do a pool.
+
+116
+00:07:31,200 --> 00:07:33,300
+Beautiful. Now let's look at the
+history.
+
+117
+00:07:34,740 --> 00:07:37,680
+Alright, so this last commit
+over here is our merge commit
+
+118
+00:07:37,920 --> 00:07:41,250
+merge pull request number one
+from Code with Mosh slash
+
+119
+00:07:41,250 --> 00:07:45,240
+feature slash login. Both my
+master and origin slash master
+
+120
+00:07:45,240 --> 00:07:48,930
+are pointing to the same commit,
+we no longer need this feature
+
+121
+00:07:48,930 --> 00:07:52,110
+branch. So we should delete this
+local branch as well as the
+
+122
+00:07:52,110 --> 00:07:54,780
+remote tracking branch. We
+already removed this branch from
+
+123
+00:07:54,780 --> 00:07:57,930
+GitHub. So now we need to remove
+it from this repository. To do
+
+124
+00:07:57,930 --> 00:08:02,910
+that we type Git remote prune
+origin. As I told you before,
+
+125
+00:08:03,150 --> 00:08:06,120
+this removes the branches that
+don't exist on the remote in
+
+126
+00:08:06,120 --> 00:08:10,680
+this case origin. So now if we
+type git branch dash R, we don't
+
+127
+00:08:10,680 --> 00:08:13,470
+have that remote tracking branch
+beautiful. Finally, we need to
+
+128
+00:08:13,470 --> 00:08:17,790
+remove our local branch so git
+branch dash D feature slash log
+

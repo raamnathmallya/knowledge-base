@@ -1,0 +1,110 @@
+1
+00:00:03,959 --> 00:00:06,869
+By default, the push command
+doesn't transfer our tags to a
+
+2
+00:00:06,869 --> 00:00:10,379
+remote repository, we have to
+explicitly push them. So let's
+
+3
+00:00:10,379 --> 00:00:14,789
+create a new tag called version
+1.0. This tag is added to the
+
+4
+00:00:14,789 --> 00:00:20,039
+last commit. Let's verify it
+real quick. Okay, so here's our
+
+5
+00:00:20,039 --> 00:00:23,429
+tag. Now this tag is only
+available in this repository on
+
+6
+00:00:23,429 --> 00:00:26,399
+my machine. If I want to send
+this to GitHub and share it with
+
+7
+00:00:26,429 --> 00:00:31,679
+other team members, I have to
+type git push origin, v 1.0.
+
+8
+00:00:34,139 --> 00:00:37,439
+Alright, beautiful. Our tag is
+now on GitHub. Let's verified
+
+9
+00:00:37,439 --> 00:00:41,699
+real quick. So I refresh the
+page. Here we have one tag.
+
+10
+00:00:41,969 --> 00:00:45,329
+Let's click here. On this page,
+we can see the list of all the
+
+11
+00:00:45,329 --> 00:00:48,839
+tags in this repository, we can
+click a tag to see more details.
+
+12
+00:00:49,859 --> 00:00:54,539
+So we can see who has created
+this tag when and over here, you
+
+13
+00:00:54,539 --> 00:00:57,629
+can see these assets that GitHub
+automatically generated for us.
+
+14
+00:00:57,929 --> 00:01:00,809
+So we can download our entire
+source code at this point in
+
+15
+00:01:00,809 --> 00:01:05,159
+time. This is very useful. If we
+push this type by accident, we
+
+16
+00:01:05,159 --> 00:01:08,549
+can remove it using the push
+command. So we type git push
+
+17
+00:01:08,819 --> 00:01:12,659
+origin, exactly like before, but
+before the tag name, we type
+
+18
+00:01:12,809 --> 00:01:16,559
+dash dash, delete. This is going
+to delete this tag from origin.
+
+19
+00:01:16,949 --> 00:01:22,679
+Take a look. All right, our tag
+is gone. So back on GitHub, we
+
+20
+00:01:22,679 --> 00:01:26,309
+no longer have a tag. But this
+tag is still in my repository.
+
+21
+00:01:26,549 --> 00:01:31,589
+So if I type git log, look, this
+tag is still here. If we don't
+
+22
+00:01:31,589 --> 00:01:36,719
+need it here, we can simply type
+Git tag dash D for delete v 1.0.
+

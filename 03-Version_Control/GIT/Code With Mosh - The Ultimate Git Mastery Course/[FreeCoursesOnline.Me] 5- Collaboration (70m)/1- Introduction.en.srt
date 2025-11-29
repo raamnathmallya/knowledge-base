@@ -1,0 +1,65 @@
+1
+00:00:02,009 --> 00:00:04,469
+So you've learned all this, I
+shall Gitt tools to manage your
+
+2
+00:00:04,469 --> 00:00:07,559
+personal projects. In this
+section, we'll be talking about
+
+3
+00:00:07,559 --> 00:00:10,229
+various tools that you need to
+master to collaborate with
+
+4
+00:00:10,259 --> 00:00:13,259
+others. We'll start off by
+talking about the most common
+
+5
+00:00:13,259 --> 00:00:15,749
+collaboration workflows. Then
+we're going to talk about
+
+6
+00:00:15,749 --> 00:00:18,569
+pushing, fetching and pulling
+objects from remote
+
+7
+00:00:18,569 --> 00:00:21,359
+repositories. Next, we'll talk
+about the essential
+
+8
+00:00:21,359 --> 00:00:24,539
+collaboration tools on GitHub.
+The most popular Git hosting
+
+9
+00:00:24,539 --> 00:00:27,929
+platform will cover pull
+requests, issues, and
+
+10
+00:00:27,929 --> 00:00:31,169
+milestones. And finally, we'll
+talk about contributing to open
+
+11
+00:00:31,169 --> 00:00:34,019
+source projects. The tools we're
+going to cover in this section
+
+12
+00:00:34,049 --> 00:00:37,469
+are super important. You'll be
+using them every single day when
+
+13
+00:00:37,469 --> 00:00:40,109
+working with a team. So let's
+jump in and get started.
+

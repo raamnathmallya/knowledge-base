@@ -1,0 +1,25 @@
+1
+00:00:03,990 --> 00:00:06,210
+In this section, we're going to
+work with the same repository
+
+2
+00:00:06,210 --> 00:00:08,700
+that I gave you in the previous
+section. If you miss that
+
+3
+00:00:08,700 --> 00:00:11,520
+section, you can download this
+repository right below this
+
+4
+00:00:11,520 --> 00:00:14,670
+video. So extract the zip file
+somewhere on your machine, but
+
+5
+00:00:14,670 --> 00:00:16,170
+you're ready, watch the next
+lesson.
+

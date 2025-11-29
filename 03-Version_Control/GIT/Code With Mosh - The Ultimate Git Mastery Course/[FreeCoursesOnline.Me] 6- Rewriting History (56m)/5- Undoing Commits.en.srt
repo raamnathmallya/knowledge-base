@@ -1,0 +1,395 @@
+1
+00:00:04,019 --> 00:00:06,359
+Let's say we decided that this
+last commit over here is
+
+2
+00:00:06,359 --> 00:00:09,929
+useless. And we want to undo it.
+Here we have two options. If you
+
+3
+00:00:09,929 --> 00:00:13,139
+have pushed this commit to a
+remote repository, chances are
+
+4
+00:00:13,229 --> 00:00:16,049
+other people have based their
+work on top of this commit. So
+
+5
+00:00:16,049 --> 00:00:18,689
+we shouldn't remove this commit.
+Here, we should use the revert
+
+6
+00:00:18,689 --> 00:00:22,499
+command. And this will create a
+new commit that will undo all
+
+7
+00:00:22,499 --> 00:00:26,819
+the changes in this commit. So
+we type Git revert, head, and
+
+8
+00:00:27,179 --> 00:00:29,759
+we'll talk about this in more
+detail in the next lesson. But
+
+9
+00:00:29,759 --> 00:00:32,669
+let's say we haven't pushed this
+commit. So it only exists in our
+
+10
+00:00:32,669 --> 00:00:36,239
+local repository. Here, we can
+use the reset command to remove
+
+11
+00:00:36,239 --> 00:00:38,729
+this commit from the history.
+Now, I know that we have talked
+
+12
+00:00:38,729 --> 00:00:41,189
+about this before, but let's
+revisit it one more time,
+
+13
+00:00:41,369 --> 00:00:44,099
+because I want to make sure you
+really understand how it works.
+
+14
+00:00:44,639 --> 00:00:49,019
+So we type Git reset dash dash
+heart, I'm going to talk about
+
+15
+00:00:49,019 --> 00:00:52,439
+this option in a second. And
+then we type the target position
+
+16
+00:00:52,439 --> 00:00:55,919
+for our head pointer. So we want
+to move the head pointer from
+
+17
+00:00:55,919 --> 00:01:00,359
+this commit to the commit
+before. So we type head tilda
+
+18
+00:01:00,449 --> 00:01:03,929
+one. Now what is the hard
+option? Well, let's say we have
+
+19
+00:01:03,929 --> 00:01:07,889
+two commits in our repository, A
+and B. And B is the last commit,
+
+20
+00:01:07,949 --> 00:01:10,529
+because head is pointing to it.
+Now look at our working
+
+21
+00:01:10,529 --> 00:01:13,889
+directory and the staging area.
+In both these areas, we have the
+
+22
+00:01:13,889 --> 00:01:17,789
+same code that we have in our
+last snapshot that is B. Now if
+
+23
+00:01:17,789 --> 00:01:20,759
+you reset the head using the
+soft option, git will simply
+
+24
+00:01:20,759 --> 00:01:23,999
+move the head pointer to the
+target location. But it's not
+
+25
+00:01:23,999 --> 00:01:27,149
+going to touch our staging area
+and the working directory. Now,
+
+26
+00:01:27,149 --> 00:01:31,109
+what is this state? This is the
+state before we committed B. So
+
+27
+00:01:31,109 --> 00:01:33,329
+we have some changes in our
+working directory and the
+
+28
+00:01:33,329 --> 00:01:36,869
+staging area. But we haven't
+committed those changes yet. So
+
+29
+00:01:36,869 --> 00:01:40,229
+this is the effect of the soft
+option. If we use the mixed
+
+30
+00:01:40,259 --> 00:01:44,489
+option, it will take the latest
+snapshot that is a and put it in
+
+31
+00:01:44,489 --> 00:01:48,629
+our staging area. What is this
+date, this is the state before
+
+32
+00:01:48,629 --> 00:01:51,839
+we state our new changes. So we
+have some new changes in our
+
+33
+00:01:51,839 --> 00:01:54,509
+working directory. But we
+haven't staged those changes
+
+34
+00:01:54,509 --> 00:01:58,409
+yet. This is the effect of the
+mixed option. Now if we use the
+
+35
+00:01:58,409 --> 00:02:02,369
+hard option, it will take the
+latest snapshot and put it in
+
+36
+00:02:02,369 --> 00:02:06,359
+our working directory as well.
+More accurately, it will put it
+
+37
+00:02:06,359 --> 00:02:10,109
+in both our working directory as
+well as the staging area. So our
+
+38
+00:02:10,109 --> 00:02:13,709
+new changes in our working
+directory are gone. So let me
+
+39
+00:02:13,709 --> 00:02:16,619
+show you a simple way to
+understand and memorize the
+
+40
+00:02:16,619 --> 00:02:19,559
+difference between these
+options. If we use the soft
+
+41
+00:02:19,589 --> 00:02:22,709
+option, git will only remove the
+commit, but it's not going to
+
+42
+00:02:22,709 --> 00:02:25,529
+touch our staging area and the
+working directory. So we're
+
+43
+00:02:25,529 --> 00:02:28,349
+going to have some changes in
+the staging area ready to be
+
+44
+00:02:28,349 --> 00:02:32,819
+committed. If we use that mix
+option, we go one step back. So
+
+45
+00:02:32,819 --> 00:02:36,149
+our changes in the staging area
+will be unstaged. So we'll have
+
+46
+00:02:36,149 --> 00:02:39,179
+some local changes in our
+working directory. And if we use
+
+47
+00:02:39,179 --> 00:02:42,689
+the heart option, we go even one
+more step back. So good, we'll
+
+48
+00:02:42,689 --> 00:02:45,599
+discard our local changes. This
+is how I've memorized the
+
+49
+00:02:45,599 --> 00:02:48,419
+difference between these
+options. So let's see this in
+
+50
+00:02:48,419 --> 00:02:51,749
+action. Before resetting the
+head. Let's look at the content
+
+51
+00:02:51,749 --> 00:02:57,269
+of the latest commit. So git
+show head. And in our last
+
+52
+00:02:57,269 --> 00:03:01,469
+snapshot, we simply added the
+word test in this file turns.
+
+53
+00:03:01,589 --> 00:03:05,879
+txt. Now let's reset the head
+using the soft option. So our
+
+54
+00:03:05,879 --> 00:03:09,419
+last commit is going to go. But
+this change is going to stay in
+
+55
+00:03:09,419 --> 00:03:15,479
+the staging area. So Git reset
+dash dash soft head tilda one.
+
+56
+00:03:16,619 --> 00:03:20,369
+Alright, look, we have some
+changes in our staging area, we
+
+57
+00:03:20,369 --> 00:03:24,779
+can verify it by getting a short
+status. So you have a green
+
+58
+00:03:24,779 --> 00:03:29,279
+arrow, which means you have some
+changes in terms of txt. Now we
+
+59
+00:03:29,279 --> 00:03:32,189
+can compare the staging area
+with the latest snapshot using
+
+60
+00:03:32,189 --> 00:03:36,329
+the diff command. We talked
+about this before. So git diff
+
+61
+00:03:36,449 --> 00:03:41,579
+dash dash cashed. So here's the
+change in our staging area.
+
+62
+00:03:41,609 --> 00:03:45,389
+Beautiful. Now if we use the
+mixed option, Git will unstag
+
+63
+00:03:45,389 --> 00:03:49,349
+our changes. So before running
+git reset. Let's look at our lo
+
+64
+00:03:49,349 --> 00:03:53,399
+one more time. All right, look
+head is currently pointing t
+
+65
+00:03:53,399 --> 00:03:57,899
+this commit. So our last comman
+is gone. Now, let's type Gi
+
+66
+00:03:58,049 --> 00:04:03,059
+reset dash dash mixed head. Not
+that I'm using head and not hea
+
+67
+00:04:03,269 --> 00:04:06,749
+tilda one because I want to k
+ep head where it is. It's p
+
+68
+00:04:06,749 --> 00:04:10,469
+inting to this commit. So wh
+n we use the mixed option, it wi
+
+69
+00:04:10,469 --> 00:04:13,439
+l take the snapshot that head po
+nts to and put it in the st
+
+70
+00:04:13,439 --> 00:04:17,279
+ging area. So this is going to
+unstaged changes, okay. And by
+
+71
+00:04:17,279 --> 00:04:20,219
+the way, mixed as the default op
+ion so we don't have to type it
+
+72
+00:04:20,219 --> 00:04:25,469
+look good has unstaged ch
+nges. So let's run a short st
+
+73
+00:04:25,469 --> 00:04:30,119
+tus. Now we have some changes in
+our working directory. We can co
+
+74
+00:04:30,119 --> 00:04:32,489
+pare our working directory wi
+h the staging area using the di
+
+75
+00:04:32,489 --> 00:04:36,899
+f command. So get diff wi
+hout any arguments. There you go
+
+76
+00:04:36,899 --> 00:04:40,559
+So here's the change in our wo
+king directory. Now if we use th
+
+77
+00:04:40,559 --> 00:04:44,009
+heart option, we go even one mo
+e step back. So this local ch
+
+78
+00:04:44,009 --> 00:04:50,699
+nge will be gone. Git reset, da
+h heart head. Our local ch
+
+79
+00:04:50,699 --> 00:04:53,339
+nge is gone and we have a clean
+orking directory.
+

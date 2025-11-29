@@ -1,0 +1,55 @@
+1
+00:00:03,990 --> 00:00:06,570
+So you'll learn that when doing
+a merge, you may run into one or
+
+2
+00:00:06,570 --> 00:00:09,510
+more conflicts. Now what if
+you're not quite ready to handle
+
+3
+00:00:09,510 --> 00:00:12,810
+these conflicts, perhaps we have
+several conflicts and we're in
+
+4
+00:00:12,810 --> 00:00:15,510
+the middle of something. So we
+don't have enough time to spend
+
+5
+00:00:15,540 --> 00:00:18,990
+on resolving this conflict. And
+in situations like this, we can
+
+6
+00:00:19,020 --> 00:00:22,710
+easily go back to the state
+before we started the merge. So
+
+7
+00:00:22,740 --> 00:00:25,740
+here we have a merge conflict.
+to abort the merge. We simply
+
+8
+00:00:25,740 --> 00:00:30,630
+type Git merge, dash dash abort.
+Now we're back to the state
+
+9
+00:00:30,630 --> 00:00:34,110
+before we started the merge. So
+if we resolve some conflicts and
+
+10
+00:00:34,110 --> 00:00:37,470
+stage the changes, those
+resolutions are gone. We're back
+
+11
+00:00:37,470 --> 00:00:39,600
+to a clean state before we start
+at the me
+

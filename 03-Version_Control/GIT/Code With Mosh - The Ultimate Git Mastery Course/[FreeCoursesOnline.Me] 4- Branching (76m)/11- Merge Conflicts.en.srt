@@ -1,0 +1,444 @@
+1
+00:00:04,110 --> 00:00:06,930
+So you've seen examples of
+merging branches. Now in the
+
+2
+00:00:06,930 --> 00:00:09,780
+real world. Quite often when we
+merge branches, we run into
+
+3
+00:00:09,780 --> 00:00:13,050
+conflicts, conflicts happen when
+the same line of code has been
+
+4
+00:00:13,050 --> 00:00:16,440
+changed in different ways in two
+branches, or if a given file is
+
+5
+00:00:16,440 --> 00:00:19,830
+changed in one branch, but it's
+deleted in another branch, in
+
+6
+00:00:19,830 --> 00:00:22,680
+another scenario is when the
+same file is added twice in two
+
+7
+00:00:22,680 --> 00:00:24,840
+different branches. But the
+content of this file is
+
+8
+00:00:24,840 --> 00:00:28,200
+different. In this case, as Git
+cannot figure out how to merge
+
+9
+00:00:28,200 --> 00:00:31,440
+the changes, so it will stop the
+merge process. And that's when
+
+10
+00:00:31,440 --> 00:00:34,620
+we need to jump in and tell Git
+how we want to proceed. Let me
+
+11
+00:00:34,620 --> 00:00:37,860
+show you a real example. So here
+on the master, let's create a
+
+12
+00:00:37,860 --> 00:00:45,420
+new branch called bug fix slash,
+Change Password. Now, let's open
+
+13
+00:00:45,630 --> 00:00:50,070
+Change Password. txt. Here on
+the second line, let's say
+
+14
+00:00:50,070 --> 00:00:56,250
+change, and the bug fix branch,
+save the changes, I can
+
+15
+00:00:56,250 --> 00:01:00,270
+determine all let's add this to
+the staging area and commit it.
+
+16
+00:01:00,870 --> 00:01:04,830
+We can say update, change,
+password, that txt. Of course,
+
+17
+00:01:04,860 --> 00:01:07,380
+this is another good commit
+message, because it's tied to a
+
+18
+00:01:07,380 --> 00:01:10,650
+particular file. But it's fine
+for this demo. So let's move on.
+
+19
+00:01:11,580 --> 00:01:15,030
+Alright, so we change this file
+and this branch. Now let's
+
+20
+00:01:15,030 --> 00:01:18,360
+switch to the master branch, and
+update the same file in a
+
+21
+00:01:18,360 --> 00:01:23,220
+different way. So let's open it.
+Here on the second line, I'm
+
+22
+00:01:23,220 --> 00:01:28,260
+going to say change in the
+master branch. All right, now,
+
+23
+00:01:28,830 --> 00:01:31,860
+back in the terminal, let's add
+this first staging area, and
+
+24
+00:01:31,860 --> 00:01:36,060
+committed were the same commit
+message. So now this file is
+
+25
+00:01:36,060 --> 00:01:39,720
+changed in different ways across
+these two branches. So when we
+
+26
+00:01:39,720 --> 00:01:45,660
+run git merge, bug fix slash
+change password, we get a
+
+27
+00:01:45,660 --> 00:01:49,080
+conflict, we get a merge
+conflict, and Change Password
+
+28
+00:01:49,080 --> 00:01:53,100
+txt. So good stuff the merge
+process, I know we have to jump
+
+29
+00:01:53,100 --> 00:01:56,520
+in and manually combine the
+changes. Also, as you can see
+
+30
+00:01:56,520 --> 00:02:00,450
+over here, we are in the middle
+of a merge process. So let's run
+
+31
+00:02:00,450 --> 00:02:06,150
+git status. Look under unmerged
+paths, this is where we can find
+
+32
+00:02:06,150 --> 00:02:09,810
+the conflict of flats. So both
+our branches have modified
+
+33
+00:02:10,050 --> 00:02:13,020
+change password or txt. Now,
+this is a very simplified
+
+34
+00:02:13,020 --> 00:02:15,660
+example, in a real world
+scenario, you might have more
+
+35
+00:02:15,660 --> 00:02:18,360
+than 10 files listed here.
+Basically, the more your
+
+36
+00:02:18,360 --> 00:02:21,000
+branches diverged, the more
+conflicts you're going to have.
+
+37
+00:02:21,090 --> 00:02:23,730
+We're going to talk about this
+later in the section. For now,
+
+38
+00:02:23,730 --> 00:02:27,360
+let's just see what you need to
+do when there is a conflict. So
+
+39
+00:02:27,390 --> 00:02:32,070
+we're going to open Change
+Password. txt. Look what's going
+
+40
+00:02:32,070 --> 00:02:35,160
+on here. The first time I saw
+this, I was like, What the hell
+
+41
+00:02:35,160 --> 00:02:38,040
+is going on here. But this is
+very simple. Here we have
+
+42
+00:02:38,040 --> 00:02:40,560
+markers that represent the
+changes in the current branch
+
+43
+00:02:40,740 --> 00:02:45,540
+and in the other branch. So over
+here, we have this markers in
+
+44
+00:02:45,540 --> 00:02:48,510
+profit that we have had, which
+points to the current branch in
+
+45
+00:02:48,510 --> 00:02:51,810
+this branch, which is the master
+branch, we have introduced this
+
+46
+00:02:51,810 --> 00:02:56,730
+line. Now after this, we have
+this divider, and below the
+
+47
+00:02:56,730 --> 00:03:01,740
+divider, we have to change this
+in the other branch. So that is
+
+48
+00:03:01,830 --> 00:03:06,720
+the slide over here. And after
+this, we have the marker for the
+
+49
+00:03:06,720 --> 00:03:10,110
+other Brach bug fix slash Change
+Password. Now in a real
+
+50
+00:03:10,110 --> 00:03:12,870
+situation, you might have
+multiple conflicts in the same
+
+51
+00:03:12,870 --> 00:03:15,930
+file. So for different chunks of
+code, you're going to see these
+
+52
+00:03:15,930 --> 00:03:19,620
+markers. Now let's see what we
+can do here. Here in VS code, we
+
+53
+00:03:19,620 --> 00:03:23,130
+have a few options, we can
+accept the current change. If we
+
+54
+00:03:23,130 --> 00:03:27,390
+click this, all those markers
+are gone. And we are left with
+
+55
+00:03:27,390 --> 00:03:30,540
+the change and the master
+branch. Let's undo this.
+
+56
+00:03:31,500 --> 00:03:35,490
+Alternatively, we can accept the
+incoming change. So once again,
+
+57
+00:03:35,670 --> 00:03:38,430
+all the markers are gone. I know
+we have to change in the other
+
+58
+00:03:38,430 --> 00:03:42,630
+branch. Let's do this. Another
+option is to accept both
+
+59
+00:03:42,630 --> 00:03:45,330
+changes. Let's ponder this
+again.
+
+60
+00:03:46,889 --> 00:03:50,129
+So here are the options in VS
+code. We also have third party
+
+61
+00:03:50,129 --> 00:03:53,189
+merge tools for handling
+conflicts. We'll talk about that
+
+62
+00:03:53,189 --> 00:03:56,039
+in the next lesson. But before
+we get there, let me show you a
+
+63
+00:03:56,039 --> 00:03:59,339
+different way of resolving
+conflicts, we can manually edit
+
+64
+00:03:59,339 --> 00:04:02,759
+this file by hand and remove
+this markers. So I'm going to
+
+65
+00:04:02,759 --> 00:04:06,389
+remove the head marker. Okay,
+I'm also going to remove the
+
+66
+00:04:06,389 --> 00:04:11,519
+divider and the second marker.
+So here we have changes in both
+
+67
+00:04:11,519 --> 00:04:14,729
+these branches. We can reorder
+them. So we can put this one
+
+68
+00:04:14,729 --> 00:04:18,269
+first. So this is how we are
+manually merging the changes
+
+69
+00:04:18,599 --> 00:04:22,049
+that just remember that Ideally,
+you should not introduce new
+
+70
+00:04:22,049 --> 00:04:26,339
+code here. So here we should not
+add a new line of code. Because
+
+71
+00:04:26,339 --> 00:04:28,709
+this line of code was not
+introduced in any of these
+
+72
+00:04:28,709 --> 00:04:31,679
+branches. It's a new line that
+you're adding in a merge commit.
+
+73
+00:04:32,069 --> 00:04:35,159
+If you do this, this merge
+commit is referred to as an evil
+
+74
+00:04:35,159 --> 00:04:39,239
+commit, because it's introducing
+changes that didn't exist in any
+
+75
+00:04:39,239 --> 00:04:42,389
+of these branches. The whole
+point of a merge commit is to
+
+76
+00:04:42,389 --> 00:04:46,109
+combine changes across two
+branches, right. So as much as
+
+77
+00:04:46,109 --> 00:04:49,499
+possible, try not to introduce
+new changes here. But I know in
+
+78
+00:04:49,499 --> 00:04:52,859
+real world situations, sometimes
+this is not avoidable. There are
+
+79
+00:04:52,859 --> 00:04:56,279
+cases where you need to manually
+edit the changes and introduce
+
+80
+00:04:56,279 --> 00:05:00,809
+something new. Now let's delete
+this line. Save the changes back
+
+81
+00:05:00,809 --> 00:05:03,839
+into terminal, we have to add
+this file to the staging area.
+
+82
+00:05:04,109 --> 00:05:07,319
+Why? Because this is what we're
+proposing for the next commit,
+
+83
+00:05:07,349 --> 00:05:12,509
+right? So now let's run git
+status. We no longer have
+
+84
+00:05:12,539 --> 00:05:15,989
+unmerged paths, which means we
+no longer have conflicts. So we
+
+85
+00:05:15,989 --> 00:05:20,219
+have modified this file, Change
+Password. txt. Now be run git
+
+86
+00:05:20,219 --> 00:05:24,209
+commit, we can leave out the
+message option and accept the
+
+87
+00:05:24,209 --> 00:05:28,229
+default message, merge branch
+bug fix into master. So let's
+
+88
+00:05:28,229 --> 00:05:28,829
+close this.
+
+89
+00:05:30,190 --> 00:05:32,140
+Back in the terminal. We're done
+with the merge.
+

@@ -1,0 +1,465 @@
+1
+00:00:04,080 --> 00:00:06,600
+Sometimes we do a merge, and
+then find out that our code
+
+2
+00:00:06,600 --> 00:00:09,660
+doesn't get compiled, or our
+application doesn't work. What
+
+3
+00:00:09,660 --> 00:00:12,510
+happens if you screw the merge
+if we don't combine the changes
+
+4
+00:00:12,510 --> 00:00:15,870
+properly? In situations like
+this, we need to undo the merge,
+
+5
+00:00:15,900 --> 00:00:19,710
+and then remerge. So let's have
+a quick look at our history. On
+
+6
+00:00:19,710 --> 00:00:22,950
+the top, we have a merge commit,
+let's say this is a faulty
+
+7
+00:00:22,950 --> 00:00:26,640
+merge. So we want to undo it,
+you have two options. One option
+
+8
+00:00:26,640 --> 00:00:30,390
+is to remove this commit, as if
+it was never there, I have to be
+
+9
+00:00:30,390 --> 00:00:32,700
+a bit careful with this
+solution. Because as part of
+
+10
+00:00:32,700 --> 00:00:35,970
+removing this commit, we are
+rewriting history, rewriting
+
+11
+00:00:35,970 --> 00:00:39,000
+history is totally fine if this
+history is local in our
+
+12
+00:00:39,000 --> 00:00:41,670
+repository, but if you have
+shared our commits with other
+
+13
+00:00:41,670 --> 00:00:44,070
+team members, if you have pushed
+our commits to a remote
+
+14
+00:00:44,070 --> 00:00:47,100
+repository, then we should not
+rewrite our history. We'll talk
+
+15
+00:00:47,100 --> 00:00:50,190
+about this in more detail in the
+future. In situations like this,
+
+16
+00:00:50,400 --> 00:00:53,520
+instead of removing this commit,
+we should revert it, which means
+
+17
+00:00:53,640 --> 00:00:56,520
+we're going to create a new
+commit that will cancel all the
+
+18
+00:00:56,520 --> 00:00:59,190
+changes in this commit. In this
+lesson, we're going to look at
+
+19
+00:00:59,190 --> 00:01:02,490
+both the solutions. First, let's
+see how we can remove the last
+
+20
+00:01:02,490 --> 00:01:06,690
+commit. So here's a picture of
+our history, both the head and
+
+21
+00:01:06,690 --> 00:01:09,450
+master pointers are pointing to
+the last commit, which is a
+
+22
+00:01:09,450 --> 00:01:12,810
+merge commit. Now we're going to
+use the reset command to move
+
+23
+00:01:12,810 --> 00:01:15,960
+both these pointers, and have
+them point to the last commit on
+
+24
+00:01:15,960 --> 00:01:19,260
+the master branch before we
+started the merge. Now look at
+
+25
+00:01:19,260 --> 00:01:21,900
+our merge commit. We don't have
+any other comments or any
+
+26
+00:01:21,900 --> 00:01:24,870
+pointers pointing to this
+commit. So from gits point of
+
+27
+00:01:24,870 --> 00:01:28,350
+view, this commit is garbage,
+once in a while, get looks for
+
+28
+00:01:28,350 --> 00:01:30,780
+commits like this, and
+automatically removes them from
+
+29
+00:01:30,780 --> 00:01:35,760
+our repository. So here in the
+terminal, we type Git reset dash
+
+30
+00:01:35,760 --> 00:01:38,940
+dash heart, I will explain what
+this means in a second, we will
+
+31
+00:01:38,940 --> 00:01:43,350
+reset head to head tilda one
+that is one commit before the
+
+32
+00:01:43,350 --> 00:01:47,400
+last commit that what is this
+hard option here. When resetting
+
+33
+00:01:47,400 --> 00:01:51,390
+the head pointer, we have three
+options soft, mixed, and hard.
+
+34
+00:01:51,990 --> 00:01:54,570
+What is the difference? Well,
+here we have our working
+
+35
+00:01:54,570 --> 00:01:58,770
+directory, our staging area, and
+the last snapshot, let me reset
+
+36
+00:01:58,770 --> 00:02:01,710
+the head using the soft option.
+Git is going to have the head
+
+37
+00:02:01,710 --> 00:02:05,310
+pointer point to a different
+snapshot. But our staging area
+
+38
+00:02:05,340 --> 00:02:08,610
+and working directory are not
+affected. If we use the mixed
+
+39
+00:02:08,610 --> 00:02:10,980
+option, which is the default
+option. So we don't have to
+
+40
+00:02:10,980 --> 00:02:14,640
+specify it get is going to get
+that new snapshot and put it in
+
+41
+00:02:14,640 --> 00:02:17,730
+the staging area as well. So if
+you have local changes in our
+
+42
+00:02:17,730 --> 00:02:20,130
+working directory, they are not
+affected, they're going to stay
+
+43
+00:02:20,130 --> 00:02:23,370
+there. If we use the hard
+option, D is going to take that
+
+44
+00:02:23,370 --> 00:02:27,030
+new snapshot and put in our
+working directory as well. So
+
+45
+00:02:27,060 --> 00:02:29,760
+all our environments are going
+to look identical. This is the
+
+46
+00:02:29,760 --> 00:02:32,820
+state that we were in, before we
+started the merge, all our
+
+47
+00:02:32,820 --> 00:02:35,640
+working environments were
+identical. So back to the
+
+48
+00:02:35,640 --> 00:02:38,580
+terminal, we're going to reset
+head to the last commit on the
+
+49
+00:02:38,580 --> 00:02:41,940
+master branch before we started
+the merge, that is this commit
+
+50
+00:02:41,940 --> 00:02:45,660
+over here, update Change
+Password. But before doing so, I
+
+51
+00:02:45,660 --> 00:02:48,780
+want to take a copy of the last
+commit ID that is our merge
+
+52
+00:02:48,780 --> 00:02:54,180
+commit. Let's copy this and put
+it somewhere. Now we type Git
+
+53
+00:02:54,270 --> 00:02:58,800
+reset dash dash hard head till
+the one to go one step back.
+
+54
+00:02:59,670 --> 00:03:02,940
+Good. Now, head is pointing to
+this commit over here, update
+
+55
+00:03:02,940 --> 00:03:07,950
+Change Password. Let's look at
+our log. Look, the merge commit
+
+56
+00:03:07,950 --> 00:03:11,220
+is no longer in our history. But
+it's still in our repository, so
+
+57
+00:03:11,220 --> 00:03:16,050
+we can recover it, I'm gonna
+show you. So we type Git reset
+
+58
+00:03:16,290 --> 00:03:19,230
+dash dash heart, now we're going
+to paste the ideal are merge
+
+59
+00:03:19,230 --> 00:03:24,450
+commit that we copied earlier.
+Okay, let's go with that. Now
+
+60
+00:03:24,450 --> 00:03:27,210
+head is pointing to this commit
+over here. That is our merge
+
+61
+00:03:27,210 --> 00:03:29,610
+commit. So let's look at our
+history.
+
+62
+00:03:31,530 --> 00:03:33,870
+So here we have our merge
+commit. Before that we have the
+
+63
+00:03:33,870 --> 00:03:36,840
+last commit on the bug fix
+branch. And here's the last
+
+64
+00:03:36,840 --> 00:03:40,410
+commit on the master branch. So
+you'll learn how to undo a merge
+
+65
+00:03:40,410 --> 00:03:43,650
+commit. But as I told you
+before, you should do this only
+
+66
+00:03:43,650 --> 00:03:46,020
+if you haven't shared your
+history with others. We'll talk
+
+67
+00:03:46,020 --> 00:03:48,960
+about that in the future. At
+this stage, all these commits
+
+68
+00:03:48,990 --> 00:03:51,900
+are local in our repository. We
+haven't shared our history with
+
+69
+00:03:51,930 --> 00:03:54,750
+others, we haven't pushed our
+commits. So undoing is totally
+
+70
+00:03:54,750 --> 00:03:58,140
+fine. But if you have shared our
+history, instead of ongoing, we
+
+71
+00:03:58,140 --> 00:04:04,410
+have to revert the last commit.
+So we type Git revert head, we
+
+72
+00:04:04,410 --> 00:04:07,530
+want to revert the last commit,
+which is our merge commit. Take
+
+73
+00:04:07,530 --> 00:04:11,880
+a look, we got this error saying
+this commit is a merge, but no
+
+74
+00:04:11,880 --> 00:04:16,080
+dash m option was given what's
+going on here. Here's our merge
+
+75
+00:04:16,080 --> 00:04:19,740
+commit. As you can see, a merge
+commit has two parents, one
+
+76
+00:04:19,740 --> 00:04:23,190
+parent on the master branch, the
+other on the feature branch. So
+
+77
+00:04:23,190 --> 00:04:26,460
+to revert this merge commit, we
+have to tell git, how we want to
+
+78
+00:04:26,460 --> 00:04:29,100
+revert the changes. In this
+case, we want to revert to this
+
+79
+00:04:29,100 --> 00:04:31,860
+commit over here on the last
+commit on the master branch
+
+80
+00:04:31,920 --> 00:04:35,040
+before we started the merge.
+This commit over here is the
+
+81
+00:04:35,040 --> 00:04:38,010
+first parent of our merge
+commit, because our merge commit
+
+82
+00:04:38,010 --> 00:04:40,890
+is on the master branch. So the
+first parent should also be on
+
+83
+00:04:40,890 --> 00:04:45,540
+the master branch. So we type
+Git revert dash m one, which
+
+84
+00:04:45,540 --> 00:04:49,050
+means the first parent and then
+we specified the target commit.
+
+85
+00:04:49,680 --> 00:04:54,750
+That is the last comment. Okay,
+get open our default editor. So
+
+86
+00:04:54,750 --> 00:04:57,720
+here we have a default commit
+message saying revert, and
+
+87
+00:04:57,870 --> 00:05:00,480
+here's the commit. We're
+reverting down Below we have
+
+88
+00:05:00,480 --> 00:05:03,900
+more details. It's saying this
+revert this commit over here
+
+89
+00:05:04,920 --> 00:05:09,450
+revising changes made to this
+commit over here. We're going to
+
+90
+00:05:09,450 --> 00:05:11,640
+accept the default message so
+close.
+
+91
+00:05:13,080 --> 00:05:15,510
+All right, we're done. Let's
+look at our history.
+
+92
+00:05:17,670 --> 00:05:21,570
+So, here's our merge command.
+Right after that we have a new
+
+93
+00:05:21,570 --> 00:05:24,150
+commit, which is reverting our
+merge commit.
+

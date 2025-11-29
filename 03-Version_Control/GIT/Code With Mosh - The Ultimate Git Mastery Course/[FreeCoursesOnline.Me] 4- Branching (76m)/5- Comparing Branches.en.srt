@@ -1,0 +1,145 @@
+1
+00:00:04,080 --> 00:00:06,480
+As we commit to our branches, we
+need to know how they're
+
+2
+00:00:06,480 --> 00:00:09,180
+diverging from master. So in
+this video, I'm going to show
+
+3
+00:00:09,180 --> 00:00:12,120
+you a couple of different ways
+to compare branches. So
+
+4
+00:00:12,120 --> 00:00:15,180
+currently we are on master. At
+some point in the future, we're
+
+5
+00:00:15,180 --> 00:00:18,270
+going to merge the bug fix
+branch into master. But before
+
+6
+00:00:18,270 --> 00:00:21,840
+doing so, you want to know what
+commits are coming in master. So
+
+7
+00:00:21,840 --> 00:00:27,540
+we type git log Master, colon,
+colon, bug fix slash signup
+
+8
+00:00:27,540 --> 00:00:31,710
+form. So this means show me all
+the commits that are in bug fix
+
+9
+00:00:31,710 --> 00:00:35,970
+branch, and are not in master.
+Currently, we have only a single
+
+10
+00:00:35,970 --> 00:00:38,670
+commit, if you had more commits,
+all of them would be listed
+
+11
+00:00:38,670 --> 00:00:42,120
+here. And just like before, we
+can use the one line option to
+
+12
+00:00:42,120 --> 00:00:44,880
+make the output more concise.
+Now, what if you want to see the
+
+13
+00:00:44,880 --> 00:00:49,080
+actual changes and not the list
+of commits? Well, what tool do
+
+14
+00:00:49,080 --> 00:00:53,730
+we use for seeing the changes?
+diff. So git diff, we're going
+
+15
+00:00:53,730 --> 00:00:57,810
+to compare master with the bug
+fix scratch. So we type master
+
+16
+00:00:57,930 --> 00:01:03,630
+colon colon bug fix slash signup
+form. So now we know that once
+
+17
+00:01:03,660 --> 00:01:07,410
+we merge the bug fix branch into
+master in audience dot txt,
+
+18
+00:01:07,410 --> 00:01:10,350
+e're going to have these
+hanges. So these two lines are
+
+19
+00:01:10,350 --> 00:01:13,230
+oing to get removed and
+eplaced with these two lines.
+
+20
+00:01:13,890 --> 00:01:16,680
+here's a shorter way to write
+his command. Because we're
+
+21
+00:01:16,680 --> 00:01:20,490
+urrently on Master, we don't
+ave to type master dot dot
+
+22
+00:01:20,490 --> 00:01:26,340
+ere. So we can type get def bug
+ix slash sign up for. So this
+
+23
+00:01:26,340 --> 00:01:28,890
+hows the differences between
+his branch and the current
+
+24
+00:01:28,890 --> 00:01:31,920
+ranch, which is master. Now
+ometimes, we don't want to see
+
+25
+00:01:31,920 --> 00:01:34,890
+he changes in terms of the
+ode. We just want to know what
+
+26
+00:01:34,890 --> 00:01:37,890
+iles are going to be affected.
+n those cases, we can use one
+
+27
+00:01:37,890 --> 00:01:41,190
+f the options we talked about
+n the previous section, name
+
+28
+00:01:41,190 --> 00:01:46,650
+nly, or name status. So once we
+erge the bug fix branch into
+
+29
+00:01:46,650 --> 00:01:50,130
+aster audience, that txt is
+oing to be modified.
+

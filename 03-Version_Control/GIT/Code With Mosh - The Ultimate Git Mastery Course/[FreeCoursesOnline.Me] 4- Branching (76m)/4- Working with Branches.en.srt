@@ -1,0 +1,419 @@
+1
+00:00:04,019 --> 00:00:06,869
+Let's say we just got a bug
+report. Now to fix this bug,
+
+2
+00:00:07,139 --> 00:00:10,199
+first, we should create a new
+branch called bug fix. So we
+
+3
+00:00:10,199 --> 00:00:14,999
+type git branch bug fix. Now to
+see the list of branches, we
+
+4
+00:00:14,999 --> 00:00:19,079
+type git branch. So currently,
+we have two branches, bug fix,
+
+5
+00:00:19,199 --> 00:00:23,399
+and master. There is an asterisk
+before Master, which means we're
+
+6
+00:00:23,399 --> 00:00:26,699
+currently on the master branch.
+You can also see that over here,
+
+7
+00:00:27,029 --> 00:00:29,579
+as I told you earlier in the
+course, this is coming from Zed
+
+8
+00:00:29,579 --> 00:00:34,169
+sh, or Z shell with Git plugin.
+So if you're on Mac, to see
+
+9
+00:00:34,169 --> 00:00:37,379
+something like this, you should
+install set sh with Git plugin.
+
+10
+00:00:37,679 --> 00:00:40,769
+If you're on Windows, you should
+install posh Git. This is really
+
+11
+00:00:40,769 --> 00:00:43,529
+helpful because here we can
+clearly see what is the current
+
+12
+00:00:43,529 --> 00:00:46,529
+branch. One of the issues that a
+lot of people face is they
+
+13
+00:00:46,529 --> 00:00:50,099
+accidentally commit their code
+to the wrong branch. So we're
+
+14
+00:00:50,099 --> 00:00:52,799
+currently on the master branch.
+There's another way to know the
+
+15
+00:00:52,799 --> 00:00:58,289
+current branch, we can type git
+status on branch master. Now, to
+
+16
+00:00:58,289 --> 00:01:01,139
+fix this imaginary bug. First,
+we have to change the current
+
+17
+00:01:01,139 --> 00:01:05,969
+branch to bug fix. There are two
+ways to do this. In the past, we
+
+18
+00:01:05,969 --> 00:01:08,489
+used the checkout command. But
+this command had multiple
+
+19
+00:01:08,489 --> 00:01:11,789
+applications, a lot of people
+found it confusing. So these
+
+20
+00:01:11,789 --> 00:01:15,479
+days, we have a new command for
+switching branches. So get
+
+21
+00:01:15,479 --> 00:01:21,059
+switch, bug fix. Now here on the
+bug fix branch beautiful. But
+
+22
+00:01:21,119 --> 00:01:23,999
+before going forward, I want to
+rename this branch, it's not
+
+23
+00:01:23,999 --> 00:01:26,909
+clear what bug we're trying to
+fix here. And also in the
+
+24
+00:01:26,909 --> 00:01:29,519
+future, it's very likely that
+we're going to have 10s or
+
+25
+00:01:29,519 --> 00:01:32,669
+hundreds of other bugs to fix.
+So it's better to use a more
+
+26
+00:01:32,669 --> 00:01:36,209
+specific name. To rename this
+branch, we can type git branch
+
+27
+00:01:36,329 --> 00:01:40,559
+dash m, we type the old name,
+and then the new name, we can
+
+28
+00:01:40,559 --> 00:01:45,869
+use a convention like bug fix
+slash signup form, assuming that
+
+29
+00:01:45,869 --> 00:01:49,229
+this bug is in our signup form.
+If you don't like it forward
+
+30
+00:01:49,229 --> 00:01:52,019
+slash, you can use a hyphen
+here. That's a matter of
+
+31
+00:01:52,019 --> 00:01:55,949
+personal preference. Okay, now
+we can see our branches renamed
+
+32
+00:01:55,949 --> 00:02:00,269
+beautiful. So to make some
+changes, let's open audience dot
+
+33
+00:02:00,269 --> 00:02:05,309
+txt in VS code or your favorite
+code editor. Right here, I'm
+
+34
+00:02:05,309 --> 00:02:07,739
+going to make a few changes.
+First, I'm going to rename
+
+35
+00:02:07,739 --> 00:02:12,419
+audience to who this course is
+for and then I'm going to add a
+
+36
+00:02:12,419 --> 00:02:17,639
+border. And finally, I'm going
+to remove the slide. So we have
+
+37
+00:02:17,639 --> 00:02:20,939
+three kinds of changes here.
+addition, modification, and
+
+38
+00:02:20,939 --> 00:02:24,509
+deletion. Okay? Obviously, these
+changes have nothing to do with
+
+39
+00:02:24,509 --> 00:02:27,239
+fixing a bug on a signup form.
+But here, we're not working on
+
+40
+00:02:27,239 --> 00:02:30,179
+an application. So don't worry
+about the differences. I'm just
+
+41
+00:02:30,179 --> 00:02:32,939
+teaching you how to use various
+tools and get the name of our
+
+42
+00:02:32,939 --> 00:02:35,669
+branches, the changes we'll make
+and the commit messages don't
+
+43
+00:02:35,669 --> 00:02:40,049
+matter. Now save the changes.
+Back in the terminal. Our
+
+44
+00:02:40,049 --> 00:02:42,659
+working directory is dirty, as
+we can see from the yellow
+
+45
+00:02:42,659 --> 00:02:47,009
+marker. So as from status, we
+can clearly see that you've
+
+46
+00:02:47,009 --> 00:02:51,119
+modified this file and this file
+is not staged. So let's add it
+
+47
+00:02:51,119 --> 00:02:55,499
+to the staging area. And then
+committed, we can say fix the
+
+48
+00:02:55,499 --> 00:03:00,239
+bug that prevented the users
+from signing up.
+
+49
+00:03:01,620 --> 00:03:07,740
+Good. Now let's look at our log.
+So git log, one line, see what's
+
+50
+00:03:07,740 --> 00:03:12,000
+going on here. On the top, we
+have head pointing to the bug
+
+51
+00:03:12,000 --> 00:03:14,760
+fix branch. That means we're
+currently on the bug fix branch.
+
+52
+00:03:15,270 --> 00:03:18,480
+And here's the latest commit and
+the bug fix branch. Now below
+
+53
+00:03:18,480 --> 00:03:21,240
+that, we can see our master
+branch, which is just a pointer
+
+54
+00:03:21,240 --> 00:03:25,350
+to a commit. So as we can see,
+our master branch is one commit
+
+55
+00:03:25,380 --> 00:03:28,650
+behind the bug fix branch. At
+some point in the future, we're
+
+56
+00:03:28,650 --> 00:03:31,260
+going to merge the bug fix
+branch with the master branch to
+
+57
+00:03:31,260 --> 00:03:34,290
+bring the master branch up. But
+don't worry about it. Now, let's
+
+58
+00:03:34,290 --> 00:03:38,850
+just focus on managing branches.
+So in audience dot txt, we made
+
+59
+00:03:38,850 --> 00:03:42,450
+a few changes. And these changes
+are only visible in the book fix
+
+60
+00:03:42,450 --> 00:03:47,190
+scratch. So if we switch back to
+the master branch, and open
+
+61
+00:03:47,220 --> 00:03:50,820
+audience dot txt, we see the old
+version of this file. So
+
+62
+00:03:50,820 --> 00:03:53,760
+branches allow us to work on
+different tasks in isolation,
+
+63
+00:03:53,850 --> 00:03:56,610
+the code we have in these
+branches are isolated, at some
+
+64
+00:03:56,610 --> 00:04:00,060
+point, we will merge them to
+bring them together. Now while
+
+65
+00:04:00,060 --> 00:04:04,050
+we're on the master branch, if
+we look at our log, on the top,
+
+66
+00:04:04,050 --> 00:04:07,050
+we can see head is pointing to
+the master branch. But we don't
+
+67
+00:04:07,050 --> 00:04:10,470
+see the bug fix branch, because
+bug fix is ahead of the master
+
+68
+00:04:10,470 --> 00:04:14,250
+branch. So its commits are not
+listed here by default. To view
+
+69
+00:04:14,250 --> 00:04:19,320
+the commits across all branches,
+we use the all option. Now, even
+
+70
+00:04:19,320 --> 00:04:21,720
+though we are on the master
+branch, we can see the commits
+
+71
+00:04:21,750 --> 00:04:25,650
+in other branches, in this case,
+the bug fix branch. Now at some
+
+72
+00:04:25,650 --> 00:04:28,230
+point in the future, when we are
+done with the bug fix branch,
+
+73
+00:04:28,260 --> 00:04:31,710
+when we merge it into the master
+branch, we need to delete it. So
+
+74
+00:04:32,370 --> 00:04:39,870
+we type git branch dash D, bug
+fix slash sign up for the here
+
+75
+00:04:39,870 --> 00:04:43,320
+we get an error saying the
+branch bug fix is not fully
+
+76
+00:04:43,320 --> 00:04:46,350
+merged. You're seeing this error
+because we have some changes in
+
+77
+00:04:46,350 --> 00:04:49,530
+the bug fix branch that are not
+merged with a master branch. So
+
+78
+00:04:49,530 --> 00:04:52,800
+by default, it prevents us from
+accidentally deleting the sprach
+
+79
+00:04:52,980 --> 00:04:56,160
+unless we merge it first. But if
+you're pretty sure that we don't
+
+80
+00:04:56,160 --> 00:04:59,220
+want the changes in this branch,
+we can force the deletion by
+
+81
+00:04:59,220 --> 00:05:05,250
+using a capital So we say git
+branch dash, capital D. In this
+
+82
+00:05:05,250 --> 00:05:07,590
+video, I'm not going to delete
+this branch because later in the
+
+83
+00:05:07,590 --> 00:05:09,960
+section, we're going to merge
+the changes in this branch with
+
+84
+00:05:09,960 --> 00:05:10,470
+Master
+

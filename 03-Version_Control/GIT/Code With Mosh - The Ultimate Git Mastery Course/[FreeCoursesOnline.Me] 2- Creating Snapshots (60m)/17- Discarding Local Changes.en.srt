@@ -1,0 +1,144 @@
+1
+00:00:04,019 --> 00:00:05,819
+There are times that we have
+some code in our working
+
+2
+00:00:05,819 --> 00:00:08,639
+directory that we want to throw
+away. Let's say we made some
+
+3
+00:00:08,639 --> 00:00:11,129
+changes, but we didn't like
+those changes. So we want to
+
+4
+00:00:11,129 --> 00:00:14,339
+scratch everything and start
+over, we can discard the local
+
+5
+00:00:14,339 --> 00:00:17,309
+changes using the Restore
+command. So here we have some
+
+6
+00:00:17,309 --> 00:00:21,599
+local changes in file one dot j,
+s. To undo this changes, we type
+
+7
+00:00:21,809 --> 00:00:26,369
+Git restore, file one dot j s,
+when we execute this command,
+
+8
+00:00:26,549 --> 00:00:29,159
+Git is going to take the version
+of this file in the next
+
+9
+00:00:29,159 --> 00:00:31,679
+environment, which is our
+staging environment, it's going
+
+10
+00:00:31,679 --> 00:00:35,159
+to take that version and copy
+into our working directory. We
+
+11
+00:00:35,159 --> 00:00:38,399
+can also use a period here, and
+this will undo all the local
+
+12
+00:00:38,399 --> 00:00:42,059
+changes. Now let me show you
+something. So the command is
+
+13
+00:00:42,059 --> 00:00:46,529
+executed. Now let's run another
+short status. But file two is
+
+14
+00:00:46,529 --> 00:00:50,609
+still here. Why is that? Well,
+this is a new untracked file. So
+
+15
+00:00:50,609 --> 00:00:53,759
+Git hasn't been tracking this.
+So when we tell Git to reassert
+
+16
+00:00:53,759 --> 00:00:57,209
+this file, git doesn't know
+where to get a previous version
+
+17
+00:00:57,209 --> 00:01:00,119
+of his file. It doesn't exist in
+our staging environment or In
+
+18
+00:01:00,119 --> 00:01:03,809
+our repository, so, to remove
+all these new untracked files,
+
+19
+00:01:03,929 --> 00:01:08,909
+we have to type git clean. Take
+a look. By default, we get this
+
+20
+00:01:08,909 --> 00:01:13,709
+fatal error saying required for
+us to false to true. And neither
+
+21
+00:01:13,709 --> 00:01:17,399
+of these searches are given. So
+basically git us telling us that
+
+22
+00:01:17,399 --> 00:01:20,249
+hey, this is a dangerous
+operation. If you accidentally
+
+23
+00:01:20,249 --> 00:01:23,189
+remove this on track files,
+there is no way you can recover
+
+24
+00:01:23,189 --> 00:01:27,779
+them. So let's try and git clean
+dash H for a quick help. Here we
+
+25
+00:01:27,779 --> 00:01:31,409
+have this option dash F, which
+forces git to remove this on
+
+26
+00:01:31,409 --> 00:01:36,059
+track fast. You also have dash D
+for removing whole directories.
+
+27
+00:01:36,359 --> 00:01:42,359
+So quite often we type Git clean
+dash fd. Now, let's run short
+
+28
+00:01:42,359 --> 00:01:46,319
+status again. File two is gone.
+So this is how we undo local
+
+29
+00:01:46,319 --> 00:01:46,859
+changes.
+

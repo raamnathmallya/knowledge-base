@@ -1,0 +1,59 @@
+1
+00:00:02,009 --> 00:00:03,899
+In this section I'm going to
+talk about one of the most
+
+2
+00:00:03,929 --> 00:00:07,499
+important and powerful features
+of Git called branching. You
+
+3
+00:00:07,499 --> 00:00:10,379
+will learn how to use branches
+to diverged from the main line
+
+4
+00:00:10,379 --> 00:00:13,829
+of development and work on
+something else in isolation, how
+
+5
+00:00:13,829 --> 00:00:17,009
+to compare branches to see their
+differences, how to merge them.
+
+6
+00:00:17,189 --> 00:00:19,529
+We'll talk about different
+merging techniques like three
+
+7
+00:00:19,529 --> 00:00:23,219
+way merging, fast forwarding,
+squash merging and rebasing.
+
+8
+00:00:23,459 --> 00:00:26,579
+We'll also talk about resolving
+merge conflicts, undoing a
+
+9
+00:00:26,579 --> 00:00:29,279
+faulty merge, and using
+essential tools like stashing
+
+10
+00:00:29,279 --> 00:00:31,559
+and cherry picking. The skills
+you're going to learn in this
+
+11
+00:00:31,559 --> 00:00:34,889
+section can totally change the
+way you develop software. So
+
+12
+00:00:34,979 --> 00:00:36,329
+let's jump in and get started.
+

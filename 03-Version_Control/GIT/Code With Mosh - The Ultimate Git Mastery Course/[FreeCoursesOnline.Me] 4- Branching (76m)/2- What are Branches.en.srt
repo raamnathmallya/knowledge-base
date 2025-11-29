@@ -1,0 +1,234 @@
+1
+00:00:02,280 --> 00:00:05,730
+So what is branching all about?
+Well, branching allows us to
+
+2
+00:00:05,730 --> 00:00:08,640
+diverge from the main line of
+work and work on something else
+
+3
+00:00:08,640 --> 00:00:12,060
+in isolation. Conceptually, you
+can think of a branch like a
+
+4
+00:00:12,060 --> 00:00:15,660
+separate, isolated workspace. So
+we have our main workspace,
+
+5
+00:00:15,660 --> 00:00:18,780
+which is called Master, we can
+have another workspace, we're
+
+6
+00:00:18,780 --> 00:00:21,540
+working on a new feature in
+isolation. While we're
+
+7
+00:00:21,540 --> 00:00:25,230
+developing this new feature, our
+code may get unstable. So we
+
+8
+00:00:25,230 --> 00:00:28,020
+don't want to release the code
+in this workspace. We continue
+
+9
+00:00:28,020 --> 00:00:31,380
+working here, when we're done,
+we test our code. And after we
+
+10
+00:00:31,380 --> 00:00:34,680
+fix all the bugs, then we bring
+the changes in this workspace
+
+11
+00:00:34,710 --> 00:00:38,550
+into the master. This is called
+merging. So branching allows us
+
+12
+00:00:38,550 --> 00:00:41,730
+to work on different work items.
+without messing up with the main
+
+13
+00:00:41,730 --> 00:00:45,180
+line of work, we keep the main
+line as stable as possible, so
+
+14
+00:00:45,180 --> 00:00:48,690
+we can release it anytime. Also,
+anyone joining our team can
+
+15
+00:00:48,690 --> 00:00:51,930
+start off on a stable codebase.
+That's the idea of branching.
+
+16
+00:00:52,440 --> 00:00:55,470
+Now, the way git manages
+branches is very different from
+
+17
+00:00:55,470 --> 00:00:58,800
+many other version control
+systems like subversion. In
+
+18
+00:00:58,800 --> 00:01:02,550
+subversion, when we create a new
+branch, subversion takes a copy
+
+19
+00:01:02,550 --> 00:01:05,520
+of our entire working directory
+and stores it somewhere else.
+
+20
+00:01:05,820 --> 00:01:07,950
+What if you have hundreds or
+thousands of files in our
+
+21
+00:01:07,950 --> 00:01:11,220
+project, all these files have to
+be copied. And this operation
+
+22
+00:01:11,220 --> 00:01:14,400
+can take a little while. That's
+why a lot of subversion users
+
+23
+00:01:14,400 --> 00:01:17,490
+hate branching, because it's
+slow and can waste a lot of disk
+
+24
+00:01:17,490 --> 00:01:21,180
+space. Git branches are super
+fast and cheap, because a branch
+
+25
+00:01:21,180 --> 00:01:24,930
+and Git is just a pointer to a
+commit. So the master branch is
+
+26
+00:01:24,930 --> 00:01:28,050
+just a pointer to the last
+commit in the main line of work.
+
+27
+00:01:28,590 --> 00:01:31,410
+As we make new commits, get most
+this pointer forward
+
+28
+00:01:31,440 --> 00:01:34,860
+automatically. So it knows what
+is the latest code in the main
+
+29
+00:01:34,860 --> 00:01:38,010
+line of work. That is the
+snapshot stores in this commit.
+
+30
+00:01:38,490 --> 00:01:41,580
+When we create a new branch, git
+creates a new pointer that can
+
+31
+00:01:41,580 --> 00:01:45,480
+be moved around. This pointer is
+just a tiny file that contains a
+
+32
+00:01:45,480 --> 00:01:49,290
+40 byte commit ID. That's why
+creating a branch in Git is
+
+33
+00:01:49,290 --> 00:01:52,500
+blazingly fast. Now when we
+switch to this branch and make
+
+34
+00:01:52,500 --> 00:01:56,100
+new commits get most of this
+point forward, the master
+
+35
+00:01:56,100 --> 00:01:59,430
+pointer stays where it is, so
+git knows the latest code in
+
+36
+00:01:59,460 --> 00:02:03,480
+each branch. Let me switch back
+to master. It takes the snapshot
+
+37
+00:02:03,480 --> 00:02:06,810
+from the commit that master
+points to and resets our working
+
+38
+00:02:06,810 --> 00:02:10,350
+directory to that snapshot. So
+we always have a single working
+
+39
+00:02:10,350 --> 00:02:13,530
+directory. Now how does git know
+which branch we're currently
+
+40
+00:02:13,530 --> 00:02:17,760
+working on using a special
+pointer called head. This coiner
+
+41
+00:02:17,760 --> 00:02:20,520
+is also another type of file
+that contains the name of a
+
+42
+00:02:20,520 --> 00:02:23,640
+branch like master. Let me
+switch to a different branch.
+
+43
+00:02:23,910 --> 00:02:27,360
+Git moves the head pointer out.
+o it updates a tiny file and
+
+44
+00:02:27,360 --> 00:02:30,180
+rites the name of the target
+ranch. This is how we can track
+
+45
+00:02:30,180 --> 00:02:32,640
+hat branch we're currently
+orking on. And throughout the
+
+46
+00:02:32,640 --> 00:02:34,980
+ection. You're gonna learn
+verything you need to know to
+
+47
+00:02:34,980 --> 00:02:35,970
+ork with branches.
+

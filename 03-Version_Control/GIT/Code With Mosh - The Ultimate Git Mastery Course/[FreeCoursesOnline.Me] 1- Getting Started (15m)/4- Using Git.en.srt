@@ -1,0 +1,292 @@
+1
+00:00:00,450 --> 00:00:03,600
+Let's talk about various ways to
+use Git. We can use Git on the
+
+2
+00:00:03,600 --> 00:00:06,780
+command line. So we open a
+terminal or command prompt
+
+3
+00:00:06,780 --> 00:00:10,620
+window to execute Git commands.
+This is the fastest, and
+
+4
+00:00:10,620 --> 00:00:14,370
+sometimes the easiest way to get
+the job done. That's why a lot
+
+5
+00:00:14,370 --> 00:00:16,980
+of people use the command line.
+If you don't like the command
+
+6
+00:00:16,980 --> 00:00:20,700
+line, Well, you're in luck.
+Because most modern code editors
+
+7
+00:00:20,700 --> 00:00:24,930
+on IDs have built in support for
+basic Git features. For example,
+
+8
+00:00:24,930 --> 00:00:27,930
+in VS code, we have the source
+control panel, which gives us
+
+9
+00:00:27,930 --> 00:00:30,780
+the essential Git features.
+There are also extensions
+
+10
+00:00:30,780 --> 00:00:34,170
+available for bringing
+additional Git features. For VS
+
+11
+00:00:34,170 --> 00:00:38,220
+code. The most popular extension
+is GitLance. It brings a ton of
+
+12
+00:00:38,220 --> 00:00:41,250
+Git features and VS code.
+They're also graphical user
+
+13
+00:00:41,250 --> 00:00:44,820
+interfaces specifically made for
+using Git. Here are the Git
+
+14
+00:00:44,820 --> 00:00:47,460
+websites you can find the
+complete list of these tools for
+
+15
+00:00:47,460 --> 00:00:51,360
+different platforms. We have
+tools for Windows, Mac, Linux,
+
+16
+00:00:51,570 --> 00:00:56,280
+Android and iOS. Out all these,
+the two most popular tools are
+
+17
+00:00:56,280 --> 00:00:59,880
+GitKraken in source tree.
+GitKraken  is my personal
+
+18
+00:00:59,880 --> 00:01:03,390
+Favorite GUI tool. Forget, it's
+beautifully designed. It works
+
+19
+00:01:03,390 --> 00:01:06,270
+across different platforms. And
+it integrates with other
+
+20
+00:01:06,270 --> 00:01:09,540
+GitKraken  products, such as
+GitKraken  boards for issue
+
+21
+00:01:09,540 --> 00:01:12,360
+tracking, and GitKraken
+timelines for project
+
+22
+00:01:12,360 --> 00:01:15,450
+management. It's free for open
+source projects. But for
+
+23
+00:01:15,450 --> 00:01:18,870
+commercial projects, you have to
+pay an annual fee. Just to let
+
+24
+00:01:18,870 --> 00:01:21,750
+you know, I'm not an affiliate
+of GitKraken , I'm just a fan.
+
+25
+00:01:22,170 --> 00:01:25,530
+The other option is source tree.
+It's completely free, but it's
+
+26
+00:01:25,560 --> 00:01:29,130
+only available for Windows and
+Mac. So if you're a Linux user,
+
+27
+00:01:29,190 --> 00:01:32,490
+you have to use GitKraken  or
+another GUI tool. In this
+
+28
+00:01:32,490 --> 00:01:35,580
+course, we'll be spending most
+of our time on the command line
+
+29
+00:01:35,580 --> 00:01:38,340
+for a couple of reasons. The
+first reason is that pretty much
+
+30
+00:01:38,370 --> 00:01:41,400
+all of these GUI tools have some
+limitations. They support the
+
+31
+00:01:41,400 --> 00:01:44,910
+Git commands that people use
+most of the time. So even if you
+
+32
+00:01:44,910 --> 00:01:47,580
+want to use a GUI tool, there
+are times you would have to roll
+
+33
+00:01:47,580 --> 00:01:50,520
+up your sleeves and get back to
+the command line to get the job
+
+34
+00:01:50,520 --> 00:01:53,580
+done. And the other reason is
+that the command line is always
+
+35
+00:01:53,580 --> 00:01:56,520
+available, but there are
+situations where a GUI tool may
+
+36
+00:01:56,520 --> 00:01:59,130
+not be available to you. You
+might connect to a server
+
+37
+00:01:59,130 --> 00:01:59,760
+remotely
+
+38
+00:02:00,000 --> 00:02:03,060
+And he may not have permission
+to install a GUI tool. If you
+
+39
+00:02:03,060 --> 00:02:05,520
+don't know how to use the
+command line, then you're stuck.
+
+40
+00:02:06,000 --> 00:02:09,150
+In practice, a lot of people,
+including myself, use both the
+
+41
+00:02:09,150 --> 00:02:11,610
+command line and a GUI tool. And
+that's what I'm going to show
+
+42
+00:02:11,610 --> 00:02:14,250
+you in this course, there are
+times that it really makes sense
+
+43
+00:02:14,250 --> 00:02:16,770
+to use a GUI tool and another
+command line. But there are
+
+44
+00:02:16,770 --> 00:02:19,410
+other times that using the
+command line is faster and
+
+45
+00:02:19,410 --> 00:02:22,680
+easier. So we'll use the command
+line. At the end of the day, you
+
+46
+00:02:22,680 --> 00:02:25,650
+should use the right tool for
+the job. Don't be like this guy.
+
+47
+00:02:25,770 --> 00:02:29,070
+You probably know him, our
+popular superstar developer
+
+48
+00:02:29,070 --> 00:02:32,280
+called John Smith. He thinks
+he's better than everyone else,
+
+49
+00:02:32,280 --> 00:02:35,370
+because he does everything in
+the command line. He never uses
+
+50
+00:02:35,370 --> 00:02:39,000
+a GUI tool and he looks down at
+people who do, well let him thin
+
+51
+00:02:39,000 --> 00:02:42,000
+whatever he wants, if that'
+what makes him happy, who cares
+
+52
+00:02:42,330 --> 00:02:45,240
+So we'll be spending most of ou
+time on the command line. Bu
+
+53
+00:02:45,240 --> 00:02:47,640
+when it makes sense to use a GU
+tool, I'll be showing yo
+
+54
+00:02:47,640 --> 00:02:50,760
+examples in VS code and Gi
+Kraken because those are the m
+
+55
+00:02:50,760 --> 00:02:53,520
+st popular tools. Now if y
+u've never worked with a c
+
+56
+00:02:53,520 --> 00:02:55,800
+mmand line before, don't w
+rry, I'm going to hold your h
+
+57
+00:02:55,800 --> 00:02:59,250
+nds and teach you everything s
+ep by step. It's a lot easier t
+
+58
+00:02:59,250 --> 00:02:59,820
+an you think.
+
+59
+00:03:00,299 --> 00:03:01,709
+Next we're going to install Git
+

@@ -1,0 +1,185 @@
+1
+00:00:03,990 --> 00:00:06,930
+We've made a few commits so far.
+But where are these commits? Let
+
+2
+00:00:06,930 --> 00:00:10,200
+me show you. So we use the lock
+command to look at our history.
+
+3
+00:00:10,560 --> 00:00:14,250
+Take a look. So here are all the
+commits we have created, sorted
+
+4
+00:00:14,250 --> 00:00:17,190
+from the latest to the earliest.
+So here's our last commit on
+
+5
+00:00:17,190 --> 00:00:21,060
+top. Each commit has a unique
+identifier. This is a 40
+
+6
+00:00:21,060 --> 00:00:24,210
+character, hexadecimal string
+that gets automatically
+
+7
+00:00:24,210 --> 00:00:27,060
+generates for us. You can think
+of it like a revision number,
+
+8
+00:00:27,150 --> 00:00:30,240
+but unlike a revision number, it
+doesn't increase. It's just a
+
+9
+00:00:30,240 --> 00:00:33,930
+unique identifier. Okay. Now
+next to that we have head
+
+10
+00:00:34,170 --> 00:00:37,080
+pointing to master. What is
+this? Well, we're going to talk
+
+11
+00:00:37,080 --> 00:00:40,710
+about this a lot in the future.
+But Master is the main branch or
+
+12
+00:00:40,710 --> 00:00:43,800
+the main line of working get in
+some other version control
+
+13
+00:00:43,800 --> 00:00:46,590
+systems. It's called trunk and
+get we can have multiple
+
+14
+00:00:46,590 --> 00:00:49,980
+branches. So we can work on
+multiple features or multiple
+
+15
+00:00:49,980 --> 00:00:53,250
+bug fixes in parallel, and then
+combine our code. We'll talk
+
+16
+00:00:53,280 --> 00:00:57,600
+about that later in the course.
+Now head is a reference to the
+
+17
+00:00:57,600 --> 00:01:00,750
+current branch. So this is how
+Git knows one branch we're
+
+18
+00:01:00,750 --> 00:01:03,300
+currently working on. Again,
+we're going to talk about this a
+
+19
+00:01:03,300 --> 00:01:06,780
+lot in the future. Now for each
+commit, you can see the author,
+
+20
+00:01:07,260 --> 00:01:10,710
+the name of the author, as well
+as their email, the date and
+
+21
+00:01:10,710 --> 00:01:13,710
+time the commit was created, as
+well as the one line
+
+22
+00:01:13,710 --> 00:01:17,160
+description. Like here, we have
+multiple commits that are spread
+
+23
+00:01:17,160 --> 00:01:21,030
+across multiple pages, we can
+press space to go to the next
+
+24
+00:01:21,030 --> 00:01:26,250
+page. And again, now to quit, we
+can press Q. Now the lock
+
+25
+00:01:26,250 --> 00:01:29,940
+command has a few interesting
+options. One of them is one
+
+26
+00:01:29,940 --> 00:01:34,350
+line. This shows us a short
+summary of the commands. So here
+
+27
+00:01:34,350 --> 00:01:36,690
+we have the unique identifier
+that is shortened to seven
+
+28
+00:01:36,690 --> 00:01:40,830
+characters, and we only have the
+one line description, so we
+
+29
+00:01:40,830 --> 00:01:43,620
+don't have the author as well as
+the date and time of each
+
+30
+00:01:43,620 --> 00:01:47,040
+commit. We have another option
+for reversing the sort order.
+
+31
+00:01:47,100 --> 00:01:52,110
+Let me show you. So git log one
+line, and then we add dash dash,
+
+32
+00:01:52,260 --> 00:01:56,370
+reverse. Now we can see the
+first command be on top and
+
+33
+00:01:56,610 --> 00:01:59,820
+here's the last command. Now the
+lock command is very powerful.
+
+34
+00:02:00,000 --> 00:02:03,000
+So in the future, we're going to
+talk a lot about it. In fact, we
+
+35
+00:02:03,000 --> 00:02:05,850
+have a complete section on
+browsing history. I'm going to
+
+36
+00:02:05,850 --> 00:02:08,940
+show you various ways to get
+reports from the history. For
+
+37
+00:02:08,940 --> 00:02:10,470
+now, let's just stick to the
+basics.
+

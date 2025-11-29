@@ -1,0 +1,164 @@
+1
+00:00:04,019 --> 00:00:07,229
+Now let's see how we can rewrite
+history using GitKraken. So
+
+2
+00:00:07,229 --> 00:00:09,929
+here's our mercury repository
+that we started with at the
+
+3
+00:00:09,929 --> 00:00:12,719
+beginning of this section. So
+all those bad commits that we
+
+4
+00:00:12,719 --> 00:00:16,439
+talked about exist here. Now we
+want to start an interactive
+
+5
+00:00:16,439 --> 00:00:20,519
+rebasing from this commit. So we
+right click here, and then go to
+
+6
+00:00:20,789 --> 00:00:25,589
+interactive rebase. So we see a
+similar interface. Here, we can
+
+7
+00:00:25,589 --> 00:00:30,119
+see all the commits listed from
+the newest to the oldest. So for
+
+8
+00:00:30,119 --> 00:00:34,559
+this commit, we can select
+rewording and type the new
+
+9
+00:00:34,559 --> 00:00:39,179
+message here. So render
+restaurants on the map update
+
+10
+00:00:39,809 --> 00:00:43,079
+we're done with this, we ca
+move commits around. So here's
+
+11
+00:00:43,079 --> 00:00:46,139
+the commit that adds a
+eference to Google Map, we can
+
+12
+00:00:46,139 --> 00:00:51,629
+elect this and drop it before
+endering the restaurant. We can
+
+13
+00:00:51,629 --> 00:00:55,319
+lso squash commits. So I want t
+squash this commit into this c
+
+14
+00:00:55,319 --> 00:01:01,199
+mmit. So here we pick squash. An
+now we can visually see that th
+
+15
+00:01:01,199 --> 00:01:03,659
+s commit is going to get co
+bined with the previous co
+
+16
+00:01:03,659 --> 00:01:06,419
+mit. Also, I'm going to sq
+ash this commit into the pr
+
+17
+00:01:06,419 --> 00:01:12,629
+vious commit. Super easy, we ca
+also drop a commit. So for th
+
+18
+00:01:12,629 --> 00:01:17,099
+s commit I'm going to set the
+ommand to drop. Now when you
+
+19
+00:01:17,099 --> 00:01:19,649
+tart the rebase operation, we'r
+going to see the same conf
+
+20
+00:01:19,649 --> 00:01:23,189
+ict as before, because in this
+commit, we introduced a new file
+
+21
+00:01:23,189 --> 00:01:26,429
+terms.txt. If it dropped t
+is commit, we're essential
+
+22
+00:01:26,429 --> 00:01:29,249
+y deleting that file. But then
+fter this, we have another c
+
+23
+00:01:29,309 --> 00:01:32,789
+mmit that tries to update th
+t file. So let's go ahead and
+
+24
+00:01:32,789 --> 00:01:36,809
+start the rebase operation
+Alright, we have a conflict.
+
+25
+00:01:36,809 --> 00:01:40,229
+n the right side, you can see we
+have a conflict in terms of t
+
+26
+00:01:40,229 --> 00:01:44,639
+t. So let's select this. Here
+on the top, we have a few option
+
+27
+00:01:44,639 --> 00:01:48,359
+. We can keep the modified v
+rsion or delete the file. In t
+
+28
+00:01:48,359 --> 00:01:51,689
+is case, we're going to keep th
+modified version. So let's go w
+
+29
+00:01:51,689 --> 00:01:56,069
+th that and then continue r
+basing. Good, so we're done
+
+30
+00:01:56,069 --> 00:01:58,919
+with rebasing that was super
+asy, but here we cannot edi
+
+31
+00:01:58,919 --> 00:02:01,589
+a commit, so we cannot spl
+t it into two separate c
+
+32
+00:02:01,589 --> 00:02:05,309
+mmits or amended. For those case
+, you have to go back to the ter
+
+33
+00:02:05,309 --> 00:02:05,969
+inal.
+

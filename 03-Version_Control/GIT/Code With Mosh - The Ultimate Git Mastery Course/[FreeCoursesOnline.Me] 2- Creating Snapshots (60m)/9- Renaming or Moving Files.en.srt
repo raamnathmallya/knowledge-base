@@ -1,0 +1,175 @@
+1
+00:00:03,900 --> 00:00:07,080
+Now let's talk about renaming or
+moving files. So currently we
+
+2
+00:00:07,080 --> 00:00:09,690
+have a single file in our
+working directory, and that is
+
+3
+00:00:09,690 --> 00:00:13,680
+file one dot txt. Let's rename
+this to main dot j s. So we use
+
+4
+00:00:13,680 --> 00:00:17,520
+the Move command in Unix to
+rename file one dot txt to main
+
+5
+00:00:17,550 --> 00:00:21,720
+j s. So in this command, we can
+rename or move files and
+
+6
+00:00:21,720 --> 00:00:25,650
+directories. Okay, now, our
+working directory is dirty. So
+
+7
+00:00:25,800 --> 00:00:30,270
+let's run git status. We have
+two changes, and both these
+
+8
+00:00:30,270 --> 00:00:34,020
+changes are unstaged because
+they're indicated by red, we
+
+9
+00:00:34,020 --> 00:00:37,680
+have a delete operation with
+deleted file on the txt. And
+
+10
+00:00:37,770 --> 00:00:41,250
+under untracked files, we have a
+new file. So as you saw at the
+
+11
+00:00:41,250 --> 00:00:44,340
+beginning of this section, git
+doesn't automatically track all
+
+12
+00:00:44,340 --> 00:00:47,130
+your new files. Every time you
+have a new file in your project,
+
+13
+00:00:47,220 --> 00:00:49,710
+you have to add it to the
+staging area, so Git starts
+
+14
+00:00:49,710 --> 00:00:52,950
+tracking it. So once again, we
+have to use the Add command to
+
+15
+00:00:52,950 --> 00:00:58,200
+stage both these changes. git
+add file one dot txt This is for
+
+16
+00:00:58,200 --> 00:01:02,820
+staging the delicia Now let's
+add the new untracked file, main
+
+17
+00:01:02,820 --> 00:01:07,590
+dot j s. Now, let's run git
+status one more time, look, give
+
+18
+00:01:07,590 --> 00:01:11,370
+recognize that we've renamed
+file one dot txt to main j s.
+
+19
+00:01:11,850 --> 00:01:14,700
+And this item is indicated by
+green, which means this is in
+
+20
+00:01:14,700 --> 00:01:18,360
+the staging area. So renaming or
+moving files is a two step
+
+21
+00:01:18,390 --> 00:01:21,480
+operation. First, we have to
+modify our working directory.
+
+22
+00:01:21,660 --> 00:01:24,870
+And then we have to stage two
+types of changes, and addition
+
+23
+00:01:25,080 --> 00:01:28,890
+and deletion. So similar to
+removing files, get gives us a
+
+24
+00:01:28,890 --> 00:01:33,480
+special command for renaming or
+moving files. That is good move.
+
+25
+00:01:33,810 --> 00:01:36,990
+So instead of using the standard
+move command in Unix, we're
+
+26
+00:01:36,990 --> 00:01:41,940
+going to use Git more. Now let's
+rename main j, s, to file on the
+
+27
+00:01:41,940 --> 00:01:46,620
+J s, and then run git status one
+more time. So we have a rename
+
+28
+00:01:46,620 --> 00:01:51,540
+operation for renaming file on a
+txt the file on the J s. So when
+
+29
+00:01:51,540 --> 00:01:54,600
+we use the Move command, the
+changes are applied to both the
+
+30
+00:01:54,600 --> 00:01:58,590
+working directory and the
+staging area. Now let's commit
+
+31
+00:01:58,590 --> 00:02:04,020
+the changes For the message, I'm
+going to say refactor code. The
+
+32
+00:02:04,020 --> 00:02:07,500
+look at the statistics, one file
+was changed. We have zero
+
+33
+00:02:07,500 --> 00:02:11,010
+insertions because we haven't
+added any new lines to any of
+
+34
+00:02:11,010 --> 00:02:14,160
+our files. And we also have zero
+deletions because we haven't
+
+35
+00:02:14,160 --> 00:02:15,900
+removed any lines from any
+files.
+

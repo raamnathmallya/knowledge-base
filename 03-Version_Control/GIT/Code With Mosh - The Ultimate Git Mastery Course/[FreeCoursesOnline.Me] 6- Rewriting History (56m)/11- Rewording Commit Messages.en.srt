@@ -1,0 +1,125 @@
+1
+00:00:03,959 --> 00:00:07,229
+Now let's see how we can rework
+commit messages. So earlier I
+
+2
+00:00:07,229 --> 00:00:10,769
+told you that here we have a
+wording issue, render
+
+3
+00:00:10,769 --> 00:00:14,879
+restaurants on the map, so the
+word on is missing.  Once again
+
+4
+00:00:14,879 --> 00:00:17,939
+we're going to start interactiv
+rebasing. So I'm going to gra
+
+5
+00:00:17,999 --> 00:00:22,859
+this commit ID. Now let's run
+it rebase dash i, this commit ca
+
+6
+00:00:23,549 --> 00:00:27,989
+rot to represent its parent. Al
+right, here's the commit you w
+
+7
+00:00:27,989 --> 00:00:31,109
+nt to reward. Now, we're going t
+replace their pick command w
+
+8
+00:00:31,109 --> 00:00:35,609
+th reword. We can also reword m
+ltiple commits. For example, l
+
+9
+00:00:35,639 --> 00:00:39,239
+t's say here, we forgot to i
+clude the Google Map SDK v
+
+10
+00:00:39,239 --> 00:00:42,419
+rsion. So I'm going to use the r
+word commit here as well. Go
+
+11
+00:00:42,659 --> 00:00:46,559
+d. Now, when I close this wi
+dow, it will replay each of th
+
+12
+00:00:46,559 --> 00:00:49,529
+se commits. For every commit tha
+you want to reword, it's goi
+
+13
+00:00:49,529 --> 00:00:52,979
+g to stop and give us a cha
+ce to change the message. So clo
+
+14
+00:00:53,039 --> 00:00:56,819
+e. Alright, here's the first com
+it you wanted to reword. So rend
+
+15
+00:00:56,819 --> 00:01:03,269
+r restaurants on the map. Good
+save, close, get replayed the
+
+16
+00:01:03,269 --> 00:01:06,239
+ther comments, and then he stop
+ed at this second commit we want
+
+17
+00:01:06,239 --> 00:01:10,709
+d to reword. So here I'm goin
+to add the version save, clos
+
+18
+00:01:11,519 --> 00:01:16,649
+. And rebasing was succ
+ssful, beautiful. Now let's pull
+
+19
+00:01:16,649 --> 00:01:20,669
+up the history. Now, I want to e
+phasize this one more time. In t
+
+20
+00:01:21,149 --> 00:01:24,899
+is demo, we reworded this comm
+t, which caused this commit to b
+
+21
+00:01:24,899 --> 00:01:28,439
+recreated, and that means all
+he subsequent commits are also
+
+22
+00:01:28,439 --> 00:01:32,069
+recreated. So we have writ
+en history as a total befo
+
+23
+00:01:32,069 --> 00:01:35,279
+e rewriting history is a dest
+uctive operation. You shou
+
+24
+00:01:35,279 --> 00:01:37,649
+d do this only with the comm
+ts in your local repo
+
+25
+00:01:37,649 --> 00:01:41,129
+itory. Next, I'm going to show
+you how to reorder commits.
+

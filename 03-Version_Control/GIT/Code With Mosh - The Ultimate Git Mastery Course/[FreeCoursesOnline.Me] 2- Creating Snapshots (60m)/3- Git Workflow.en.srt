@@ -1,0 +1,404 @@
+1
+00:00:04,019 --> 00:00:06,539
+Now that we have a Git
+repository, let's talk about the
+
+2
+00:00:06,539 --> 00:00:10,109
+basic Git workflow, what we do
+on a daily basis when using Git.
+
+3
+00:00:10,439 --> 00:00:13,739
+So here's our project directory.
+And here's our Git repository,
+
+4
+00:00:13,829 --> 00:00:16,679
+which is actually a hidden
+subdirectory in our project
+
+5
+00:00:16,679 --> 00:00:19,649
+directory. Now, every day, as
+part of working on various
+
+6
+00:00:19,649 --> 00:00:23,399
+tasks, we might find one or more
+flats. When our project reaches
+
+7
+00:00:23,429 --> 00:00:26,219
+a state we want to record, we
+commit those changes into our
+
+8
+00:00:26,219 --> 00:00:30,119
+repository. Creating a commit is
+like taking a snapshot of our
+
+9
+00:00:30,119 --> 00:00:33,899
+project. Now in git, we have a
+special area or a special
+
+10
+00:00:33,929 --> 00:00:37,349
+intermediate step that doesn't
+exist in most other version
+
+11
+00:00:37,349 --> 00:00:41,549
+control systems. It's called the
+staging area, or the index is
+
+12
+00:00:41,609 --> 00:00:44,849
+essentially what we're proposing
+for the next commit or the next
+
+13
+00:00:44,849 --> 00:00:48,269
+snapshot. So when we're done
+making changes, we add the
+
+14
+00:00:48,269 --> 00:00:52,139
+Modify files to the staging area
+or index, review our changes,
+
+15
+00:00:52,409 --> 00:00:55,109
+and if everything is good, then
+we'll make a commit. The
+
+16
+00:00:55,109 --> 00:00:57,749
+proposed snapshot will get
+permanently stored in our
+
+17
+00:00:57,749 --> 00:01:01,589
+repository. So the staging area
+allows us to review our work
+
+18
+00:01:01,679 --> 00:01:04,979
+before recording a snapshot. If
+some of the changes shouldn't be
+
+19
+00:01:04,979 --> 00:01:08,219
+recorded as part of the next
+snapshot, we can unstaged them
+
+20
+00:01:08,339 --> 00:01:11,399
+and commit them as part of
+another snapshot. That's the
+
+21
+00:01:11,399 --> 00:01:14,759
+basic Git workflow. Now, let me
+walk you through a real example.
+
+22
+00:01:14,819 --> 00:01:18,509
+This example is crucial. So pay
+close attention all the way to
+
+23
+00:01:18,509 --> 00:01:21,599
+the end. Even if you think you
+know the basics. Our project
+
+24
+00:01:21,599 --> 00:01:24,959
+directory is currently empty. So
+we add a couple of files here.
+
+25
+00:01:25,469 --> 00:01:28,469
+Now if you're ready to record
+this state, so we use the Add
+
+26
+00:01:28,469 --> 00:01:31,829
+command to add these files to
+the staging area. Now these
+
+27
+00:01:31,829 --> 00:01:34,319
+files are in the staging area.
+This is the state we're
+
+28
+00:01:34,319 --> 00:01:38,069
+proposing for the next commit,
+we review this file, everything
+
+29
+00:01:38,069 --> 00:01:41,219
+is good. So we use the commit
+command to permanently store
+
+30
+00:01:41,219 --> 00:01:45,299
+this snapshot in the repository.
+As part of this, we supply a
+
+31
+00:01:45,299 --> 00:01:48,809
+meaningful message to indicate
+what this snapshot represents.
+
+32
+00:01:48,959 --> 00:01:52,709
+This is essential for having a
+useful history. So as we fix
+
+33
+00:01:52,709 --> 00:01:56,369
+bugs, implement new features and
+refactor our code, we make
+
+34
+00:01:56,369 --> 00:01:59,459
+commits and each commit clearly
+explains the state of the
+
+35
+00:01:59,459 --> 00:02:03,179
+project. At that point in time,
+so now we have one commit in our
+
+36
+00:02:03,179 --> 00:02:06,299
+repository. Now a common
+misconception about Git is that
+
+37
+00:02:06,329 --> 00:02:10,169
+once we commit the changes the
+staging area becomes empty, this
+
+38
+00:02:10,169 --> 00:02:13,019
+is not correct. And I think this
+is why a lot of people find Git
+
+39
+00:02:13,019 --> 00:02:16,619
+confusing. So what we currently
+have in the staging area is the
+
+40
+00:02:16,619 --> 00:02:20,219
+same snapshot that we stored in
+the repository. So this staging
+
+41
+00:02:20,219 --> 00:02:23,489
+area is actually very similar to
+a staging environment we use
+
+42
+00:02:23,669 --> 00:02:26,429
+when releasing software to
+production. It's either a
+
+43
+00:02:26,429 --> 00:02:29,369
+reflection of what we currently
+have in production, or the next
+
+44
+00:02:29,369 --> 00:02:32,099
+version that's going to go in
+production. So let's continue
+
+45
+00:02:32,099 --> 00:02:35,279
+with our example. Let's say as
+part of fixing a bug, we make
+
+46
+00:02:35,279 --> 00:02:38,369
+some changes to file one. Note
+that what we currently have in
+
+47
+00:02:38,369 --> 00:02:41,729
+the staging area is the old
+version of file one, because we
+
+48
+00:02:41,729 --> 00:02:45,629
+haven't staged the changes yet.
+So once again, we use the Add
+
+49
+00:02:45,629 --> 00:02:48,779
+command to stage the changes.
+Now what we have in the staging
+
+50
+00:02:48,779 --> 00:02:52,799
+area is the same content we have
+in our working directory. So
+
+51
+00:02:52,829 --> 00:02:55,589
+let's make a commit to record
+this date. Now we have two
+
+52
+00:02:55,589 --> 00:02:59,219
+commits in our repository. Also
+ook at the commit message is
+
+53
+00:02:59,219 --> 00:03:02,669
+escribing the bug that we just f
+xed. Now let's say we realized t
+
+54
+00:03:02,669 --> 00:03:06,719
+at we no longer need file to i
+contains unused code. So we d
+
+55
+00:03:06,719 --> 00:03:09,389
+leted from our working d
+rectory, but this file is st
+
+56
+00:03:09,389 --> 00:03:12,479
+ll in the staging area. So on
+e again, we should use the Ad
+
+57
+00:03:12,509 --> 00:03:15,359
+command to stage this ch
+nge. I this case, the dele
+
+58
+00:03:15,359 --> 00:03:18,269
+ion. This is the inte
+esting part, even though we'r
+
+59
+00:03:18,269 --> 00:03:21,899
+saying Add File to get know
+that file to is actually dele
+
+60
+00:03:21,899 --> 00:03:25,319
+ed. So it will delete this file
+from the staging area or the
+
+61
+00:03:25,319 --> 00:03:28,499
+ext snapshot. And again, we make
+it commit to permanently re
+
+62
+00:03:28,499 --> 00:03:32,039
+ord this state. Now we have th
+ee commits in our repository. Ea
+
+63
+00:03:32,609 --> 00:03:35,819
+h commit contains a unique id
+ntifier that gets generated by
+
+64
+00:03:35,819 --> 00:03:39,029
+Git. It's like a revision nu
+ber h commit also contain
+
+65
+00:03:39,029 --> 00:03:43,049
+information about what was cha
+ged by who went as well as a co
+
+66
+00:03:43,049 --> 00:03:46,109
+plete snapshot of our project
+at the time it was created
+
+67
+00:03:46,109 --> 00:03:50,039
+So unlike many other version
+control systems, git doesn't
+
+68
+00:03:50,069 --> 00:03:54,119
+store the deltas or what was cha
+ged. It stores the full content
+
+69
+00:03:54,119 --> 00:03:57,779
+With this, Git can quickl
+restore the project to an ear
+
+70
+00:03:57,779 --> 00:04:00,869
+ier snapshot without having
+to compute the changes anyone
+
+71
+00:04:01,229 --> 00:04:03,719
+asked. But hey Marsh wouldn
+t storing the full conten
+
+72
+00:04:03,719 --> 00:04:07,739
+in every snapshot wastes a lot
+f space. No, because Git is ver
+
+73
+00:04:07,739 --> 00:04:10,859
+efficient in data storag
+. it compresses file conten
+
+74
+00:04:10,859 --> 00:04:14,639
+s, and doesn't store duplic
+te content or someone using
+
+75
+00:04:14,639 --> 00:04:17,429
+it, you don't really need to kno
+how Git stores data that's
+
+76
+00:04:17,699 --> 00:04:20,249
+implementation detail, and ma
+even change in the future
+
+77
+00:04:20,249 --> 00:04:23,879
+What you need to know is that e
+ch commit contains a comple
+
+78
+00:04:23,879 --> 00:04:26,939
+e snapshot of our projec
+. And this allows us to quickl
+
+79
+00:04:26,939 --> 00:04:30,239
+get back to the previous state.
+So that's the basic idea. Over t
+
+80
+00:04:30,689 --> 00:04:32,549
+e next few lessons, you're
+going to see this workfl
+
+81
+00:04:32,549 --> 00:04:33,719
+w in action.
+

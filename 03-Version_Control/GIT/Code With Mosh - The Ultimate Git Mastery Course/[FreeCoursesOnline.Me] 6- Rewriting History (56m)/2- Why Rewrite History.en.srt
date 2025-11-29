@@ -1,0 +1,119 @@
+1
+00:00:01,979 --> 00:00:04,679
+Let's start off by talking about
+why we need to rewrite history.
+
+2
+00:00:04,859 --> 00:00:07,679
+Well, we have to ask, why do we
+need the history in the first
+
+3
+00:00:07,679 --> 00:00:12,389
+place, we needed to see what was
+changed, why, and when, if our
+
+4
+00:00:12,389 --> 00:00:15,149
+commit messages are not
+meaningful, or if our commits
+
+5
+00:00:15,149 --> 00:00:18,479
+are too large and contain
+unrelated changes, or if there
+
+6
+00:00:18,479 --> 00:00:21,809
+are too small and scattered all
+over the history, then we're not
+
+7
+00:00:21,809 --> 00:00:24,239
+going to be able to extract
+meaningful information from the
+
+8
+00:00:24,239 --> 00:00:27,989
+history. We want a clean,
+readable history that tells this
+
+9
+00:00:27,989 --> 00:00:31,469
+story of our project, how it's
+evolved from day one. And that's
+
+10
+00:00:31,469 --> 00:00:34,439
+where rewriting the history
+comes in. If you have small
+
+11
+00:00:34,439 --> 00:00:37,589
+related commits, we can squash
+them into a single commit that
+
+12
+00:00:37,589 --> 00:00:41,489
+represents a logical chain set.
+On the other hand, if you have a
+
+13
+00:00:41,489 --> 00:00:45,179
+large commit that contains a lot
+of unrelated changes, we can
+
+14
+00:00:45,179 --> 00:00:48,149
+split that commit into a bunch
+of smaller commits, each
+
+15
+00:00:48,149 --> 00:00:51,779
+representing a logically
+separate chain set. We can also
+
+16
+00:00:51,779 --> 00:00:54,869
+reward commit messages so
+they're more meaningful. If you
+
+17
+00:00:54,869 --> 00:00:58,409
+made commits by accident, we can
+drop them, we can also modify
+
+18
+00:00:58,409 --> 00:01:01,499
+the content of our commits. So
+if you forgot to include a file
+
+19
+00:01:01,499 --> 00:01:05,009
+in a commit, we can go back and
+modify that commit. These are
+
+20
+00:01:05,009 --> 00:01:08,099
+the operations we can perform
+and get to produce a clean,
+
+21
+00:01:08,309 --> 00:01:11,639
+readable and meaningful history.
+But rewriting history can be a
+
+22
+00:01:11,639 --> 00:01:14,399
+dangerous operation, and you
+need to know what you're doing
+
+23
+00:01:14,429 --> 00:01:16,769
+before touching the history.
+That's what we're going to talk
+
+24
+00:01:16,769 --> 00:01:17,549
+about next.
+

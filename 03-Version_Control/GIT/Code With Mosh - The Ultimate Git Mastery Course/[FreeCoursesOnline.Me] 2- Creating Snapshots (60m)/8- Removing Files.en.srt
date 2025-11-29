@@ -1,0 +1,150 @@
+1
+00:00:03,990 --> 00:00:06,060
+Let's say that we just
+discovered that we no longer
+
+2
+00:00:06,060 --> 00:00:09,240
+need file to in our project
+because it contains unused code.
+
+3
+00:00:09,630 --> 00:00:14,580
+So to remove this file, we type
+RM file to the txt. Again, this
+
+4
+00:00:14,580 --> 00:00:17,340
+is not a good command because it
+doesn't start with Git. It's
+
+5
+00:00:17,340 --> 00:00:21,960
+just a standard Unix command.
+Okay, so let's go with this. Now
+
+6
+00:00:21,960 --> 00:00:24,060
+we have a yellow indicator,
+which means our working
+
+7
+00:00:24,060 --> 00:00:28,830
+directory is dirty. So let's run
+git status. We have one change
+
+8
+00:00:29,520 --> 00:00:33,300
+that is not staged for commit.
+So we remove file two from our
+
+9
+00:00:33,300 --> 00:00:37,020
+working directory, but still
+exists in the staging area. Let
+
+10
+00:00:37,020 --> 00:00:42,300
+me prove it to you. So we type
+git, LS dash files. These are
+
+11
+00:00:42,300 --> 00:00:45,810
+the files in our staging area.
+So file two still here, even
+
+12
+00:00:45,810 --> 00:00:48,480
+though we removed it from our
+working directory. So as I told
+
+13
+00:00:48,480 --> 00:00:51,630
+you before, every time we make
+changes, we have to stage those
+
+14
+00:00:51,630 --> 00:00:56,850
+changes using the Add command.
+So here we type git add file to
+
+15
+00:00:56,850 --> 00:01:00,000
+the txt to stage this change or
+this deletion more, actually
+
+16
+00:01:00,000 --> 00:01:06,030
+accurately. Now let's run git LS
+slash files one more time. So
+
+17
+00:01:06,030 --> 00:01:09,450
+file two is no longer in the
+staging area. Beautiful. Let's
+
+18
+00:01:09,450 --> 00:01:13,890
+run git status, we have one
+change that is ready to be
+
+19
+00:01:13,890 --> 00:01:17,070
+committed. And as you can see,
+it's indicated by green, which
+
+20
+00:01:17,070 --> 00:01:22,560
+means it's in the staging area.
+So let's commit this change. And
+
+21
+00:01:22,560 --> 00:01:27,930
+here we're going to say, remove
+unused code. So to remove a
+
+22
+00:01:27,930 --> 00:01:31,170
+file, we have to remove it from
+both our working directory as
+
+23
+00:01:31,170 --> 00:01:34,020
+well as the staging area.
+Because this is a very common
+
+24
+00:01:34,020 --> 00:01:36,840
+operation, git gives us a
+command that does both of these
+
+25
+00:01:36,840 --> 00:01:41,880
+steps in one go. Let me show
+you. So we type Git RM. So
+
+26
+00:01:41,880 --> 00:01:45,990
+instead of using the standard rm
+command in Unix, we use Git Rm
+
+27
+00:01:46,410 --> 00:01:49,830
+karolis, the file name, like
+file two dot txt, we can also
+
+28
+00:01:49,830 --> 00:01:54,000
+specify multiple files. We can
+also use patterns like all text
+
+29
+00:01:54,000 --> 00:01:57,240
+files. When we execute this
+command, git remote this file
+
+30
+00:01:57,240 --> 00:02:00,390
+from both the working directory
+as well as the staging area.
+

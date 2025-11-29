@@ -1,0 +1,435 @@
+1
+00:00:03,990 --> 00:00:07,170
+Let's see how we can amend an
+earlier commit. So look at this
+
+2
+00:00:07,170 --> 00:00:10,200
+commit over here, add a
+reference to Google Map SDK.
+
+3
+00:00:10,620 --> 00:00:13,410
+Before going further, let's look
+at the contents of this command.
+
+4
+00:00:13,890 --> 00:00:19,740
+So I'm going to copy the command
+ID. Now let's run, get show. So
+
+5
+00:00:19,800 --> 00:00:23,940
+in this commit, we're adding
+this line to package dot txt.
+
+6
+00:00:24,570 --> 00:00:27,030
+Now let's say we forgot to
+include the license for Google
+
+7
+00:00:27,030 --> 00:00:30,210
+Map. So we want to go back in
+history and amend this commit.
+
+8
+00:00:30,720 --> 00:00:35,160
+Now, let's pull up the history
+one more time. So to edit this
+
+9
+00:00:35,160 --> 00:00:38,130
+commit, we're going to use
+interactive rebasing, as you
+
+10
+00:00:38,130 --> 00:00:41,340
+learned earlier in the course,
+with rebasing, we can replay a
+
+11
+00:00:41,340 --> 00:00:44,460
+bunch of commits on top of
+another commit. So here, we're
+
+12
+00:00:44,460 --> 00:00:48,720
+going to replay this commit, and
+all the future commits on top of
+
+13
+00:00:49,020 --> 00:00:52,800
+the parent of this commit, which
+is this commit over here. So I
+
+14
+00:00:52,800 --> 00:00:58,470
+want to copy this commit idea.
+Now, let's run git rebase dash I
+
+15
+00:00:58,470 --> 00:01:01,230
+for interactive, this basically
+means that we're going to
+
+16
+00:01:01,260 --> 00:01:03,870
+interact with the rebase
+operation. So we're going to
+
+17
+00:01:03,870 --> 00:01:07,080
+stop it, make changes and
+continue. Now we paste the
+
+18
+00:01:07,080 --> 00:01:11,100
+commit ID. All right, take a
+look. What we have here is a
+
+19
+00:01:11,100 --> 00:01:14,640
+scrip, it contains a series of
+instructions about the rebase
+
+20
+00:01:14,640 --> 00:01:17,880
+operation. So here we have
+instructions or commands like
+
+21
+00:01:17,880 --> 00:01:22,440
+pick. Down here, you can see a
+legend of all the supported
+
+22
+00:01:22,440 --> 00:01:26,460
+commands. So we have pick,
+reward, edit, and so on. As we
+
+23
+00:01:26,460 --> 00:01:28,290
+go through the section, you're
+gonna learn more about these
+
+24
+00:01:28,290 --> 00:01:31,890
+commands. So in the script, we
+have all the comments are you
+
+25
+00:01:31,890 --> 00:01:36,390
+going to replay listed from the
+oldest to the newest. So up here
+
+26
+00:01:36,450 --> 00:01:39,690
+as the commit that you're going
+to edit, and down here is the
+
+27
+00:01:39,690 --> 00:01:43,770
+latest commit. Now, I'm going to
+change this instruction from
+
+28
+00:01:43,770 --> 00:01:48,240
+pick to edit, we can also edit
+multiple commits if you want to,
+
+29
+00:01:48,390 --> 00:01:52,560
+in this demo, I'm going to edit
+only a single commit. So revert
+
+30
+00:01:52,680 --> 00:01:55,890
+and save the changes. Now at
+this point, you know that when
+
+31
+00:01:55,890 --> 00:01:59,850
+you edit a commit, git actually
+creates a new commit. Here's the
+
+32
+00:01:59,850 --> 00:02:04,080
+interesting part. In this demo,
+even though we're editing only a
+
+33
+00:02:04,080 --> 00:02:07,530
+single commit, all the commits
+that come after this commit will
+
+34
+00:02:07,560 --> 00:02:11,400
+also be edited, or more
+accurately recreated. Let me
+
+35
+00:02:11,400 --> 00:02:15,570
+explain why. Imagine we have
+four commits in our history. And
+
+36
+00:02:15,570 --> 00:02:18,900
+we want to amend B. Git creates
+a new commit, let's call that B
+
+37
+00:02:18,900 --> 00:02:23,040
+star. Now, C should point to B
+star, right? But this is not
+
+38
+00:02:23,040 --> 00:02:26,520
+possible. Because commits are
+immutable. So the parent of C
+
+39
+00:02:26,520 --> 00:02:30,150
+cannot be changed. In the
+situation, git creates another
+
+40
+00:02:30,150 --> 00:02:33,990
+commit that looks exactly like
+C, but he points to B star. By
+
+41
+00:02:33,990 --> 00:02:37,170
+the same token, it will create
+another commit that looks like
+
+42
+00:02:37,170 --> 00:02:41,940
+D, but points to C star. So even
+though we only modified B, all
+
+43
+00:02:41,940 --> 00:02:45,030
+the subsequent commits had to be
+modified or more accurately
+
+44
+00:02:45,030 --> 00:02:49,530
+recreated. So remember, rebasing
+is a destructive operation,
+
+45
+00:02:49,710 --> 00:02:52,680
+because it rewrites history. So
+you should use it only for the
+
+46
+00:02:52,680 --> 00:02:56,100
+commits that you haven't shared
+with others. Okay. All right
+
+47
+00:02:56,100 --> 00:02:59,580
+back to our script, we're going
+to edit the first commit in this
+
+48
+00:02:59,580 --> 00:03:03,210
+lesson. Now, when we close this
+window, the rebase operation
+
+49
+00:03:03,210 --> 00:03:08,160
+will start back in the terminal,
+take a look, you've stopped at
+
+50
+00:03:08,160 --> 00:03:12,360
+this commit, add a reference to
+oogle Map SDK. So because we
+
+51
+00:03:12,360 --> 00:03:15,090
+old gate that we want to edit
+his commit, get stopped here.
+
+52
+00:03:15,480 --> 00:03:18,000
+ow we have a chance to amend
+his commit. So we're going to
+
+53
+00:03:18,000 --> 00:03:21,210
+ake the necessary changes,
+hen, we're going to amend this
+
+54
+00:03:21,210 --> 00:03:25,230
+ommit, and then continue with t
+e rebase operation. So I'm g
+
+55
+00:03:25,230 --> 00:03:32,310
+ing to echo license to license d
+t txt and add this change and a
+
+56
+00:03:32,310 --> 00:03:37,110
+end the current commit. And w
+'re going to accept the p
+
+57
+00:03:37,110 --> 00:03:41,610
+evious message. That's good. N
+w, back in the terminal, we m
+
+58
+00:03:41,610 --> 00:03:47,190
+de a new commit. Now, let's ru
+git log, one line, all graph an
+
+59
+00:03:47,430 --> 00:03:51,570
+let's see what's going on he
+e. We have two branches. In th
+
+60
+00:03:51,570 --> 00:03:54,060
+s branch, we have all the co
+mits that we wanted to re
+
+61
+00:03:54,060 --> 00:03:57,840
+lay. Down here is the first co
+mit that is to commit that we
+
+62
+00:03:57,840 --> 00:04:01,440
+anted to edit. We modified thi
+commit and git created anot
+
+63
+00:04:01,680 --> 00:04:05,790
+er commit with the same messa
+e up here. The rebasing opera
+
+64
+00:04:05,790 --> 00:04:09,510
+ions stop. So once we conti
+ue rebasing, all the subse
+
+65
+00:04:09,510 --> 00:04:13,590
+uent commits will be replay
+d on top of this new commit
+
+66
+00:04:13,590 --> 00:04:16,890
+and then this branch will b
+discarded, take a look. So we
+
+67
+00:04:17,190 --> 00:04:22,260
+ype Git rebase dash dash contin
+e, or if we screw up, we can al
+
+68
+00:04:22,260 --> 00:04:26,040
+ays abort the rebase operat
+on and go back to the previo
+
+69
+00:04:26,040 --> 00:04:30,030
+s state before we started the re
+ase. So let's continue rebasi
+
+70
+00:04:30,030 --> 00:04:35,820
+g. Good. Now let's look at the l
+g one more time. We have a simpl
+
+71
+00:04:35,820 --> 00:04:39,210
+, clean history. If you paid
+lose attention, you proba
+
+72
+00:04:39,210 --> 00:04:43,080
+ly noticed that the commit IDs a
+e different. So here's the new i
+
+73
+00:04:43,080 --> 00:04:47,850
+ea of the commit that we chang
+d. Let's copy this and run git s
+
+74
+00:04:47,850 --> 00:04:51,330
+ow. So now in this commi
+tee, we have two changes. We in
+
+75
+00:04:51,690 --> 00:04:56,460
+roduced a new file, licen
+ed .txt, and we added this line
+
+76
+00:04:56,460 --> 00:05:00,960
+to package .txt perfect Now let
+me show you something interes
+
+77
+00:05:00,960 --> 00:05:03,810
+ing. I'm going to pull up the
+istory one more time.
+
+78
+00:05:05,220 --> 00:05:08,940
+So we added licensed. txt in thi
+commit. Now what if we check ou
+
+79
+00:05:08,940 --> 00:05:13,410
+the commit that was introduce
+later, let's say this commit. I
+
+80
+00:05:13,410 --> 00:05:16,230
+we check this out, you will se
+that our license file is stil
+
+81
+00:05:16,230 --> 00:05:19,140
+there, even though it was not i
+the original work in progres
+
+82
+00:05:19,140 --> 00:05:25,050
+commit. So let's check out thi
+commit. The head pointer i
+
+83
+00:05:25,050 --> 00:05:29,490
+detached. Now, let's look at th
+files in our project. Here's th
+
+84
+00:05:29,490 --> 00:05:32,880
+license file that we just added
+So here's what you need to tak
+
+85
+00:05:32,880 --> 00:05:35,880
+away the change that w
+introduced in one of the earlie
+
+86
+00:05:35,880 --> 00:05:38,520
+commits carried on throughou
+the rest of the history
+
+87
+00:05:39,600 --> 00:05:42,390
+Alright, we're done here. S
+let's check out maste
+

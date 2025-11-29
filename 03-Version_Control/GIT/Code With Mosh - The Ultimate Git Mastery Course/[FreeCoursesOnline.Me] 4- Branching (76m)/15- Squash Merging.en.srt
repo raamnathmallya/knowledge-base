@@ -1,0 +1,414 @@
+1
+00:00:03,990 --> 00:00:07,080
+Here we have a bug fix branch
+with two commits. B one and B
+
+2
+00:00:07,080 --> 00:00:11,070
+two. Let's say, we're done here.
+So we do a merge. Now these
+
+3
+00:00:11,070 --> 00:00:15,120
+commits B one and B two are part
+of the history of Master, right?
+
+4
+00:00:15,480 --> 00:00:18,960
+But what if these commits are
+not good quality commits, maybe
+
+5
+00:00:18,960 --> 00:00:22,260
+they are too fine grained, or
+they don't represent a single
+
+6
+00:00:22,290 --> 00:00:25,050
+logical chain set, maybe we have
+mixed different things in each
+
+7
+00:00:25,050 --> 00:00:29,160
+commit. So these commits are not
+good quality commits. Perhaps we
+
+8
+00:00:29,160 --> 00:00:32,280
+added this commit at checkpoints
+along the way. So we don't
+
+9
+00:00:32,280 --> 00:00:35,130
+really care about the history of
+the bug fix branch. So we don't
+
+10
+00:00:35,130 --> 00:00:37,620
+want these commits to pollute
+the history of our master
+
+11
+00:00:37,620 --> 00:00:41,190
+branch. In situations like this,
+we have a better solution called
+
+12
+00:00:41,250 --> 00:00:44,880
+squash merging. So let's undo
+the merge. And we're going to
+
+13
+00:00:44,880 --> 00:00:48,300
+create a new commit that
+combines all the changes in the
+
+14
+00:00:48,300 --> 00:00:51,840
+bug fix branch. So we have a
+single logical chain set that
+
+15
+00:00:51,840 --> 00:00:55,710
+represents all the changes for
+fixing this book. Now we can
+
+16
+00:00:55,740 --> 00:00:59,190
+apply this commit on top of
+master. This is what we call
+
+17
+00:00:59,220 --> 00:01:02,070
+squash merging. Now, what you
+need to pay attention to here is
+
+18
+00:01:02,070 --> 00:01:05,070
+that this new commit is not a
+merge commit. Because it doesn't
+
+19
+00:01:05,070 --> 00:01:08,250
+have two parents, it doesn't
+have a reference to be two, it's
+
+20
+00:01:08,250 --> 00:01:11,790
+just a regular commit that we
+have added on top of master. Now
+
+21
+00:01:11,790 --> 00:01:14,730
+we're done with the bug fix
+branch, so we can delete it. And
+
+22
+00:01:14,730 --> 00:01:18,780
+we are left with a simple clean
+and linear history. This is the
+
+23
+00:01:18,780 --> 00:01:21,390
+benefit of squash merging. But
+it doesn't mean you should use
+
+24
+00:01:21,390 --> 00:01:24,660
+this technique all the time, you
+should use it with small, short
+
+25
+00:01:24,660 --> 00:01:28,320
+lived branches with bad history,
+like bug fixes or features that
+
+26
+00:01:28,320 --> 00:01:31,470
+you can implement in a few hours
+or in a day. Now let's see a
+
+27
+00:01:31,470 --> 00:01:34,890
+squash merging in action. So
+let's start off by creating a
+
+28
+00:01:34,890 --> 00:01:42,300
+new branch called bug fix slash
+photo upload. And this branch,
+
+29
+00:01:42,300 --> 00:01:45,060
+we're going to make two commits.
+And in each commit, I'm going to
+
+30
+00:01:45,060 --> 00:01:52,290
+update one file. So let's
+echobug fix to audience dot txt.
+
+31
+00:01:53,790 --> 00:01:58,230
+Now, we're going to commit using
+dash a option, we're going to
+
+32
+00:01:58,230 --> 00:02:01,380
+stage and commit all the changes
+in one step. We talked about
+
+33
+00:02:01,380 --> 00:02:04,530
+this at the beginning of the
+course, remember, so let's give
+
+34
+00:02:04,530 --> 00:02:10,380
+it a message. Update audience.
+txt. Now let's make a second
+
+35
+00:02:10,380 --> 00:02:16,800
+commit. So echo, bug fix to
+Table of Contents. txt. Once
+
+36
+00:02:16,800 --> 00:02:19,950
+again, we're going to commit all
+the changes in one step and say,
+
+37
+00:02:20,040 --> 00:02:24,300
+update table of contents. txt.
+So here we have two commits.
+
+38
+00:02:24,390 --> 00:02:32,190
+Let's look at our history. So
+git log, online, all graph. So
+
+39
+00:02:32,220 --> 00:02:36,120
+our bug fix branch is two
+commits ahead of Master, the
+
+40
+00:02:36,120 --> 00:02:39,930
+first commit and the second
+commit. In this case, we can do
+
+41
+00:02:39,930 --> 00:02:42,750
+a fast forward merge. But let's
+say the master branch has
+
+42
+00:02:42,750 --> 00:02:45,960
+evolved. And we're not going to
+do a fast forward merge. So
+
+43
+00:02:45,960 --> 00:02:48,240
+instead of doing a regular
+merge, which adds a merge
+
+44
+00:02:48,240 --> 00:02:52,350
+commit, we're going to do a
+squash merge. So first, we
+
+45
+00:02:52,350 --> 00:02:56,910
+switch to the master branch, git
+switch master. Now in the past,
+
+46
+00:02:56,910 --> 00:03:01,620
+we typed Git merge, bug fix
+slash photo upload, here, we're
+
+47
+00:03:01,620 --> 00:03:06,330
+going to add an option called
+dash dash squash. Let's see what
+
+48
+00:03:06,330 --> 00:03:10,530
+happens. Get created a new
+commit called a squash commit,
+
+49
+00:03:10,770 --> 00:03:14,730
+which combines the changes
+across these two files. But we
+
+50
+00:03:14,730 --> 00:03:17,880
+don't have a commit yet. All th
+se changes are in our staging ar
+
+51
+00:03:17,880 --> 00:03:23,730
+a, let me show you. So git st
+tus, dash s. Look, both these fi
+
+52
+00:03:23,730 --> 00:03:27,150
+es are modified, and they're st
+ged. So now we have to make a co
+
+53
+00:03:27,150 --> 00:03:31,830
+mit. So git commit dash m. he
+e, we type a meaningful me
+
+54
+00:03:31,830 --> 00:03:35,400
+sage that represents all the ch
+nges in our bug fix branch. So
+
+55
+00:03:35,610 --> 00:03:41,550
+we say, fix the bug on the ph
+to upload page. Alright, le
+
+56
+00:03:41,610 --> 00:03:46,590
+'s go. Let's bring up the hi
+tory. So here on the master, we
+
+57
+00:03:46,680 --> 00:03:50,010
+have a new commit that co
+bines all the changes for fi
+
+58
+00:03:50,010 --> 00:03:53,340
+ing this bug. So once we re
+oved the bug fix branch, we
+
+59
+00:03:53,790 --> 00:03:56,700
+re going to end up with a si
+ple, clean, linear history. Bu
+
+60
+00:03:57,060 --> 00:04:00,120
+before doing this, let me sh
+w you something I'm currently on
+
+61
+00:04:00,120 --> 00:04:03,900
+master. Earlier, I showed you ho
+to view the merged branches. We
+
+62
+00:04:04,290 --> 00:04:09,360
+type git branch, dash dash me
+ged and look at our new br
+
+63
+00:04:09,360 --> 00:04:12,990
+nch. bug fix slash photo up
+oad is not in this list, be
+
+64
+00:04:13,050 --> 00:04:15,540
+ause technically, we don't ha
+e a merge commit that co
+
+65
+00:04:15,540 --> 00:04:18,870
+nects these two branches. So wh
+n doing a squash merge, it's su
+
+66
+00:04:18,870 --> 00:04:21,870
+er important to remove your ta
+get branch, otherwise, that br
+
+67
+00:04:21,870 --> 00:04:24,150
+nch will be sitting there, I ma
+create confusion in the fu
+
+68
+00:04:24,150 --> 00:04:28,320
+ure. For example, you might ru
+git branch, dash dash, no me
+
+69
+00:04:28,320 --> 00:04:31,920
+ge, and think you haven't me
+ged this branch into master. Th
+
+70
+00:04:32,280 --> 00:04:38,520
+s is confusing. So we type gi
+branch, dash D to remove bug fi
+
+71
+00:04:38,520 --> 00:04:43,140
+slash photo upload. Now we
+re going to get an error. Can yo
+
+72
+00:04:43,140 --> 00:04:47,880
+tell why? Take a look at the br
+nch photo upload is not fully me
+
+73
+00:04:47,880 --> 00:04:51,210
+ged. Because once again, git do
+s not see this as a real me
+
+74
+00:04:51,210 --> 00:04:54,600
+ge. So here we have to en
+orce the deletion using a ca
+
+75
+00:04:54,600 --> 00:04:58,800
+ital D. Okay, our branches go
+e. Let's look at our history. On
+
+76
+00:04:58,800 --> 00:04:59,430
+more time.
+
+77
+00:05:02,040 --> 00:05:05,610
+So we have a simple linear
+history, we have a single commit
+
+78
+00:05:05,850 --> 00:05:09,150
+that combines all the changes
+for fixing the bug on the photo
+
+79
+00:05:09,150 --> 00:05:11,820
+upload page. One last thing
+before we finish this lesson,
+
+80
+00:05:12,150 --> 00:05:15,000
+when are playing a squash merge
+on top of Master, we might end
+
+81
+00:05:15,000 --> 00:05:18,000
+up with conflicts, the process
+for resolving conflicts is
+
+82
+00:05:18,000 --> 00:05:21,390
+exactly like before. So we bring
+up our mercial, resolve the
+
+83
+00:05:21,390 --> 00:05:23,190
+conflicts and then make a
+commit.
+

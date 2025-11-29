@@ -1,0 +1,54 @@
+1
+00:00:01,440 --> 00:00:04,290
+Welcome to my ultimate git
+mastery course. Over the next
+
+2
+00:00:04,290 --> 00:00:06,420
+five hours, you're going to
+learn everything you need to
+
+3
+00:00:06,420 --> 00:00:09,660
+know to use git like a pro, and
+work effectively with others.
+
+4
+00:00:10,020 --> 00:00:12,210
+We're going to start off by
+talking about the fundamental
+
+5
+00:00:12,210 --> 00:00:15,750
+concepts like what is git, how
+to install and configure it. And
+
+6
+00:00:15,750 --> 00:00:18,510
+then in each section, we're
+gonna explore a different set of
+
+7
+00:00:18,510 --> 00:00:22,500
+git tools will cover creating
+snapshots of your code, browsing
+
+8
+00:00:22,500 --> 00:00:25,770
+your project history, branching
+and merging, collaborating with
+
+9
+00:00:25,800 --> 00:00:28,800
+others using GitHub and
+rewriting history. I'm Mosh
+
+10
+00:00:28,950 --> 00:00:31,650
+Hamedani and I'm super excited
+to be your instructor! Now let's
+
+11
+00:00:31,650 --> 00:00:32,850
+jump in and get started.
+

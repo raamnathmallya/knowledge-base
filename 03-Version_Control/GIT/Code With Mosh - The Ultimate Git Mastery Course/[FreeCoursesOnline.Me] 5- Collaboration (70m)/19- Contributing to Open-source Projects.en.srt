@@ -1,0 +1,302 @@
+1
+00:00:03,990 --> 00:00:06,450
+So we have covered all the
+essential collaboration tools.
+
+2
+00:00:06,870 --> 00:00:10,230
+Now let's see how we can work on
+an open source project. For this
+
+3
+00:00:10,230 --> 00:00:13,590
+demo, I'm looking at this
+repository with Vidly suite 5in
+
+4
+00:00:13,590 --> 00:00:16,500
+my personal GitHub account, le
+'s say you want to contribute
+
+5
+00:00:16,500 --> 00:00:19,410
+to this repository, perhaps
+ou found a bug, or want
+
+6
+00:00:19,410 --> 00:00:23,850
+to implement a new feature. So
+ou come to the issues tab, you
+
+7
+00:00:23,850 --> 00:00:26,640
+an create a new issue and descr
+be the bug or the feature you w
+
+8
+00:00:26,640 --> 00:00:29,850
+nt to implement. Or you can p
+ck one of the existing issu
+
+9
+00:00:30,090 --> 00:00:33,780
+s. Currently, there are 79, o
+en issues here. Here's the probl
+
+10
+00:00:34,020 --> 00:00:37,260
+m, you don't have push access
+to this repository, only I can p
+
+11
+00:00:37,260 --> 00:00:41,970
+sh to it. So what you need to do
+is you go to the top and fork t
+
+12
+00:00:41,970 --> 00:00:45,810
+is repository. When you fork t
+is repository, GitHub will tak
+
+13
+00:00:45,810 --> 00:00:49,590
+a complete copy of this reposit
+ry and put it in your account,
+
+14
+00:00:49,590 --> 00:00:52,080
+ou have full control over t
+at repository, you can create
+
+15
+00:00:52,080 --> 00:00:55,380
+ew branches, new tags, you can p
+sh your stuff, you can do anyth
+
+16
+00:00:55,380 --> 00:00:59,700
+ng you want, right. So current
+y, I'm logged in using my ot
+
+17
+00:00:59,700 --> 00:01:02,310
+er GitHub account, that is C
+de with Mosh account, I'm going
+
+18
+00:01:02,310 --> 00:01:05,850
+o fork this repository that is
+n my personal account, take
+
+19
+00:01:05,850 --> 00:01:06,150
+a loo
+
+20
+00:01:08,370 --> 00:01:09,570
+It's gonna take a few seconds.
+
+21
+00:01:12,090 --> 00:01:15,330
+All right, look, we have a copy
+of this repository in my code
+
+22
+00:01:15,330 --> 00:01:18,510
+with Mosh account, which is
+orked from my personal account.
+
+23
+00:01:18,900 --> 00:01:21,840
+o this is my repository and
+itHub. Now, I'm going to clone
+
+24
+00:01:21,840 --> 00:01:25,470
+t on my local machine and start
+orking on it. So let's go to
+
+25
+00:01:25,470 --> 00:01:32,610
+ode, grab the URL, and then
+lone this repository. Good. So
+
+26
+00:01:32,610 --> 00:01:36,150
+ow let's go to this directory.
+'m going to start a new branch,
+
+27
+00:01:36,510 --> 00:01:41,940
+it switch dash c, we can call
+t buck fix. Now on this branch,
+
+28
+00:01:41,940 --> 00:01:46,770
+'m going to make a commit. So
+et's echo hello to our README
+
+29
+00:01:46,770 --> 00:01:53,130
+ile, and then make a commit and
+ay update README. Good. Now I'm
+
+30
+00:01:53,130 --> 00:01:57,810
+oing to push this branch to my
+itHub repository. So git push
+
+31
+00:01:58,080 --> 00:02:01,770
+ashiell the first I'm going to
+ush this branch origin, which
+
+32
+00:02:01,770 --> 00:02:04,710
+epresents my fork to
+epository, and then the name of
+
+33
+00:02:04,710 --> 00:02:10,860
+he branch. That is bug fix.
+ow, back on GitHub, my bug fix
+
+34
+00:02:10,860 --> 00:02:14,190
+ranch has recent push us. So
+hen I'm done with this branch,
+
+35
+00:02:14,580 --> 00:02:19,530
+can start a pull request. Now
+ook over here, we're trying to
+
+36
+00:02:19,530 --> 00:02:23,670
+ompare that bug fix branch and
+his forked repository in my
+
+37
+00:02:23,670 --> 00:02:28,200
+ode much account. But comparing
+hat with Master of this base
+
+38
+00:02:28,200 --> 00:02:31,620
+epository that is in my
+ersonal account. So starting a
+
+39
+00:02:31,620 --> 00:02:34,500
+ull request is exactly like
+efore, the only difference that
+
+40
+00:02:34,500 --> 00:02:37,200
+e have here is that we have two
+epositories, the base
+
+41
+00:02:37,200 --> 00:02:41,130
+epository, which is the main or
+he official repository, and my
+
+42
+00:02:41,130 --> 00:02:44,100
+ork repository. Now, we should
+ive this Pull Request a
+
+43
+00:02:44,100 --> 00:02:48,360
+escriptive title. So we can say
+ug fix, and change password
+
+44
+00:02:48,360 --> 00:02:52,440
+or, of course, we can leave
+ore details, and then create
+
+45
+00:02:52,440 --> 00:02:56,610
+he pull request. Now the
+aintainer of this repository,
+
+46
+00:02:56,670 --> 00:02:59,490
+n this case, myself is going to
+et notified. So I'm going to
+
+47
+00:02:59,490 --> 00:03:02,100
+ome back here and have a
+onversation with the person who
+
+48
+00:03:02,190 --> 00:03:05,340
+uggested these changes. So just
+ike before, we can have a
+
+49
+00:03:05,340 --> 00:03:08,640
+onversation and the maintainer
+an request changes, and the
+
+50
+00:03:08,640 --> 00:03:12,000
+ontributor can push new
+ommits. At some point, when the
+
+51
+00:03:12,000 --> 00:03:14,940
+aintainer is happy, they can
+ome over here and merge this
+
+52
+00:03:14,940 --> 00:03:18,090
+ull request. Here's the
+nteresting part. Currently, I'm
+
+53
+00:03:18,090 --> 00:03:22,320
+ogged in using my code wash
+ccount. So I'm a contributor to
+
+54
+00:03:22,320 --> 00:03:27,090
+his repository. Now look, I
+annot merge and close this pull
+
+55
+00:03:27,090 --> 00:03:31,590
+equest, only the maintainer can
+o this. So on this other
+
+56
+00:03:31,590 --> 00:03:35,250
+rowser window, I'm logged in
+sing my personal account. And
+
+57
+00:03:35,280 --> 00:03:40,200
+ook, we have four pull
+equests. And here's the last
+
+58
+00:03:40,200 --> 00:03:43,620
+ne that I just created using my
+ther account. So I can look at
+
+59
+00:03:43,620 --> 00:03:48,390
+his pull request. Go through
+hanges with the contributor. At
+
+60
+00:03:48,390 --> 00:03:51,390
+ome point when I'm happy, I can
+erge and close this pull
+
+61
+00:03:51,390 --> 00:03:51,930
+equest.
+

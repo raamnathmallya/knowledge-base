@@ -1,0 +1,339 @@
+1
+00:00:04,049 --> 00:00:07,349
+Let's see how we can work with
+branches and GitKraken. So as yo
+
+2
+00:00:07,349 --> 00:00:09,959
+can see, here, we have a be
+utiful graph of our branches. An
+
+3
+00:00:09,959 --> 00:00:12,839
+we can easily see all the br
+nches we have created and wh
+
+4
+00:00:12,929 --> 00:00:15,989
+ther these branches have been me
+ged into master or not. For ex
+
+5
+00:00:15,989 --> 00:00:19,859
+mple, this feature branch, re
+et password has a single co
+
+6
+00:00:19,859 --> 00:00:23,939
+mit, and it hasn't been me
+ged into master. In contrast, we
+
+7
+00:00:24,389 --> 00:00:27,599
+have this other branch here, bu
+fix slash Change Password. Ea
+
+8
+00:00:27,929 --> 00:00:31,589
+lier, we created this branch fr
+m this commit on Master, we ad
+
+9
+00:00:31,619 --> 00:00:34,769
+ed one commit to this branch, an
+then merge it into master. So
+
+10
+00:00:35,039 --> 00:00:38,129
+here's our merge commit. Now le
+'s create a new branch from Ma
+
+11
+00:00:38,129 --> 00:00:41,849
+ter. So master is the current br
+nch, we can also change the cu
+
+12
+00:00:41,849 --> 00:00:45,959
+rent branch from this drop do
+n list over here. Now, we ri
+
+13
+00:00:45,959 --> 00:00:49,979
+ht click here, and go to cr
+ate branch here. Let's give it
+
+14
+00:00:49,979 --> 00:00:54,749
+a name, like feature slash de
+ete user. So now we are on th
+
+15
+00:00:54,749 --> 00:00:59,009
+s new branch, we can right cl
+ck it and rename or deleted. No
+
+16
+00:00:59,429 --> 00:01:02,399
+let's go to VS code, make so
+e changes and add a commit to th
+
+17
+00:01:02,399 --> 00:01:06,059
+s branch. So in our table of co
+tent file, I'm going to add tw
+
+18
+00:01:06,059 --> 00:01:11,699
+lines, green tea save, GitKrak
+n has detected our change
+
+19
+00:01:11,699 --> 00:01:15,329
+. So let's look at them. Here's
+the file that we have modifi
+
+20
+00:01:15,329 --> 00:01:19,439
+d, let's state the change
+and make a comment. We can sa
+
+21
+00:01:19,439 --> 00:01:25,889
+update table of content. Good.
+o our branch pointer move forwar
+
+22
+00:01:25,889 --> 00:01:28,799
+. Now we have one extra commit
+here that is not in master
+
+23
+00:01:28,799 --> 00:01:32,579
+Next, I'm going to switch
+back to master and make a confli
+
+24
+00:01:32,579 --> 00:01:38,009
+ting change. So double click
+aster. Here in table of conten
+
+25
+00:01:38,009 --> 00:01:44,189
+, I'm going to say black tea. O
+ay. GitKraken has detected
+
+26
+00:01:44,189 --> 00:01:49,229
+ur change. So let's go ahead and
+make another commit. Good. So
+
+27
+00:01:51,869 --> 00:01:56,429
+ook, our branches have diverged.
+Master is here, our feature b
+
+28
+00:01:56,429 --> 00:01:59,819
+anches over here, and we can se
+the divergence. Now before do
+
+29
+00:01:59,819 --> 00:02:02,999
+ng a merge, let's compare t
+ese branches. So currently
+
+30
+00:02:03,029 --> 00:02:05,609
+the last commit on our featu
+e branch is selected, I'm going
+
+31
+00:02:05,999 --> 00:02:09,719
+to hold down the Shift and selec
+the master branch. Now the t
+
+32
+00:02:10,259 --> 00:02:13,229
+ps of these branches have been
+selected. So we can see their
+
+33
+00:02:13,229 --> 00:02:15,929
+diff over here, the only file
+that has been changed across th
+
+34
+00:02:15,929 --> 00:02:20,039
+se two branches is our table of
+ontent file. So take a look. Obv
+
+35
+00:02:20,039 --> 00:02:22,919
+ously, we have a conflict
+nd change on line three. So
+
+36
+00:02:22,919 --> 00:02:25,619
+when we do a merge, we're goi
+g to run into conflict.
+
+37
+00:02:25,619 --> 00:02:31,559
+Now let's close this. And to em
+rge. So master is the current b
+
+38
+00:02:31,559 --> 00:02:36,089
+anch, we right click on our fe
+ture branch. and here we can do
+
+39
+00:02:36,089 --> 00:02:40,649
+a rebase or a merge. Let's go
+ith merge, our merge failed. A
+
+40
+00:02:40,649 --> 00:02:43,559
+d on the right side, we can se
+merge conflicts detected.
+
+41
+00:02:43,559 --> 00:02:47,999
+so here we can see all the confl
+ct files. Let's select table of
+
+42
+00:02:47,999 --> 00:02:51,059
+ontent, I love this merge too
+built into GitKraken. So
+
+43
+00:02:51,059 --> 00:02:55,709
+on the left side, we have chan
+es on master. And on the right
+
+44
+00:02:55,709 --> 00:02:57,779
+side, we have changes on o
+r feature branch. Now down bel
+
+45
+00:02:58,319 --> 00:03:01,919
+w, we can see the output. So w
+can go ahead and select the c
+
+46
+00:03:02,219 --> 00:03:05,129
+anges in Master, followed by
+hanges in our feature bran
+
+47
+00:03:05,129 --> 00:03:08,879
+h. If this is not what we want
+we can always deselect one
+
+48
+00:03:09,239 --> 00:03:13,709
+or more of these lines, or ch
+nge the order. If you have mor
+
+49
+00:03:13,709 --> 00:03:16,379
+than one conflict, we can brows
+through them over here. Very s
+
+50
+00:03:16,379 --> 00:03:21,299
+mple. When we're done, we cli
+k Save. Our table of content f
+
+51
+00:03:21,299 --> 00:03:24,929
+le is now staged. And here's t
+e default commit message merg
+
+52
+00:03:24,929 --> 00:03:28,679
+branch feature slash delete
+user. Here we can abort the ma
+
+53
+00:03:28,679 --> 00:03:32,339
+riage or committed. Let's go ahe
+d with that. So here's our m
+
+54
+00:03:32,429 --> 00:03:35,189
+rge commit beautiful. N
+w let's say we screwed some
+
+55
+00:03:35,219 --> 00:03:38,279
+hing up. So we're going to und
+this merge, we can either rever
+
+56
+00:03:38,279 --> 00:03:42,449
+it, or reset the head to the
+revious commit. So with this co
+
+57
+00:03:42,959 --> 00:03:46,979
+mit selected, we can right cl
+ck and go to revert commit, GitK
+
+58
+00:03:46,979 --> 00:03:50,759
+aken and saying Do you want to
+mmediately commit the reve
+
+59
+00:03:50,759 --> 00:03:55,289
+ted changes? Yes. So here's
+he revert of our merge commit. A
+
+60
+00:03:55,289 --> 00:03:59,159
+ternatively, we can reset the h
+ad to the commit before our merg
+
+61
+00:03:59,189 --> 00:04:02,819
+commit. So here's our merg
+commit. And here's the last
+
+62
+00:04:03,119 --> 00:04:05,999
+commit on master. We can
+ight click this commit and go t
+
+63
+00:04:05,999 --> 00:04:10,709
+reset master to this commit. He
+e we have three options you hav
+
+64
+00:04:10,709 --> 00:04:13,769
+seen before. Soft, mixed and
+hard. We're gonna go with h
+
+65
+00:04:13,769 --> 00:04:18,299
+rd. Good so our merge commit is
+now gone. So this was the es
+
+66
+00:04:18,299 --> 00:04:21,059
+ence of working with branches a
+d GitKraken. As you can see, Gi
+
+67
+00:04:21,359 --> 00:04:24,239
+Kraken it makes it incredibly e
+sy to manage branches and r
+
+68
+00:04:24,239 --> 00:04:26,249
+solve conflicts.
+

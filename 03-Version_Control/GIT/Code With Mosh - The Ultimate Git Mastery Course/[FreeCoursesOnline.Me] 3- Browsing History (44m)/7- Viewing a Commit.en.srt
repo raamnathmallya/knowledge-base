@@ -1,0 +1,169 @@
+1
+00:00:03,990 --> 00:00:06,630
+Now let's see how we can view a
+commit. We talked about this
+
+2
+00:00:06,630 --> 00:00:09,240
+briefly in the previous section.
+But let's explore it in a bit
+
+3
+00:00:09,240 --> 00:00:11,940
+more detail now. So let's say we
+want to view this commit over
+
+4
+00:00:11,940 --> 00:00:15,120
+here, there are two ways to
+reference this commit, we can
+
+5
+00:00:15,120 --> 00:00:18,660
+use the commit ID, or we can use
+a relative reference using the
+
+6
+00:00:18,660 --> 00:00:21,750
+head pointer. So as we can see,
+head is in front of the last
+
+7
+00:00:21,750 --> 00:00:26,010
+commit. And this commit we're
+interested in, is two commits
+
+8
+00:00:26,220 --> 00:00:31,530
+before the last commit. So we
+can type git show head Tilda
+
+9
+00:00:31,620 --> 00:00:35,430
+two, that means go to the head,
+which is the last commit, and
+
+10
+00:00:35,430 --> 00:00:40,920
+then go two steps back. So here,
+we can see all the details about
+
+11
+00:00:40,920 --> 00:00:44,430
+this commit, we can see the
+commit ID or commit hash, the
+
+12
+00:00:44,460 --> 00:00:48,540
+author of the commit, the date
+and time, the subject, and a
+
+13
+00:00:48,540 --> 00:00:51,600
+diff of every file that has
+changed in this commit. In this
+
+14
+00:00:51,600 --> 00:00:54,870
+case, only a single file has
+been changed. And that is this
+
+15
+00:00:54,870 --> 00:00:58,920
+file over here, staging changes
+dot txt. In this file, we have
+
+16
+00:00:58,920 --> 00:01:02,940
+two new lines, as we can see
+over here, now what if we don't
+
+17
+00:01:02,940 --> 00:01:05,730
+want to see the changes, we want
+to see the final version of a
+
+18
+00:01:05,730 --> 00:01:10,080
+file in this commit? Well, we
+bring up the last command, then
+
+19
+00:01:10,110 --> 00:01:14,010
+we add a colon. And here we type
+the past to our file. So this
+
+20
+00:01:14,010 --> 00:01:17,820
+file we're interested in is in a
+directory called sections. Here
+
+21
+00:01:17,820 --> 00:01:22,560
+we have another directory called
+creating dash snapshots. And our
+
+22
+00:01:22,560 --> 00:01:27,210
+file is called staging. Dash
+changes, a txt. So here's the
+
+23
+00:01:27,210 --> 00:01:30,720
+final version of this file
+stored in this commit. Now, what
+
+24
+00:01:30,720 --> 00:01:33,030
+if we don't want to see the
+actual changes or the actual
+
+25
+00:01:33,030 --> 00:01:36,000
+lines of code in this commit, we
+just want to see the files that
+
+26
+00:01:36,000 --> 00:01:39,990
+have been modified in this
+commit. Well, we type Git show
+
+27
+00:01:40,290 --> 00:01:45,900
+head tilda two and then we us
+an option called name dash on
+
+28
+00:01:46,020 --> 00:01:50,850
+y. So over here, we can see al
+the files that have been ad
+
+29
+00:01:50,850 --> 00:01:55,140
+ed, modified or deleted in th
+s commit. With this option, we
+
+30
+00:01:55,290 --> 00:01:58,140
+can only see the name of the fi
+e, so we cannot tell which fi
+
+31
+00:01:58,140 --> 00:02:01,410
+es have been added, modified or
+deleted. To get that in
+
+32
+00:02:01,410 --> 00:02:04,770
+ormation, we have to use a di
+ferent option called name da
+
+33
+00:02:04,950 --> 00:02:10,440
+h status. So now we have the le
+ter M here, which means this fi
+
+34
+00:02:10,440 --> 00:02:11,490
+e has been modified
+

@@ -1,0 +1,224 @@
+1
+00:00:04,019 --> 00:00:07,079
+So we have a GitHub repository
+in the cloud. Now, every team
+
+2
+00:00:07,079 --> 00:00:09,869
+member should clone this
+repository. That means they
+
+3
+00:00:09,869 --> 00:00:12,509
+should take a copy of this
+repository and put it on their
+
+4
+00:00:12,509 --> 00:00:15,689
+machine. Locally, they will work
+with that repository. And when
+
+5
+00:00:15,689 --> 00:00:18,089
+they're ready to share their
+changes, they will push their
+
+6
+00:00:18,089 --> 00:00:21,869
+commits to this central
+repository. Okay. So to clone
+
+7
+00:00:21,869 --> 00:00:25,319
+this repository, we go to the
+code tab, here, we can see the
+
+8
+00:00:25,319 --> 00:00:29,819
+full URL of this repository.
+Let's copy this, we go through
+
+9
+00:00:29,819 --> 00:00:34,889
+terminal and type git clone, and
+paste the URL. When we execute
+
+10
+00:00:34,889 --> 00:00:38,159
+this command, Git is going to
+create a directory by the same
+
+11
+00:00:38,159 --> 00:00:41,309
+name, the same name as our
+repository. If you don't like
+
+12
+00:00:41,309 --> 00:00:44,909
+this name, you can always change
+it. so here we can say, Mars
+
+13
+00:00:45,119 --> 00:00:50,519
+project, take a look. So git
+clone our entire repository. So
+
+14
+00:00:50,549 --> 00:00:53,879
+all the commits in the central
+repository also exist here on my
+
+15
+00:00:53,879 --> 00:00:57,839
+machine. Currently, we have only
+a single commit. Now, let's go
+
+16
+00:00:57,839 --> 00:01:05,309
+to this directory, Mars project,
+and run git log. So currently,
+
+17
+00:01:05,309 --> 00:01:08,669
+we have a single commit. Now
+look at this pointers, we have
+
+18
+00:01:08,669 --> 00:01:12,689
+head pointing to master. And we
+have these two pointers in red
+
+19
+00:01:13,019 --> 00:01:16,379
+origin slash master and origin
+slash head. What are these?
+
+20
+00:01:16,709 --> 00:01:19,919
+Well, when we clone a
+repository, get names the source
+
+21
+00:01:19,919 --> 00:01:23,219
+repository, in this case, the
+one that we have on GitHub, get
+
+22
+00:01:23,219 --> 00:01:26,819
+names that origin. So origin is
+a reference to that repository.
+
+23
+00:01:27,359 --> 00:01:31,439
+Origin slash master tells us
+where is the master branch in
+
+24
+00:01:31,439 --> 00:01:34,589
+that repository, because now we
+have multiple repositories, and
+
+25
+00:01:34,889 --> 00:01:38,849
+the history in each repository
+can evolve independently. So
+
+26
+00:01:38,879 --> 00:01:42,149
+origin slash master tells us
+where is the master branch in
+
+27
+00:01:42,149 --> 00:01:45,329
+our origin repository, that
+technically this is called a
+
+28
+00:01:45,329 --> 00:01:48,539
+remote tracking branch. It's a
+branch, but it's not a kind of
+
+29
+00:01:48,539 --> 00:01:51,329
+branch you are familiar with, so
+we cannot check it out. We
+
+30
+00:01:51,329 --> 00:01:54,989
+cannot commit to it. So if you
+type, git switch, origin slash
+
+31
+00:01:54,989 --> 00:01:59,789
+Master, we get an error. If you
+type git branch, we can see we
+
+32
+00:01:59,789 --> 00:02:04,289
+only have a single branch, the
+master branch. So origin slash
+
+33
+00:02:04,289 --> 00:02:08,729
+master is a remote tracking
+branch. Similarly, origin slash
+
+34
+00:02:08,729 --> 00:02:12,029
+head tells us where's the head
+pointer in our origin
+
+35
+00:02:12,029 --> 00:02:14,939
+repository. Here we have a
+useful command, you should be
+
+36
+00:02:14,939 --> 00:02:19,499
+familiar with Git remote. This
+shows the list of remote
+
+37
+00:02:19,499 --> 00:02:22,739
+repositories. A remote
+repository is a repository that
+
+38
+00:02:22,739 --> 00:02:25,829
+is not on our machine more
+accurately, it's not in the
+
+39
+00:02:25,829 --> 00:02:29,159
+current directory. So currently,
+we have only a single remote
+
+40
+00:02:29,159 --> 00:02:33,029
+repository, that is our origin
+repository. If we type Git
+
+41
+00:02:33,029 --> 00:02:37,409
+remote, dash V for verbose, we
+can see more details about this
+
+42
+00:02:37,409 --> 00:02:42,119
+remote repository. So origin is
+referencing this repository over
+
+43
+00:02:42,119 --> 00:02:46,799
+here github.com slash code with
+Marsh slash Mars that get so
+
+44
+00:02:46,799 --> 00:02:49,469
+this is the URL that Git is
+going to use when we talk to
+
+45
+00:02:49,469 --> 00:02:50,639
+this remote repository.
+

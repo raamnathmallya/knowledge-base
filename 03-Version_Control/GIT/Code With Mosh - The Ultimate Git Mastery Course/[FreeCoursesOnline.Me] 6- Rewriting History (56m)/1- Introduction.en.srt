@@ -1,0 +1,65 @@
+1
+00:00:02,009 --> 00:00:04,739
+One of the great but also
+dangerous features of Git is
+
+2
+00:00:04,739 --> 00:00:08,519
+that it allows us to rewrite our
+history. We can drop or modify
+
+3
+00:00:08,519 --> 00:00:11,849
+commits, we can combine or split
+them. And so that's what we're
+
+4
+00:00:11,849 --> 00:00:14,369
+going to talk about in this
+section. We're going to start
+
+5
+00:00:14,369 --> 00:00:17,849
+off by talking about why and
+when to rewrite history. Then
+
+6
+00:00:17,849 --> 00:00:20,699
+I'm going to show you how to
+undo or revert commits. You
+
+7
+00:00:20,699 --> 00:00:23,189
+already covered these before,
+but we're going to revisit them
+
+8
+00:00:23,189 --> 00:00:26,039
+with a bit more depth. Next,
+we're going to learn how to use
+
+9
+00:00:26,069 --> 00:00:29,399
+interactive rebasing to rewrite
+history. With interactive
+
+10
+00:00:29,399 --> 00:00:33,509
+rebasing, we can modify commits,
+drop them, combine or split them
+
+11
+00:00:33,509 --> 00:00:36,479
+and so on. We're also going to
+talk about recovering, lost
+
+12
+00:00:36,479 --> 00:00:38,489
+commits. There are a lot of fun
+things we're going to talk
+
+13
+00:00:38,489 --> 00:00:40,679
+about. So let's jump in and get
+started.
+

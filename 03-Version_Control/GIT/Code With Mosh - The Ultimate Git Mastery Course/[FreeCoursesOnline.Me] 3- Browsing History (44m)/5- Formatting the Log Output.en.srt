@@ -1,0 +1,283 @@
+1
+00:00:03,990 --> 00:00:06,870
+So here's the default output of
+the log command. Now, if this is
+
+2
+00:00:06,870 --> 00:00:09,330
+not what you want, and you don't
+like the one line option,
+
+3
+00:00:09,360 --> 00:00:12,720
+either, you can easily customize
+the output of the log command.
+
+4
+00:00:12,810 --> 00:00:18,810
+Let me show you how. So we type
+Git log, dash dash, pretty
+
+5
+00:00:19,200 --> 00:00:23,580
+equals format, colon, double
+quotes. I know this is a little
+
+6
+00:00:23,580 --> 00:00:25,860
+bit long. But the good thing is
+you don't have to memorize any
+
+7
+00:00:25,860 --> 00:00:28,470
+of these things, you can always
+go back to the documentation or
+
+8
+00:00:28,530 --> 00:00:31,620
+look at the cheat sheet that
+I've provided for you. So here
+
+9
+00:00:31,620 --> 00:00:35,370
+in double quotes, we can specify
+a format string, this format
+
+10
+00:00:35,370 --> 00:00:38,910
+string can be a combination of
+plaintext, and some placeholders
+
+11
+00:00:38,970 --> 00:00:42,090
+that will get replaced by git to
+display pieces of information
+
+12
+00:00:42,090 --> 00:00:47,070
+about each commit. For example,
+if I type Hello here, for each
+
+13
+00:00:47,070 --> 00:00:50,580
+commit, we see the word hello,
+of course, this is useless. So
+
+14
+00:00:50,580 --> 00:00:53,250
+here, we want to display
+information dynamically. Let's
+
+15
+00:00:53,250 --> 00:00:56,310
+bring up this command one more
+time. And after the word hello,
+
+16
+00:00:56,310 --> 00:01:01,050
+type percent, a n, which is
+short for author name. Now take
+
+17
+00:01:01,050 --> 00:01:04,980
+a look. For each commit, we can
+see the author name, right after
+
+18
+00:01:04,980 --> 00:01:05,640
+the word hello.
+
+19
+00:01:06,180 --> 00:01:07,320
+Let's make this more
+interesting.
+
+20
+00:01:07,770 --> 00:01:09,150
+So I'm going
+
+21
+00:01:09,200 --> 00:01:16,590
+to remove hello and say, person
+am I committed now here we want
+
+22
+00:01:16,590 --> 00:01:21,660
+to display the commit ID or
+hash, so use percent capital H.
+
+23
+00:01:22,680 --> 00:01:26,070
+Now we can see the author name,
+right after that see committed
+
+24
+00:01:26,100 --> 00:01:29,460
+and here's the full hash for
+each commit. This is too
+
+25
+00:01:29,460 --> 00:01:32,280
+verbose. So we can use the
+lowercase h to see the
+
+26
+00:01:32,280 --> 00:01:33,030
+abbreviation
+
+27
+00:01:33,870 --> 00:01:34,530
+like this.
+
+28
+00:01:36,870 --> 00:01:37,500
+That is better.
+
+29
+00:01:38,430 --> 00:01:41,490
+If you look at the documentation
+for the log command, somewhere
+
+30
+00:01:41,490 --> 00:01:43,920
+in the middle of the page, you
+can see the complete list of
+
+31
+00:01:43,920 --> 00:01:47,280
+these placeholders. So we have
+capital H, for displaying the
+
+32
+00:01:47,280 --> 00:01:51,060
+commit hash, or lowercase h for
+displaying the abbreviated
+
+33
+00:01:51,060 --> 00:01:55,200
+commit hash, we have quite a few
+other placeholders. So back to
+
+34
+00:01:55,200 --> 00:01:58,530
+the terminal. Let's take this to
+the next level. So right after
+
+35
+00:01:58,530 --> 00:02:03,300
+the hash we can say on and here
+we can display the date, percent
+
+36
+00:02:03,420 --> 00:02:08,310
+CD, that is commit date. There
+you go. So you can customize the
+
+37
+00:02:08,340 --> 00:02:11,640
+output of the lock command any
+way that suits your needs. Now
+
+38
+00:02:11,640 --> 00:02:14,520
+we can also colorize this
+output. For example, we can
+
+39
+00:02:14,520 --> 00:02:17,130
+display the author name in
+green. Let me show you how to do
+
+40
+00:02:17,130 --> 00:02:21,510
+this. So we bring up the last
+command. Just before the author
+
+41
+00:02:21,510 --> 00:02:25,830
+name, we type percent, capital
+C, and then lowercase green.
+
+42
+00:02:27,720 --> 00:02:30,240
+Look, here we have two
+placeholders. The first
+
+43
+00:02:30,240 --> 00:02:30,780
+placeholder
+
+44
+00:02:30,780 --> 00:02:34,530
+is for changing the color. And
+the second placeholder is for
+
+45
+00:02:34,530 --> 00:02:38,340
+displaying the author name. Now,
+everything comes out in green,
+
+46
+00:02:38,550 --> 00:02:41,370
+because we didn't change the
+color after displaying the
+
+47
+00:02:41,370 --> 00:02:46,170
+author name. So let's bring up
+the last command. Right after
+
+48
+00:02:46,170 --> 00:02:50,100
+the author name, we can type
+percent, capital C, and the
+
+49
+00:02:50,100 --> 00:02:55,440
+lowercase reset. That's much
+better. Similarly, we can use a
+
+50
+00:02:55,440 --> 00:02:59,490
+different color for the commit
+ID, and the date or other pieces
+
+51
+00:02:59,490 --> 00:03:02,370
+of information we have here.
+Once again, back to the
+
+52
+00:03:02,370 --> 00:03:04,950
+documentation for the log
+ommand. Here you can see
+
+53
+00:03:04,950 --> 00:03:07,800
+arious placeholders for
+hanging the color. So we have
+
+54
+00:03:07,800 --> 00:03:13,080
+, red, C, green, C Blue C reset
+and C in parenthesis, we can
+
+55
+00:03:13,080 --> 00:03:16,680
+supply a custom color. Now in
+eality, you're not going to rem
+
+56
+00:03:16,680 --> 00:03:19,590
+mber all these details every ti
+e when I look at the history. So
+
+57
+00:03:19,800 --> 00:03:21,990
+in the next lesson, I'm going to
+show you how to create an al
+
+58
+00:03:22,020 --> 00:03:23,700
+as for this long command.
+

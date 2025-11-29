@@ -1,0 +1,84 @@
+1
+00:00:03,960 --> 00:00:06,930
+So even though this repository
+is public, no one but me can
+
+2
+00:00:06,930 --> 00:00:10,200
+push array to it. Other people
+can see my code and commit
+
+3
+00:00:10,200 --> 00:00:13,230
+history, but they cannot push
+new commits. So if you work in a
+
+4
+00:00:13,230 --> 00:00:15,630
+team, you should add your team
+members here and give them push
+
+5
+00:00:15,630 --> 00:00:19,290
+access. Let me show you how to
+do this. So over here, we have a
+
+6
+00:00:19,290 --> 00:00:21,930
+tab on the right side, called
+settings.
+
+7
+00:00:23,790 --> 00:00:25,230
+Here we go to manage access.
+
+8
+00:00:26,850 --> 00:00:30,750
+Now, look, currently, we don't
+have any collaborators, we can
+
+9
+00:00:30,750 --> 00:00:34,080
+invite our team members by their
+GitHub username, full name or
+
+10
+00:00:34,110 --> 00:00:38,790
+email. So I'm going to look
+myself up. Here's my other
+
+11
+00:00:38,790 --> 00:00:42,150
+GitHub account. But please,
+please, please don't invite me I
+
+12
+00:00:42,150 --> 00:00:44,640
+don't want to get 1000
+notifications. Every time
+
+13
+00:00:44,640 --> 00:00:48,060
+someone watches this course I'm
+just following along. So I'm
+
+14
+00:00:48,060 --> 00:00:52,500
+going to add myself. Now I have
+an invitation that is pending.
+
+15
+00:00:52,560 --> 00:00:55,290
+So I'm going to get an email and
+in that email, there is a link
+
+16
+00:00:55,290 --> 00:00:58,680
+for me to accept or decline the
+invitation and once I accept the
+
+17
+00:00:58,680 --> 00:01:01,740
+invitation, then I'll have push
+access to this repository.
+

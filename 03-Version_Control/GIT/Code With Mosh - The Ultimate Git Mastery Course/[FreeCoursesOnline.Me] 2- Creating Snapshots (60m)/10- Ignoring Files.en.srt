@@ -1,0 +1,493 @@
+1
+00:00:04,019 --> 00:00:06,569
+In almost every project, we
+should tell Git to ignore
+
+2
+00:00:06,569 --> 00:00:09,539
+certain files and directories.
+For example, we don't want to
+
+3
+00:00:09,539 --> 00:00:13,139
+include lock files or binary
+files that get generated as a
+
+4
+00:00:13,139 --> 00:00:16,169
+result of compiling our code.
+And adding those files is just
+
+5
+00:00:16,169 --> 00:00:19,169
+going to increase the size of
+our repository without providing
+
+6
+00:00:19,169 --> 00:00:22,109
+any values. every developer can
+have their own lock files,
+
+7
+00:00:22,139 --> 00:00:25,349
+right? So lock files are not
+something we want to share and
+
+8
+00:00:25,349 --> 00:00:28,949
+synchronize with other team
+members. So for this demo, this
+
+9
+00:00:28,949 --> 00:00:32,009
+creates a directory called logs,
+and then add a log file here.
+
+10
+00:00:32,369 --> 00:00:36,329
+Once again, we can use the echo
+command to write hello to logs
+
+11
+00:00:36,359 --> 00:00:41,729
+slash dev deadlock. Now let's
+run git status. So getting
+
+12
+00:00:41,729 --> 00:00:45,269
+saying that we have an untracked
+directory called logs. But we
+
+13
+00:00:45,269 --> 00:00:47,549
+don't want to add this to the
+staging area, because we don't
+
+14
+00:00:47,549 --> 00:00:51,419
+want Git to track this. So to
+prevent this, we have to create
+
+15
+00:00:51,419 --> 00:00:55,829
+a special file called dot Git
+ignore. So this file has no
+
+16
+00:00:55,829 --> 00:00:59,009
+name. It only has an extension
+and it should be in the root of
+
+17
+00:00:59,009 --> 00:01:05,699
+your project. So let's echo logs
+forward slash to dot, git
+
+18
+00:01:05,699 --> 00:01:09,239
+ignore. Now I'm going to open
+this file using VS code. So
+
+19
+00:01:09,239 --> 00:01:13,799
+code, git ignore. So in this
+file, we have a single entry
+
+20
+00:01:14,069 --> 00:01:17,759
+logs, forward slash, which
+indicates a directory, we can
+
+21
+00:01:17,759 --> 00:01:20,369
+list as many files and
+directories we want here. For
+
+22
+00:01:20,369 --> 00:01:24,389
+example, we can include main dot
+log, we can also use patterns,
+
+23
+00:01:25,109 --> 00:01:28,349
+like all log files, and so on.
+Once we are done, we save the
+
+24
+00:01:28,349 --> 00:01:32,549
+changes back in the terminal.
+Now, if you run git status one
+
+25
+00:01:32,549 --> 00:01:35,729
+more time, it no longer says
+that we have a new directory
+
+26
+00:01:35,729 --> 00:01:38,909
+called locks, because it's
+ignoring it. Instead, it says,
+
+27
+00:01:39,059 --> 00:01:43,589
+we have a new file called dot
+Git ignore. So let's add this
+
+28
+00:01:43,589 --> 00:01:48,659
+file to the staging area and
+then commit our code. So add,
+
+29
+00:01:48,959 --> 00:01:53,399
+git ignore. So this is how we
+can ignore files and directories
+
+30
+00:01:53,399 --> 00:01:56,879
+and get. Just remember, this
+only works if you haven't
+
+31
+00:01:56,879 --> 00:02:00,419
+already included a file or a
+directory in your repository. In
+
+32
+00:02:00,419 --> 00:02:03,089
+other words, if you accidentally
+include a file in your
+
+33
+00:02:03,089 --> 00:02:06,509
+repository, and then later added
+to Git ignore, Git is not gonna
+
+34
+00:02:06,509 --> 00:02:10,259
+ignore that. Let me show you. So
+let's create a new directory
+
+35
+00:02:10,259 --> 00:02:13,709
+called ban. And let's imagine
+that this directory contains our
+
+36
+00:02:13,709 --> 00:02:17,729
+compiled source code. So using
+the echo command, I'm going to
+
+37
+00:02:17,729 --> 00:02:23,219
+write hello to ban slash app
+that bear. Now let's run git
+
+38
+00:02:23,219 --> 00:02:26,669
+status. So we have a new
+directory. Now we want to
+
+39
+00:02:26,669 --> 00:02:31,469
+accidentally commit this to our
+repository. So we add all the
+
+40
+00:02:31,469 --> 00:02:34,289
+changes, and then come in our
+code
+
+41
+00:02:35,550 --> 00:02:36,240
+admin.
+
+42
+00:02:37,980 --> 00:02:40,950
+Here's the problem. Every time
+it compiled our code, Git is
+
+43
+00:02:40,950 --> 00:02:45,420
+going to say that this file, bin
+slash after bin is changed. So
+
+44
+00:02:45,420 --> 00:02:47,790
+we have to stage it and then
+commit it. It doesn't make
+
+45
+00:02:47,790 --> 00:02:50,970
+sense. Why do we have to commit
+this file every time we compile
+
+46
+00:02:50,970 --> 00:02:55,440
+our application? So back to Git
+ignore? Let's add the bin
+
+47
+00:02:55,440 --> 00:02:59,700
+directory here as well. Back in
+the terminal, let's run git
+
+48
+00:02:59,700 --> 00:03:03,720
+status. So we have modified Git
+ignore beautiful, let's date and
+
+49
+00:03:03,720 --> 00:03:08,280
+commit this change. So git add,
+period. And then git commit,
+
+50
+00:03:09,360 --> 00:03:15,660
+include in slash, and Git
+ignore. Now in this case, Git is
+
+51
+00:03:15,660 --> 00:03:18,450
+not going to ignore the changes
+in this directory, because it's
+
+52
+00:03:18,450 --> 00:03:22,770
+already tracking this directory.
+So let's modify our bin file by
+
+53
+00:03:22,770 --> 00:03:30,390
+saying echo hello world to bin
+slash app, that bin get status.
+
+54
+00:03:30,780 --> 00:03:34,470
+Look good is saying that this
+file is modified. This is not
+
+55
+00:03:34,470 --> 00:03:37,650
+what we want. To solve this
+problem, we have to remove this
+
+56
+00:03:37,650 --> 00:03:40,170
+file from the staging area,
+which is what we're proposing
+
+57
+00:03:40,170 --> 00:03:44,820
+for the next commit. So earlier
+we talked about get LS dash
+
+58
+00:03:44,820 --> 00:03:48,660
+files. This command shows the
+files in our staging area. So as
+
+59
+00:03:48,660 --> 00:03:52,350
+you can see, this bin file or
+the bin directory is already in
+
+60
+00:03:52,350 --> 00:03:56,100
+the staging area. We should
+remove it here How? Well earlier
+
+61
+00:03:56,100 --> 00:03:59,850
+we talked about the Git remote
+command. I told you that with
+
+62
+00:03:59,850 --> 00:04:02,760
+this Command, we can remove a
+file or a directory from both
+
+63
+00:04:02,760 --> 00:04:05,880
+the working directory as well as
+the staging area. But in this
+
+64
+00:04:05,880 --> 00:04:08,160
+case, we don't want to remove
+this file from our working
+
+65
+00:04:08,160 --> 00:04:11,190
+directory, because that's how we
+launch our application. So we
+
+66
+00:04:11,190 --> 00:04:14,730
+want to remove this file only
+from the staging area, how well
+
+67
+00:04:15,000 --> 00:04:20,760
+let's add dash H for a quick
+help. So we type Git RM and then
+
+68
+00:04:20,760 --> 00:04:24,840
+we can add zero or more options.
+Here we have this option called
+
+69
+00:04:25,020 --> 00:04:29,130
+dash dash cash. And with this we
+can remove stuff only from the
+
+70
+00:04:29,130 --> 00:04:32,820
+index index is the alternate for
+the staging area. So when you
+
+71
+00:04:32,820 --> 00:04:36,390
+look at Git documentation, most
+of the time you see index. So
+
+72
+00:04:36,390 --> 00:04:39,450
+using this option, we can remove
+the bin directory from the
+
+73
+00:04:39,450 --> 00:04:46,830
+index. So Git RM dash dash
+cached bin for slash. Now we get
+
+74
+00:04:46,830 --> 00:04:51,120
+an error saying not removing bin
+recursively without dash R. So
+
+75
+00:04:51,120 --> 00:04:55,620
+one more time. Let's look at the
+help for this command. We have
+
+76
+00:04:55,680 --> 00:04:59,730
+another option called dash r for
+recursive removal. So we've been
+
+77
+00:04:59,730 --> 00:05:03,420
+removed The entire bin directory
+from the staging area. To do
+
+78
+00:05:03,420 --> 00:05:09,480
+that we type Git RM, dash dash
+cash dash r bin, forward slash.
+
+79
+00:05:10,170 --> 00:05:12,990
+Beautiful. Now this entire
+directory is removed from the
+
+80
+00:05:12,990 --> 00:05:18,630
+staging area. Let's verify. So
+get LS files, our bin directory
+
+81
+00:05:18,630 --> 00:05:23,610
+is no longer here. Now let's run
+git status. Look, we have one
+
+82
+00:05:23,610 --> 00:05:27,450
+change that is ready to be
+committed. This directory is
+
+83
+00:05:27,450 --> 00:05:32,280
+deleted from our staging area.
+So let's commit the change and
+
+84
+00:05:32,730 --> 00:05:38,160
+remove the bin directory that
+was accidentally committed.
+
+85
+00:05:39,690 --> 00:05:43,200
+Okay, from this point forward,
+Git is no longer going to track
+
+86
+00:05:43,200 --> 00:05:49,080
+the changes in this directory.
+So if we echo test to bin slash
+
+87
+00:05:49,260 --> 00:05:52,260
+after bin, you can see our
+working directory is still
+
+88
+00:05:52,260 --> 00:05:55,050
+clean, we don't have any
+changes. We can verify it using
+
+89
+00:05:55,050 --> 00:05:58,440
+git status as well. So this is
+how we can ignore files and
+
+90
+00:05:58,440 --> 00:06:02,460
+directories and Git Now if you
+head over to github.com, slash
+
+91
+00:06:02,460 --> 00:06:06,210
+GitHub slash category, you can
+see various Git ignore templates
+
+92
+00:06:06,210 --> 00:06:09,450
+for different programming
+languages. For example, let's
+
+93
+00:06:09,450 --> 00:06:15,570
+look at the template for Java.
+So for Java projects, it's a
+
+94
+00:06:15,570 --> 00:06:18,990
+great idea to exclude all the
+class files, because these files
+
+95
+00:06:18,990 --> 00:06:21,750
+get automatically generated when
+you compile your code, so
+
+96
+00:06:21,750 --> 00:06:24,750
+there's no need to include them
+in your repository. So here we
+
+97
+00:06:24,750 --> 00:06:27,900
+have various patterns, like all
+the class files, or all the log
+
+98
+00:06:27,900 --> 00:06:31,320
+files, the lines that start with
+a high sign. These are comments
+
+99
+00:06:31,380 --> 00:06:32,700
+so they get ignored by Git
+

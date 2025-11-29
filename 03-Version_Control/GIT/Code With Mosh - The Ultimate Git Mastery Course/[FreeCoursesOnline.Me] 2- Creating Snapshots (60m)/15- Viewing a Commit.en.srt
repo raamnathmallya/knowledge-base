@@ -1,0 +1,325 @@
+1
+00:00:03,960 --> 00:00:06,750
+So viewing the list of commits
+is great. But what if we want to
+
+2
+00:00:06,750 --> 00:00:09,930
+see what exactly we have changed
+in a given commit, that's when
+
+3
+00:00:09,930 --> 00:00:12,690
+we use the show command. For
+example, let's say we want to
+
+4
+00:00:12,690 --> 00:00:16,200
+look at the content of this
+commit over here, we type Git
+
+5
+00:00:16,200 --> 00:00:19,050
+show. Now here, we need to
+specify the commit, we want to
+
+6
+00:00:19,050 --> 00:00:22,050
+inspect, there are two ways to
+reference a commit, we can
+
+7
+00:00:22,050 --> 00:00:26,520
+reference it using its unique
+identifier. So we type d, 601,
+
+8
+00:00:26,520 --> 00:00:30,360
+B, 9 0. Now we don't have to
+type all the seven characters,
+
+9
+00:00:30,510 --> 00:00:33,690
+we can type fewer characters, as
+long as we don't have another
+
+10
+00:00:33,690 --> 00:00:37,020
+commit, whose ID starts with
+these characters. So that's one
+
+11
+00:00:37,020 --> 00:00:39,570
+way to reference a commit. And
+another way is to use the head
+
+12
+00:00:39,570 --> 00:00:42,870
+pointer. So look, head is
+currently in front of the last
+
+13
+00:00:42,870 --> 00:00:46,800
+commit. So to view the last
+commit, we can type head or to
+
+14
+00:00:46,800 --> 00:00:50,370
+look at previous commit, we can
+type a till there, and then
+
+15
+00:00:50,370 --> 00:00:53,790
+specify how many steps we want
+to go back. So if we type one,
+
+16
+00:00:54,180 --> 00:00:57,330
+we start from head which is
+here, we go one step back, and
+
+17
+00:00:57,720 --> 00:01:02,160
+this References This comment
+over here. Let's take a look. So
+
+18
+00:01:02,190 --> 00:01:04,770
+on the top, we can see the
+author and the date of this
+
+19
+00:01:04,770 --> 00:01:08,280
+commit, as well as its message.
+Below that we have a diff of
+
+20
+00:01:08,280 --> 00:01:10,650
+what has changed. So in this
+commit, we have changed a single
+
+21
+00:01:10,650 --> 00:01:15,150
+file that is git ignore. Over
+here, we can see that we removed
+
+22
+00:01:15,150 --> 00:01:18,780
+this line and added these two
+lines. So this is very useful.
+
+23
+00:01:19,260 --> 00:01:21,810
+Now what if we don't want to see
+the differences, we want to see
+
+24
+00:01:21,810 --> 00:01:24,690
+the final version, the exact
+version that is stored in this
+
+25
+00:01:24,690 --> 00:01:29,190
+commit? Well, you bring up the
+last command, get show head till
+
+26
+00:01:29,190 --> 00:01:33,150
+the one. Then we type a colon.
+And here we specified the full
+
+27
+00:01:33,150 --> 00:01:37,830
+path to a file. For example, we
+can say, dot Git ignore or if
+
+28
+00:01:37,830 --> 00:01:42,150
+this file is in a subdirectory.
+We type for example, bin slash
+
+29
+00:01:42,240 --> 00:01:48,030
+app dot bin Okay, now let's look
+at Git ignore. So this is the
+
+30
+00:01:48,030 --> 00:01:51,150
+exact version stored in this
+commit. Now, earlier I told you
+
+31
+00:01:51,150 --> 00:01:54,570
+that each commit contains a
+complete snapshot of our working
+
+32
+00:01:54,570 --> 00:01:59,760
+directory, not just changes, but
+when we run the show command. We
+
+33
+00:01:59,820 --> 00:02:02,760
+only see the differences? What
+is changed? What if you want to
+
+34
+00:02:02,760 --> 00:02:05,760
+see all the files and
+directories in a commit? Well,
+
+35
+00:02:06,210 --> 00:02:08,730
+for that, we're gonna use a
+different command. That's called
+
+36
+00:02:08,880 --> 00:02:13,710
+LS tree. Now why is this called
+a tree, well, it tree is a data
+
+37
+00:02:13,710 --> 00:02:16,770
+structure for representing
+hierarchical information. So in
+
+38
+00:02:16,770 --> 00:02:19,560
+a tree, we can have nodes, and
+these nodes can have children.
+
+39
+00:02:19,860 --> 00:02:23,040
+Now directory on the file system
+can be represented using a tree.
+
+40
+00:02:23,490 --> 00:02:26,310
+Because each directory can have
+children, these children can be
+
+41
+00:02:26,310 --> 00:02:28,740
+files, and other sub
+directories. If you want to
+
+42
+00:02:28,740 --> 00:02:31,050
+learn more about this concept,
+you should take my dat
+
+43
+00:02:31,050 --> 00:02:34,980
+structures course. So LS tree m
+ans list all the files in a t
+
+44
+00:02:34,980 --> 00:02:38,910
+ee. Now here we specified the c
+mments we're interested in had t
+
+45
+00:02:39,150 --> 00:02:42,780
+lde one. And now look, these a
+e all the files and d
+
+46
+00:02:42,780 --> 00:02:46,200
+rectories stored in this c
+mmit. So we have Git ignore. R
+
+47
+00:02:46,620 --> 00:02:49,140
+ght before that we have a u
+ique identifier that is g
+
+48
+00:02:49,140 --> 00:02:52,650
+nerated based on the content o
+this file. So in gits d
+
+49
+00:02:52,650 --> 00:02:56,460
+tabase. We have an object with t
+is ID. Below that we have b
+
+50
+00:02:56,460 --> 00:02:59,790
+en, again, it has a unique i
+entifier that is generated b
+
+51
+00:02:59,790 --> 00:03:02,910
+sed on the content of this d
+rectory, now look at the type o
+
+52
+00:03:02,910 --> 00:03:06,660
+this object, it's a tree. So f
+les are represented using b
+
+53
+00:03:06,660 --> 00:03:10,170
+obs, and directories are r
+presented using trees. All of t
+
+54
+00:03:10,170 --> 00:03:13,410
+ese are objects that are s
+ored in gits database. Using t
+
+55
+00:03:13,410 --> 00:03:15,930
+e show command, we can easily v
+ew an object and gits d
+
+56
+00:03:15,930 --> 00:03:19,890
+tabase. For example, if we t
+pe Git show, and then specify t
+
+57
+00:03:19,980 --> 00:03:22,770
+is unique identifier, or we c
+n type only the few c
+
+58
+00:03:22,770 --> 00:03:27,390
+aracters, as long as there is n
+ambiguity. So here's the c
+
+59
+00:03:27,390 --> 00:03:32,490
+ntent of our Git ignore file. A
+another example, let's look a
+
+60
+00:03:32,490 --> 00:03:37,050
+this object, this tree, the b
+n directory, so git show 6
+
+61
+00:03:37,350 --> 00:03:42,690
+629. Here we have a tree. In t
+is tree, we have this file, a
+
+62
+00:03:42,960 --> 00:03:46,800
+p dot bin. So using the show co
+mand, we can view an object an
+
+63
+00:03:46,800 --> 00:03:50,820
+gets database. These objects ca
+be commits, blobs, which re
+
+64
+00:03:50,820 --> 00:03:54,270
+resent files, and trees which re
+resent directories, as well as
+
+65
+00:03:54,270 --> 00:03:56,460
+tags. We'll talk about tags in
+the future.
+

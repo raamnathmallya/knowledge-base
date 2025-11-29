@@ -1,0 +1,84 @@
+1
+00:00:04,019 --> 00:00:06,989
+Another useful tool in Git is
+the blame tool. With this, we
+
+2
+00:00:06,989 --> 00:00:10,109
+can find the author of a
+particular line. So as part of
+
+3
+00:00:10,109 --> 00:00:12,809
+troubleshooting issues, we may
+wonder who has written that
+
+4
+00:00:12,809 --> 00:00:16,229
+terrible, smelly, disgusting
+line of code. That's where we
+
+5
+00:00:16,229 --> 00:00:19,019
+use the blame tool to basically
+blame them for writing that
+
+6
+00:00:19,019 --> 00:00:23,069
+piece of code. Here's an
+example. Get blame audience dot
+
+7
+00:00:23,069 --> 00:00:27,779
+txt. Now, in front of each line
+of code in this file, we have
+
+8
+00:00:27,779 --> 00:00:30,239
+some extra pieces of
+information, we can see the
+
+9
+00:00:30,239 --> 00:00:33,539
+commit where this line was
+inserted, we can see the
+
+10
+00:00:33,539 --> 00:00:38,339
+author's name and the date and
+time this line was inserted. Now
+
+11
+00:00:38,339 --> 00:00:42,179
+if we want to find the author's
+email, we use the dash E,
+
+12
+00:00:42,569 --> 00:00:47,849
+option, dash E and set up the
+name we have the email, we can
+
+13
+00:00:47,849 --> 00:00:50,819
+also filter by lines. So if you
+have a large file, we don't want
+
+14
+00:00:50,819 --> 00:00:53,999
+to see all these details. Let's
+say we're only interested in the
+
+15
+00:00:53,999 --> 00:01:01,139
+first three lines. So we type
+Git blame dash, capital L, and
+
+16
+00:01:01,139 --> 00:01:03,329
+here we say one, comma three.
+
+17
+00:01:05,010 --> 00:01:06,810
+Now we only see the first three
+lines.
+

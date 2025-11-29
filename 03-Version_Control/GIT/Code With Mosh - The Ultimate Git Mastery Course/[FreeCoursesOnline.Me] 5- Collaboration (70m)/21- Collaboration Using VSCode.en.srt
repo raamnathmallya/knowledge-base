@@ -1,0 +1,190 @@
+1
+00:00:04,050 --> 00:00:06,630
+Let's see how we can work with
+remote repositories here in VS
+
+2
+00:00:06,630 --> 00:00:09,840
+code. Unfortunately, we have
+limited collaboration tools here
+
+3
+00:00:09,870 --> 00:00:12,540
+compared to GitKraken. But let
+me walk you through the tools we
+
+4
+00:00:12,540 --> 00:00:16,530
+have here real quick. So we go
+to GitLens. We talked about this
+
+5
+00:00:16,530 --> 00:00:19,530
+earlier in the course, we can
+right click on our repository.
+
+6
+00:00:19,830 --> 00:00:24,060
+Here, we have fetch, pull, push,
+and push for us. Now one thing
+
+7
+00:00:24,060 --> 00:00:27,060
+that I like about get Labs is
+that it tells us how far we are
+
+8
+00:00:27,060 --> 00:00:30,930
+behind or ahead of a branch in
+origin. So we're currently on
+
+9
+00:00:30,930 --> 00:00:33,900
+the bug fix branch, I'm going to
+create a new commit, and then
+
+10
+00:00:33,930 --> 00:00:36,990
+GitLens. will tell us that we
+are one commit ahead of origin
+
+11
+00:00:36,990 --> 00:00:42,120
+slash bug fix, take a look. So
+I'm going to change our README
+
+12
+00:00:42,120 --> 00:00:47,490
+file and add a new line. Save.
+Now, let's come in and say
+
+13
+00:00:47,520 --> 00:00:54,840
+update README. Good. Now, back
+in GitLens. Take a look.
+
+14
+00:00:55,440 --> 00:00:58,890
+GitLens's saying, we have one
+coming ahead, we can expand this
+
+15
+00:00:58,890 --> 00:01:02,970
+folder and see the commit that
+we have to push to origin. So we
+
+16
+00:01:02,970 --> 00:01:06,330
+can click on this icon and push
+this and here we have three
+
+17
+00:01:06,330 --> 00:01:09,510
+options. We can do a regular
+push, we can do a force push or
+
+18
+00:01:09,510 --> 00:01:12,270
+cancel. And as I told you
+before, you should not really
+
+19
+00:01:12,270 --> 00:01:14,580
+use a force push that often
+unless you have screwed
+
+20
+00:01:14,580 --> 00:01:19,260
+something up. So let's go with a
+regular push. Good. Now the
+
+21
+00:01:19,260 --> 00:01:22,110
+first time you're going to see
+this pop up saying extension
+
+22
+00:01:22,110 --> 00:01:27,630
+GitHub wants to sign in using
+GitHub. So let's allow that. Now
+
+23
+00:01:27,630 --> 00:01:31,080
+we have authorized visual city
+code to access GitHub. Let's go
+
+24
+00:01:31,080 --> 00:01:36,630
+with that. And then confirm.
+Here we have to enter our
+
+25
+00:01:36,630 --> 00:01:43,110
+password. Okay, perfect. Now,
+back to VS code. It's saying
+
+26
+00:01:43,110 --> 00:01:46,770
+that GitHub authentication wants
+to open a UI. That's totally
+
+27
+00:01:46,770 --> 00:01:52,440
+fine. Let's open it. Good. Now
+we have this prompt here saying,
+
+28
+00:01:52,710 --> 00:01:55,710
+Would you like code to
+periodically run git fetch, I
+
+29
+00:01:55,710 --> 00:01:58,440
+find this pretty useful because
+it tells us how far we are
+
+30
+00:01:58,440 --> 00:02:03,390
+behind origin. So let's allow
+that. Good. So we're done with
+
+31
+00:02:03,390 --> 00:02:07,320
+pushing. Now unfortunately, here
+we cannot push tags or branches
+
+32
+00:02:07,380 --> 00:02:10,560
+at this not at the time of
+recording this video. So to push
+
+33
+00:02:10,560 --> 00:02:13,860
+a branch or a tag, we have to go
+back to the terminal. Another
+
+34
+00:02:13,860 --> 00:02:17,760
+tool we have here is remote. so
+here we can see we have two
+
+35
+00:02:17,760 --> 00:02:23,070
+remote, base and origin. We can
+add a new remote or rename or
+
+36
+00:02:23,070 --> 00:02:26,220
+remove an existing one. So these
+are pretty much all the
+
+37
+00:02:26,220 --> 00:02:29,160
+collaboration tools we have in
+GitLens, GitKraken is a lot
+
+38
+00:02:29,160 --> 00:02:30,720
+better. We'll look at that.
+Next.
+

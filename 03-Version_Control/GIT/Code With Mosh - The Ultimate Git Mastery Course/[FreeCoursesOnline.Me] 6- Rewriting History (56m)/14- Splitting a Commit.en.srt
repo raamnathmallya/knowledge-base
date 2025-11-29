@@ -1,0 +1,245 @@
+1
+00:00:03,990 --> 00:00:07,050
+Now look at this coming up here,
+update Terms of Service and
+
+2
+00:00:07,050 --> 00:00:10,740
+Google Map SDK version. These
+are two completely separate
+
+3
+00:00:10,740 --> 00:00:13,860
+changes. Updating the Google Map
+version has nothing to do with
+
+4
+00:00:13,890 --> 00:00:17,310
+updating Terms of Service. So we
+should split this commit into
+
+5
+00:00:17,310 --> 00:00:20,400
+two separate commits. So I'm
+going to grab this commit ID.
+
+6
+00:00:21,690 --> 00:00:26,760
+Now we start interactive
+rebasing from the parent of this
+
+7
+00:00:26,760 --> 00:00:30,570
+commit. All right, here, we're
+going to use the Edit command
+
+8
+00:00:30,570 --> 00:00:34,140
+that you have seen before. So
+when we close this window, it
+
+9
+00:00:34,140 --> 00:00:37,320
+will stop the rebase operation
+at this commit. Here, we have a
+
+10
+00:00:37,320 --> 00:00:41,220
+chance to split this commit into
+two separate commits. So close
+
+11
+00:00:42,000 --> 00:00:46,170
+back into terminal. Look, we
+stopped at this commit, update
+
+12
+00:00:46,170 --> 00:00:49,770
+Terms of Service and Google Map
+version. Now let's look at the
+
+13
+00:00:49,770 --> 00:00:53,520
+log one more time. So head is
+currently pointing to this
+
+14
+00:00:53,520 --> 00:00:57,030
+commit. And we can use the reset
+command to go back to the state
+
+15
+00:00:57,120 --> 00:01:01,470
+before we made this commit. So
+we can type Git reset, dash die
+
+16
+00:01:01,470 --> 00:01:06,150
+soft, had tilda one, or head
+carrot, and with this, we go one
+
+17
+00:01:06,150 --> 00:01:09,480
+step back before we made this
+commit. So our changes are going
+
+18
+00:01:09,480 --> 00:01:12,270
+to be in the staging area. and
+here we can unstaged some of the
+
+19
+00:01:12,270 --> 00:01:16,470
+changes and make a separate
+commit. Alternatively, we can go
+
+20
+00:01:16,470 --> 00:01:19,980
+two steps back. So we're going
+to onstage our changes, but our
+
+21
+00:01:19,980 --> 00:01:22,770
+changes are going to be in the
+working directory, then we can
+
+22
+00:01:22,770 --> 00:01:25,560
+stage and commit them
+separately, I'm going to go with
+
+23
+00:01:25,560 --> 00:01:28,500
+this. Also, as I told you
+before, mixed as the default
+
+24
+00:01:28,500 --> 00:01:32,430
+option, so we can simplify this
+command to get reset head
+
+25
+00:01:32,430 --> 00:01:38,580
+carrot. Okay, now, let's get a
+short status. So we have two
+
+26
+00:01:38,580 --> 00:01:42,990
+kinds of changes. We have some
+updates in package dot txt, and
+
+27
+00:01:42,990 --> 00:01:47,670
+a new on track file. So I'm
+going to stage package dot txt
+
+28
+00:01:48,570 --> 00:01:54,180
+and make a commit. here we can
+say update Google Map SDK
+
+29
+00:01:54,180 --> 00:01:58,470
+version. We can also say from
+1.0 to 2.0.
+
+30
+00:01:59,970 --> 00:02:02,400
+All right, now let's look at the
+history one more time.
+
+31
+00:02:03,780 --> 00:02:07,890
+We have divergence. So we
+started our rebase operation. At
+
+32
+00:02:07,890 --> 00:02:12,330
+this commit, we wanted to replay
+these two commits now git
+
+33
+00:02:12,330 --> 00:02:15,330
+stopped before replaying this
+command. Here, we added a new
+
+34
+00:02:15,330 --> 00:02:19,650
+commit. And that's why we have
+divergence. Now, let's go ahead
+
+35
+00:02:19,680 --> 00:02:22,680
+and make another commit for
+updating the terms of service.
+
+36
+00:02:23,130 --> 00:02:26,400
+So we have a new untracked file,
+we can add it in the staging
+
+37
+00:02:26,400 --> 00:02:31,470
+area, and then make a commit.
+Here we can say update or add
+
+38
+00:02:31,800 --> 00:02:38,010
+Terms of Service. Good. So we
+made another new commit that was
+
+39
+00:02:38,010 --> 00:02:41,160
+not part of the history. Let's
+look at our log one more time.
+
+40
+00:02:42,030 --> 00:02:45,720
+So here are the two new commits
+that we have created. And this
+
+41
+00:02:45,720 --> 00:02:49,080
+is the commit that we're trying
+to edit. Note that in this demo,
+
+42
+00:02:49,110 --> 00:02:51,990
+I didn't use the amend option,
+because I didn't really want to
+
+43
+00:02:51,990 --> 00:02:55,740
+amend or modify this commit. I
+wanted to replace this commit
+
+44
+00:02:55,920 --> 00:02:59,190
+with two separate commits. So
+now when we continue the rebase
+
+45
+00:02:59,190 --> 00:03:05,670
+operation, it will replay the
+next commit. So Git rebase dash
+
+46
+00:03:05,670 --> 00:03:10,140
+dash continue radom with
+rebasing let's pull up the
+
+47
+00:03:10,140 --> 00:03:14,160
+history of one last time. So we
+have two separate commits, one
+
+48
+00:03:14,160 --> 00:03:16,680
+for updating Google Map, the
+other for adding Terms of
+
+49
+00:03:16,680 --> 00:03:19,500
+Service. So this is how we can
+split the commit
+

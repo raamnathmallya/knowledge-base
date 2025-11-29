@@ -1,0 +1,160 @@
+1
+00:00:04,049 --> 00:00:06,959
+In Git, we can easily set up
+aliases for the commands that we
+
+2
+00:00:06,959 --> 00:00:09,899
+use frequently. So we don't have
+to type them in their long form.
+
+3
+00:00:10,079 --> 00:00:14,849
+Let me show you. So we type Git
+config, dash dash global. So
+
+4
+00:00:14,849 --> 00:00:18,179
+this configuration gets applied
+to all of our repositories. Here
+
+5
+00:00:18,179 --> 00:00:20,969
+in the alias section, we're
+going to define a new property.
+
+6
+00:00:21,299 --> 00:00:25,319
+So we type a period. And then we
+type a custom command name, for
+
+7
+00:00:25,319 --> 00:00:29,699
+example, LG. And in short for
+lock. Now whenever we type git
+
+8
+00:00:29,849 --> 00:00:33,719
+LG, we won't get to execute a
+particular get command. So we
+
+9
+00:00:33,719 --> 00:00:38,249
+type that command here, log dash
+dash pretty. Now because we have
+
+10
+00:00:38,249 --> 00:00:41,879
+a space here, we should wrap
+this value with double quotes.
+
+11
+00:00:42,959 --> 00:00:47,579
+Okay, so pretty equals format
+colon, here, we have to use
+
+12
+00:00:47,579 --> 00:00:50,939
+double quotes again, to specify
+a format string. But because we
+
+13
+00:00:50,939 --> 00:00:53,879
+have already surrounded the
+value with double quotes, I'm
+
+14
+00:00:53,879 --> 00:00:57,239
+going to replace the inner
+quotes with single quotes. Okay,
+
+15
+00:00:57,719 --> 00:01:02,789
+so here we can say percent as an
+as an author name, committed
+
+16
+00:01:03,599 --> 00:01:08,969
+percent H, so here's the result.
+Now, let's open up our global
+
+17
+00:01:08,969 --> 00:01:12,239
+configuration file in our
+default editor. So type Git
+
+18
+00:01:12,329 --> 00:01:18,479
+config, dash dash global dash E.
+So here's our Git config file.
+
+19
+00:01:19,079 --> 00:01:23,009
+Now, down here, in the alias
+section, we have the LG command
+
+20
+00:01:23,189 --> 00:01:27,749
+that is bound to log with this
+pretty format. So now if we
+
+21
+00:01:27,749 --> 00:01:33,449
+close this, and type get LG, we
+see the output our custom log
+
+22
+00:01:33,449 --> 00:01:36,719
+ommand. aliases are very
+seful. But in this course, I'm
+
+23
+00:01:36,719 --> 00:01:39,299
+ot going to use them because if
+omeone watches the course from
+
+24
+00:01:39,299 --> 00:01:42,119
+he middle, I don't want them to
+onder what is this custom git
+
+25
+00:01:42,119 --> 00:01:45,689
+ommand that is not documented
+nywhere. Okay. Before we finish
+
+26
+00:01:45,689 --> 00:01:48,329
+his lesson, let me give you
+nother useful example of an
+
+27
+00:01:48,359 --> 00:01:55,379
+lias. So let's define another
+lias called on stage. With this
+
+28
+00:01:55,379 --> 00:01:58,259
+e can easily onstage the
+hanges. So we're going to bind
+
+29
+00:01:58,259 --> 00:02:01,919
+his to the Restore command in g
+t once again, use double q
+
+30
+00:02:01,919 --> 00:02:07,229
+otes. Here we type restore, d
+sh dash staged period. With t
+
+31
+00:02:07,229 --> 00:02:10,469
+is, you're going to restore a
+l the files in the staging a
+
+32
+00:02:10,469 --> 00:02:15,899
+ea. Now we can easily type git o
+stage. As simple as that.
+

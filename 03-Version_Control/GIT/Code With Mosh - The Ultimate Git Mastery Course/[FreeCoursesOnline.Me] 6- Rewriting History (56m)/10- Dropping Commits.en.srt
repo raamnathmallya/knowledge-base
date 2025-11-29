@@ -1,0 +1,354 @@
+1
+00:00:03,990 --> 00:00:07,050
+Now let's see how we can drop a
+commit. So let's say we want to
+
+2
+00:00:07,050 --> 00:00:11,160
+drop this commit over here, our
+first work in progress. But
+
+3
+00:00:11,160 --> 00:00:14,250
+before doing so let's look at
+the content of this commit. So
+
+4
+00:00:14,370 --> 00:00:18,240
+I'm going to copy the commit ID.
+Now, let's run git shell.
+
+5
+00:00:19,200 --> 00:00:23,220
+Alright, and this commit, we
+introduced a new file called
+
+6
+00:00:23,430 --> 00:00:28,230
+terms. txt. And in this file, we
+added this line, draft. Now
+
+7
+00:00:28,230 --> 00:00:31,560
+let's look at the next commit.
+So back to the log.
+
+8
+00:00:32,850 --> 00:00:35,550
+Here's the next commit, update
+Terms of Service.
+
+9
+00:00:35,940 --> 00:00:38,460
+So once again, let's look at the
+content of this commit,
+
+10
+00:00:38,790 --> 00:00:43,320
+git show. Here, we have two
+changes, we have an update in
+
+11
+00:00:43,320 --> 00:00:47,220
+package dot txt. So we're
+updating Google Map version. We
+
+12
+00:00:47,220 --> 00:00:53,010
+also have a change in terms of
+txt. So we replaced draft with
+
+13
+00:00:53,010 --> 00:00:57,150
+completed. Okay. So here's the
+interesting part. Let's pull up
+
+14
+00:00:57,150 --> 00:01:00,900
+the history one more time. What
+do you think will happen? If we
+
+15
+00:01:00,900 --> 00:01:03,810
+try to drop this commit, we're
+going to end up with a conflict.
+
+16
+00:01:04,260 --> 00:01:07,200
+Here's the reason why dropping
+this commit, we're essentially
+
+17
+00:01:07,200 --> 00:01:10,710
+saying, we never introduced this
+change. So we never introduced a
+
+18
+00:01:10,710 --> 00:01:15,450
+file called terms dot txt. Now
+in contrast, the next commit
+
+19
+00:01:15,450 --> 00:01:19,140
+says, Hey, I have an update for
+terms dot txt, so Git will not
+
+20
+00:01:19,140 --> 00:01:22,200
+be able to replay all these
+commits, it's going to get
+
+21
+00:01:22,200 --> 00:01:25,140
+confused. This is where we need
+to jump in, resolve the
+
+22
+00:01:25,140 --> 00:01:27,750
+conflict, and then continue the
+rebase operation.
+
+23
+00:01:28,290 --> 00:01:30,540
+So here's the commit you want to
+drop, we should
+
+24
+00:01:31,360 --> 00:01:34,080
+start our rebase operation with
+the parent of this commit. So we
+
+25
+00:01:34,080 --> 00:01:39,270
+type Git rebase dash I, here's
+the commit, then we type tilda
+
+26
+00:01:39,270 --> 00:01:43,770
+ne, or we can also use a
+arrot, that means the parent.
+
+27
+00:01:44,490 --> 00:01:48,060
+o let's go with that. Here's
+he commit on a drop, we can
+
+28
+00:01:48,060 --> 00:01:52,500
+hange the command from pick to
+rop. Or I can just delete the
+
+29
+00:01:52,500 --> 00:01:57,750
+lide. Now save the changes and
+ack in the terminal. Alright,
+
+30
+00:01:57,750 --> 00:01:58,860
+ook, we have a conflict.
+
+31
+00:01:59,190 --> 00:02:00,150
+But don't get scared.
+
+32
+00:02:00,240 --> 00:02:04,200
+This is much easier than you
+think. So let's run a short
+
+33
+00:02:04,200 --> 00:02:08,940
+status. What's going on here, we
+have some changes in the staging
+
+34
+00:02:08,940 --> 00:02:12,390
+area, we have an update to
+package dot txt, and we have
+
+35
+00:02:12,390 --> 00:02:15,870
+some local changes that are not
+staged. On the one hand, we are
+
+36
+00:02:15,870 --> 00:02:18,990
+trying to delete this file. On
+the other hand, we're trying to
+
+37
+00:02:18,990 --> 00:02:22,620
+update it. So these changes that
+you see here, are actually going
+
+38
+00:02:22,620 --> 00:02:26,100
+to go with the next commit. So
+let's pull up the history one
+
+39
+00:02:26,100 --> 00:02:30,990
+more time. All right, look, the
+head is currently at this
+
+40
+00:02:30,990 --> 00:02:34,680
+location. So it's in the
+detached mode, we told get that
+
+41
+00:02:34,680 --> 00:02:37,500
+we want to drop this commit. So
+Git is trying to undo the
+
+42
+00:02:37,500 --> 00:02:40,620
+changes introduced in this
+commit. In this case, adding
+
+43
+00:02:40,620 --> 00:02:44,280
+this new file terms of txt. Now
+the changes that we have in the
+
+44
+00:02:44,280 --> 00:02:48,300
+staging area are going to go
+when replaying the next commit.
+
+45
+00:02:48,960 --> 00:02:51,480
+And this commit, we have two
+changes, we updated Terms of
+
+46
+00:02:51,480 --> 00:02:54,900
+Service and Google Map SDK
+version. So now we need to
+
+47
+00:02:54,900 --> 00:02:59,550
+resolve the conflict. We type
+Git merge tool, we have two
+
+48
+00:02:59,550 --> 00:03:04,530
+types of changes and deletion
+and a modification. In this
+
+49
+00:03:04,530 --> 00:03:06,780
+case, we're going to go with the
+modification, because we want to
+
+50
+00:03:06,780 --> 00:03:11,550
+keep that file in our history.
+So let's go with that. Now,
+
+51
+00:03:11,790 --> 00:03:15,090
+let's get a short status again.
+So we have two changes in the
+
+52
+00:03:15,090 --> 00:03:18,270
+staging area that are going to
+go with the next commit. So we
+
+53
+00:03:18,270 --> 00:03:21,900
+were ready to continue the
+rebase operation. Git rebase
+
+54
+00:03:21,930 --> 00:03:26,340
+dash dash, continue. Also, as I
+told you before, if you screw
+
+55
+00:03:26,340 --> 00:03:29,550
+something up or if you have a
+nasty merge conflict, you can
+
+56
+00:03:29,580 --> 00:03:33,510
+always abort and go back to the
+state before you started the
+
+57
+00:03:33,510 --> 00:03:34,410
+rebase operation.
+
+58
+00:03:34,590 --> 00:03:37,320
+It's very easy. So let's
+continue rebasing.
+
+59
+00:03:39,180 --> 00:03:41,700
+Alright, here's the message for
+the next commit update Terms of
+
+60
+00:03:41,700 --> 00:03:47,280
+Service and Google Map SDK. So
+let's close that. We're done
+
+61
+00:03:47,280 --> 00:03:50,190
+with rebasing beautiful, let's
+look at our history more time.
+
+62
+00:03:52,110 --> 00:03:54,450
+So our first work in progress
+commit is gone.
+
+63
+00:03:54,870 --> 00:03:58,710
+Now as another example, I want
+to drop these two commits as
+
+64
+00:03:58,710 --> 00:04:02,700
+ell. So these are the last
+hree commits, we can run
+
+65
+00:04:02,789 --> 00:04:04,679
+git rebase dash, I
+
+66
+00:04:05,069 --> 00:04:06,389
+head tilda three.
+
+67
+00:04:07,919 --> 00:04:10,319
+So we said the last three
+commits. Now I'm going to
+
+68
+00:04:10,319 --> 00:04:14,609
+elete these two commits and s
+ve the changes back in the t
+
+69
+00:04:14,609 --> 00:04:18,059
+rminal. In this case, we d
+dn't have any conflicts.
+
+70
+00:04:18,360 --> 00:04:20,490
+So let's look at our history one
+last time.
+
+71
+00:04:21,899 --> 00:04:23,219
+All those ugly commits are gone.
+
+72
+00:04:23,489 --> 00:04:26,009
+Next, I'm going to show you how
+to reward commit messages.
+

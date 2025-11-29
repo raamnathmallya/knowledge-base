@@ -1,0 +1,644 @@
+1
+00:00:04,049 --> 00:00:06,449
+Let's talk about another
+technique for bringing changes
+
+2
+00:00:06,449 --> 00:00:09,629
+from one branch into another. So
+here we have a feature branch
+
+3
+00:00:09,689 --> 00:00:12,959
+with two commits. When we're
+done, we can do a merge. But
+
+4
+00:00:12,959 --> 00:00:16,289
+we'll end up with nonlinear
+history. Now our history here is
+
+5
+00:00:16,289 --> 00:00:19,049
+not too bad, it's not really
+complicated. But as we have more
+
+6
+00:00:19,049 --> 00:00:21,869
+branches, and we're working on
+more complex scenarios, our
+
+7
+00:00:21,869 --> 00:00:24,539
+history might get really hard to
+read. So here, we can use a
+
+8
+00:00:24,539 --> 00:00:28,379
+different technique, I will
+result in linear history. So we
+
+9
+00:00:28,379 --> 00:00:32,429
+go back to the state. Before we
+do a merge, look at the base of
+
+10
+00:00:32,429 --> 00:00:35,219
+our feature branch. This is
+where we started the feature
+
+11
+00:00:35,219 --> 00:00:38,549
+branch right. Now using the
+rebase command, we can change
+
+12
+00:00:38,549 --> 00:00:41,939
+the base of our feature branch,
+so we can base it on the latest
+
+13
+00:00:41,939 --> 00:00:45,389
+commit on master. What's the
+point of this? Well, look at the
+
+14
+00:00:45,389 --> 00:00:48,959
+shape of our history. We have a
+direct linear path from feature
+
+15
+00:00:48,959 --> 00:00:52,049
+to master. So if you want to
+merge the feature branch into
+
+16
+00:00:52,049 --> 00:00:56,189
+Master, we can do a fast forward
+merge, and now we have linear
+
+17
+00:00:56,189 --> 00:00:59,549
+history. This is called
+rebasing. Now, while it sounds
+
+18
+00:00:59,549 --> 00:01:02,369
+like a great idea, you need to
+be cautious with rebasing
+
+19
+00:01:02,789 --> 00:01:05,729
+because rebasing rewrites
+history, and that means you
+
+20
+00:01:05,729 --> 00:01:09,059
+should use rebasing only for
+branches or commits that are
+
+21
+00:01:09,059 --> 00:01:12,359
+local in your repository. If you
+have shared this commits with
+
+22
+00:01:12,389 --> 00:01:14,819
+other people in your team, if
+you have pushed or changes, you
+
+23
+00:01:14,819 --> 00:01:16,979
+should not use rebasing.
+Otherwise, you're going to make
+
+24
+00:01:16,979 --> 00:01:21,689
+a big mess. Let me explain why
+rebasing rewrites history. So
+
+25
+00:01:21,779 --> 00:01:24,659
+here's the state before
+rebasing, when you rebase, the
+
+26
+00:01:24,659 --> 00:01:28,349
+feature branch, Git is not going
+to change the base or the parent
+
+27
+00:01:28,349 --> 00:01:32,309
+of f1, because commits and Git
+are immutable, they cannot be
+
+28
+00:01:32,309 --> 00:01:35,669
+changed. So Git is going to look
+at this commit is going to
+
+29
+00:01:35,699 --> 00:01:39,659
+create a new commit that looks
+like f1 and f2, and apply them
+
+30
+00:01:39,659 --> 00:01:42,989
+on top of Master, then it's
+going to move the feature
+
+31
+00:01:42,989 --> 00:01:47,159
+pointer over here. Now look at
+f2, we don't have any branches
+
+32
+00:01:47,159 --> 00:01:49,919
+or any other commits pointing to
+it. So at some point in the
+
+33
+00:01:49,919 --> 00:01:53,249
+future, Git is going to remove
+this commit. So we are
+
+34
+00:01:53,279 --> 00:01:55,979
+ssentially rewriting history,
+hese two commits that we have
+
+35
+00:01:55,979 --> 00:01:58,859
+ere, they're not the same
+ommit as before. So if you have
+
+36
+00:01:58,859 --> 00:02:01,559
+hared f one and F two with
+thers, and other people have
+
+37
+00:02:01,559 --> 00:02:05,879
+reated a new commit on top of
+2. Now, after rebasing, their
+
+38
+00:02:05,879 --> 00:02:09,089
+istory is going to get screwed.
+o let's create a new feature
+
+39
+00:02:09,089 --> 00:02:13,859
+ranch called shopping cart, git
+witch dicey feature slash
+
+40
+00:02:14,159 --> 00:02:18,179
+hopping cart. Now let's make a
+ommit and this branch. So I'm
+
+41
+00:02:18,179 --> 00:02:23,159
+oing to echo hello to cart, the
+xt, the change doesn't really
+
+42
+00:02:23,159 --> 00:02:27,239
+atter. Now, let's add this to
+he staging area, and then make
+
+43
+00:02:27,239 --> 00:02:32,009
+commit. Here, we'll say add
+art, a txt. Now let's look at
+
+44
+00:02:32,009 --> 00:02:38,699
+ur history. So our shopping
+art branch is one commit ahead
+
+45
+00:02:38,699 --> 00:02:42,269
+f Master, right. So if we do a
+erge, git will do a Fast
+
+46
+00:02:42,269 --> 00:02:45,449
+orward march. Now let's go back
+o the master branch and make a
+
+47
+00:02:45,449 --> 00:02:49,139
+ew commit. With this, our
+ranches are going to divert. So
+
+48
+00:02:49,139 --> 00:02:53,429
+e should either do a three way
+erge or rebase. So let's go
+
+49
+00:02:53,429 --> 00:02:58,889
+ack to master. Here, we're
+oing to echo hello to Table of
+
+50
+00:02:58,889 --> 00:03:03,599
+ontents. txt. Now we're going
+o commit the changes and say
+
+51
+00:03:03,629 --> 00:03:07,319
+pdate table of contents. Good.
+et's pull up the history one
+
+52
+00:03:07,319 --> 00:03:12,839
+ore time. Look, our branches
+ave diverged. This is the base
+
+53
+00:03:12,839 --> 00:03:15,629
+f this branches. This is where
+e created the shopping cart
+
+54
+00:03:15,629 --> 00:03:18,839
+ranch. Now in our shopping cart
+ranch, we have this comment
+
+55
+00:03:18,839 --> 00:03:22,589
+ver here. And in Master, we
+ave another commit. So our
+
+56
+00:03:22,589 --> 00:03:25,199
+ranches have diverged. Now the
+umber of commits doesn't
+
+57
+00:03:25,199 --> 00:03:27,569
+atter, we could have 10s of
+ommits in each of these
+
+58
+00:03:27,569 --> 00:03:31,019
+ranches. What we want to do now
+s rebase, the shopping cart
+
+59
+00:03:31,019 --> 00:03:34,799
+ranch. So we want to change its
+ase from this commit over here
+
+60
+00:03:35,279 --> 00:03:39,629
+o the last commit on master. So
+irst, we have to switch to our
+
+61
+00:03:39,629 --> 00:03:46,439
+arget branch, git switch,
+eature slash shopping cart. Now
+
+62
+00:03:46,469 --> 00:03:50,999
+e're going to run git rebase.
+aster, we're telling get to
+
+63
+00:03:50,999 --> 00:03:54,269
+hange the base of this branch
+o the last commit on master.
+
+64
+00:03:55,559 --> 00:03:58,589
+eautiful. In this case,
+ebasing was done successfully.
+
+65
+00:03:58,769 --> 00:04:01,229
+hat is not the case in the real
+orld. Most of the time, when
+
+66
+00:04:01,229 --> 00:04:04,109
+ou rebase, you end up with
+onflicts. We'll talk about it
+
+67
+00:04:04,109 --> 00:04:06,719
+n a moment. But first, let's
+ull up our history one more
+
+68
+00:04:06,719 --> 00:04:12,329
+ime. So git log, alright, look,
+ur branches have no longer
+
+69
+00:04:12,329 --> 00:04:16,289
+iverse, we have a direct linear
+ath from our feature branch,
+
+70
+00:04:16,889 --> 00:04:20,579
+nto master. So now if we decide
+o do a merge, git will do a
+
+71
+00:04:20,579 --> 00:04:25,409
+ast forward merge to bring the
+aster pointer upward. So let's
+
+72
+00:04:25,409 --> 00:04:31,109
+witch to master and we run git
+erge feature slash shopping
+
+73
+00:04:31,109 --> 00:04:35,909
+art. Look, we have a fast
+orward match. Now let's pull up
+
+74
+00:04:35,909 --> 00:04:36,929
+he history one more time.
+
+75
+00:04:39,930 --> 00:04:43,650
+So both our branches are
+pointing to the same commit over
+
+76
+00:04:43,650 --> 00:04:48,060
+here, and we have a simple,
+clean, linear history. Now what
+
+77
+00:04:48,060 --> 00:04:50,910
+if there's a conflict? Well,
+let's have a look. So currently,
+
+78
+00:04:50,910 --> 00:04:55,770
+we're on master. That's Aiko,
+ocean, to table of content, that
+
+79
+00:04:55,770 --> 00:04:59,220
+txt, that change doesn't matter.
+I just want to create a conflict
+
+80
+00:04:59,220 --> 00:05:04,530
+and change Now, let's commit the
+change and say update table of
+
+81
+00:05:04,530 --> 00:05:08,370
+content. txt. Go ahead. Now
+let's switch to our feature
+
+82
+00:05:08,370 --> 00:05:11,220
+branch and make a conflict and
+change. So we're going to write
+
+83
+00:05:11,220 --> 00:05:15,990
+something else to Table of
+Contents. txt. So Git switch,
+
+84
+00:05:16,290 --> 00:05:21,630
+feature slash shopping cart. Now
+we Echo, let's say, mountain to
+
+85
+00:05:21,630 --> 00:05:26,070
+table of content dot txt, and
+then make a commit, right
+
+86
+00:05:26,070 --> 00:05:30,810
+mountain to table of content.
+Now our branches have diverged,
+
+87
+00:05:30,960 --> 00:05:34,050
+and we have a conflicting
+change. Let's verify this. So
+
+88
+00:05:34,620 --> 00:05:39,870
+git log, look, our branches have
+diverged one more time, we have
+
+89
+00:05:39,870 --> 00:05:43,500
+this commit in our shopping cart
+branch, and this other commit in
+
+90
+00:05:43,500 --> 00:05:48,570
+master. And here's the base of
+our feature branch. So when we
+
+91
+00:05:48,570 --> 00:05:52,080
+try to rebase it on top of this
+commit, we're going to see a
+
+92
+00:05:52,080 --> 00:05:58,470
+conflict, take a look. So we go
+to our feature branch, and then
+
+93
+00:05:58,470 --> 00:06:03,690
+run git rebase. Master. Look, we
+have a conflict and this file
+
+94
+00:06:03,900 --> 00:06:07,680
+table of contents. txt. So here,
+we should resolve the conflict.
+
+95
+00:06:07,920 --> 00:06:11,730
+Exactly like before, we're going
+to launch our merge tool, so we
+
+96
+00:06:11,730 --> 00:06:17,790
+say Git merge tool. So here, we
+need to decide how we're going
+
+97
+00:06:17,790 --> 00:06:20,970
+to combine the changes. For this
+demo, it doesn't really matter,
+
+98
+00:06:21,120 --> 00:06:24,270
+I'm going to pick one of those
+changes. Now we save the
+
+99
+00:06:24,270 --> 00:06:28,650
+changes, and close the format.
+So as you can see, in the
+
+100
+00:06:28,650 --> 00:06:32,490
+terminal window, we are in the
+middle of rebasing, our shopping
+
+101
+00:06:32,490 --> 00:06:38,190
+cart branch. So next, we type
+Git rebase dash dash continue to
+
+102
+00:06:38,190 --> 00:06:41,790
+tell Git to apply the next
+commit on top of master. If the
+
+103
+00:06:41,790 --> 00:06:44,490
+next commit also has a conflict,
+again, we're going to end up
+
+104
+00:06:44,490 --> 00:06:47,490
+with the same state. So we have
+to resolve the conflict and then
+
+105
+00:06:47,490 --> 00:06:51,240
+tell Git to continue rebasing.
+Alternatively, we can use
+
+106
+00:06:51,330 --> 00:06:55,290
+another option to skip, this
+will skip the current commit,
+
+107
+00:06:55,440 --> 00:06:58,380
+and move on to the next commit.
+So if we look at the conflict,
+
+108
+00:06:58,410 --> 00:07:01,140
+and we realized that we don't
+actually care about this commit,
+
+109
+00:07:01,170 --> 00:07:05,280
+we can skip it. We have another
+option here, and that is abort.
+
+110
+00:07:05,610 --> 00:07:08,370
+This is useful in situations
+where we have so many commits to
+
+111
+00:07:08,370 --> 00:07:11,490
+apply on top of Master, perhaps
+our branches have diverged for a
+
+112
+00:07:11,490 --> 00:07:14,490
+long time. In that case, if we
+don't have enough time for
+
+113
+00:07:14,520 --> 00:07:17,250
+resolving all these conflicts
+and going through a complete
+
+114
+00:07:17,250 --> 00:07:21,570
+rebase we can afford the rebase
+here. So this will take us back
+
+115
+00:07:21,570 --> 00:07:25,590
+to the previous state before we
+started rebasing. One last thing
+
+116
+00:07:25,590 --> 00:07:28,320
+before we finish this lesson,
+look at this question mark over
+
+117
+00:07:28,320 --> 00:07:32,250
+here. That means we have new
+untracked files. Let's verify so
+
+118
+00:07:32,250 --> 00:07:37,800
+get status. Look. You have table
+of content dot txt, that origin
+
+119
+00:07:38,340 --> 00:07:41,400
+What is this? Well, our merge
+tool in this case p for merge
+
+120
+00:07:41,640 --> 00:07:45,540
+automatically created this file
+as a backup. So let's look at
+
+121
+00:07:45,540 --> 00:07:49,650
+the content of this file. So
+this is our table of content
+
+122
+00:07:49,650 --> 00:07:52,590
+file. Before we resolve the
+conflict, we don't want this
+
+123
+00:07:52,590 --> 00:07:55,830
+file in our repository. So we
+can remove it using the rm
+
+124
+00:07:55,830 --> 00:07:59,640
+command or get clean, assuming
+that we don't have other
+
+125
+00:07:59,730 --> 00:08:03,690
+untracked files that we want to
+add to our repository. Now our
+
+126
+00:08:03,690 --> 00:08:06,330
+working directory is clean. We
+don't have any new untracked
+
+127
+00:08:06,330 --> 00:08:09,750
+files, but for the future to
+prevent our merge tool from
+
+128
+00:08:09,750 --> 00:08:13,470
+automatically generating thes
+files. We can set Git config
+
+129
+00:08:13,860 --> 00:08:20,700
+dash dash global merge tool do
+keep backup to fals
+

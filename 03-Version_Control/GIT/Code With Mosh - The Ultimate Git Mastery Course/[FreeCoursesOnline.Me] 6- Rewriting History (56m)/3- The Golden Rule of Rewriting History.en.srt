@@ -1,0 +1,319 @@
+1
+00:00:04,019 --> 00:00:07,229
+So I told you about the benefits
+of rewriting history. But before
+
+2
+00:00:07,229 --> 00:00:10,409
+doing so, you should remember
+the golden rule of rewriting
+
+3
+00:00:10,409 --> 00:00:14,639
+history. Don't rewrite public
+history. This basically means if
+
+4
+00:00:14,639 --> 00:00:17,249
+you have pushed your commits to
+share your work with others,
+
+5
+00:00:17,519 --> 00:00:20,099
+those commits are considered
+public, and you should not
+
+6
+00:00:20,099 --> 00:00:24,359
+modify them. Let me explain why.
+Let's say our local and remote
+
+7
+00:00:24,359 --> 00:00:26,789
+repositories are in the same
+state, they have the same
+
+8
+00:00:26,789 --> 00:00:29,969
+history. And now we want to
+modify B. Here's what you need
+
+9
+00:00:29,969 --> 00:00:33,599
+to understand. Commits and Git
+are immutable, which means once
+
+10
+00:00:33,599 --> 00:00:37,109
+we create them, they cannot be
+changed. So if you try to modify
+
+11
+00:00:37,109 --> 00:00:40,379
+B git, we'll create a new
+command, let's call it B star.
+
+12
+00:00:40,739 --> 00:00:43,559
+So B is going to stay in gets
+database, in case we screw
+
+13
+00:00:43,559 --> 00:00:46,829
+something up, and we want to
+recover it later. Now let's say
+
+14
+00:00:46,829 --> 00:00:49,859
+we want to do a push to share
+our change with others. What do
+
+15
+00:00:49,859 --> 00:00:52,859
+you think is going to happen?
+Git is going to reject our push.
+
+16
+00:00:53,099 --> 00:00:55,889
+Can you tell why? At this level,
+you should be able to answer
+
+17
+00:00:55,889 --> 00:00:59,189
+this question. If not pause the
+video, think about it for a few
+
+18
+00:00:59,189 --> 00:01:03,119
+seconds. Here's the reason. Look
+at the shape of our history. On
+
+19
+00:01:03,119 --> 00:01:06,479
+the left side, our master
+branches have diverged. And this
+
+20
+00:01:06,479 --> 00:01:09,869
+is exactly the same scenario
+where we try to push after
+
+21
+00:01:09,869 --> 00:01:12,479
+someone else has pushed the
+origin. So there are some
+
+22
+00:01:12,479 --> 00:01:16,319
+changes in origin slash master
+that don't exist in our master.
+
+23
+00:01:16,739 --> 00:01:20,099
+In this case, first we have to
+merge origin slash master into
+
+24
+00:01:20,099 --> 00:01:25,229
+our local master. And then we
+can do a push. Now, our local
+
+25
+00:01:25,229 --> 00:01:28,529
+and remote repositories have the
+same history. But look at what
+
+26
+00:01:28,529 --> 00:01:31,859
+we have done here, we have
+created this nonlinear noisy
+
+27
+00:01:31,859 --> 00:01:35,369
+history, these two commits, B
+and M are completely
+
+28
+00:01:35,429 --> 00:01:39,089
+unnecessary. We wanted to modify
+B and replace it with something
+
+29
+00:01:39,089 --> 00:01:41,759
+better. So why should we keep it
+in history and shared with
+
+30
+00:01:41,759 --> 00:01:46,169
+others. So now let's look at an
+alternative solution. We're back
+
+31
+00:01:46,169 --> 00:01:49,709
+in the previous state before we
+did a push. So if we do a push,
+
+32
+00:01:49,859 --> 00:01:52,769
+our push is going to reject
+that. Here, we can use the Force
+
+33
+00:01:52,769 --> 00:01:57,149
+option and force Git to override
+what is an origin with what we
+
+34
+00:01:57,149 --> 00:02:02,849
+have locally. So in origin, Git
+is going to drop B and replace
+
+35
+00:02:02,849 --> 00:02:06,779
+it with B star. And then in our
+local repository, Git is going
+
+36
+00:02:06,779 --> 00:02:11,159
+to attach origin slash master to
+B star. Now we have a simple
+
+37
+00:02:11,159 --> 00:02:14,129
+linear history. So you might
+think this is great, we should
+
+38
+00:02:14,129 --> 00:02:17,369
+use the Force option all the
+time. That is not true. This
+
+39
+00:02:17,369 --> 00:02:21,119
+forget about our local
+repository for a second. Imagine
+
+40
+00:02:21,119 --> 00:02:25,019
+here is John's repository before
+we did a push, so john is not
+
+41
+00:02:25,019 --> 00:02:29,579
+aware of our new commit B star
+in his repository, he only has A
+
+42
+00:02:29,579 --> 00:02:33,899
+and B. So he adds a new commit
+on top of B. And then he tries
+
+43
+00:02:33,899 --> 00:02:36,959
+to do a push, what do you think
+is going to happen? You know,
+
+44
+00:02:36,959 --> 00:02:40,229
+the answer, John's push is going
+to get rejected. Because once
+
+45
+00:02:40,229 --> 00:02:43,889
+again, his master branch is
+diverged from origin slash
+
+46
+00:02:43,889 --> 00:02:47,189
+master. So there are some
+changes in origin, in this case,
+
+47
+00:02:47,189 --> 00:02:51,719
+B star that John doesn't have in
+his local repository. So first,
+
+48
+00:02:51,719 --> 00:02:56,339
+he has to do a pool to bring in
+B star and then merge it with
+
+49
+00:02:56,339 --> 00:02:59,849
+his master. Now he can do a push
+to share his work with others.
+
+50
+00:03:00,359 --> 00:03:03,869
+But look, once again, we have
+created this noisy nonlinear
+
+51
+00:03:03,869 --> 00:03:07,619
+history. So remember, the golden
+rule, don't rewrite public
+
+52
+00:03:07,619 --> 00:03:11,129
+history. Once you push your
+work, it's public, it's final.
+
+53
+00:03:11,429 --> 00:03:14,099
+So you should not change it
+unless you have a strong reason
+
+54
+00:03:14,099 --> 00:03:17,039
+for doing so. rewriting the
+private history in your local
+
+55
+00:03:17,039 --> 00:03:19,979
+repository is perfectly fine.
+And in fact, it's actually a
+
+56
+00:03:19,979 --> 00:03:22,949
+good practice. So you should
+always clean up your work or
+
+57
+00:03:22,949 --> 00:03:25,559
+your private history before
+sharing it with the rest of the
+
+58
+00:03:25,559 --> 00:03:29,189
+world. So back to our
+repositories. Currently, both
+
+59
+00:03:29,219 --> 00:03:31,499
+our local and remote
+repositories are in the same
+
+60
+00:03:31,499 --> 00:03:35,309
+state. Now let's say we add a
+new commit on top of being this
+
+61
+00:03:35,309 --> 00:03:38,279
+new commit is private, because
+we haven't shared it with anyone
+
+62
+00:03:38,279 --> 00:03:41,129
+else. We haven't pushed it yet.
+So we can change the commit
+
+63
+00:03:41,129 --> 00:03:44,579
+message or the content. We can
+even drop this commit. No one is
+
+64
+00:03:44,579 --> 00:03:45,449
+going to get affected
+

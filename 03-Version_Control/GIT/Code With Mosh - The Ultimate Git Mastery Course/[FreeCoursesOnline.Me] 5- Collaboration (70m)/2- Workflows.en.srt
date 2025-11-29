@@ -1,0 +1,350 @@
+1
+00:00:03,990 --> 00:00:06,450
+So at the beginning of the
+course, I told you that version
+
+2
+00:00:06,450 --> 00:00:09,960
+control systems fall into two
+groups, centralized and
+
+3
+00:00:09,960 --> 00:00:13,470
+distributed. In centralized
+systems like subversion, you
+
+4
+00:00:13,470 --> 00:00:17,280
+have a single repository that is
+shared by all team members. The
+
+5
+00:00:17,280 --> 00:00:20,400
+problem with this system is that
+everyone is dependent on this
+
+6
+00:00:20,400 --> 00:00:23,280
+central repository. If the
+server that is hosting this
+
+7
+00:00:23,280 --> 00:00:26,820
+repository goes offline, no one
+can commit or view the project
+
+8
+00:00:26,820 --> 00:00:30,810
+history. In distributed systems
+like git, every developer has a
+
+9
+00:00:30,810 --> 00:00:33,690
+repository on their machine. So
+they're not dependent on a
+
+10
+00:00:33,690 --> 00:00:36,480
+central server, they can work
+offline with their local
+
+11
+00:00:36,480 --> 00:00:39,660
+repository. But how can we
+collaborate with this model?
+
+12
+00:00:39,930 --> 00:00:42,720
+Well, we can synchronize our
+work directly with each other.
+
+13
+00:00:43,110 --> 00:00:46,710
+But this is often too complex
+and error prone. Instead, we can
+
+14
+00:00:46,710 --> 00:00:50,160
+use what we call the centralized
+workflow. So everyone has their
+
+15
+00:00:50,160 --> 00:00:53,490
+local repository, but there's
+also a central repository they
+
+16
+00:00:53,490 --> 00:00:56,700
+used to synchronize their work.
+This is the workflow used in
+
+17
+00:00:56,700 --> 00:01:00,030
+most private teams and closed
+source projects. But you might
+
+18
+00:01:00,030 --> 00:01:03,300
+be asking, Hey, Mosh, what is
+the point of this workflow? How
+
+19
+00:01:03,300 --> 00:01:06,090
+is it better than a centralized
+version control system like
+
+20
+00:01:06,090 --> 00:01:09,330
+subversion? Well, with this
+model, we don't have a single
+
+21
+00:01:09,330 --> 00:01:12,450
+point of failure, we can work
+with our local repository. And
+
+22
+00:01:12,450 --> 00:01:14,940
+if a central repository is
+unavailable for a period of
+
+23
+00:01:14,940 --> 00:01:18,780
+time, we can synchronize our
+work directly. Now, where should
+
+24
+00:01:18,780 --> 00:01:21,930
+we put the central repository,
+so it's accessible to all team
+
+25
+00:01:21,930 --> 00:01:24,510
+members? Well, some
+organizations put this
+
+26
+00:01:24,510 --> 00:01:28,110
+repository on a server in their
+private network. Others prefer
+
+27
+00:01:28,110 --> 00:01:31,920
+to use Git hosting services like
+GitHub, git lab, Gitbucket, and
+
+28
+00:01:31,920 --> 00:01:35,880
+so on. With all these services,
+we can set up a repository as a
+
+29
+00:01:35,880 --> 00:01:39,390
+private repository. So it's only
+accessible to our team and no
+
+30
+00:01:39,390 --> 00:01:43,530
+one else. So let's walk through
+a real scenario. John and Amy
+
+31
+00:01:43,530 --> 00:01:46,230
+want to collaborate on a
+project. They start off by
+
+32
+00:01:46,230 --> 00:01:50,400
+cloning or taking a copy of this
+central repository. And now they
+
+33
+00:01:50,400 --> 00:01:53,640
+both have a local repository on
+their machine. So John starts
+
+34
+00:01:53,640 --> 00:01:57,270
+working and makes a few commits,
+me could be making other commits
+
+35
+00:01:57,270 --> 00:02:00,390
+In the meantime, but let's not
+worry about that yet. Now, at
+
+36
+00:02:00,390 --> 00:02:04,110
+some point, john needs to share
+his work with Amy. To do that,
+
+37
+00:02:04,170 --> 00:02:07,200
+he uses the push command to send
+his commits to the central
+
+38
+00:02:07,200 --> 00:02:10,500
+repository. The central
+repository is now in sync with
+
+39
+00:02:10,500 --> 00:02:14,790
+John's work. Now, Amy can use
+the pull command to bring in
+
+40
+00:02:14,790 --> 00:02:18,390
+John's work into her local
+repository. If John's work
+
+41
+00:02:18,390 --> 00:02:21,960
+conflicts with Amy's work, she
+has to resolve the conflicts and
+
+42
+00:02:21,960 --> 00:02:25,170
+then push our changes to the
+central repository. So this is
+
+43
+00:02:25,170 --> 00:02:28,170
+the centralized workflow, which
+is used in most private teams,
+
+44
+00:02:28,530 --> 00:02:31,380
+everyone in the team has pushed
+access to right to the central
+
+45
+00:02:31,380 --> 00:02:34,650
+repository, we have another
+workflow for open source
+
+46
+00:02:34,650 --> 00:02:38,250
+projects called integration
+manager workflow. In an open
+
+47
+00:02:38,250 --> 00:02:41,220
+source project, we have one or
+more maintainers, and many
+
+48
+00:02:41,220 --> 00:02:43,830
+contributors. The problem is
+that we don't know this
+
+49
+00:02:43,830 --> 00:02:47,040
+contributors. So we cannot trust
+them enough to give them push a
+
+50
+00:02:47,040 --> 00:02:50,160
+write access to our repository,
+only the maintainers of the
+
+51
+00:02:50,160 --> 00:02:53,640
+project have pushed access to
+the project repository. So if
+
+52
+00:02:53,640 --> 00:02:56,580
+you want to contribute, first,
+we should fork the project
+
+53
+00:02:56,580 --> 00:03:00,540
+repository to get a copy of this
+repository in the cloud. Next,
+
+54
+00:03:00,540 --> 00:03:04,410
+we clone this repository to get
+a local copy on our machine, we
+
+55
+00:03:04,410 --> 00:03:07,170
+make a few commits, and when
+we're ready to share our work,
+
+56
+00:03:07,440 --> 00:03:11,490
+we do a push to send our commits
+to our forked repository. Next,
+
+57
+00:03:11,490 --> 00:03:14,490
+we send a pull request to the
+maintainer of the project. This
+
+58
+00:03:14,490 --> 00:03:17,130
+is a feature built into
+platforms like GitHub, I'll show
+
+59
+00:03:17,130 --> 00:03:20,340
+you how to do that later in this
+section. So the maintainer of
+
+60
+00:03:20,340 --> 00:03:23,340
+the project gets notified, then
+they can pull in our changes,
+
+61
+00:03:23,640 --> 00:03:26,790
+review them. And if they're
+happy, they can merge our work
+
+62
+00:03:26,790 --> 00:03:29,910
+into their local repository, and
+then push the merge changes to
+
+63
+00:03:29,910 --> 00:03:33,270
+the official repository. This is
+called the integration manager
+
+64
+00:03:33,270 --> 00:03:36,480
+workflow. Because someone is in
+charge of integrating changes,
+
+65
+00:03:36,780 --> 00:03:40,230
+we cannot push directly to this
+official repository. That's why
+
+66
+00:03:40,230 --> 00:03:43,590
+we have to fork it to get a copy
+in the cloud. Because this
+
+67
+00:03:43,590 --> 00:03:46,950
+repository is in the cloud. It's
+also visible to the maintainer
+
+68
+00:03:46,950 --> 00:03:49,680
+of the project, and that's how
+they can pull in our changes.
+
+69
+00:03:50,100 --> 00:03:52,530
+Alright, that's it for
+workflows. Next, we're going to
+
+70
+00:03:52,530 --> 00:03:55,620
+create a GitHub repository to
+see this workflows in action.
+

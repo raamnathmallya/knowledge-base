@@ -1,0 +1,175 @@
+1
+00:00:03,990 --> 00:00:06,660
+Now we have a snapshot in the
+staging area ready to be
+
+2
+00:00:06,660 --> 00:00:09,960
+permanently stored in our
+repository. So we type git
+
+3
+00:00:10,230 --> 00:00:15,270
+commit, dash M for message. And
+here in double quotes, we type a
+
+4
+00:00:15,270 --> 00:00:18,360
+short description that
+identifies what this snapshot
+
+5
+00:00:18,360 --> 00:00:22,950
+represents. So here I'm going to
+say, initial commit. Now there
+
+6
+00:00:22,950 --> 00:00:25,830
+are times that a short one line
+description is not sufficient.
+
+7
+00:00:26,070 --> 00:00:29,550
+You want to explain some details
+to give context. For example, if
+
+8
+00:00:29,550 --> 00:00:32,640
+you worked on a bug, and there
+were some constraints at the
+
+9
+00:00:32,640 --> 00:00:35,040
+time you committed your code,
+you want to explain those
+
+10
+00:00:35,040 --> 00:00:38,040
+constraints. This is very
+valuable to both you and your
+
+11
+00:00:38,040 --> 00:00:42,600
+coworkers. So in situations like
+this, we drop the message. We
+
+12
+00:00:42,600 --> 00:00:47,730
+just type git commit. Now when
+we press enter, this opens our
+
+13
+00:00:47,730 --> 00:00:51,210
+default editor, in this case VS
+code, because at the beginning
+
+14
+00:00:51,210 --> 00:00:54,390
+of the course, I configured my
+default editor to be VS code.
+
+15
+00:00:54,630 --> 00:00:58,080
+Okay. So here we're trying to
+edit this file, commit,
+
+16
+00:00:58,320 --> 00:01:02,310
+underlined edit message which
+stored in our Git subdirectory.
+
+17
+00:01:02,790 --> 00:01:07,890
+So, on the top, we can type a
+short description. Ideally,
+
+18
+00:01:07,890 --> 00:01:10,770
+there should be less than 80
+characters, and then we add a
+
+19
+00:01:10,770 --> 00:01:15,360
+line break. And after that we
+can type a long description. Now
+
+20
+00:01:15,360 --> 00:01:18,240
+this lines that start with a
+pound sign or comments, they're
+
+21
+00:01:18,240 --> 00:01:21,660
+gonna get ignored. So we typed
+what everyone here in this case,
+
+22
+00:01:21,660 --> 00:01:27,210
+I'm going to say, initial
+command. And this is our first
+
+23
+00:01:27,270 --> 00:01:29,760
+commit. Of course, this is
+repetitive. We don't have commit
+
+24
+00:01:29,760 --> 00:01:32,490
+messages like this. But for this
+demo, I'm going to go with this
+
+25
+00:01:32,490 --> 00:01:37,680
+message. So we save the changes.
+Then, we close this window. Back
+
+26
+00:01:37,680 --> 00:01:40,770
+in the terminal, our snapshot is
+committed. And here we have
+
+27
+00:01:40,770 --> 00:01:44,190
+basic statistics about what was
+changed. So two files were
+
+28
+00:01:44,190 --> 00:01:47,940
+changed which are file one and
+file two. And we have three
+
+29
+00:01:47,940 --> 00:01:51,480
+insertions, three lines were
+inserted. In file one, we
+
+30
+00:01:51,480 --> 00:01:55,440
+inserted two lines, hello world,
+and in file, two inserted one
+
+31
+00:01:55,440 --> 00:01:58,320
+line. Now look at this
+indicator, it turned green,
+
+32
+00:01:58,530 --> 00:02:01,740
+because our working directory is
+Now clean, it doesn't have any
+
+33
+00:02:01,740 --> 00:02:05,310
+new changes. So what we have in
+our working directory is exactly
+
+34
+00:02:05,310 --> 00:02:08,700
+the same content we have in our
+staging area, which is exactly
+
+35
+00:02:08,700 --> 00:02:10,920
+the same content we have in the
+last commit.
+

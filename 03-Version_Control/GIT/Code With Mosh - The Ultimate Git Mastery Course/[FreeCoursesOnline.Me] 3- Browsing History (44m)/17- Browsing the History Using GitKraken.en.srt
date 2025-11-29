@@ -1,0 +1,400 @@
+1
+00:00:03,990 --> 00:00:06,930
+Let's see how we can browse the
+history using GitKraken. So
+
+2
+00:00:06,930 --> 00:00:10,440
+first we go to open a
+repository, we go to our project
+
+3
+00:00:10,440 --> 00:00:15,450
+directory, and open our
+repository. So here's the
+
+4
+00:00:15,450 --> 00:00:18,270
+history of our project, we can
+clearly see all the commits we
+
+5
+00:00:18,270 --> 00:00:21,600
+have created so far. On the left
+side, we can see our pointers.
+
+6
+00:00:21,900 --> 00:00:25,500
+So master branch is just a
+pointer to the last commit over
+
+7
+00:00:25,500 --> 00:00:29,280
+here. Next to master we have
+plus one, which means we have
+
+8
+00:00:29,340 --> 00:00:33,150
+another pointer pointing to the
+same commit, take a look, that
+
+9
+00:00:33,150 --> 00:00:37,560
+is our tag, version 1.2, we have
+another tag pointing to this
+
+10
+00:00:37,560 --> 00:00:41,490
+commit. Now we can search for
+commits right here. And here we
+
+11
+00:00:41,490 --> 00:00:45,780
+can find commits by their ID,
+author, or message. So if I type
+
+12
+00:00:45,810 --> 00:00:49,890
+GUI, this is the only commit t
+at has the word GUI in this mes
+
+13
+00:00:49,890 --> 00:00:53,430
+age. As I told you before, all
+these GUI tools have some lim
+
+14
+00:00:53,430 --> 00:00:56,820
+tations. For example, here, we
+annot find commits created by
+
+15
+00:00:56,820 --> 00:00:59,610
+given author in a par
+icular date range, so we can
+
+16
+00:00:59,610 --> 00:01:02,910
+ot apply multiple filters. In
+hose situations, we just hav
+
+17
+00:01:02,910 --> 00:01:06,030
+to go back to the terminal. Now
+we can select any of this com
+
+18
+00:01:06,030 --> 00:01:09,420
+its to see its details. So her
+on the right side, we can see
+
+19
+00:01:09,420 --> 00:01:13,500
+the commit ID, message, aut
+or, as well as the summary of m
+
+20
+00:01:13,500 --> 00:01:17,100
+dified files. So here, we have m
+dified five files, we can see a
+
+21
+00:01:17,100 --> 00:01:20,640
+l these files listed here, we c
+n sort the list in ascending o
+
+22
+00:01:20,640 --> 00:01:24,210
+descending order, we can see t
+e list in the tree structure o
+
+23
+00:01:24,240 --> 00:01:28,710
+in a flat list. Now we have a v
+ry useful option here, view a
+
+24
+00:01:28,770 --> 00:01:32,640
+l files. So if this commit has m
+dified only two files, but you w
+
+25
+00:01:32,640 --> 00:01:35,340
+nt to look at the other files i
+a project, at that point in tim
+
+26
+00:01:35,340 --> 00:01:39,660
+, we can select this and ope
+any of these files. For exa
+
+27
+00:01:39,660 --> 00:01:43,680
+ple, here, sales page, that txt
+hasn't been modified. That's why
+
+28
+00:01:43,680 --> 00:01:46,770
+we don't have an icon next to
+t. But we can click on it to see
+
+29
+00:01:46,770 --> 00:01:50,040
+what it looked like at that poi
+t in time. Now, let's look at
+
+30
+00:01:50,040 --> 00:01:53,670
+ur table of content file. So her
+'s the final version of this fil
+
+31
+00:01:53,670 --> 00:01:58,110
+storage and this command to see
+the actual changes, we go to the
+
+32
+00:01:58,110 --> 00:02:01,890
+diff View tab. So you can see
+this line was removed and rep
+
+33
+00:02:01,980 --> 00:02:05,730
+aced by a blank line. I totally
+ove the diff view in GitKra
+
+34
+00:02:05,730 --> 00:02:09,270
+en and it makes our job a lot ea
+ier. You also have two tabs he
+
+35
+00:02:09,270 --> 00:02:12,750
+e, blame and history, which ki
+d of brings us to the same vi
+
+36
+00:02:12,750 --> 00:02:16,620
+w, let me show you. So we can go
+to history. Here on the left, yo
+
+37
+00:02:16,620 --> 00:02:19,470
+can see all the commits that ha
+e touched this file, here's th
+
+38
+00:02:19,470 --> 00:02:22,950
+first commit. And here's the la
+t commit. So as we look at th
+
+39
+00:02:22,950 --> 00:02:26,580
+s commit, we can see how thi
+file has evolved. So let's cha
+
+40
+00:02:26,580 --> 00:02:30,930
+ge the diff view to file vie
+. In the first commit, our fil
+
+41
+00:02:30,930 --> 00:02:35,010
+was empty. And the second com
+it, we added this lines. And in
+
+42
+00:02:35,010 --> 00:02:39,120
+he last commit, we removed the
+border under the header. Now if
+
+43
+00:02:39,120 --> 00:02:41,700
+ou click on the blame tab her
+, unfortunately, it's not vis
+
+44
+00:02:41,700 --> 00:02:45,180
+ble in my recording window.
+But if you click on it, we can t
+
+45
+00:02:45,180 --> 00:02:50,550
+ggle blame details. So this
+ine was added in this commi
+
+46
+00:02:50,550 --> 00:02:54,450
+over here by this person
+So we can clearly see who ha
+
+47
+00:02:54,600 --> 00:02:57,750
+written what line of code.
+ow let's close this window
+
+48
+00:02:57,750 --> 00:03:02,730
+And this window as well. Back t
+our history, let's see how we
+
+49
+00:03:02,730 --> 00:03:05,490
+can compare two commits. So I'm
+going to compare this commit
+
+50
+00:03:05,490 --> 00:03:09,000
+with this commit over here.
+o select the second commit
+
+51
+00:03:09,000 --> 00:03:13,890
+we press Command on Mac, or Ctr
+on Windows. Now on the right
+
+52
+00:03:13,890 --> 00:03:16,800
+ide, you can see we have select
+d two commit. And here are the f
+
+53
+00:03:16,800 --> 00:03:19,950
+les that have been changed acros
+these two commits. So this
+
+54
+00:03:19,950 --> 00:03:23,070
+s how we can compare commi
+s. Now, if you right click on an
+
+55
+00:03:23,100 --> 00:03:27,720
+of this commits, we can check
+ut that commit. All right,
+
+56
+00:03:27,720 --> 00:03:31,020
+now look, the head pointe
+is pointing to this commit
+
+57
+00:03:31,020 --> 00:03:34,440
+so it's in the detached state.
+Now to attach it back to the ma
+
+58
+00:03:34,440 --> 00:03:38,880
+ter branch, we right click
+he master branch and go to che
+
+59
+00:03:38,880 --> 00:03:43,920
+kout master. Good. Now one mo
+e thing here, we can right
+
+60
+00:03:43,920 --> 00:03:48,510
+lick a commit and create a tag
+r an annotated tag. We have a
+
+61
+00:03:48,510 --> 00:03:50,580
+bunch of other commands here.
+e'll talk about them in the fu
+
+62
+00:03:50,580 --> 00:03:53,670
+ure. So this is how we can br
+wse the history and get cracki
+
+63
+00:03:53,670 --> 00:03:56,430
+g. That before we finish this l
+sson, let me show you anothe
+
+64
+00:03:56,460 --> 00:03:59,790
+useful feature here. We can br
+ng up the command palette by pre
+
+65
+00:03:59,970 --> 00:04:04,440
+sing Command and P on Mac, o
+Ctrl, and P on Windows, the his
+
+66
+00:04:04,440 --> 00:04:07,290
+ory of various commands, we can
+select the blame command. And
+
+67
+00:04:07,590 --> 00:04:10,410
+then here we can search for a f
+le in our project, let's say tab
+
+68
+00:04:10,590 --> 00:04:14,070
+e of contents. txt. So we hav
+auto completion. This is fan
+
+69
+00:04:14,070 --> 00:04:18,810
+astic. I love it. So let's loo
+at table of content. Now we can
+
+70
+00:04:18,810 --> 00:04:21,780
+see the full history of this fil
+, we can see we accidentally del
+
+71
+00:04:21,780 --> 00:04:24,420
+ted this file and this com
+it, and then added it back ove
+
+72
+00:04:24,420 --> 00:04:28,560
+here. And of course, if we tog
+le the blame details, we can see
+
+73
+00:04:28,560 --> 00:04:32,430
+who has written what line of cod
+very handy. Now let's bring up
+
+74
+00:04:32,430 --> 00:04:36,090
+he command palette one more tim
+. We can also search for com
+
+75
+00:04:36,090 --> 00:04:40,650
+its. So we can search by mess
+ge like GUI, or by author, or b
+
+76
+00:04:41,580 --> 00:04:44,340
+commit ID and so on. Withi
+the command palette, we can a
+
+77
+00:04:44,340 --> 00:04:49,530
+so create tags. So let's searc
+for tag. Now we can creat
+
+78
+00:04:49,530 --> 00:04:52,560
+a tag. This will create a tag f
+r the last commit in our repos
+
+79
+00:04:52,560 --> 00:04:56,280
+tory. To create a tag for an ea
+lier commit. As I told you,
+
+80
+00:04:56,280 --> 00:04:59,730
+e have to right click that commi
+and go to create tag.
+

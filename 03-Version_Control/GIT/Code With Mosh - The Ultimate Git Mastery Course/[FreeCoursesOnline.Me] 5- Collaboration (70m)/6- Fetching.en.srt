@@ -1,0 +1,369 @@
+1
+00:00:03,990 --> 00:00:06,720
+So here's the current situation.
+On the left side, we have our
+
+2
+00:00:06,720 --> 00:00:09,840
+local repository. And on the
+right side, we have our remote
+
+3
+00:00:09,840 --> 00:00:12,780
+repository, which is the
+repository hosted by GitHub in
+
+4
+00:00:12,780 --> 00:00:15,750
+the cloud. Now, one thing to
+understand here is that our
+
+5
+00:00:15,750 --> 00:00:18,540
+local repository is not
+connected to the remote
+
+6
+00:00:18,540 --> 00:00:21,930
+repository. So if you have a new
+commit in our remote repository,
+
+7
+00:00:22,170 --> 00:00:25,500
+our local repository will not be
+aware of that. Here, we have to
+
+8
+00:00:25,500 --> 00:00:28,800
+use the fetch command to
+download this new commit. So Git
+
+9
+00:00:28,800 --> 00:00:31,350
+is going to download this new
+command. And then we'll origin
+
+10
+00:00:31,350 --> 00:00:35,160
+slash master forward. So as I
+told you before, origin slash
+
+11
+00:00:35,160 --> 00:00:38,370
+master is a remote tracking
+branch, and tells us where's the
+
+12
+00:00:38,370 --> 00:00:41,850
+master branch and origin. In
+this case, it's pointing to B.
+
+13
+00:00:42,480 --> 00:00:45,060
+Even though we downloaded this
+new commit, our working
+
+14
+00:00:45,060 --> 00:00:48,420
+directory is none updated.
+Because currently master is
+
+15
+00:00:48,420 --> 00:00:51,270
+pointing to a, that is the
+previous commit the previous
+
+16
+00:00:51,270 --> 00:00:54,000
+snapshot. So we don't have those
+changes in our working
+
+17
+00:00:54,000 --> 00:00:57,540
+directory. Now, how can we bring
+those changes here? Well, we
+
+18
+00:00:57,540 --> 00:00:59,820
+have two branches, doesn't
+matter that one of them is a
+
+19
+00:00:59,820 --> 00:01:03,000
+remote tracking branch. And to
+bring those changes into Master,
+
+20
+00:01:03,180 --> 00:01:05,550
+we have to merge the other
+branch into master.
+
+21
+00:01:05,910 --> 00:01:06,420
+So
+
+22
+00:01:06,600 --> 00:01:10,020
+we switch to the master branch
+and type Git merge, origin slash
+
+23
+00:01:10,020 --> 00:01:13,710
+master. Now in this case, our
+branches haven't diverged. And
+
+24
+00:01:13,830 --> 00:01:17,580
+we have a direct linear path
+from origin slash master to
+
+25
+00:01:17,580 --> 00:01:21,630
+master. So we're going to have a
+fast forward merge. In contrast,
+
+26
+00:01:21,870 --> 00:01:24,360
+if our branches had diverged,
+potentially, we could have a
+
+27
+00:01:24,360 --> 00:01:27,330
+conflict. So we'll have to
+resolve the conflict just like
+
+28
+00:01:27,330 --> 00:01:31,620
+before, let's see this in
+action. Here on GitHub, we can
+
+29
+00:01:31,620 --> 00:01:35,610
+go to Add File and create a new
+file or upload files, we can
+
+30
+00:01:35,640 --> 00:01:38,970
+also edit existing files. So in
+this demo, I'm going to edit our
+
+31
+00:01:38,970 --> 00:01:41,970
+README file and create a new
+commit directly on this
+
+32
+00:01:41,970 --> 00:01:47,640
+repository. So let's click on
+README file, and then we click
+
+33
+00:01:47,640 --> 00:01:53,430
+on this pencil icon. Now let's
+add a new line of code, we can
+
+34
+00:01:53,430 --> 00:01:56,850
+preview our changes. So we're
+adding this new line that is
+
+35
+00:01:56,880 --> 00:02:00,720
+indicated by green. And over
+here, we can specify our commit
+
+36
+00:02:00,720 --> 00:02:05,070
+message. So by default, GitHub
+is suggesting update README, we
+
+37
+00:02:05,070 --> 00:02:08,220
+can leave it as is, optionally,
+we can add some description here
+
+38
+00:02:08,220 --> 00:02:11,670
+as well. Here, we have two
+options, we can commit directly
+
+39
+00:02:11,670 --> 00:02:15,480
+to master. Or we can create a
+new branch and start a pull
+
+40
+00:02:15,480 --> 00:02:18,780
+request. I'll talk about the
+second option in the future. So
+
+41
+00:02:18,840 --> 00:02:24,960
+let's commit this directly on
+master. And now, back on the
+
+42
+00:02:24,960 --> 00:02:27,720
+homepage of our repository. So
+you can see we have two
+
+43
+00:02:27,720 --> 00:02:30,810
+commands, let's have a quick
+look. Here's our new commit
+
+44
+00:02:30,960 --> 00:02:34,800
+update README. Now back in the
+terminal, we don't have this new
+
+45
+00:02:34,800 --> 00:02:38,280
+commit in our local repository,
+let me show you. So we type git
+
+46
+00:02:38,280 --> 00:02:42,030
+log. And, look, we only have
+this commit over here, that is
+
+47
+00:02:42,030 --> 00:02:44,910
+the initial commit. So to
+download new commands, we have
+
+48
+00:02:44,910 --> 00:02:49,530
+to type Git fetch. And then we
+specify the remote, in this case
+
+49
+00:02:49,560 --> 00:02:53,940
+origin. and optionally, we can
+specify a branch. So if you want
+
+50
+00:02:53,940 --> 00:02:56,520
+to download the commits on a
+particular branch, we can type
+
+51
+00:02:56,520 --> 00:02:59,490
+the branch name here, if we
+leave it out, we're going to
+
+52
+00:02:59,490 --> 00:03:03,360
+download all the comments in
+that remote repository. If you
+
+53
+00:03:03,360 --> 00:03:06,570
+drop origin, get assumes that we
+want to fetch the commits from
+
+54
+00:03:06,600 --> 00:03:10,590
+origin. So let's go with that.
+Alright, we fetch the new
+
+55
+00:03:10,590 --> 00:03:14,250
+commit. Let's verify it. So
+let's look at the log one more
+
+56
+00:03:14,250 --> 00:03:20,130
+time. See, our remote tracking
+branch has moved forward. So now
+
+57
+00:03:20,130 --> 00:03:23,640
+we have this new command. But
+this commit is not on our master
+
+58
+00:03:23,640 --> 00:03:27,570
+branch. So master is behind by
+one commit. There is another
+
+59
+00:03:27,570 --> 00:03:30,030
+useful command you should be
+familiar with. That is git
+
+60
+00:03:30,030 --> 00:03:35,970
+branch dash vv. It shows how our
+local and remote tracking
+
+61
+00:03:35,970 --> 00:03:40,770
+branches are diverging. So our
+master branch is linked to this
+
+62
+00:03:40,770 --> 00:03:45,600
+branch origin slash Master, and
+it's behind by one commit. So
+
+63
+00:03:45,600 --> 00:03:48,810
+now we have to do a merge. So
+we're currently on Master, we
+
+64
+00:03:48,810 --> 00:03:53,970
+type Git merge origin slash
+Master, because our branches
+
+65
+00:03:53,970 --> 00:03:57,210
+haven't diverged. And we have a
+direct linear path from this
+
+66
+00:03:57,210 --> 00:03:59,970
+target branch into Master, we're
+going to have a fast forward
+
+67
+00:03:59,970 --> 00:04:04,470
+merge, take a look. There you
+go. Fast forward. Now let's look
+
+68
+00:04:04,470 --> 00:04:11,130
+at the log one more time. So git
+log. So Master, and origin slash
+
+69
+00:04:11,130 --> 00:04:14,820
+master are pointing to the same
+commit. We can also verify this
+
+70
+00:04:14,820 --> 00:04:20,520
+using git branch dash vv. So we
+no longer have that message, one
+
+71
+00:04:20,520 --> 00:04:23,730
+commit behind. Now we can look
+at the content of a readme file
+
+72
+00:04:23,730 --> 00:04:27,570
+using the cat command. So cat
+README, and
+
+73
+00:04:27,899 --> 00:04:30,299
+here's the new line that I added
+on GitHub.
+
+74
+00:04:30,360 --> 00:04:32,730
+So this change is now in our
+working directory.
+

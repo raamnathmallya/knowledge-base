@@ -1,0 +1,367 @@
+1
+00:00:04,019 --> 00:00:07,109
+In this repository, we have just
+over 10 commits. But in a real
+
+2
+00:00:07,109 --> 00:00:10,529
+repository, we often have
+hundreds or sometimes thousands
+
+3
+00:00:10,529 --> 00:00:13,439
+of commits, depending on the age
+of the repository. Now, we don't
+
+4
+00:00:13,439 --> 00:00:15,569
+have to look at all of these
+commits. So let me show you a
+
+5
+00:00:15,569 --> 00:00:18,479
+few different ways to filter the
+history. We can filter it by
+
+6
+00:00:18,509 --> 00:00:22,529
+author, by date, by commit
+message, by content, and so on.
+
+7
+00:00:22,949 --> 00:00:27,839
+So let's run git log one line.
+Now, if you want to see the last
+
+8
+00:00:27,839 --> 00:00:31,979
+three commands, we simply type
+dash three here. There you go.
+
+9
+00:00:32,429 --> 00:00:37,499
+Now we can also filter by
+author. So one line, here, type
+
+10
+00:00:37,589 --> 00:00:41,789
+dash dash author, equals, and
+here in double quotes, we type
+
+11
+00:00:41,789 --> 00:00:45,869
+the author's name, let's say
+Mosh. So here are all the
+
+12
+00:00:45,869 --> 00:00:48,719
+commits that I have submitted to
+this repository, we can also
+
+13
+00:00:48,719 --> 00:00:54,719
+filter by date. So instead of
+author we can use before and or
+
+14
+00:00:54,839 --> 00:01:00,029
+after. So we can say, hey, show
+me all the commits from 2020. On
+
+15
+00:01:00,479 --> 00:01:05,279
+August 17. This will return all
+the commits created on this
+
+16
+00:01:05,279 --> 00:01:09,959
+date. And after, take a look. We
+can also specify relative dates,
+
+17
+00:01:10,319 --> 00:01:13,859
+that is pretty useful. For
+example, we can say, hey, show
+
+18
+00:01:13,859 --> 00:01:19,499
+me all the commits from
+yesterday. Or we can say, show
+
+19
+00:01:19,499 --> 00:01:23,999
+me all the commits from one week
+ago, or two days ago, or one
+
+20
+00:01:23,999 --> 00:01:27,749
+month ago. pretty useful. We can
+also filter by commit message or
+
+21
+00:01:27,749 --> 00:01:31,349
+subject. For example, we can
+say, hey, show me all the
+
+22
+00:01:31,349 --> 00:01:35,729
+commits that have the word GUI
+and their message, k type, dash
+
+23
+00:01:35,729 --> 00:01:40,619
+dash, grab, equals. And here in
+double quotes, we type the
+
+24
+00:01:40,619 --> 00:01:44,669
+search term GUI, just remember
+that this operation is case
+
+25
+00:01:44,669 --> 00:01:48,209
+sensitive. So if we type GUI in
+lowercase, we're going to have a
+
+26
+00:01:48,209 --> 00:01:52,079
+different result. Take a look.
+Here, we have only a single
+
+27
+00:01:52,079 --> 00:01:56,969
+commit that has the word GUI and
+a subject. We can also filter
+
+28
+00:01:56,969 --> 00:01:59,729
+the history by content, let's
+say we want to find all the
+
+29
+00:01:59,729 --> 00:02:03,419
+commits that have added or
+removed a function declaration.
+
+30
+00:02:03,839 --> 00:02:08,369
+So we type, instead of dash dash
+grab, we're going to type dash,
+
+31
+00:02:08,639 --> 00:02:11,639
+capital S. And here, we're not
+going to use an equal sign.
+
+32
+00:02:11,879 --> 00:02:14,789
+Instead, we're going to add
+double quotes. And in between
+
+33
+00:02:14,789 --> 00:02:17,099
+the quotes, we're going to type
+our function name, let's say,
+
+34
+00:02:17,429 --> 00:02:20,819
+all the commits that have added
+or remove this line. Now, this
+
+35
+00:02:20,819 --> 00:02:23,099
+repository, we don't have any
+code, we just have plain
+
+36
+00:02:23,099 --> 00:02:27,389
+English. So let's find all the
+commits that have added the word
+
+37
+00:02:27,749 --> 00:02:32,879
+objectives in capital. There you
+go, here's the commit. Now, if
+
+38
+00:02:32,879 --> 00:02:35,459
+you want to see the actual
+changes in this commit, we can
+
+39
+00:02:35,459 --> 00:02:38,909
+use the patch option, you learn
+about it in the last video. So
+
+40
+00:02:38,909 --> 00:02:41,819
+we bring up the last command.
+And then at the end, we type
+
+41
+00:02:41,999 --> 00:02:46,739
+dash dash patch. So in this
+commit, this file was modified
+
+42
+00:02:47,159 --> 00:02:51,959
+object dot txt, and over here,
+you can see that object is was
+
+43
+00:02:51,959 --> 00:02:55,469
+inserted, very useful. We can
+also filter the history by a
+
+44
+00:02:55,469 --> 00:03:01,259
+range of commits. So let me
+bring up all the commands. Let's
+
+45
+00:03:01,259 --> 00:03:04,619
+say we are only interested in
+the commits in a particular
+
+46
+00:03:04,619 --> 00:03:08,999
+range here, let's say from this
+commit to this commit over here.
+
+47
+00:03:10,019 --> 00:03:13,949
+So we can say git log one line.
+Here, we add the first commit
+
+48
+00:03:13,949 --> 00:03:19,589
+hash, so FB, 0 d 184. Then we
+add double periods. And then we
+
+49
+00:03:19,589 --> 00:03:26,069
+type the target commit ID, like
+EDB 3594. Now what if you want
+
+50
+00:03:26,069 --> 00:03:29,219
+to find all the commits that
+touch a particular file or a
+
+51
+00:03:29,219 --> 00:03:32,999
+bunch of files? Well, that is
+super easy. We simply type git
+
+52
+00:03:32,999 --> 00:03:37,229
+log, we can optionally use one
+line, it's not compulsory. Now
+
+53
+00:03:37,229 --> 00:03:40,979
+if you want to find all the
+commits that have modified our
+
+54
+00:03:40,979 --> 00:03:45,239
+table of content file, we simply
+add the file name at the end. So
+
+55
+00:03:45,749 --> 00:03:48,749
+these three commands have
+modified this file. Now
+
+56
+00:03:48,749 --> 00:03:51,629
+sometimes, depending on the name
+of your files, it might complain
+
+57
+00:03:51,629 --> 00:03:55,499
+and say, Hey, this name is
+ambiguous. In those cases, we
+
+58
+00:03:55,499 --> 00:03:59,429
+have to separate the file name
+from the options over here. So
+
+59
+00:04:00,269 --> 00:04:03,599
+we bring up the last command.
+And here we use double hyphens
+
+60
+00:04:03,839 --> 00:04:07,019
+to separate the file name. From
+the options we're using here.
+
+61
+00:04:07,229 --> 00:04:09,659
+You don't have to use this all
+the time, you have to use this
+
+62
+00:04:09,689 --> 00:04:12,719
+only if we get complaints about
+he file name saying, hey, this
+
+63
+00:04:12,749 --> 00:04:15,449
+is ambiguous and I cannot fig
+re out what options you're usi
+
+64
+00:04:16,229 --> 00:04:19,319
+g. So in this case, we get the s
+me result. Now if you want to
+
+65
+00:04:19,319 --> 00:04:22,679
+ee the actual changes in each
+of these commits, once again, we
+
+66
+00:04:22,679 --> 00:04:26,729
+can use the patch option. Howe
+er, the patch option shoul
+
+67
+00:04:26,729 --> 00:04:31,199
+be listed before the filename s
+we cannot add it over here.
+
+68
+00:04:31,199 --> 00:04:34,919
+t's not going to work. Because
+now after we added double hyp
+
+69
+00:04:35,189 --> 00:04:38,639
+ens get is interpreting this
+s a file name. And there is no
+
+70
+00:04:38,639 --> 00:04:43,199
+uch a file called dash dash pa
+ch. So to make this work, we hav
+
+71
+00:04:43,199 --> 00:04:44,339
+to use the patch op
+
+72
+00:04:45,600 --> 00:04:46,110
+over here.
+
+73
+00:04:47,430 --> 00:04:51,690
+Now for each command, we can see
+the actual changes in our table
+
+74
+00:04:51,690 --> 00:04:52,500
+of content file.
+

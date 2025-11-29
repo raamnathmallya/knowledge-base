@@ -1,0 +1,159 @@
+1
+00:00:03,990 --> 00:00:06,870
+We all make mistakes, sometimes
+we may accidentally delete a
+
+2
+00:00:06,870 --> 00:00:10,140
+file. So let me show you how to
+recover a deleted file from the
+
+3
+00:00:10,140 --> 00:00:12,840
+history. For this demo, I'm
+going to remove the table of
+
+4
+00:00:12,840 --> 00:00:17,250
+content file. So we're going to
+use the rm command or move to C
+
+5
+00:00:17,250 --> 00:00:22,470
+dot txt. Now we have a change,
+let's commit it and say, remove
+
+6
+00:00:22,890 --> 00:00:26,670
+table of contents. txt. Now this
+message is purely for this demo,
+
+7
+00:00:26,880 --> 00:00:29,730
+in a real situation, the message
+is not going to indicate that
+
+8
+00:00:29,730 --> 00:00:32,520
+we're deleting a file because
+that would happen accidentally.
+
+9
+00:00:32,880 --> 00:00:35,700
+So we may remove this file as
+part of fixing a bug or
+
+10
+00:00:35,700 --> 00:00:39,750
+implementing a new feature.
+Okay, so our table of content
+
+11
+00:00:39,750 --> 00:00:42,900
+file has gone. Now we need to
+find all the commits that have
+
+12
+00:00:42,930 --> 00:00:50,610
+touched this file. So we run git
+log one line, toc dot txt, the
+
+13
+00:00:50,610 --> 00:00:54,210
+here we get this fatal error
+saying ambiguous argument, table
+
+14
+00:00:54,210 --> 00:00:57,510
+of contents. txt, this is one of
+those situations where I told
+
+15
+00:00:57,510 --> 00:01:01,560
+you, it is not able to properly
+interpret your file name. So you
+
+16
+00:01:01,560 --> 00:01:05,580
+have to separate it from the
+options using double hyphens. So
+
+17
+00:01:06,510 --> 00:01:11,670
+we bring up the last command and
+add double hyphens here. So here
+
+18
+00:01:11,670 --> 00:01:14,640
+are all the commits that have
+touched this file. Obviously,
+
+19
+00:01:14,820 --> 00:01:17,850
+the last commit is the one that
+has deleted this file, because
+
+20
+00:01:17,850 --> 00:01:20,760
+we don't have any further
+changes to that file after that
+
+21
+00:01:20,760 --> 00:01:24,450
+commit. So now, to restore this
+file, we have to look at the
+
+22
+00:01:24,480 --> 00:01:28,110
+parent of this commit, which is
+this commit over here, this is
+
+23
+00:01:28,110 --> 00:01:31,290
+where we had the latest version
+of this file. Because in this
+
+24
+00:01:31,290 --> 00:01:34,740
+commit over here, our table of
+content file was deleted. So it
+
+25
+00:01:34,740 --> 00:01:38,640
+doesn't exist in this snapshot.
+So we look at this parent, we
+
+26
+00:01:38,640 --> 00:01:42,690
+take this ID and now we're going
+to check out only the table of
+
+27
+00:01:42,690 --> 00:01:47,340
+content file from this commit.
+So git checkout commit, and then
+
+28
+00:01:47,340 --> 00:01:52,920
+we add the past to our file. So
+our working directory is dirty.
+
+29
+00:01:53,370 --> 00:01:57,660
+Let's run a short status. We
+have one new file that is also
+
+30
+00:01:57,660 --> 00:02:02,580
+in the staging area. So let's
+commit it and say restore ta
+
+31
+00:02:02,670 --> 00:02:06,300
+le of content dot txt. This is
+how we can restore a deleted fi
+
+32
+00:02:06,300 --> 00:02:06,600
+e.
+

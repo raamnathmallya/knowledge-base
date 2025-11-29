@@ -1,0 +1,145 @@
+1
+00:00:03,990 --> 00:00:07,350
+Here we have a feature branch
+with two commits, f1, and f2.
+
+2
+00:00:07,890 --> 00:00:10,740
+Now, let's see one of these
+commits, like f1 has some
+
+3
+00:00:10,770 --> 00:00:13,770
+interesting changes we want to
+have in master. But we're not
+
+4
+00:00:13,770 --> 00:00:17,400
+quite ready to merge our feature
+branch into master. What should
+
+5
+00:00:17,400 --> 00:00:20,790
+we do now, this is where we use
+cherry picking. So we can cherry
+
+6
+00:00:20,790 --> 00:00:24,780
+pick this particular commit, and
+apply it on top of master. Let
+
+7
+00:00:24,780 --> 00:00:27,780
+me show you how to do this. Here
+in our history, you can see that
+
+8
+00:00:27,780 --> 00:00:31,290
+our feature branch, it's one
+commit ahead of master. Now
+
+9
+00:00:31,290 --> 00:00:33,930
+we're going to bring this
+particular commit into master
+
+10
+00:00:34,080 --> 00:00:39,000
+without merging. So I'm going to
+copy this commit ID. Now we're
+
+11
+00:00:39,000 --> 00:00:44,400
+currently on Master, we type Git
+cherry, dash pig, either type
+
+12
+00:00:44,400 --> 00:00:48,240
+the commit ID, here we have a
+conflict in table of contents of
+
+13
+00:00:48,240 --> 00:00:53,550
+txt. So let's open up our merge
+tool. In this demo, I'm going to
+
+14
+00:00:53,550 --> 00:00:56,550
+take the changes in the remote
+branch, which is our feature
+
+15
+00:00:56,550 --> 00:01:01,320
+branch. So I'm going to select
+this purple icon. Good, save the
+
+16
+00:01:01,320 --> 00:01:05,550
+changes, close the merge tool.
+We're back here. As we can see,
+
+17
+00:01:05,550 --> 00:01:08,070
+in the terminal window, we're in
+the middle of a cherry pick.
+
+18
+00:01:08,850 --> 00:01:12,720
+Let's have a quick look at our
+staging area. So our table of
+
+19
+00:01:12,720 --> 00:01:16,710
+contents file has some changes
+that are in the staging area. We
+
+20
+00:01:16,710 --> 00:01:19,830
+also have this directory here,
+DS on the land store, don't
+
+21
+00:01:19,830 --> 00:01:22,770
+worry about it. This is only for
+Mac computers. This is one of
+
+22
+00:01:22,770 --> 00:01:25,230
+those standard directories that
+we need to include in our Git
+
+23
+00:01:25,230 --> 00:01:29,310
+ignore file. For now, let's not
+worry about it. So let's make a
+
+24
+00:01:29,310 --> 00:01:33,390
+commit. I'm gonna specify a
+message. The default message
+
+25
+00:01:33,390 --> 00:01:36,450
+that we have here is based on
+the commit that you were trying
+
+26
+00:01:36,450 --> 00:01:39,570
+to cherry pick, so we can accept
+it or change it if necessary.
+
+27
+00:01:39,930 --> 00:01:45,180
+Now close back in the terminal.
+Let's look at our history one
+
+28
+00:01:45,180 --> 00:01:49,560
+more time. So master has moved
+forward. And now we have this
+
+29
+00:01:49,560 --> 00:01:52,230
+new commit that we cherry picked
+from our feature branch.
+

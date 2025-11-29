@@ -1,0 +1,190 @@
+1
+00:00:03,990 --> 00:00:06,300
+Let's talk about the best
+practices for committing code.
+
+2
+00:00:06,660 --> 00:00:09,180
+First of all your commits
+shouldn't be too big or too
+
+3
+00:00:09,180 --> 00:00:12,090
+small. We don't want to make a
+commit, every time we update a
+
+4
+00:00:12,090 --> 00:00:14,520
+file, that's just useless.
+Because we'll end up with
+
+5
+00:00:14,520 --> 00:00:17,640
+commits like update five, one
+update file to occupy three,
+
+6
+00:00:17,850 --> 00:00:20,490
+it's just useless. On the other
+hand, we don't want our commits
+
+7
+00:00:20,490 --> 00:00:23,700
+to be too big, we don't want to
+wait and implement a feature end
+
+8
+00:00:23,700 --> 00:00:26,280
+to end before committing it. We
+don't want to code for three
+
+9
+00:00:26,280 --> 00:00:28,770
+days and then make a commit,
+because the whole point of
+
+10
+00:00:28,770 --> 00:00:32,010
+committing is to record
+checkpoints as we go. So if you
+
+11
+00:00:32,010 --> 00:00:35,880
+screw up, we can always go back
+and recover our code. So try to
+
+12
+00:00:35,880 --> 00:00:38,730
+commit often, in the real world,
+you might commit five to 10
+
+13
+00:00:38,730 --> 00:00:41,160
+times a day or even more,
+depending on the kind of work
+
+14
+00:00:41,160 --> 00:00:43,920
+you're doing. But this is just a
+basic guideline. Don't take it
+
+15
+00:00:43,920 --> 00:00:47,880
+as a rule. Don't try to aim for
+five or 10 commits a day. So as
+
+16
+00:00:47,880 --> 00:00:50,670
+you're coding, as you reach a
+state you want to record then
+
+17
+00:00:50,670 --> 00:00:53,850
+make a commit. And also, each
+commit should represent a
+
+18
+00:00:53,850 --> 00:00:57,480
+logically separate chain set. So
+don't mix things up. For
+
+19
+00:00:57,480 --> 00:01:00,390
+example, if you're fixing a bug,
+and then you accidentally Find a
+
+20
+00:01:00,390 --> 00:01:03,630
+typo in your app, you shouldn't
+come in both this changes in one
+
+21
+00:01:03,630 --> 00:01:06,630
+commit, you should have two
+separate commits, one commit for
+
+22
+00:01:06,630 --> 00:01:09,630
+the typo, another one for the
+bug fix. Now, if you
+
+23
+00:01:09,630 --> 00:01:13,200
+accidentally stage both these
+changes, we can easily onstage
+
+24
+00:01:13,200 --> 00:01:16,320
+them. I'll show you how to do
+this later in the section. Next,
+
+25
+00:01:16,350 --> 00:01:18,780
+you should give yourself the
+habit of creating meaningful
+
+26
+00:01:18,780 --> 00:01:21,720
+commit messages. Because all of
+these messages are going to show
+
+27
+00:01:21,720 --> 00:01:24,660
+up in history. So if your
+messages are cryptic, they're
+
+28
+00:01:24,660 --> 00:01:27,360
+not going to be helpful to you
+or other team members. If you
+
+29
+00:01:27,360 --> 00:01:31,170
+follow my previous advice, if a
+commit represents a single unit
+
+30
+00:01:31,170 --> 00:01:33,930
+of work, it would be easier to
+come up with a message for your
+
+31
+00:01:33,930 --> 00:01:37,140
+commit. If you're doing too many
+things in one commit, you're not
+
+32
+00:01:37,140 --> 00:01:39,960
+going to come up with a good
+message. Okay. Now in terms of
+
+33
+00:01:39,960 --> 00:01:43,050
+the wording, most people prefer
+to use the present tense in
+
+34
+00:01:43,050 --> 00:01:46,140
+their commit messages. So
+instead of fixed a bug, you
+
+35
+00:01:46,140 --> 00:01:49,290
+should say, fixed a bug. If you
+don't like this convention,
+
+36
+00:01:49,440 --> 00:01:52,230
+that's totally fine. But
+whatever commercial use, make
+
+37
+00:01:52,230 --> 00:01:55,200
+sure that you and other team
+members stick to it. So always
+
+38
+00:01:55,200 --> 00:01:57,630
+take this best practices in mind
+when committing code
+

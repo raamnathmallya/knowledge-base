@@ -1,0 +1,234 @@
+1
+00:00:04,050 --> 00:00:07,260
+Now let's look at an example of
+a three way merge. First, let's
+
+2
+00:00:07,260 --> 00:00:11,460
+look at our history. So this is
+where we are, our master branch
+
+3
+00:00:11,490 --> 00:00:15,090
+is at this commit, which is a
+merge commit. Now I'm going to
+
+4
+00:00:15,090 --> 00:00:18,570
+create a new branch for
+implementing a new feature. So
+
+5
+00:00:19,470 --> 00:00:23,700
+get switch, dash C for create,
+we're going to call that branch
+
+6
+00:00:23,730 --> 00:00:28,380
+feature slash, Change Password.
+So now we have this new branch.
+
+7
+00:00:28,710 --> 00:00:34,110
+Let's look at our history one
+more time. So at this point,
+
+8
+00:00:34,470 --> 00:00:38,730
+both these pointers are Change
+Password pointer and master
+
+9
+00:00:38,730 --> 00:00:42,180
+pointer are pointing to the same
+commit. Now, what you want to
+
+10
+00:00:42,180 --> 00:00:46,260
+explore in this lesson is how
+two branches can diverge. So
+
+11
+00:00:46,890 --> 00:00:49,470
+we're currently on the Change
+Password branch. Let's make a
+
+12
+00:00:49,470 --> 00:00:53,910
+commit here, I'm going to echo
+hello to, let's say change as
+
+13
+00:00:53,910 --> 00:00:58,950
+password to txt. Now we're going
+to save the changes and commit
+
+14
+00:00:58,950 --> 00:01:03,270
+them and say, build the Change
+Password form.
+
+15
+00:01:05,190 --> 00:01:07,170
+Now, let's look at our history
+again.
+
+16
+00:01:08,500 --> 00:01:12,580
+So as you can see, our Change
+Password branch is one commit
+
+17
+00:01:12,880 --> 00:01:16,060
+ahead of the master branch,
+right? But our branches have not
+
+18
+00:01:16,060 --> 00:01:19,600
+diverged yet, because there is a
+direct linear path from the
+
+19
+00:01:19,600 --> 00:01:22,780
+Change Password branch to
+master. So to make this branches
+
+20
+00:01:22,780 --> 00:01:25,750
+diverged, I'm going to go back
+to master and make a new commit.
+
+21
+00:01:26,560 --> 00:01:33,910
+So Git switch Master, let's open
+objectives dot txt, and make a
+
+22
+00:01:33,910 --> 00:01:37,180
+small change here, it doesn't
+really matter. Now, back into
+
+23
+00:01:37,180 --> 00:01:42,610
+terminal, let's run git add, and
+then commit and say, update
+
+24
+00:01:42,700 --> 00:01:47,440
+objectives. txt. So now both the
+master and Change Password
+
+25
+00:01:47,440 --> 00:01:52,720
+branches have a new commit, take
+a look. So git log. Okay, here's
+
+26
+00:01:52,720 --> 00:01:56,860
+master. And here's the Change
+Password branch. As we can see,
+
+27
+00:01:57,040 --> 00:02:00,400
+our branches have diverged. And
+this is the commit where we
+
+28
+00:02:00,400 --> 00:02:03,760
+started the Change Password
+branch, we added a new commit in
+
+29
+00:02:03,760 --> 00:02:07,420
+this branch and got back to
+master and added a new commit to
+
+30
+00:02:07,420 --> 00:02:11,410
+master. Now we do not have a
+direct linear path from change
+
+31
+00:02:11,410 --> 00:02:15,100
+password to master. So if we
+start from here, we cannot go to
+
+32
+00:02:15,100 --> 00:02:18,640
+master. So when we try to merge
+the changes, Git is going to run
+
+33
+00:02:18,670 --> 00:02:21,340
+a three way merge, it's going to
+look at the tips of this
+
+34
+00:02:21,340 --> 00:02:25,510
+branches, which is this commit.
+And this commit over here, is
+
+35
+00:02:25,510 --> 00:02:29,020
+going to compare these with our
+common ancestor, which is in
+
+36
+00:02:29,020 --> 00:02:32,620
+this case, this commit over
+here, based on the differences,
+
+37
+00:02:32,710 --> 00:02:35,890
+it's going to figure out how to
+merge or combine the changes
+
+38
+00:02:36,010 --> 00:02:41,200
+into a new merge commit. So here
+on the master branch, we type
+
+39
+00:02:41,440 --> 00:02:48,310
+Git merge, feature slash change
+password. Once again, we have a
+
+40
+00:02:48,310 --> 00:02:51,220
+default message for the merge
+commit, we can accept it as is
+
+41
+00:02:51,250 --> 00:02:55,570
+or change it if we need to. So
+let's close this window. Now
+
+42
+00:02:55,570 --> 00:02:58,540
+back in the terminal, as you can
+see, we don't have a fast
+
+43
+00:02:58,540 --> 00:03:01,570
+forward merge. Now let's look at
+our history one more time.
+
+44
+00:03:04,170 --> 00:03:06,510
+So here's the result of the
+merge. Our Change
+
+45
+00:03:06,510 --> 00:03:08,490
+Password branch is pointing at
+this commit.
+
+46
+00:03:09,179 --> 00:03:12,929
+Our Master was here. Now we
+combine these two into a new
+
+47
+00:03:12,929 --> 00:03:13,919
+merge commit over here.
+

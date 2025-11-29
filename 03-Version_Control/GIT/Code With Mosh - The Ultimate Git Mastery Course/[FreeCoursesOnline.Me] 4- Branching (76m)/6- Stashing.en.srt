@@ -1,0 +1,314 @@
+1
+00:00:04,050 --> 00:00:07,320
+So as I told you before, when we
+switch branches, git resets our
+
+2
+00:00:07,320 --> 00:00:10,440
+working directory to the
+snapshot stored in the last
+
+3
+00:00:10,440 --> 00:00:13,740
+commit of the target branch.
+Now, if you have local changes
+
+4
+00:00:13,740 --> 00:00:16,860
+in our working directory that we
+haven't committed yet, these
+
+5
+00:00:16,860 --> 00:00:20,430
+changes could get lost in these
+situations. It doesn't allow us
+
+6
+00:00:20,430 --> 00:00:23,610
+to switch branches. Let me show
+you how this happens and what
+
+7
+00:00:23,610 --> 00:00:26,640
+you should do about it. So in
+the previous lesson, we made
+
+8
+00:00:26,640 --> 00:00:30,660
+some changes in audience that
+txt in our bug fix branch, that
+
+9
+00:00:30,660 --> 00:00:33,930
+currently we're on the master
+branch. So let's open audience.
+
+10
+00:00:33,960 --> 00:00:37,890
+txt and make some other kind of
+changes. So here I'm going to
+
+11
+00:00:37,890 --> 00:00:42,480
+add an asterisk just to indicate
+a change, save back in the
+
+12
+00:00:42,480 --> 00:00:46,050
+terminal, our working directory
+is dirty, because we have some
+
+13
+00:00:46,050 --> 00:00:48,750
+local changes we haven't
+committed yet. So let's say
+
+14
+00:00:48,750 --> 00:00:50,700
+we're in the middle of
+something, and then we have to
+
+15
+00:00:50,700 --> 00:00:54,600
+quickly switch to the bug fix
+branch. If we type Git switch,
+
+16
+00:00:55,080 --> 00:01:00,270
+bug fix signup form, we get an
+error saying your local changes
+
+17
+00:01:00,270 --> 00:01:03,480
+to the following files would be
+overwritten by Checkout, please
+
+18
+00:01:03,480 --> 00:01:06,720
+commit your changes, or stash
+them before you switch branches.
+
+19
+00:01:07,140 --> 00:01:09,420
+Now, in this case, I don't want
+to commit the changes, because
+
+20
+00:01:09,450 --> 00:01:12,480
+I'm not done yet. So in
+situations like this, we should
+
+21
+00:01:12,480 --> 00:01:16,080
+stash our changes, slashing
+something means storing it in a
+
+22
+00:01:16,080 --> 00:01:18,600
+safe place. So we're going to
+store this somewhere in our Git
+
+23
+00:01:18,600 --> 00:01:21,390
+repository. But this is not
+going to be part of our history.
+
+24
+00:01:21,660 --> 00:01:27,360
+Let me show you how this works.
+So we type Git stash, push dash
+
+25
+00:01:27,360 --> 00:01:31,170
+m, and give it a message. With
+this message, we can tell what
+
+26
+00:01:31,170 --> 00:01:35,880
+these changes are all about.
+That's a new tax rules. So I was
+
+27
+00:01:35,880 --> 00:01:38,730
+working on the new tax rules.
+And then I had to quickly switch
+
+28
+00:01:38,730 --> 00:01:43,620
+to the bug fix scratch, right.
+So save working directory and
+
+29
+00:01:43,650 --> 00:01:47,430
+index date on master. And here's
+the message. Now as you can see,
+
+30
+00:01:47,430 --> 00:01:51,960
+over here, we have one stash.
+Just remember why default, new
+
+31
+00:01:51,990 --> 00:01:55,680
+ontrack files are not included
+in your stash. So as an example,
+
+32
+00:01:55,680 --> 00:02:00,180
+if I create a new file here,
+let's echo hello to new file.
+
+33
+00:02:00,300 --> 00:02:04,980
+txt. Now let's run a short
+status. So we have a new file.
+
+34
+00:02:05,370 --> 00:02:08,760
+If I stash the changes, this new
+untracked file is not going to
+
+35
+00:02:08,760 --> 00:02:12,090
+be included in the stash by
+default. To include it, we have
+
+36
+00:02:12,090 --> 00:02:17,760
+to use the all option. So we say
+Git stash, push dash dash all or
+
+37
+00:02:17,760 --> 00:02:21,660
+just dash a and then dash m. or
+we can combine these two
+
+38
+00:02:21,660 --> 00:02:26,250
+options. Interesting option. Now
+we'll give you the message, my
+
+39
+00:02:26,250 --> 00:02:29,160
+new stash. Of course, the
+message should be something more
+
+40
+00:02:29,160 --> 00:02:32,610
+meaningful. So now we have two
+slashes. You can see that over
+
+41
+00:02:32,610 --> 00:02:38,160
+here. To view our stashes with
+tap get stash list. So you have
+
+42
+00:02:38,160 --> 00:02:42,840
+two slashes. Each stash has a
+unique identifier stash add. In
+
+43
+00:02:42,840 --> 00:02:46,860
+curly braces, we have an index.
+Now as you can see, our working
+
+44
+00:02:46,860 --> 00:02:51,030
+directory is clean. So we can
+switch to the bug fix branch. No
+
+45
+00:02:51,030 --> 00:02:54,450
+problem, we can do our work
+here. When we are done, we get
+
+46
+00:02:54,450 --> 00:02:58,500
+back to the master. At this
+point, we want to apply the
+
+47
+00:02:58,500 --> 00:03:02,010
+changes from one of our stashes
+to our working directory. But
+
+48
+00:03:02,010 --> 00:03:05,370
+before doing so, we want to look
+at those changes to see what
+
+49
+00:03:05,370 --> 00:03:08,910
+lines of code have been
+modified. So we type Git stash
+
+50
+00:03:08,940 --> 00:03:13,650
+show. And here we type the name
+of the stash like stash at curly
+
+51
+00:03:13,650 --> 00:03:18,000
+braces one. Now we can make this
+shorter by using just the
+
+52
+00:03:18,000 --> 00:03:22,530
+sequence number. Now we know
+that in stash number one, one
+
+53
+00:03:22,530 --> 00:03:25,680
+file has been changed. That is
+audience dot txt. Here we have
+
+54
+00:03:25,680 --> 00:03:30,150
+two changes, one insertion and
+one deletion. So we can go ahead
+
+55
+00:03:30,180 --> 00:03:33,750
+and apply this stash on our
+working directory. So Git stash
+
+56
+00:03:33,870 --> 00:03:37,830
+apply once the changes are
+applied to our working directory
+
+57
+00:03:37,830 --> 00:03:40,620
+beautiful. Now when we're done
+with this stash, we want to
+
+58
+00:03:40,620 --> 00:03:45,570
+remove it to clean things up. So
+we can type Git stash drop one,
+
+59
+00:03:46,350 --> 00:03:49,140
+that stash is removed. Let's
+look at our stash the small more
+
+60
+00:03:49,140 --> 00:03:52,350
+time. We have one more stash.
+Let's say we don't need this
+
+61
+00:03:52,350 --> 00:03:57,420
+anymore. So we can type Git
+stash drops zero or to remove
+
+62
+00:03:57,420 --> 00:04:01,770
+all stashes we can type Git
+stash clear. All our stashes are
+
+63
+00:04:01,770 --> 00:04:02,070
+gone.
+

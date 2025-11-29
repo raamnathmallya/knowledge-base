@@ -1,0 +1,259 @@
+1
+00:00:03,990 --> 00:00:06,240
+Let's see we have pushed all
+these commits to a remote
+
+2
+00:00:06,240 --> 00:00:09,750
+repository. And now we want to
+undo one or more of them. As I
+
+3
+00:00:09,750 --> 00:00:12,720
+explained before, resetting the
+head is not an option here,
+
+4
+00:00:12,960 --> 00:00:15,150
+because we don't want to drop
+the commits that we have shared
+
+5
+00:00:15,150 --> 00:00:18,510
+with others. So we have to use
+the revert commit. Now let's say
+
+6
+00:00:18,510 --> 00:00:22,860
+we want to revert this commit
+over here, we type Git revert
+
+7
+00:00:22,980 --> 00:00:27,240
+head, we can also revert an
+earlier commit, like head to the
+
+8
+00:00:27,240 --> 00:00:32,340
+to, this will revert this commit
+over here, we can also specify a
+
+9
+00:00:32,340 --> 00:00:35,280
+range. Let's say we want to
+revert all the last three
+
+10
+00:00:35,280 --> 00:00:39,030
+commits. First, we'll look at
+the parent of this commit. So
+
+11
+00:00:39,690 --> 00:00:43,470
+that is coming over here. So
+here, we say revert had to the
+
+12
+00:00:43,470 --> 00:00:48,120
+Three, two head. And here's the
+tricky part. When we say head to
+
+13
+00:00:48,120 --> 00:00:52,170
+the three to head, we're
+referencing this range, but it
+
+14
+00:00:52,170 --> 00:00:55,650
+will actually revert the last
+three commits. So it's not going
+
+15
+00:00:55,650 --> 00:00:59,820
+to include this commit over
+here, okay? Now when we run this
+
+16
+00:00:59,820 --> 00:01:02,730
+command, Git is going to revert
+each of these commits one by
+
+17
+00:01:02,730 --> 00:01:06,210
+one, take a look. Let's go.
+Alright, first, it's going to
+
+18
+00:01:06,210 --> 00:01:09,330
+revert this commit, I'm going to
+keep the default message as is.
+
+19
+00:01:09,390 --> 00:01:13,890
+So let's close this window. Now,
+Git is reversing the next
+
+20
+00:01:13,890 --> 00:01:17,370
+commit. Once again, I'm going to
+keep the default message. So
+
+21
+00:01:17,550 --> 00:01:22,140
+let's move on. And here's one
+more revert operation. Let's go.
+
+22
+00:01:22,950 --> 00:01:27,480
+Alright, reverting is done. Now
+let's look at our history. Look,
+
+23
+00:01:28,110 --> 00:01:31,710
+we have three revert commits.
+And this is very ugly, it's
+
+24
+00:01:31,710 --> 00:01:34,710
+adding so much noise in our
+history. Wouldn't it be better
+
+25
+00:01:34,890 --> 00:01:37,620
+if you reverted all these
+commits using a single commit,
+
+26
+00:01:37,860 --> 00:01:40,620
+let me show you how to do that.
+First, I want to reset the head
+
+27
+00:01:40,890 --> 00:01:45,180
+to this position to get rid of
+this revert commits. So Git
+
+28
+00:01:45,300 --> 00:01:50,880
+reset dash dash heart had tilde
+three. Let's look at our history
+
+29
+00:01:50,880 --> 00:01:55,500
+one more time. So we're in the
+same state as before, and we
+
+30
+00:01:55,500 --> 00:02:00,090
+want to revert the last three
+commits, we type Git revert,
+
+31
+00:02:00,870 --> 00:02:04,950
+we're going to use an option
+called no commit. With this
+
+32
+00:02:04,980 --> 00:02:08,130
+ption, it will simply add the
+equired changes in the staging
+
+33
+00:02:08,130 --> 00:02:11,520
+rea. So for every commit that
+e're going to revert, it will
+
+34
+00:02:11,520 --> 00:02:14,730
+igure out the changes that need
+o be undone, then it will appl
+
+35
+00:02:14,730 --> 00:02:18,690
+those changes in the stagin
+area. Just like before, we'r
+
+36
+00:02:18,690 --> 00:02:23,520
+going to specify our range, s
+head tilda three to head. Now,
+
+37
+00:02:23,520 --> 00:02:28,110
+we can simplify this by dropping
+the second hat. So with this,
+
+38
+00:02:28,110 --> 00:02:32,130
+we're essentially reverting the
+last three commits, take a look.
+
+39
+00:02:33,060 --> 00:02:36,540
+So get removed this file,
+because we added this file in
+
+40
+00:02:36,540 --> 00:02:39,990
+one of the last three commits.
+Now look, we have some changes
+
+41
+00:02:39,990 --> 00:02:45,030
+in our staging area. So git
+status, dash s. Here's the
+
+42
+00:02:45,030 --> 00:02:48,360
+reverse of all the changes
+across the last three commits.
+
+43
+00:02:48,870 --> 00:02:52,110
+f you screwed something, and we
+ant to get out of this date, we
+
+44
+00:02:52,110 --> 00:02:57,150
+an type Git revert, abort. Or
+f we're happy with our changes,
+
+45
+00:02:57,660 --> 00:03:02,310
+e can use the continue option.
+ow in this case, I don't want
+
+46
+00:03:02,310 --> 00:03:05,490
+o accept the default message,
+ecause we're reverting multiple
+
+47
+00:03:05,490 --> 00:03:08,580
+ommits. So we should write a
+essage that better describes
+
+48
+00:03:08,640 --> 00:03:11,250
+he commits that we're
+everting. In this demo, I'm
+
+49
+00:03:11,250 --> 00:03:17,970
+oing to say revert bad code.
+ave close. All right, reverting
+
+50
+00:03:17,970 --> 00:03:22,530
+s done. Let's look at our
+istory. Now we have a single
+
+51
+00:03:22,740 --> 00:03:25,890
+referred commit beautiful, so
+e can push this to the origin
+
+52
+00:03:25,980 --> 00:03:27,150
+nd share it with others.
+

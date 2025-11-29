@@ -1,0 +1,75 @@
+1
+00:00:04,050 --> 00:00:06,630
+Alright, before we get started,
+let me tell you something super
+
+2
+00:00:06,630 --> 00:00:09,690
+important real quick. If you
+want to get the most out of this
+
+3
+00:00:09,690 --> 00:00:13,110
+Git course and become a git
+expert, you should watch every
+
+4
+00:00:13,110 --> 00:00:16,230
+lesson in order. Don't skip any
+lessons, even if you think you
+
+5
+00:00:16,230 --> 00:00:19,410
+know the basics. And trust me,
+there's a lot of bad information
+
+6
+00:00:19,410 --> 00:00:22,530
+and misconceptions about Git out
+there. A lot of people don't
+
+7
+00:00:22,530 --> 00:00:25,620
+know how Git really works. And
+that's why they constantly screw
+
+8
+00:00:25,620 --> 00:00:28,950
+things up and jump on Stack
+Overflow for help. I don't want
+
+9
+00:00:28,950 --> 00:00:31,800
+you to be one of them. So I've
+put tremendous effort into
+
+10
+00:00:31,800 --> 00:00:34,500
+creating this course, to make
+sure you really understand how
+
+11
+00:00:34,500 --> 00:00:37,680
+Git works and how you can use it
+like a pro. But that would only
+
+12
+00:00:37,680 --> 00:00:41,460
+happen if you watch every single
+lesson in order. This course is
+
+13
+00:00:41,460 --> 00:00:44,460
+short and sweet. It's only five
+hours long, but teaches you a
+
+14
+00:00:44,460 --> 00:00:47,970
+ton. You know me I'm not going
+to waste your time with bs. With
+
+15
+00:00:47,970 --> 00:00:49,860
+that, now let's move on to the
+next lesson.
+

@@ -1,0 +1,579 @@
+1
+00:00:03,990 --> 00:00:07,500
+Let's see a real example of a
+fast forward merge. So first,
+
+2
+00:00:07,500 --> 00:00:09,930
+let's look at our log. And by
+the way, when you're using
+
+3
+00:00:09,930 --> 00:00:14,190
+branches, it's a good idea to
+always include the graph option.
+
+4
+00:00:14,370 --> 00:00:16,020
+At this point in time, you're
+not going to see any
+
+5
+00:00:16,020 --> 00:00:18,900
+differences. But as we go
+forward, you will see that the
+
+6
+00:00:18,900 --> 00:00:21,870
+graph option will give us a
+better representation of our
+
+7
+00:00:21,870 --> 00:00:24,810
+branches and how they diverged.
+And, of course, I know this
+
+8
+00:00:24,810 --> 00:00:27,660
+command is very long, and you're
+not supposed to write this every
+
+9
+00:00:27,660 --> 00:00:30,660
+single time. That's why we use
+aliases. But as I told you
+
+10
+00:00:30,660 --> 00:00:33,420
+before, in this course, I'm not
+going to use aliases, because I
+
+11
+00:00:33,420 --> 00:00:36,900
+want anyone to be able to follow
+this course. So let's look at
+
+12
+00:00:36,900 --> 00:00:41,280
+our log. As you can see, our bug
+fix branch is one commit ahead
+
+13
+00:00:41,280 --> 00:00:45,210
+of master. Also, as you can see,
+here, we have a linear path. So
+
+14
+00:00:45,210 --> 00:00:49,260
+if you start from bug fix, we
+can get to master. So master has
+
+15
+00:00:49,260 --> 00:00:53,100
+not diverged from bug fix. That
+means when we run a merge, git
+
+16
+00:00:53,100 --> 00:00:56,460
+will fast forward Master, let me
+show you. So to bring the
+
+17
+00:00:56,460 --> 00:00:59,700
+changes from the bug fix crash
+into Master, first, we should be
+
+18
+00:00:59,700 --> 00:01:04,740
+on master and then run git
+merge, bug, fix slash, sign up
+
+19
+00:01:04,770 --> 00:01:07,440
+for him, I don't know why my
+autocomplete is not working on
+
+20
+00:01:07,440 --> 00:01:12,030
+this machine. So let's run.
+Look, we have a fast forward
+
+21
+00:01:12,030 --> 00:01:15,870
+merge. And this file is the only
+file that was changed with five
+
+22
+00:01:15,870 --> 00:01:22,080
+changes. Now, let's look at our
+history one more time. So now
+
+23
+00:01:22,080 --> 00:01:25,140
+both these branches are pointing
+to the same commit, which is the
+
+24
+00:01:25,140 --> 00:01:28,230
+latest commit over here, and we
+have a linear history. Now it is
+
+25
+00:01:28,230 --> 00:01:31,020
+possible to disable a fast
+forward merge. And this has a
+
+26
+00:01:31,020 --> 00:01:34,020
+number of benefits. So let's
+create a new bug fix branch,
+
+27
+00:01:34,260 --> 00:01:37,200
+make a new commit to it, and
+then merge it with Master using
+
+28
+00:01:37,230 --> 00:01:40,980
+a no Fast Forward option. So
+earlier, I told you that to
+
+29
+00:01:40,980 --> 00:01:44,190
+create a branch we type git
+branch, and then type the branch
+
+30
+00:01:44,190 --> 00:01:47,400
+name. But after this, we have to
+switch to that branch. So there
+
+31
+00:01:47,400 --> 00:01:50,220
+are two steps we have to follow.
+Now let me show you a shortcut.
+
+32
+00:01:50,730 --> 00:01:55,230
+We can type Git switch, dash c
+for create. And with this, we
+
+33
+00:01:55,230 --> 00:01:58,740
+can create and switch to a
+branch in one step. So I'm going
+
+34
+00:01:58,740 --> 00:02:04,050
+to call this branch bug fixed
+slash login for now we are on
+
+35
+00:02:04,050 --> 00:02:09,450
+this new branch. So let's open
+our table of contents file and
+
+36
+00:02:09,630 --> 00:02:14,460
+add an asterisk here, save back
+to the terminal, let's commit
+
+37
+00:02:14,460 --> 00:02:18,840
+the changes. For the commit
+message, I'm going to say update
+
+38
+00:02:19,050 --> 00:02:23,940
+table of contents. txt. Okay,
+now let's look at our history.
+
+39
+00:02:24,000 --> 00:02:30,570
+So git log, one nine, all graph,
+take a look. So our new branch
+
+40
+00:02:30,630 --> 00:02:33,870
+is one commit ahead of master.
+And by the way, we probably
+
+41
+00:02:33,870 --> 00:02:36,660
+don't need this branch anymore,
+so we can drop it. But that
+
+42
+00:02:36,660 --> 00:02:40,290
+aside, let's merge our new
+branch into master using a no
+
+43
+00:02:40,290 --> 00:02:44,220
+Fast Forward option. So first,
+we have to switch to a master,
+
+44
+00:02:44,700 --> 00:02:49,710
+get switch master. Now we run
+git merge, here, we have to use
+
+45
+00:02:49,800 --> 00:02:54,570
+the no Fast Forward option. So
+no, fast forward, then we type
+
+46
+00:02:54,570 --> 00:02:59,520
+the branch name. So bug fix
+slash login form. So we this
+
+47
+00:02:59,520 --> 00:03:02,970
+pretending good, hey, even if
+fast forward is possible, don't
+
+48
+00:03:02,970 --> 00:03:07,500
+do it, create a merge commit
+that combines all the changes in
+
+49
+00:03:07,500 --> 00:03:10,680
+this target branch and bring
+them into Master, take a look.
+
+50
+00:03:11,340 --> 00:03:14,910
+So our default editor is opened.
+Here, we have to type a commit
+
+51
+00:03:14,910 --> 00:03:17,490
+message because we're going to
+have a merge commit and new
+
+52
+00:03:17,490 --> 00:03:20,940
+commit in the master branch, by
+default, gets suggest this
+
+53
+00:03:20,940 --> 00:03:24,840
+message, merge branch, bug, fix
+slash login form into Master,
+
+54
+00:03:25,200 --> 00:03:28,410
+most of the time, the default
+message is totally fine. So we
+
+55
+00:03:28,410 --> 00:03:29,310
+can close this.
+
+56
+00:03:30,990 --> 00:03:33,690
+Go back to the terminal, we no
+longer have a fast forward
+
+57
+00:03:33,690 --> 00:03:37,230
+merge. So let's look at our
+history one more time, using the
+
+58
+00:03:37,230 --> 00:03:41,700
+graph option. Let's see what's
+going on here. So here's our new
+
+59
+00:03:41,700 --> 00:03:46,140
+bug fix branch, which originated
+from this commit over here. So
+
+60
+00:03:46,140 --> 00:03:49,320
+before we merge this into Master
+Master was pointing to this
+
+61
+00:03:49,320 --> 00:03:52,470
+commit. And this is when we
+created our new bug fix scratch.
+
+62
+00:03:52,890 --> 00:03:56,280
+And this branch, we added a new
+commit, which was for updating
+
+63
+00:03:56,310 --> 00:03:59,910
+our table of content file, then
+we merge this branch into
+
+64
+00:03:59,910 --> 00:04:03,990
+master. So see the graph, this
+is coming from the graph option.
+
+65
+00:04:04,260 --> 00:04:06,870
+If we don't use the graph
+option, we'll see everything in
+
+66
+00:04:06,870 --> 00:04:10,560
+a linear way. So our master is
+pointing to this commit, which
+
+67
+00:04:10,560 --> 00:04:13,560
+is our merge commit. And here's
+the commit message that you just
+
+68
+00:04:13,560 --> 00:04:16,830
+saw. Now, what is the benefits
+of this approach? Why should we
+
+69
+00:04:16,830 --> 00:04:19,680
+disable Fast Forward marriages?
+Well, this is one of those areas
+
+70
+00:04:19,680 --> 00:04:22,410
+that gets a bit controversial.
+And they get committed to we
+
+71
+00:04:22,410 --> 00:04:25,800
+have two groups of people. Some
+people hate merge commits, and
+
+72
+00:04:25,830 --> 00:04:28,290
+they argue that these merge
+commits pollute the history,
+
+73
+00:04:28,530 --> 00:04:31,170
+they make it harder to read and
+understand what's going on,
+
+74
+00:04:31,230 --> 00:04:34,140
+especially as we have more and
+more branches. These people
+
+75
+00:04:34,140 --> 00:04:37,620
+prefer a linear history. On the
+other hand, we have another
+
+76
+00:04:37,620 --> 00:04:41,370
+group of people who argue that
+these merge commits are a true
+
+77
+00:04:41,370 --> 00:04:44,280
+reflection of history, a true
+reflection of what actually
+
+78
+00:04:44,280 --> 00:04:47,040
+happened when we merged our
+branches and how they were
+
+79
+00:04:47,040 --> 00:04:50,490
+merged. In my opinion, both his
+arguments are valid. It's
+
+80
+00:04:50,490 --> 00:04:52,980
+definitely easier to read a
+linear history, but you should
+
+81
+00:04:53,010 --> 00:04:55,860
+also remember that a linear
+history is not your true
+
+82
+00:04:55,860 --> 00:04:59,520
+history. It's like now that
+aside, these merge commits have
+
+83
+00:04:59,610 --> 00:05:03,450
+another benefit, they make it
+easier for us to undo a feature.
+
+84
+00:05:03,690 --> 00:05:06,510
+Let's talk about it using a real
+example. So here we have two
+
+85
+00:05:06,510 --> 00:05:10,320
+branches master and feature. And
+our branches have not diverse.
+
+86
+00:05:10,440 --> 00:05:14,460
+So there is a direct linear path
+from feature to master. Right.
+
+87
+00:05:14,910 --> 00:05:17,220
+So here, we can use a fast
+forward merge. But let's see
+
+88
+00:05:17,220 --> 00:05:20,640
+what happens. If you don't use a
+fast forward merge, you're gonna
+
+89
+00:05:20,640 --> 00:05:23,700
+have a merge commit, that
+combines all the changes in the
+
+90
+00:05:23,700 --> 00:05:27,090
+feature branch. So if you have f
+one and F two in the feature
+
+91
+00:05:27,090 --> 00:05:30,900
+branch, this new merge commit
+combines all the changes in F
+
+92
+00:05:30,900 --> 00:05:34,620
+one and F two. Now, let's see,
+we work on this feature. And
+
+93
+00:05:34,620 --> 00:05:37,050
+then next day, we are told to
+remove this feature from the
+
+94
+00:05:37,050 --> 00:05:40,710
+codebase, we can easily revert
+the last commit in the master
+
+95
+00:05:40,710 --> 00:05:43,440
+branch. We'll talk about
+reverting commits in the future
+
+96
+00:05:43,590 --> 00:05:46,320
+when we talk about rewriting
+history. But basically, by
+
+97
+00:05:46,320 --> 00:05:50,130
+reverting a commit, we create a
+new commit, that is the opposite
+
+98
+00:05:50,130 --> 00:05:53,070
+of that commit. So essentially,
+it undoes everything that has
+
+99
+00:05:53,070 --> 00:05:56,610
+happened in another commit. So
+if we use a merge commit, there
+
+100
+00:05:56,610 --> 00:06:00,240
+is a single commit that we have
+to revert. In contrast, if we
+
+101
+00:06:00,240 --> 00:06:04,230
+use the Fast Forward option, our
+master pointer is going to move
+
+102
+00:06:04,230 --> 00:06:06,780
+over here. And now if you want
+to take out this feature from
+
+103
+00:06:06,780 --> 00:06:09,510
+the codebase, we have more
+commits that we have to revert,
+
+104
+00:06:09,720 --> 00:06:13,200
+and this can get a bit more
+complex. So once again, both his
+
+105
+00:06:13,200 --> 00:06:16,470
+arguments are valid, it really
+depends on your team culture and
+
+106
+00:06:16,560 --> 00:06:18,900
+the kind of project you're
+working on. So I leave it up to
+
+107
+00:06:18,900 --> 00:06:22,500
+you to decide what approach
+works best for you. Now, where
+
+108
+00:06:22,500 --> 00:06:24,960
+you work, you might have a
+policy in your company is saying
+
+109
+00:06:25,050 --> 00:06:28,890
+no Fast Forward merges. In that
+case, you don't want to type Git
+
+110
+00:06:28,890 --> 00:06:32,400
+merge, no Fast Forward every
+time What if you forget, so let
+
+111
+00:06:32,400 --> 00:06:35,370
+me show you a better way. We can
+disable Fast Forward measures
+
+112
+00:06:35,460 --> 00:06:39,450
+for a particular repository or
+for all of our repositories. So
+
+113
+00:06:39,600 --> 00:06:44,250
+we type Git config. Fast
+forward, no, this will disable
+
+114
+00:06:44,250 --> 00:06:47,340
+Fast Forward only in the current
+repository. But if you want this
+
+115
+00:06:47,340 --> 00:06:50,580
+to apply to all of your
+repositories, of course, you
+
+116
+00:06:50,580 --> 00:06:51,930
+should use the global option
+here.
+

@@ -1,0 +1,135 @@
+1
+00:00:03,990 --> 00:00:06,540
+So you'll learn how to cherry
+pick a particular commit from
+
+2
+00:00:06,540 --> 00:00:09,660
+another branch and apply it to
+the current branch. But what if
+
+3
+00:00:09,660 --> 00:00:12,450
+you're only interested in a
+single file, not a whole commit,
+
+4
+00:00:12,660 --> 00:00:15,120
+let me show you how to bring a
+given file from another branch
+
+5
+00:00:15,180 --> 00:00:18,450
+into the current branch. So for
+this demo, I'm going to create
+
+6
+00:00:18,840 --> 00:00:23,490
+another branch called feature
+slash send email. That is
+
+7
+00:00:23,490 --> 00:00:25,590
+scratch, I'm going to make a
+change to our table of content
+
+8
+00:00:25,590 --> 00:00:32,640
+file. So echo, river to table of
+content dot txt. Now, let's make
+
+9
+00:00:32,640 --> 00:00:36,810
+a comment, and say update table
+of content. Now let's say we
+
+10
+00:00:36,810 --> 00:00:39,030
+want to bring this table of
+content file to our master
+
+11
+00:00:39,030 --> 00:00:43,860
+branch. So first, we switch to
+master. Now we're going to use
+
+12
+00:00:43,860 --> 00:00:46,110
+the Restore command. You'll
+learn about this earlier in the
+
+13
+00:00:46,110 --> 00:00:51,120
+course. So we type Git restore,
+dash di source, or we could use
+
+14
+00:00:51,120 --> 00:00:55,830
+dash s for short. We set this to
+our target branch, feature slash
+
+15
+00:00:55,920 --> 00:00:59,520
+send email. And then we specify
+our file name. In this case,
+
+16
+00:00:59,520 --> 00:01:02,490
+table of contents. txt, the
+earlier I told you that
+
+17
+00:01:02,490 --> 00:01:05,460
+sometimes get cannot interpret
+the file name. So in those
+
+18
+00:01:05,460 --> 00:01:08,970
+situations, we have to add
+double hyphens here to separate
+
+19
+00:01:08,970 --> 00:01:12,870
+the options from the file or the
+files here. Now when I run this
+
+20
+00:01:12,870 --> 00:01:16,260
+command, Git is going to restore
+our table of content file in our
+
+21
+00:01:16,260 --> 00:01:19,440
+working directory. From the
+latest version of this file
+
+22
+00:01:19,440 --> 00:01:23,370
+stored in this branch. Take a
+look. So our working directory
+
+23
+00:01:23,370 --> 00:01:27,750
+is dirty. Let's get a short
+status. So we have some local
+
+24
+00:01:27,750 --> 00:01:30,990
+changes in this file, we can
+view the contents of this file
+
+25
+00:01:30,990 --> 00:01:36,390
+using the cat command. So cat
+table of content, that txt. So
+
+26
+00:01:36,390 --> 00:01:38,760
+this is the change that we
+applied in our feature branch.
+
+27
+00:01:39,240 --> 00:01:41,850
+Now we can stage the change and
+committed in the current branch.
+

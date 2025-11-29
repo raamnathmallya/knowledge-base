@@ -1,0 +1,119 @@
+1
+00:00:04,019 --> 00:00:07,199
+Now let's talk about milestones.
+We use milestones to track the
+
+2
+00:00:07,199 --> 00:00:10,349
+progress of various issues. So
+we can add a bunch of issues to
+
+3
+00:00:10,349 --> 00:00:13,079
+a milestone, and then see how
+much we have progress in that
+
+4
+00:00:13,079 --> 00:00:17,909
+milestone. So here on the issues
+tab, we go to milestones and
+
+5
+00:00:17,909 --> 00:00:21,989
+create a new milestone, we give
+it a title. This can be anything
+
+6
+00:00:21,989 --> 00:00:24,719
+that is meaningful to the team.
+For example, if you're working
+
+7
+00:00:24,719 --> 00:00:28,229
+on version two of our software,
+the title can be 2.0 point oh,
+
+8
+00:00:28,979 --> 00:00:32,189
+now optionally, we can give it a
+due date. So I'm going to set
+
+9
+00:00:32,189 --> 00:00:37,469
+this to, let's say, 30th of
+September 2020. We can also give
+
+10
+00:00:37,469 --> 00:00:41,849
+it a description, and then
+create the milestone. So here we
+
+11
+00:00:41,849 --> 00:00:45,989
+have one open milestone that is
+due by September 30. Now over
+
+12
+00:00:45,989 --> 00:00:48,779
+here, you can see the progress
+of this milestone. Currently, we
+
+13
+00:00:48,779 --> 00:00:52,199
+don't have any issues or
+scientist milestone. So let's go
+
+14
+00:00:52,199 --> 00:00:56,549
+to the issues page and select
+this issue. And of course, we
+
+15
+00:00:56,549 --> 00:01:01,169
+could select multiple issues,
+and then put them in a
+
+16
+00:01:01,169 --> 00:01:07,319
+particular milestone. Good. Now,
+look over here. This issue is
+
+17
+00:01:07,319 --> 00:01:10,499
+assigned to our version two
+milestone. Now let's go to the
+
+18
+00:01:10,499 --> 00:01:15,569
+milestones tab. Now look over
+here, we have one open issue
+
+19
+00:01:15,689 --> 00:01:19,229
+zero closed, and we're at zero
+percent complete. If I close
+
+20
+00:01:19,229 --> 00:01:21,779
+this issue, our milestone will
+be complete. Let me show you
+
+21
+00:01:21,779 --> 00:01:26,639
+real quick. So we go to the
+issues. I'm going to select this
+
+22
+00:01:26,639 --> 00:01:34,199
+issue and then mark it as
+closed. Okay, good. Now back to
+
+23
+00:01:34,199 --> 00:01:38,639
+the milestones page. Look at our
+milestone is complete. This is a
+
+24
+00:01:38,669 --> 00:01:39,779
+very useful report.
+

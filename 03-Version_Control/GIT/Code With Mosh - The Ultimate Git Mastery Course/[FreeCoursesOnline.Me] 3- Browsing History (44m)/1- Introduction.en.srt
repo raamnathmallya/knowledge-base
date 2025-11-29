@@ -1,0 +1,65 @@
+1
+00:00:01,230 --> 00:00:03,720
+In this section, we'll look at
+various ways to browse the
+
+2
+00:00:03,720 --> 00:00:07,290
+history of our project, you will
+learn how to search for commits
+
+3
+00:00:07,320 --> 00:00:11,370
+by author, date, message,
+content, and so on. We'll also
+
+4
+00:00:11,370 --> 00:00:14,550
+talk about viewing a commit to
+see what files have been changed
+
+5
+00:00:14,550 --> 00:00:17,850
+and how. Next I'll show you how
+to restore your project to an
+
+6
+00:00:17,850 --> 00:00:20,910
+earlier point in time to the
+snapshot stored in one of your
+
+7
+00:00:20,910 --> 00:00:24,690
+commits. We'll also see how we
+can compare a commit to see what
+
+8
+00:00:24,690 --> 00:00:27,510
+files have been changed and how
+you will also learn to view the
+
+9
+00:00:27,510 --> 00:00:31,080
+history of a file to see how
+it's evolved from day one, and
+
+10
+00:00:31,110 --> 00:00:33,840
+who has written each line of
+code. And finally, I'll show you
+
+11
+00:00:33,840 --> 00:00:37,530
+a great tool for quickly finding
+a bad commit that introduced a
+
+12
+00:00:37,530 --> 00:00:39,960
+bug in your application. So
+there's a lot we're going to
+
+13
+00:00:39,960 --> 00:00:41,940
+cover. Let's jump in and get
+started.
+

@@ -1,0 +1,269 @@
+1
+00:00:04,019 --> 00:00:06,779
+Now what if you have conflicts
+when merging and closing a pull
+
+2
+00:00:06,779 --> 00:00:10,289
+request? Well, once again on his
+machine, I'm going to start a
+
+3
+00:00:10,289 --> 00:00:14,189
+new branch, add a commit, push
+it, create a pull request. And
+
+4
+00:00:14,189 --> 00:00:16,799
+in the meantime, I'm going to
+create a conflict and change on
+
+5
+00:00:16,799 --> 00:00:19,619
+master. So when we merge this
+branch into Master, we get a
+
+6
+00:00:19,619 --> 00:00:24,509
+conflict. So let's create a new
+branch called feature slash, log
+
+7
+00:00:24,509 --> 00:00:28,529
+out. Now on this branch, I'm
+going to write hello to file one
+
+8
+00:00:28,529 --> 00:00:33,749
+dot txt. Let's commit the
+changes and say write hello to
+
+9
+00:00:33,929 --> 00:00:39,089
+file one. Now let's push this
+branch. So push that shoe origin
+
+10
+00:00:39,509 --> 00:00:44,759
+feature slash logout. Now on
+GitHub, we have this new branch
+
+11
+00:00:44,849 --> 00:00:48,089
+feature slash logout, we can
+start a pull request. But before
+
+12
+00:00:48,089 --> 00:00:52,079
+doing so let's add a conflict
+and change in master. So back to
+
+13
+00:00:52,079 --> 00:00:56,249
+Amy's machine. Let's switch to
+master and write something
+
+14
+00:00:56,249 --> 00:00:59,909
+different to find one. So I'm
+going to write world two file
+
+15
+00:00:59,909 --> 00:01:05,099
+one dot txt. Now let's commit
+the changes, right world to find
+
+16
+00:01:05,099 --> 00:01:08,729
+one, and then do a push. Of
+course, this doesn't have to
+
+17
+00:01:08,729 --> 00:01:11,699
+happen on a machine, someone
+else might have a pull request
+
+18
+00:01:11,699 --> 00:01:15,269
+that is open, that pull request
+might get merged into master. So
+
+19
+00:01:15,269 --> 00:01:18,839
+master can move forward without
+me being aware of that. Okay,
+
+20
+00:01:19,169 --> 00:01:22,679
+either way, we have a conflict
+and change. So let's go ahead.
+
+21
+00:01:24,869 --> 00:01:27,719
+Now let's say Amy has finished
+her work. So she wants to start
+
+22
+00:01:27,719 --> 00:01:31,139
+a pull request. So over here, we
+click on compare and pull
+
+23
+00:01:31,139 --> 00:01:35,579
+request. Now look, GitHub is
+saying that it cannot
+
+24
+00:01:35,609 --> 00:01:38,519
+automatically merge the changes
+because we have conflicts. But
+
+25
+00:01:38,549 --> 00:01:41,909
+don't worry, we can still create
+the pull request. So let's give
+
+26
+00:01:41,909 --> 00:01:46,109
+it the title, feature logout and
+I'm going to leave out the
+
+27
+00:01:46,109 --> 00:01:49,499
+description doesn't really
+matter. All right, now we have a
+
+28
+00:01:49,499 --> 00:01:52,889
+pull request. At some point in
+the future, we want to merge and
+
+29
+00:01:52,889 --> 00:01:56,759
+close this pull request. Now
+look over here. GitHub is saying
+
+30
+00:01:56,999 --> 00:02:00,089
+this branch has conflicts that
+must be resolved. So here we
+
+31
+00:02:00,089 --> 00:02:03,299
+have two options, we can use the
+command line or use the GitHub
+
+32
+00:02:03,299 --> 00:02:05,969
+user interface. If you want to
+use the command line, the
+
+33
+00:02:05,969 --> 00:02:09,479
+process is exactly like before.
+So someone who is in charge of
+
+34
+00:02:09,479 --> 00:02:12,689
+merging, it could be Amy or
+someone else. And that person
+
+35
+00:02:12,719 --> 00:02:15,569
+first has to pull in the latest
+code, then they have to start
+
+36
+00:02:15,569 --> 00:02:18,179
+the merge process, they're gonna
+get conflicts and they'll
+
+37
+00:02:18,179 --> 00:02:20,969
+resolve the conflicts, add a new
+commit, and then push it to
+
+38
+00:02:20,969 --> 00:02:24,239
+GitHub. Exactly like before,
+nothing different. So in this
+
+39
+00:02:24,239 --> 00:02:26,759
+lesson, I'm going to show you
+how to resolve conflicts on
+
+40
+00:02:26,759 --> 00:02:30,719
+GitHub. That is very simple. So
+we click on resolve conflicts.
+
+41
+00:02:32,309 --> 00:02:35,369
+Now on this page, we can see all
+the conflict in files on the
+
+42
+00:02:35,369 --> 00:02:38,819
+left and this case, we have a
+single file and on the right we
+
+43
+00:02:38,819 --> 00:02:42,119
+can see our conflict markers.
+You have seen these before. So
+
+44
+00:02:42,329 --> 00:02:46,349
+in this branch feature slash
+logout, we have added Hello, on
+
+45
+00:02:46,349 --> 00:02:49,049
+this branch on Master, we have
+added world, so we need to
+
+46
+00:02:49,049 --> 00:02:52,019
+decide what changes we need. In
+this case, I'm going to bring
+
+47
+00:02:52,019 --> 00:02:56,309
+the changes in both these
+branches. So let's delete the
+
+48
+00:02:56,309 --> 00:03:00,929
+markers. You're left with hello
+world. If you have multiple
+
+49
+00:03:00,929 --> 00:03:05,549
+conflicts, we can browse through
+them using these buttons. Now,
+
+50
+00:03:05,879 --> 00:03:09,629
+let's mark this as resolved.
+Good. So now we need to commit
+
+51
+00:03:09,629 --> 00:03:16,139
+the changes onto feature slash
+logout. So commit. Good. Now
+
+52
+00:03:16,139 --> 00:03:19,709
+back to our pull request. Down
+below, we no longer have that
+
+53
+00:03:19,709 --> 00:03:23,669
+message sent or conflict. So we
+can go ahead and merge the pull
+
+54
+00:03:23,669 --> 00:03:26,579
+request. Done
+

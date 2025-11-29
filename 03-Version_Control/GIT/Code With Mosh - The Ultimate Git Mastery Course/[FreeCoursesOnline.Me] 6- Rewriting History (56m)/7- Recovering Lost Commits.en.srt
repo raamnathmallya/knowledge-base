@@ -1,0 +1,195 @@
+1
+00:00:03,990 --> 00:00:07,020
+Sometimes we may screw up while
+resetting the head. Let me give
+
+2
+00:00:07,020 --> 00:00:11,100
+you an example. So here's our
+history, I'm going to run git
+
+3
+00:00:11,220 --> 00:00:16,170
+reset hard head, tilda six,
+let's say this is an accident.
+
+4
+00:00:17,790 --> 00:00:21,060
+Now, let's bring up the history
+again, what happened to our
+
+5
+00:00:21,060 --> 00:00:23,880
+commits? You may think that we
+have lost our commits, well,
+
+6
+00:00:24,090 --> 00:00:26,700
+I've got a good news for you.
+With git, we don't really lose
+
+7
+00:00:26,700 --> 00:00:29,970
+anything, all the information
+about our project history, all
+
+8
+00:00:29,970 --> 00:00:32,340
+the commits that we have
+created, all of these objects
+
+9
+00:00:32,340 --> 00:00:35,400
+are stored in our repository,
+even if we don't see them when
+
+10
+00:00:35,400 --> 00:00:38,670
+looking at the history. So Git
+keeps on these objects for a
+
+11
+00:00:38,670 --> 00:00:41,910
+while. And if they're not used
+anymore, then it will garbage
+
+12
+00:00:41,910 --> 00:00:46,260
+collector. So how can we recover
+the lost commit? Well, we have a
+
+13
+00:00:46,260 --> 00:00:50,220
+great tool here called ref log.
+And this is basically a log of
+
+14
+00:00:50,220 --> 00:00:53,850
+how a reference has moved in our
+history. If it don't supply any
+
+15
+00:00:53,850 --> 00:00:57,090
+options here, I guess we'll show
+how the head pointer has moved
+
+16
+00:00:57,090 --> 00:01:00,570
+in our history. Take a look.
+Now, you might think this looks
+
+17
+00:01:00,570 --> 00:01:03,240
+like a scary movie. But trust
+me, this is easier than you
+
+18
+00:01:03,240 --> 00:01:08,640
+think. So from the top, look at
+the first entry. And this lock.
+
+19
+00:01:09,300 --> 00:01:12,300
+Every entry has a unique
+identifier. Here's the unique
+
+20
+00:01:12,300 --> 00:01:15,600
+identifier of the first entry.
+Here's the unique identifier of
+
+21
+00:01:15,600 --> 00:01:19,260
+the second entry. Now in front
+of the unique identifier, we see
+
+22
+00:01:19,260 --> 00:01:23,220
+a description of what happened.
+So just a few seconds ago, we
+
+23
+00:01:23,220 --> 00:01:26,940
+used the reset operation to mov
+the head to this new position
+
+24
+00:01:27,480 --> 00:01:31,620
+Now after this operation, now
+head is pointing to this commen
+
+25
+00:01:31,620 --> 00:01:36,540
+over here, we can verify it. S
+we've got our history. hat i
+
+26
+00:01:36,540 --> 00:01:41,790
+here, and it's pointing to thi
+commit af 26. We can verify i
+
+27
+00:01:41,790 --> 00:01:45,210
+here. Now look at the secon
+entry in the lock. Before ther
+
+28
+00:01:45,210 --> 00:01:49,080
+was an operation, we made
+commit with this message, rever
+
+29
+00:01:49,080 --> 00:01:53,310
+bad code. After this operation
+the head pointer was at thi
+
+30
+00:01:53,310 --> 00:01:57,420
+location. So to recover the las
+commit, we can reset the hea
+
+31
+00:01:57,570 --> 00:02:00,810
+back to this location. So I'
+going to copy this. Here we ca
+
+32
+00:02:00,810 --> 00:02:05,520
+use the command ID or the uniqu
+identifier of this entry. So w
+
+33
+00:02:05,520 --> 00:02:09,990
+type Git reset hard. In thi
+demo, I'm going to use the entr
+
+34
+00:02:09,990 --> 00:02:15,900
+ID. Good. Now head is at thi
+location called revert bac
+
+35
+00:02:15,900 --> 00:02:19,860
+code. Let's look at our histor
+one more time. All our commit
+
+36
+00:02:19,860 --> 00:02:23,730
+are back beautiful. Now we ca
+use the ref log to see how othe
+
+37
+00:02:23,730 --> 00:02:26,460
+pointers have more than ou
+history. So let's say we have
+
+38
+00:02:26,460 --> 00:02:31,500
+branch called feature. We ca
+type Git ref log show featur
+
+39
+00:02:31,830 --> 00:02:34,320
+and this will show the histor
+of the feature pointe
+

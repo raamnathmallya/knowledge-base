@@ -1,0 +1,229 @@
+1
+00:00:04,019 --> 00:00:05,999
+In this section, we're going to
+work with a different repository
+
+2
+00:00:05,999 --> 00:00:09,209
+called mercury. If you want to
+follow along with me, you can
+
+3
+00:00:09,209 --> 00:00:12,779
+get this repository right below
+this video. Now, let's look at
+
+4
+00:00:12,779 --> 00:00:17,579
+our history. So here's our
+initial commands. After that we
+
+5
+00:00:17,579 --> 00:00:21,599
+have render restaurants, the
+map, here, we have a warning
+
+6
+00:00:21,599 --> 00:00:25,619
+issue, that word on is missing.
+So the message should have been
+
+7
+00:00:25,829 --> 00:00:29,009
+render restaurants on the map.
+So later, we'll come back and
+
+8
+00:00:29,009 --> 00:00:33,719
+fix the warning issue. After
+that we have fixed a typo. This
+
+9
+00:00:33,719 --> 00:00:36,329
+is a common issue that I see
+quite a lot in people's
+
+10
+00:00:36,329 --> 00:00:39,419
+repositories. Technically, this
+commit shouldn't be here,
+
+11
+00:00:39,539 --> 00:00:42,509
+because we shouldn't have made a
+typo in the first place. So
+
+12
+00:00:42,509 --> 00:00:45,659
+comments like this are just
+noise in the history. So later,
+
+13
+00:00:45,659 --> 00:00:48,989
+I will show you how to combine
+these two commits to make our
+
+14
+00:00:48,989 --> 00:00:53,639
+history clean and readable. Look
+at the next commit, change the
+
+15
+00:00:53,639 --> 00:00:56,369
+color of restaurant icons.
+What's the problem with this?
+
+16
+00:00:56,609 --> 00:01:01,619
+Well, once again, this is part
+of the same unit of work. So
+
+17
+00:01:01,619 --> 00:01:03,899
+ideally, we should combine all
+these three commits into a
+
+18
+00:01:03,899 --> 00:01:08,189
+single logical commit. Next, we
+have add a reference to Google
+
+19
+00:01:08,189 --> 00:01:10,889
+Map SDK, what do you think is
+the problem with this commit,
+
+20
+00:01:11,519 --> 00:01:14,249
+the problem is the position of
+this committee in the history
+
+21
+00:01:14,849 --> 00:01:17,489
+because here we are rendering
+the restaurants on Google Map.
+
+22
+00:01:17,969 --> 00:01:20,189
+But then we're adding a
+reference to Google Map over
+
+23
+00:01:20,189 --> 00:01:24,389
+here. So that means, if you
+check out this committee on its
+
+24
+00:01:24,389 --> 00:01:27,449
+own, our application is not
+going to work. Because at this
+
+25
+00:01:27,449 --> 00:01:30,779
+point in time, we don't have a
+reference to Google Map. So here
+
+26
+00:01:30,779 --> 00:01:34,919
+we have two solutions, we should
+either move this commit down and
+
+27
+00:01:34,919 --> 00:01:38,339
+put it before rendering
+restaurants. Or we can combine
+
+28
+00:01:38,339 --> 00:01:42,329
+these two commits together.
+After that we have a work in
+
+29
+00:01:42,329 --> 00:01:45,959
+progress commit. Again, very
+common issue I see all the time.
+
+30
+00:01:46,409 --> 00:01:49,079
+Commits like this are just
+oise in history. And later in
+
+31
+00:01:49,079 --> 00:01:52,319
+he future, let's say a week or
+month from now, if we look at
+
+32
+00:01:52,319 --> 00:01:56,069
+ur history to see what was
+hanged, and why we're not going
+
+33
+00:01:56,069 --> 00:01:58,379
+o extract meaningful
+nformation from commits like
+
+34
+00:01:58,379 --> 00:02:01,949
+his. So we should either drop
+his commit or change its
+
+35
+00:02:01,949 --> 00:02:06,119
+essage. Now look at the next
+ommit, update Terms of Service
+
+36
+00:02:06,569 --> 00:02:10,169
+nd Google Map SDK. Here we have
+commit that combines two
+
+37
+00:02:10,169 --> 00:02:13,349
+eparate kinds of changes,
+pdating the terms of service
+
+38
+00:02:13,439 --> 00:02:17,189
+ot nothing to do with updating
+oogle Map version. So ideally,
+
+39
+00:02:17,189 --> 00:02:21,029
+e should split this commit into
+wo separate commits. Next, we
+
+40
+00:02:21,029 --> 00:02:24,299
+ave another work in progress
+ommand, followed by a commit
+
+41
+00:02:24,929 --> 00:02:28,649
+ith a mysterious message. What
+his period mean here, nobody
+
+42
+00:02:28,649 --> 00:02:32,069
+nows. So once again, we should
+ither drop this commit or
+
+43
+00:02:32,129 --> 00:02:34,649
+hange this message. So
+hroughout this section, I'm
+
+44
+00:02:34,649 --> 00:02:37,799
+oing to show you various tools
+o clean up this history. We're
+
+45
+00:02:37,799 --> 00:02:40,439
+oing to start off by undoing
+he last two commits. We'll do
+
+46
+00:02:40,439 --> 00:02:41,039
+hat next.
+

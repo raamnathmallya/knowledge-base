@@ -1,0 +1,380 @@
+1
+00:00:03,990 --> 00:00:07,080
+Quite frankly, yes, good is not
+the best tool for resolving
+
+2
+00:00:07,080 --> 00:00:09,810
+conflicts, at least not at the
+time of recording this lesson.
+
+3
+00:00:10,020 --> 00:00:12,750
+So let's look at some other
+tools for resolving conflicts.
+
+4
+00:00:12,930 --> 00:00:16,140
+There's so many tools out there.
+The most popular ones are K,
+
+5
+00:00:16,140 --> 00:00:19,740
+diff, and P4merge, which are
+cross platform, and winmerge,
+
+6
+00:00:19,830 --> 00:00:23,850
+which is for Windows only. If
+you use GetKraken, or a powerful
+
+7
+00:00:23,850 --> 00:00:27,210
+Id like IntelliJ, you don't need
+any of this external merge
+
+8
+00:00:27,210 --> 00:00:29,820
+tools. But they still encourage
+you to watch this lesson to the
+
+9
+00:00:29,820 --> 00:00:32,430
+end, because the skills you're
+going to learn will transfer to
+
+10
+00:00:32,460 --> 00:00:35,010
+other tools. In this lesson,
+we're going to use p for merge
+
+11
+00:00:35,100 --> 00:00:38,880
+for resolving conflicts. So open
+up your browser and search for
+
+12
+00:00:38,910 --> 00:00:43,980
+P4merge. Over here on
+P4merge.com. You can download
+
+13
+00:00:43,980 --> 00:00:48,210
+the latest version. Let's go
+with this. Here, you have to
+
+14
+00:00:48,210 --> 00:00:51,660
+select your operating system,
+I'm going to go with Mac and
+
+15
+00:00:51,660 --> 00:00:55,860
+download the latest version. We
+don't have to register. So let's
+
+16
+00:00:55,860 --> 00:01:01,950
+skip registration. Good. All
+right, so we get a dmg file on
+
+17
+00:01:01,950 --> 00:01:05,580
+Mac. If you're on Windows,
+you'll get a setup wizard. So
+
+18
+00:01:05,580 --> 00:01:09,750
+let's drag and drop before merge
+onto applications. It seemed
+
+19
+00:01:09,750 --> 00:01:11,820
+that I already have this, so I'm
+going to replace it with the
+
+20
+00:01:11,820 --> 00:01:16,410
+latest version. Good. Now here
+in the terminal, we have to
+
+21
+00:01:16,410 --> 00:01:20,520
+configure P4merge as our default
+merge tool. So we say Git
+
+22
+00:01:20,520 --> 00:01:26,730
+config, dash dash global merge
+tool, we give it a name, P4merge
+
+23
+00:01:27,780 --> 00:01:31,290
+next we need to tell Git where
+to find p for merge. So once
+
+24
+00:01:31,290 --> 00:01:37,620
+again, git config, dash dash
+global merge tool dot P4merge,
+
+25
+00:01:37,980 --> 00:01:43,050
+that is the name we assigned
+over here, dot path. Here in
+
+26
+00:01:43,050 --> 00:01:46,500
+double quotes, we should add the
+full path to P4merge. If you're
+
+27
+00:01:46,500 --> 00:01:49,800
+on Windows, your path is going
+to be like C colon, backslash
+
+28
+00:01:50,100 --> 00:01:53,640
+Program Files, backslas p for
+P4merge, backslash, whatever,
+
+29
+00:01:53,700 --> 00:01:57,240
+depending on where you have
+installed this. On Mac, the path
+
+30
+00:01:57,240 --> 00:02:02,670
+is going to be slash
+applications, slash P4merge that
+
+31
+00:02:02,670 --> 00:02:10,530
+app slash contents slash Mac OS
+slash P4merge make sure to spell
+
+32
+00:02:10,530 --> 00:02:14,130
+it properly, exactly as what you
+see here. All the uppercase and
+
+33
+00:02:14,130 --> 00:02:17,340
+lowercase letters are different
+because Mac OS is a case
+
+34
+00:02:17,340 --> 00:02:21,210
+sensitive operating system.
+Okay, so we have configured our
+
+35
+00:02:21,210 --> 00:02:24,690
+default merge tool. Now we need
+a merge conflict. To save time,
+
+36
+00:02:24,690 --> 00:02:27,540
+I'm not going to recreate
+another merge conflict, I'm
+
+37
+00:02:27,540 --> 00:02:31,830
+going to simulate the previous
+conflict. So we're on master.
+
+38
+00:02:32,040 --> 00:02:35,940
+And we want to merge this with
+our bug fix branch. So Git
+
+39
+00:02:35,940 --> 00:02:40,920
+merge, bug fix slash Change
+Password. Alright, we got to
+
+40
+00:02:40,920 --> 00:02:44,280
+merge conflicts exactly like
+before. In the previous lesson,
+
+41
+00:02:44,550 --> 00:02:49,200
+we open change password in VS
+code to edit the conflict here.
+
+42
+00:02:50,310 --> 00:02:53,880
+Now this time, we're going to
+use our external merge tool. So
+
+43
+00:02:53,880 --> 00:02:59,610
+if we run git merge, so right
+here, we have three copies of
+
+44
+00:02:59,610 --> 00:03:02,760
+our change password file. On the
+left side, we have changed
+
+45
+00:03:02,760 --> 00:03:06,000
+password on the left remote.
+This is the version we have in
+
+46
+00:03:06,000 --> 00:03:09,660
+our remote or target branch,
+which is our bug fix branch. In
+
+47
+00:03:09,660 --> 00:03:12,660
+the middle, we have Change
+Password underline base, this is
+
+48
+00:03:12,660 --> 00:03:15,900
+the base copy the base version.
+So here's the version of this
+
+49
+00:03:15,900 --> 00:03:19,380
+file before our branches
+diverged. And on the right side,
+
+50
+00:03:19,380 --> 00:03:22,020
+we have changed password
+underlined local. So this
+
+51
+00:03:22,020 --> 00:03:24,690
+represents the changes we have
+in the current branch, which is
+
+52
+00:03:24,690 --> 00:03:27,870
+the master branch. Now the
+beauty of this tool is that here
+
+53
+00:03:27,870 --> 00:03:31,110
+we can visually see the
+conflicting changes. So I like
+
+54
+00:03:31,110 --> 00:03:34,770
+VS code where we had those ugly
+Git markers. Here, we can easily
+
+55
+00:03:34,770 --> 00:03:38,820
+see that on the second line, we
+have a conflict and change. Now
+
+56
+00:03:38,820 --> 00:03:41,490
+down below, we can see how these
+changes are going to get
+
+57
+00:03:41,490 --> 00:03:45,480
+combined. So by default, P4mer
+e is bringing changes from bot
+
+58
+00:03:45,480 --> 00:03:49,380
+branches. But we can easily cha
+ge this. So on the right sid
+
+59
+00:03:49,380 --> 00:03:53,070
+, we have two icons, purple and
+green, and purple represents the
+
+60
+00:03:53,070 --> 00:03:56,490
+changes on the left side. So loo
+at the legend over here, you
+
+61
+00:03:56,790 --> 00:03:59,910
+have a purple icon that rep
+esents the left side, that cha
+
+62
+00:03:59,910 --> 00:04:03,060
+ges in the remote branch. The
+green icon represents the cha
+
+63
+00:04:03,060 --> 00:04:06,930
+ges in the local branch, whi
+h is master. So if we click on
+
+64
+00:04:06,960 --> 00:04:10,770
+he purple icon, now we only hav
+the changes in the local bra
+
+65
+00:04:10,770 --> 00:04:14,100
+ch. Now while green is sel
+cted, we can select the oth
+
+66
+00:04:14,130 --> 00:04:18,630
+r branch by holding down shi
+t and clicking. So now we hav
+
+67
+00:04:18,630 --> 00:04:21,720
+the changes in both these bra
+ches. This is the idea of P4mer
+
+68
+00:04:21,720 --> 00:04:25,620
+e or visual merge tools. Pretty
+uch all merge tools out there w
+
+69
+00:04:25,620 --> 00:04:29,400
+rk in a similar fashion. If you
+ave multiple conflicts in the
+
+70
+00:04:29,400 --> 00:04:32,460
+ame file, we can browse through
+them using these buttons on the
+
+71
+00:04:32,460 --> 00:04:36,060
+oolbar. So we resolve the con
+lict. When we are done. Just li
+
+72
+00:04:36,210 --> 00:04:39,090
+e before, we need to save th
+changes and go back to the ter
+
+73
+00:04:39,090 --> 00:04:42,900
+inal and commit that. So we shou
+d close P4merge Now back in the
+
+74
+00:04:43,860 --> 00:04:48,120
+erminal. Let's save the changes
+and make a commit. I'm goin
+
+75
+00:04:48,120 --> 00:04:52,260
+to accept the default message.
+So let's close that we know and
+
+76
+00:04:52,260 --> 00:04:56,100
+we've successfully mer
+ed our branches.
+

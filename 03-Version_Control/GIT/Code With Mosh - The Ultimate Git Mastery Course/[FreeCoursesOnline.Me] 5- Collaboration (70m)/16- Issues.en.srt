@@ -1,0 +1,203 @@
+1
+00:00:03,990 --> 00:00:06,540
+One of the features of GitHub
+that goes hand in hand with pull
+
+2
+00:00:06,540 --> 00:00:10,890
+requests is issue tracking. So
+here on the issues tab, we can
+
+3
+00:00:10,890 --> 00:00:14,070
+track all kinds of issues like
+bug fixes, new features,
+
+4
+00:00:14,250 --> 00:00:16,980
+enhancements, or any kind of
+ideas we want to discuss in the
+
+5
+00:00:16,980 --> 00:00:17,310
+team.
+
+6
+00:00:17,730 --> 00:00:19,770
+So let me walk you through a
+real example. I'm going to
+
+7
+00:00:19,770 --> 00:00:20,610
+create a new issue.
+
+8
+00:00:21,990 --> 00:00:25,620
+We give it a descriptive title,
+like, send email on someone
+
+9
+00:00:25,770 --> 00:00:29,610
+signs up. Here, we can write
+more details about this issue,
+
+10
+00:00:29,910 --> 00:00:33,330
+we can also attach files, this
+is very useful, it's much easier
+
+11
+00:00:33,330 --> 00:00:36,660
+than tossing emails around. So
+all the details we're working on
+
+12
+00:00:36,660 --> 00:00:40,290
+an issue are encapsulated in a
+single place. Here, we can
+
+13
+00:00:40,320 --> 00:00:43,260
+optionally assign this issue to
+one or more people, if we know
+
+14
+00:00:43,260 --> 00:00:46,860
+ahead of time. If not, people
+can come in and assign issues to
+
+15
+00:00:46,860 --> 00:00:49,770
+themselves. In this case, I'm
+going to assign this issue to
+
+16
+00:00:49,980 --> 00:00:54,960
+myself. Okay. And we can also
+add labels to this issue. So
+
+17
+00:00:56,160 --> 00:00:59,490
+every Git repository has these
+labels by default. We have bug
+
+18
+00:00:59,760 --> 00:01:03,240
+documentation, duplicate
+enhancement, and so on. We can
+
+19
+00:01:03,270 --> 00:01:05,760
+also customize these labels.
+I'll show you how to do that in
+
+20
+00:01:05,760 --> 00:01:11,370
+the next lesson. So let's add
+enhancement. Now, let's go ahead
+
+21
+00:01:11,400 --> 00:01:16,800
+and submit a new issue. All
+right, here's our issue. On this
+
+22
+00:01:16,800 --> 00:01:19,770
+page, we can have a conversation
+about this issue. So anyone in
+
+23
+00:01:19,770 --> 00:01:22,800
+the team can come in and leave
+comments. This is very useful.
+
+24
+00:01:23,220 --> 00:01:26,100
+Now one thing that I love here
+is that we can link this issue
+
+25
+00:01:26,100 --> 00:01:29,640
+with a pull request. With this,
+when we merge and close a pull
+
+26
+00:01:29,640 --> 00:01:32,880
+request, this issue will be
+automatically closed, we can
+
+27
+00:01:32,880 --> 00:01:35,280
+also assign this issue to a
+milestone, I'm going to talk
+
+28
+00:01:35,280 --> 00:01:39,030
+about that later in the section.
+If this issue is not linked to a
+
+29
+00:01:39,030 --> 00:01:42,210
+pull request, we can always come
+in here and close this issue
+
+30
+00:01:42,210 --> 00:01:47,820
+manually. Now, let's go back to
+the list of issues. So we have a
+
+31
+00:01:47,820 --> 00:01:51,630
+single issue here. That is an
+enhancement, you can immediately
+
+32
+00:01:51,630 --> 00:01:54,720
+see that I am working on this
+issue. This is very useful in
+
+33
+00:01:54,720 --> 00:01:57,600
+teams. So anyone can come in
+here and see who is working on
+
+34
+00:01:57,600 --> 00:02:00,210
+what. And if someone doesn't
+have any work to do, they can
+
+35
+00:02:00,240 --> 00:02:04,560
+always come in here and pick an
+issue. So I can come in here and
+
+36
+00:02:05,280 --> 00:02:08,010
+assign this issue to myself if
+it's not assigned to someone
+
+37
+00:02:08,010 --> 00:02:13,170
+else. Now let's go back. Here we
+can filter the list by author,
+
+38
+00:02:13,320 --> 00:02:17,490
+label project milestones
+assignees. And we can also sort
+
+39
+00:02:17,490 --> 00:02:20,040
+the result in different ways.
+I'm not going to go through
+
+40
+00:02:20,040 --> 00:02:22,470
+these they're really simple, you
+can figure them out on your own.
+
+41
+00:02:22,890 --> 00:02:25,680
+Next I'm going to show you how
+to customize the list of labels.
+

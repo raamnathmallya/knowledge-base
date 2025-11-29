@@ -1,0 +1,99 @@
+1
+00:00:03,960 --> 00:00:07,290
+Now what if we want to see the
+changes across two commits. For
+
+2
+00:00:07,290 --> 00:00:10,110
+example, let's say we want to
+know what has been changed over
+
+3
+00:00:10,110 --> 00:00:12,840
+the last three commits. To do
+that, we're going to use the
+
+4
+00:00:12,840 --> 00:00:15,810
+diff command. In the previous
+section, you'll learn how to use
+
+5
+00:00:15,810 --> 00:00:19,380
+the diff command to view the
+staged and unstaged changes. Now
+
+6
+00:00:19,380 --> 00:00:21,750
+we're going to use the same
+command to see the differences
+
+7
+00:00:21,750 --> 00:00:26,130
+between two commits. So we can
+start from head tilda two and go
+
+8
+00:00:26,130 --> 00:00:30,210
+to head and now we can see a
+diff of every file that has been
+
+9
+00:00:30,210 --> 00:00:34,230
+changed across these two
+commits. So here we have a diff
+
+10
+00:00:34,320 --> 00:00:37,860
+of audience txt. Below that we
+can see the changes in
+
+11
+00:00:37,890 --> 00:00:41,100
+objectives or txt and so on. If
+you want to see the changes to a
+
+12
+00:00:41,100 --> 00:00:45,240
+particular file, you can add the
+file name at the end. so here we
+
+13
+00:00:45,240 --> 00:00:49,260
+can type audience dot txt. Now
+we only see the changes in this
+
+14
+00:00:49,260 --> 00:00:53,190
+file. Also, similar to the lock
+command. Here we have options
+
+15
+00:00:53,190 --> 00:00:56,760
+like name, status, and name only
+to view the list of files that
+
+16
+00:00:56,760 --> 00:01:02,220
+have been changed. So we can say
+name only to see the list of
+
+17
+00:01:02,220 --> 00:01:07,200
+files that have been changed, or
+we can say name status, to see
+
+18
+00:01:07,200 --> 00:01:10,320
+the list of files, or the type
+of change. In this case, we only
+
+19
+00:01:10,320 --> 00:01:13,350
+have modifications, but if you
+had new or deleted files, they
+
+20
+00:01:13,350 --> 00:01:14,550
+would be listed here as well.
+

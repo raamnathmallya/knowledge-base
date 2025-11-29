@@ -1,0 +1,125 @@
+1
+00:00:02,040 --> 00:00:04,380
+Alright, let's see if you have
+Git on your machine or not. And
+
+2
+00:00:04,380 --> 00:00:07,920
+if yes, what version you have in
+stock. To do this, you have to
+
+3
+00:00:07,920 --> 00:00:11,340
+open a terminal or command
+prompt window. If you're on Mac,
+
+4
+00:00:11,430 --> 00:00:14,430
+press Command space, and then
+type terminal. If you're on
+
+5
+00:00:14,430 --> 00:00:18,270
+Windows, click the Search icon
+on the bottom navigation bar and
+
+6
+00:00:18,270 --> 00:00:23,070
+type cmd. So here's my terminal
+or console window, your terminal
+
+7
+00:00:23,070 --> 00:00:25,890
+window might look different, it
+doesn't matter. This is where
+
+8
+00:00:25,890 --> 00:00:28,680
+we're going to execute Git
+commands. So let's look at the
+
+9
+00:00:28,680 --> 00:00:32,790
+version of Git on this machine.
+We type Git dash dash version.
+
+10
+00:00:33,270 --> 00:00:37,320
+So on this machine, I'm using
+Git version 2.19.2. But the late
+
+11
+00:00:37,320 --> 00:00:40,590
+t version, at the time of recor
+ing this video is 2.27.0. So I
+
+12
+00:00:41,520 --> 00:00:44,490
+highly encourage you to
+download and install the late
+
+13
+00:00:44,490 --> 00:00:49,020
+t version. Just head over to git
+SCM comm/downloads. Over here,
+
+14
+00:00:49,020 --> 00:00:52,470
+ou can find instructions for
+nstalling Git on different opera
+
+15
+00:00:52,470 --> 00:00:55,140
+ing systems. It's really e
+sy, you're not gonna have
+
+16
+00:00:55,140 --> 00:00:57,510
+ny problems. Now if you'r
+on Windows, once you inst
+
+17
+00:00:57,510 --> 00:01:00,510
+ll Git you're going this appl
+cation called git bas
+
+18
+00:01:00,510 --> 00:01:04,710
+, which is short for born ag
+in shell. This is basically a c
+
+19
+00:01:04,710 --> 00:01:07,740
+mmand prompt window like t
+is one over here, but it emulat
+
+20
+00:01:07,740 --> 00:01:11,610
+s Unix or Linux environments.
+o throughout this course, I en
+
+21
+00:01:11,610 --> 00:01:14,160
+ourage you to use Git Bas
+instead of the built in comm
+
+22
+00:01:14,310 --> 00:01:17,220
+nd prompt window. So what you s
+e on the screen looks closer t
+
+23
+00:01:17,220 --> 00:01:19,500
+what I'm going to show you i
+this course. So go ahead and
+
+24
+00:01:19,500 --> 00:01:22,890
+install Git. In the next les
+on, I'm going to show you how to
+
+25
+00:01:22,920 --> 00:01:25,530
+customize our Git environmen
+.
+

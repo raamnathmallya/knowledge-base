@@ -1,0 +1,400 @@
+1
+00:00:04,080 --> 00:00:06,360
+As I told you in the last
+lesson, quite often, we use
+
+2
+00:00:06,360 --> 00:00:09,480
+visual diff tools for comparing
+files. There's so many visual
+
+3
+00:00:09,480 --> 00:00:12,840
+diff tools out there. The most
+popular ones are K, diff, and P
+
+4
+00:00:12,840 --> 00:00:16,200
+for merge, which are cross
+platform, and winmerge that runs
+
+5
+00:00:16,230 --> 00:00:19,200
+only on Windows. In this lesson,
+I'm going to show you how to use
+
+6
+00:00:19,200 --> 00:00:22,440
+VS code for comparing files. If
+you want to use a different tool
+
+7
+00:00:22,440 --> 00:00:24,600
+or a different editor, you have
+to look up the instructions
+
+8
+00:00:24,600 --> 00:00:27,720
+yourself. So here in the
+terminal, first, we have to tell
+
+9
+00:00:27,720 --> 00:00:31,380
+Git that we want to use VS code
+as our default default. So we
+
+10
+00:00:31,380 --> 00:00:34,740
+have to set to configuration
+settings. So once again, we type
+
+11
+00:00:34,950 --> 00:00:39,720
+Git config, dash dash global, so
+the global settings apply to all
+
+12
+00:00:39,720 --> 00:00:42,750
+of our repositories. Okay. Now,
+the setting we're going to set
+
+13
+00:00:42,750 --> 00:00:47,130
+is diff tool. We're going to set
+that to VS code. So with this
+
+14
+00:00:47,130 --> 00:00:50,250
+command, we're just giving a
+name, in this case VS code to
+
+15
+00:00:50,250 --> 00:00:54,540
+our default default, next minute
+to tell git, how to launch VS
+
+16
+00:00:54,540 --> 00:00:59,460
+code. So once again, git config
+dash dash global here we set
+
+17
+00:00:59,580 --> 00:01:06,270
+default dot VS code dot cmd. We
+set this to double quotes
+
+18
+00:01:06,300 --> 00:01:09,120
+because we're gonna have a
+space. Now on my machine, I've
+
+19
+00:01:09,120 --> 00:01:12,570
+added code to my path, so I can
+run it from any directories. If
+
+20
+00:01:12,570 --> 00:01:14,460
+this doesn't work on your
+machine, you have to look up the
+
+21
+00:01:14,460 --> 00:01:17,910
+instructions yourself, depending
+on your operating system. So
+
+22
+00:01:17,910 --> 00:01:20,640
+we're going to launch code with
+a few arguments. The first one
+
+23
+00:01:20,640 --> 00:01:24,600
+is dash dash, wait, this tells
+the terminal window to wait
+
+24
+00:01:24,660 --> 00:01:27,270
+until we're done with VS code.
+So until we have compared the
+
+25
+00:01:27,270 --> 00:01:31,380
+changes and close the VS code
+instance, the second argument is
+
+26
+00:01:31,500 --> 00:01:35,310
+dash dash diff. This tells VS
+code that we want to use it for
+
+27
+00:01:35,310 --> 00:01:39,150
+diffing or comparing files. Then
+we have two more arguments,
+
+28
+00:01:39,450 --> 00:01:44,130
+dollar sign, local in capital,
+and dollar sign, remote and
+
+29
+00:01:44,130 --> 00:01:48,060
+capital. These are placeholders
+for the old and new copies of a
+
+30
+00:01:48,060 --> 00:01:51,930
+file. Okay, so let's set that.
+Now. Let's make sure that you
+
+31
+00:01:51,930 --> 00:01:55,740
+have got this step right. So
+we're going to run git config
+
+32
+00:01:55,950 --> 00:01:59,730
+dash dash global dash e as I
+told you at the beginning of the
+
+33
+00:01:59,730 --> 00:02:02,550
+course. With this command, we
+can edit our global
+
+34
+00:02:02,550 --> 00:02:05,760
+configuration settings in our
+default editor, which is VS
+
+35
+00:02:05,760 --> 00:02:10,770
+code. So take a look. So all
+these things are stored in this
+
+36
+00:02:10,770 --> 00:02:15,300
+file dot Git config, which is
+stored in this directory. So we
+
+37
+00:02:15,300 --> 00:02:17,430
+have the user section, which we
+said earlier in the course.
+
+38
+00:02:18,570 --> 00:02:21,510
+Here's the diff section that we
+just set. In the section, you
+
+39
+00:02:21,510 --> 00:02:24,750
+have set the tool to VS code.
+This is just a name. Then we
+
+40
+00:02:24,750 --> 00:02:28,470
+have diff tool VS code. And
+here's the command that should
+
+41
+00:02:28,470 --> 00:02:32,310
+be run for comparing files with
+VS code. So we have code with
+
+42
+00:02:32,310 --> 00:02:36,210
+dash dash Wait, then dash dash
+diff. And now those two
+
+43
+00:02:36,210 --> 00:02:39,720
+placeholders that I added, for
+some reason they're lost. So
+
+44
+00:02:39,810 --> 00:02:43,290
+let's add them real quick.
+dollar sign, local, and dollar
+
+45
+00:02:43,290 --> 00:02:47,430
+sign remote. Make sure to get
+this right. Otherwise things are
+
+46
+00:02:47,430 --> 00:02:50,640
+not going to work on your
+machine. Now we're done. So
+
+47
+00:02:51,570 --> 00:02:56,580
+that's closest we know. Back
+into terminal, instead of using
+
+48
+00:02:56,580 --> 00:03:00,000
+the diff command, we're going to
+use diff tool. This will allow
+
+49
+00:03:00,000 --> 00:03:02,880
+are a visual diff tool for
+comparing files. Now if you
+
+50
+00:03:02,880 --> 00:03:05,640
+don't supply any arguments,
+we're going to see our unstaged
+
+51
+00:03:05,640 --> 00:03:08,280
+changes. So this will compare
+what we have in the working
+
+52
+00:03:08,280 --> 00:03:11,400
+directory with what we have in
+the staging area. If you want to
+
+53
+00:03:11,400 --> 00:03:16,110
+look at our state changes, we
+supply dash dash sticks exactly
+
+54
+00:03:16,110 --> 00:03:19,950
+the same way we use the diff
+command. Okay, so let's look at
+
+55
+00:03:19,950 --> 00:03:23,430
+the changes we have in our
+working directory. We have
+
+56
+00:03:23,430 --> 00:03:27,060
+modified only a single file,
+that is why we have one out of
+
+57
+00:03:27,060 --> 00:03:30,780
+one, and that is file one dot j
+s. So Git is asking if you want
+
+58
+00:03:30,780 --> 00:03:33,660
+to launch VS code, which is the
+name that we assigned to our
+
+59
+00:03:33,660 --> 00:03:39,210
+default dev tool. Let's go ahead
+and take a look. So here's the
+
+60
+00:03:39,210 --> 00:03:42,060
+old copy, which is what we have
+in the staging area. And here's
+
+61
+00:03:42,060 --> 00:03:44,550
+a new copy, which is what we
+have in the working directory.
+
+62
+00:03:45,030 --> 00:03:48,660
+As you can see, we can easily
+tell that this line has been
+
+63
+00:03:48,660 --> 00:03:51,930
+replaced with this line, it's
+much easier to see the changes.
+
+64
+00:03:52,830 --> 00:03:55,590
+Now the terminal window is
+waiting for us to close the VS
+
+65
+00:03:55,590 --> 00:04:00,000
+code instance. So let's close
+this window. Back to the
+
+66
+00:04:00,000 --> 00:04:03,630
+terminal. Now let's look at the
+state changes. So, git diff
+
+67
+00:04:03,630 --> 00:04:07,590
+tool, dash dash staged, two
+files have been affected in the
+
+68
+00:04:07,590 --> 00:04:11,190
+staging area. The first one is
+file one dot j s, let's look at
+
+69
+00:04:11,190 --> 00:04:15,150
+the changes. Alright, in this
+case, the old copy is what we
+
+70
+00:04:15,150 --> 00:04:18,480
+have in the last command. And
+the new copy is what we have the
+
+71
+00:04:18,480 --> 00:04:21,750
+staging area. So these are the
+changes that are going to go
+
+72
+00:04:21,750 --> 00:04:24,780
+into next commit, we can easily
+tell that we have added two
+
+73
+00:04:24,780 --> 00:04:29,880
+lines here. Now let's close this
+tab. Back in the terminal, Git
+
+74
+00:04:29,880 --> 00:04:32,820
+is asking if you want to look at
+the changes in file to the J s.
+
+75
+00:04:33,060 --> 00:04:36,180
+In this case, I'm going to
+ignore that So no, I quite
+
+76
+00:04:36,210 --> 00:04:39,060
+honestly, we don't use dev tools
+so much these days. I just
+
+77
+00:04:39,060 --> 00:04:41,400
+covered it because I want my
+course to be comprehensive.
+
+78
+00:04:41,700 --> 00:04:45,990
+These days. Most editors and IDs
+allow us to view the stage and
+
+79
+00:04:46,020 --> 00:04:49,470
+unstaged changes as part of our
+development environment. I will
+
+80
+00:04:49,470 --> 00:04:51,210
+show you how to do this later in
+the section.
+

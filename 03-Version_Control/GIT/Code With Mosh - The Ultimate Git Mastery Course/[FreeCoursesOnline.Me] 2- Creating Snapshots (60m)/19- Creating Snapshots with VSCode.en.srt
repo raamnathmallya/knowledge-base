@@ -1,0 +1,150 @@
+1
+00:00:04,050 --> 00:00:06,360
+Now let's look at the git tools
+built into VS code.
+
+2
+00:00:06,929 --> 00:00:10,079
+So here on the left side, we
+have the source control panel
+
+3
+00:00:10,169 --> 00:00:13,739
+where we can see all the changes
+in our project. So what we see
+
+4
+00:00:13,739 --> 00:00:17,489
+here is similar to the output of
+the status command, we can see
+
+5
+00:00:17,519 --> 00:00:20,309
+all the change files, and the
+kind of changes introduced in
+
+6
+00:00:20,309 --> 00:00:24,449
+those files. So here we have
+changes in file, one dot j s, we
+
+7
+00:00:24,449 --> 00:00:27,989
+can click on a file to get a
+diff of that file. Now here we
+
+8
+00:00:27,989 --> 00:00:30,959
+are dealing with a new untracked
+file as you can see up here,
+
+9
+00:00:31,289 --> 00:00:34,739
+that's why we don't have any
+code on the left side. Now we
+
+10
+00:00:34,739 --> 00:00:39,959
+can stage this file by clicking
+on the plus icon. If we made a
+
+11
+00:00:39,959 --> 00:00:43,529
+mistake, we can always on stage
+a file that's very easy. All we
+
+12
+00:00:43,529 --> 00:00:48,149
+have to do is to click on the
+minus icon. Now we have local
+
+13
+00:00:48,149 --> 00:00:51,329
+changes in our working
+directory. So let's go ahead and
+
+14
+00:00:51,509 --> 00:00:55,289
+stage this file one more time.
+Let's say we have reviewed our
+
+15
+00:00:55,289 --> 00:00:58,949
+changes and we want to proceed
+to make a commit. Up here we can
+
+16
+00:00:58,949 --> 00:01:02,369
+type a commit message. So for
+this demo, we can say, add,
+
+17
+00:01:02,639 --> 00:01:05,819
+file, one dot j s, just
+remember, this is not a good
+
+18
+00:01:05,819 --> 00:01:08,699
+commit message, because our
+commits should be based on
+
+19
+00:01:08,699 --> 00:01:12,029
+logical units of work, not
+individual files added or
+
+20
+00:01:12,029 --> 00:01:17,729
+removed. Okay, so let's go ahead
+and make a commit. Good. Now,
+
+21
+00:01:18,479 --> 00:01:21,869
+back to the Explorer panel. We
+have a fairly new feature here.
+
+22
+00:01:21,869 --> 00:01:24,869
+I think they introduced it a
+couple of months ago. If we
+
+23
+00:01:24,869 --> 00:01:30,089
+click on a file, and then open
+the timeline folder, we can see
+
+24
+00:01:30,119 --> 00:01:33,869
+all the commits apply to this
+file. So here's our latest
+
+25
+00:01:33,869 --> 00:01:37,049
+commit. At file one, we can
+click on that commit to see the
+
+26
+00:01:37,049 --> 00:01:40,739
+changes introducing that commit.
+Here's the previous commit
+
+27
+00:01:41,009 --> 00:01:44,609
+delete file one dot js. We also
+had another commit earlier,
+
+28
+00:01:44,669 --> 00:01:48,749
+refactor code is pretty helpful.
+Here by default, we don't have a
+
+29
+00:01:48,749 --> 00:01:51,839
+way to look at our history. We
+need to install a plugin to do
+
+30
+00:01:51,839 --> 00:01:54,029
+that. I'm going to talk about
+that in the next section.
+

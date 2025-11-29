@@ -1,0 +1,194 @@
+1
+00:00:04,019 --> 00:00:08,099
+So in our local repository, our
+master branch is of origin slash
+
+2
+00:00:08,099 --> 00:00:11,519
+master by one commit. So we can
+use the push command to send
+
+3
+00:00:11,519 --> 00:00:14,669
+this new commit to origin. When
+we run this command, git will
+
+4
+00:00:14,669 --> 00:00:17,549
+send our new commit to the
+remote repository, then it will
+
+5
+00:00:17,549 --> 00:00:21,659
+move the master pointer forward
+2.2 C. And finally it would move
+
+6
+00:00:21,719 --> 00:00:27,479
+origin slash Master 2.2 C as
+well. So we type git push. Next,
+
+7
+00:00:27,479 --> 00:00:30,389
+we specified the remote
+repository in this case, origin.
+
+8
+00:00:31,049 --> 00:00:34,409
+And finally, we specified the
+branch we want to push master.
+
+9
+00:00:35,069 --> 00:00:37,619
+There, currently, we are on the
+master branch so we can drop
+
+10
+00:00:37,619 --> 00:00:41,879
+master. Also, if a drop origin
+is good, we'll assume origin by
+
+11
+00:00:41,879 --> 00:00:46,019
+default. So we just type git
+push. Here, we have to enter our
+
+12
+00:00:46,019 --> 00:00:49,679
+GitHub credentials. So I'm going
+to add my email
+
+13
+00:00:51,030 --> 00:00:51,750
+and password.
+
+14
+00:00:53,130 --> 00:00:57,990
+Good. So get sent our new coming
+to origin. Let's verified real
+
+15
+00:00:57,990 --> 00:01:01,950
+quick. So here on GitHub, look,
+we have four commands. And
+
+16
+00:01:02,280 --> 00:01:06,090
+here's the last commit that we
+just pushed at file one. Now,
+
+17
+00:01:06,090 --> 00:01:09,930
+sometimes your push may get
+rejected. Let's see why. So once
+
+18
+00:01:09,930 --> 00:01:13,380
+again, our local repository is
+ahead of origin by one commit.
+
+19
+00:01:13,890 --> 00:01:16,980
+Now let's say before we do a
+push, someone else does a push
+
+20
+00:01:17,010 --> 00:01:20,640
+an add a new commit to origin.
+Now, if we do a push, our push
+
+21
+00:01:20,640 --> 00:01:23,190
+will get rejected, because our
+histories have evolved
+
+22
+00:01:23,190 --> 00:01:26,520
+differently. So good prevents us
+from overwriting someone else's
+
+23
+00:01:26,520 --> 00:01:29,700
+work, that I've seen some people
+using the force option here,
+
+24
+00:01:29,970 --> 00:01:32,850
+this is a terrible thing you can
+do with this, you're telling it
+
+25
+00:01:32,850 --> 00:01:36,570
+to drop other people's work, and
+replace it with your work. This
+
+26
+00:01:36,570 --> 00:01:39,660
+is not what we want. So unless
+you have a very strong reason
+
+27
+00:01:39,660 --> 00:01:42,720
+for using the force option, you
+should never ever, ever, ever
+
+28
+00:01:42,750 --> 00:01:45,540
+use this option. Basically, you
+should use this only if you have
+
+29
+00:01:45,540 --> 00:01:50,010
+screwed things up. So what can
+we do here? Well, we have to do
+
+30
+00:01:50,010 --> 00:01:53,460
+a poll to bring other people's
+work into our local repository.
+
+31
+00:01:53,460 --> 00:01:56,910
+And then we have to do a merge
+or a rebase. If there are any
+
+32
+00:01:56,910 --> 00:02:00,120
+conflicts, we have to resolve
+them, and then we can do a push.
+
+33
+00:02:00,660 --> 00:02:03,180
+Here's a question for you look
+at the history of these two
+
+34
+00:02:03,180 --> 00:02:06,420
+repositories. What comments do
+we have in our local repository
+
+35
+00:02:06,510 --> 00:02:10,950
+that don't exist in origin, C
+and M, right? Because in both
+
+36
+00:02:10,950 --> 00:02:15,960
+these repositories, we have a, b
+and d. So when we do a push, git
+
+37
+00:02:15,960 --> 00:02:19,170
+will send these two commits to
+the origin. Now we have the same
+
+38
+00:02:19,170 --> 00:02:22,440
+state in both these
+repositories. The final code and
+
+39
+00:02:22,440 --> 00:02:24,090
+the history of changes are
+identical.
+

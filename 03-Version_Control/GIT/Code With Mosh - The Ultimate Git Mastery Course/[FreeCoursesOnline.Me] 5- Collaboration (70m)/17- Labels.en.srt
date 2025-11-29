@@ -1,0 +1,59 @@
+1
+00:00:04,049 --> 00:00:06,749
+Let's see how we can customize
+the list of labels in a GitHub
+
+2
+00:00:06,749 --> 00:00:12,089
+repository. So here on the
+issues tab, we go to labels. On
+
+3
+00:00:12,089 --> 00:00:15,029
+this page, we can see all the
+default labels that exist in
+
+4
+00:00:15,059 --> 00:00:19,559
+every GitHub repository. We can
+create a new label, let's say
+
+5
+00:00:19,559 --> 00:00:23,489
+refactoring. We can optionally
+give it a description and a
+
+6
+00:00:23,489 --> 00:00:26,519
+color. If you don't like this
+color, you can click here,
+
+7
+00:00:26,939 --> 00:00:29,909
+GitHub automatically generates a
+new color that is reflected over
+
+8
+00:00:29,909 --> 00:00:35,129
+here. Now let's create the
+label. Good. Now look over here.
+
+9
+00:00:35,579 --> 00:00:38,939
+For the enhancement label. We
+have one open issue or pull
+
+10
+00:00:38,939 --> 00:00:42,509
+request. So this is also another
+useful report. We can see all
+
+11
+00:00:42,509 --> 00:00:45,269
+the labels and the number of
+open issues assigned to them in
+
+12
+00:00:45,269 --> 00:00:45,959
+one place.
+

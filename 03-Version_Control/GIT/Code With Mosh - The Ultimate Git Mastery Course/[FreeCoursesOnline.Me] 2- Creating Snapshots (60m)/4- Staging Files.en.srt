@@ -1,0 +1,299 @@
+1
+00:00:03,990 --> 00:00:06,840
+Let's start by adding a couple
+of files to our project. To do
+
+2
+00:00:06,840 --> 00:00:09,360
+that, we're gonna use the echo
+command. This is not a good
+
+3
+00:00:09,360 --> 00:00:12,480
+command, it's just a standard
+Unix or Linux command for
+
+4
+00:00:12,480 --> 00:00:16,920
+writing content to a file. So
+here we're gonna write hello to
+
+5
+00:00:17,070 --> 00:00:21,390
+file one dot txt. So here, I'm
+working with a txt file. Because
+
+6
+00:00:21,420 --> 00:00:24,000
+I don't want this course to be
+specific to people who know a
+
+7
+00:00:24,000 --> 00:00:27,270
+particular programming language
+like Python or JavaScript. What
+
+8
+00:00:27,270 --> 00:00:30,000
+I'm going to show you in terms
+of the workflow applies to any
+
+9
+00:00:30,000 --> 00:00:33,990
+programming languages. Okay? So
+we write hello to file one dot
+
+10
+00:00:33,990 --> 00:00:38,160
+txt. Good. Now let's execute
+this command one more time, and
+
+11
+00:00:38,160 --> 00:00:41,400
+change file one to file two. So
+now we have two files in our
+
+12
+00:00:41,400 --> 00:00:44,610
+project. Now look at this
+question mark here. That means
+
+13
+00:00:44,610 --> 00:00:47,670
+we have new files here that are
+not tracked by git, because the
+
+14
+00:00:47,670 --> 00:00:51,090
+first time you initialize a git
+repository in a directory, Git
+
+15
+00:00:51,090 --> 00:00:54,030
+is not going to automatically
+track your files. So if you have
+
+16
+00:00:54,120 --> 00:00:57,690
+1000 files in a project, you
+have to instruct Git to track
+
+17
+00:00:57,690 --> 00:01:02,700
+them. Okay. So here we go. run
+git status to see the status of
+
+18
+00:01:02,700 --> 00:01:06,780
+the working directory on the
+staging area. Take a look. So we
+
+19
+00:01:06,780 --> 00:01:10,200
+don't have any comments yet. We
+have untracked files, which are
+
+20
+00:01:10,200 --> 00:01:13,620
+file one and file two. They're
+indicated by red because they're
+
+21
+00:01:13,620 --> 00:01:16,800
+not in the staging area yet. To
+add these files to the staging
+
+22
+00:01:16,800 --> 00:01:20,760
+area, we use the git add
+command. Here we can list a
+
+23
+00:01:20,760 --> 00:01:24,720
+single file, like file one dot
+txt, or multiple files separated
+
+24
+00:01:24,720 --> 00:01:31,740
+by a space. We can also use
+patterns. So star dot txt, that
+
+25
+00:01:31,740 --> 00:01:36,090
+means all the files with a txt
+extension, we also have period,
+
+26
+00:01:36,270 --> 00:01:39,240
+which adds the entire directory
+recursively. But you have to be
+
+27
+00:01:39,240 --> 00:01:41,610
+a little bit careful with this.
+Because sometimes there are
+
+28
+00:01:41,610 --> 00:01:44,790
+files you don't want to add to
+your repository, perhaps large
+
+29
+00:01:44,790 --> 00:01:48,060
+files like large binary files or
+lock files, you don't want to
+
+30
+00:01:48,090 --> 00:01:51,060
+add this faster repository,
+because they increase the size
+
+31
+00:01:51,060 --> 00:01:53,820
+of your repository. I will show
+you how to ignore this files
+
+32
+00:01:53,820 --> 00:01:57,360
+later in this section. So just
+remember, add period adds the
+
+33
+00:01:57,390 --> 00:02:00,690
+entire directory recursively in
+this demo, I'm going to go with
+
+34
+00:02:00,690 --> 00:02:02,910
+this command, because we only
+have two files in this
+
+35
+00:02:02,910 --> 00:02:06,570
+directory, okay? Now our green
+indicator change to yellow,
+
+36
+00:02:06,600 --> 00:02:09,900
+which means we have stuff in the
+staging area that are ready to
+
+37
+00:02:09,900 --> 00:02:14,880
+be committed. So if we run git
+status again, look, we have two
+
+38
+00:02:14,880 --> 00:02:18,000
+new files, and they're indicated
+by green, which means they're in
+
+39
+00:02:18,000 --> 00:02:20,760
+the staging area. Now, let me
+show you something interesting.
+
+40
+00:02:21,210 --> 00:02:24,510
+I'm going to modify a file one.
+So once again, we're gonna use
+
+41
+00:02:24,510 --> 00:02:29,370
+the echo command to echo world.
+But here instead of one greater
+
+42
+00:02:29,370 --> 00:02:32,310
+than sign, I'm going to use two
+greater than signs, which means
+
+43
+00:02:32,340 --> 00:02:37,500
+a pet. So we're going to append
+world to file one dot txt. Now
+
+44
+00:02:37,500 --> 00:02:41,700
+let's run git status again, look
+what happened. We have two files
+
+45
+00:02:41,700 --> 00:02:44,880
+in the staging area, because
+they're indicated by green. But
+
+46
+00:02:44,880 --> 00:02:48,930
+we also have one modified file
+in our working directory. So you
+
+47
+00:02:48,930 --> 00:02:51,840
+might be asking, but hey, Marsh,
+didn't we already Add File one
+
+48
+00:02:51,840 --> 00:02:54,990
+to staging area? Yes, we did.
+But when you run the Add
+
+49
+00:02:54,990 --> 00:02:58,710
+command, get took a snapshot of
+file one And out of that
+
+50
+00:02:58,710 --> 00:03:02,550
+snapshot to the staging area. So
+here's the current situation. In
+
+51
+00:03:02,550 --> 00:03:05,730
+the staging area, we have the
+first version of file one, we
+
+52
+00:03:05,730 --> 00:03:09,270
+change this file after we added
+it to the staging area. So what
+
+53
+00:03:09,270 --> 00:03:12,270
+we currently have in our working
+directory is the second version
+
+54
+00:03:12,270 --> 00:03:15,360
+of this file. It has some
+changes that are not staged yet.
+
+55
+00:03:15,960 --> 00:03:20,700
+So back to the terminal. We run
+git add period or git add file
+
+56
+00:03:20,700 --> 00:03:25,050
+one dot txt one more time. Now
+look at the status of our
+
+57
+00:03:25,050 --> 00:03:27,990
+working directory. Both these
+files are in the staging area,
+
+58
+00:03:28,080 --> 00:03:31,440
+and we don't have any unstaged
+changes. So next, I'm going to
+
+59
+00:03:31,440 --> 00:03:34,410
+show you how to commit this
+snapshot to permanently store it
+
+60
+00:03:34,410 --> 00:03:35,580
+in our Git repository.
+

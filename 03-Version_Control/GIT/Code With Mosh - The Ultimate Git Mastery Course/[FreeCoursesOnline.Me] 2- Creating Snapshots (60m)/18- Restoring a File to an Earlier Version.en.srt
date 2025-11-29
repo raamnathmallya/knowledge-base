@@ -1,0 +1,179 @@
+1
+00:00:03,990 --> 00:00:07,140
+So now you know that once Git
+tracks a file, it stores every
+
+2
+00:00:07,140 --> 00:00:10,080
+version of that file in its
+database. And that means if you
+
+3
+00:00:10,080 --> 00:00:13,380
+screw things, we can always
+restore a file or a directory to
+
+4
+00:00:13,380 --> 00:00:16,320
+a previous version. So in this
+demo, I'm going to delete a file
+
+5
+00:00:16,410 --> 00:00:20,130
+and then show you how to restore
+it. It's very easy. So we're
+
+6
+00:00:20,130 --> 00:00:23,430
+going to delete file one dot J
+s, I told you that if we use the
+
+7
+00:00:23,460 --> 00:00:26,790
+rm command in Linux, or Unix
+based systems, this will only
+
+8
+00:00:26,790 --> 00:00:29,520
+remove the file from the working
+directory. So then we'll have to
+
+9
+00:00:29,550 --> 00:00:32,670
+state the change or the
+deletion. A better way is to use
+
+10
+00:00:32,670 --> 00:00:37,050
+the Git rm command. This will
+remove the file from both the
+
+11
+00:00:37,050 --> 00:00:41,220
+working directory as well as the
+staging area. Okay. Now let's
+
+12
+00:00:41,220 --> 00:00:45,270
+get a short status. So in the
+staging area, we have a deleted
+
+13
+00:00:45,270 --> 00:00:50,370
+file. Now, let's make a commit,
+delete file one dot J s.
+
+14
+00:00:51,090 --> 00:00:54,240
+Alright, now let's say shoot, we
+shouldn't have deleted this
+
+15
+00:00:54,240 --> 00:00:57,630
+file. So what can we do here?
+Well, we have a few options. We
+
+16
+00:00:57,630 --> 00:01:00,390
+can undo or revert the last
+commit. We're going to talk
+
+17
+00:01:00,390 --> 00:01:02,940
+about that later in the course.
+But in this lesson, I want to
+
+18
+00:01:02,940 --> 00:01:06,600
+talk about restoring a file to a
+previous version, not undoing a
+
+19
+00:01:06,600 --> 00:01:12,240
+commit. So let's look at our
+history. Alright, so here's our
+
+20
+00:01:12,240 --> 00:01:16,080
+history, we want to restore file
+one to the commit before the
+
+21
+00:01:16,080 --> 00:01:21,030
+last commit, that is coming over
+here. So we type Git restore.
+
+22
+00:01:21,690 --> 00:01:25,740
+Now let's have a quick look at
+the documentation. The restore
+
+23
+00:01:25,740 --> 00:01:28,980
+command takes three types of
+arguments, we can supply a bunch
+
+24
+00:01:28,980 --> 00:01:32,280
+of options, we can supply a
+source, you haven't done this so
+
+25
+00:01:32,280 --> 00:01:36,420
+far. So by default, git will
+restore that file from the next
+
+26
+00:01:36,450 --> 00:01:39,450
+environment or the next area. So
+if the file we want to restore
+
+27
+00:01:39,480 --> 00:01:42,120
+is in the working directory gets
+we'll restore it from the
+
+28
+00:01:42,120 --> 00:01:45,180
+staging area. And if the file is
+in the staging area, it will
+
+29
+00:01:45,180 --> 00:01:48,450
+restore it from the last
+snapshot or the last commit. Now
+
+30
+00:01:48,450 --> 00:01:51,120
+in this case, we want to change
+the default behavior. We want to
+
+31
+00:01:51,120 --> 00:01:55,650
+restore a file from the commit
+before the last one. So we type
+
+32
+00:01:55,860 --> 00:02:01,740
+git restore data source, we set
+it to head tilda one. And then
+
+33
+00:02:01,740 --> 00:02:05,280
+we specify the full path to the
+file. In this case, file one dot
+
+34
+00:02:05,280 --> 00:02:10,110
+j s. Now, let's get a short
+status. So we have a new
+
+35
+00:02:10,140 --> 00:02:13,500
+untracked file. So this is how
+we can restore a file to a
+
+36
+00:02:13,500 --> 00:02:14,340
+previous version.
+

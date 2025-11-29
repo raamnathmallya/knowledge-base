@@ -1,0 +1,284 @@
+1
+00:00:03,990 --> 00:00:07,020
+So to bring the changes in a
+remote repository into our local
+
+2
+00:00:07,020 --> 00:00:10,290
+repository, most of the time, we
+have to do a fetch, followed by
+
+3
+00:00:10,290 --> 00:00:13,500
+a merge. So we have a command
+that combines the two, it's the
+
+4
+00:00:13,500 --> 00:00:16,860
+pull command, let's see how it
+works. So let's say our local
+
+5
+00:00:16,860 --> 00:00:19,860
+and remote repositories are in
+the same state, we have a single
+
+6
+00:00:19,860 --> 00:00:22,590
+commit in both these
+repositories. Now our
+
+7
+00:00:22,590 --> 00:00:25,770
+repositories are going to evolve
+in different ways. So in our
+
+8
+00:00:25,770 --> 00:00:29,580
+local repository, we're going to
+add this new commit beam. And in
+
+9
+00:00:29,580 --> 00:00:32,070
+our remote repository, we're
+going to add this other commit,
+
+10
+00:00:32,160 --> 00:00:36,210
+see, so when we run git pull,
+Git is going to download C and
+
+11
+00:00:36,540 --> 00:00:39,480
+put it into our local
+repository, not that origin
+
+12
+00:00:39,480 --> 00:00:42,960
+slash master is pointing to see.
+So now our branches have
+
+13
+00:00:42,960 --> 00:00:46,140
+diverged. In this case, Git is
+going to perform a three way
+
+14
+00:00:46,140 --> 00:00:49,620
+merge to bring the remote
+changes into our master branch.
+
+15
+00:00:50,220 --> 00:00:52,620
+Now, some people don't like
+these merge commits, because
+
+16
+00:00:52,620 --> 00:00:55,410
+they pollute the history. So
+alternatively, we can use
+
+17
+00:00:55,410 --> 00:00:58,590
+rebasing here, so I'm going to
+undo the merge commit, we're in
+
+18
+00:00:58,590 --> 00:01:02,340
+the same state as before, if we
+use the rebase option, Git is
+
+19
+00:01:02,340 --> 00:01:05,640
+going to rebase, our master
+branch on top of origin slash
+
+20
+00:01:05,640 --> 00:01:10,020
+master. So what is the base of
+our master branch, it's a when
+
+21
+00:01:10,020 --> 00:01:12,810
+we use the rebase option, and
+Git is going to change the base
+
+22
+00:01:12,810 --> 00:01:17,310
+of our master from A to C. So
+essentially, it's replaying our
+
+23
+00:01:17,310 --> 00:01:21,270
+local changes and on top of
+changes made by others, with
+
+24
+00:01:21,270 --> 00:01:24,630
+this will end up with simple
+nonlinear history. Now, which
+
+25
+00:01:24,630 --> 00:01:27,510
+approach is better? Well, it
+depends who you ask. This has
+
+26
+00:01:27,510 --> 00:01:30,630
+been a discussion going for
+years. Some people love rebasing
+
+27
+00:01:30,660 --> 00:01:34,500
+others prefer merge commits. Now
+let's see this in action. So
+
+28
+00:01:34,500 --> 00:01:37,260
+once again, let's create another
+commit on GitHub, I'm going to
+
+29
+00:01:37,260 --> 00:01:45,510
+edit the readme file and add yet
+another line of code. Let's make
+
+30
+00:01:45,510 --> 00:01:53,520
+a commit. Good. So back into
+terminal, I'm also going to make
+
+31
+00:01:53,550 --> 00:01:57,660
+a commit in master. So our local
+and remote branches diverged. So
+
+32
+00:01:57,660 --> 00:02:05,610
+we can add a new file, file one,
+then added committed at file on
+
+33
+00:02:06,000 --> 00:02:10,830
+good, let's have a quick look at
+our log. So git log. So our
+
+34
+00:02:10,830 --> 00:02:14,670
+master branch is ahead of origin
+slash master by one commit. But
+
+35
+00:02:14,670 --> 00:02:17,340
+at this point, we are not aware
+of the commit we made on GitHub.
+
+36
+00:02:17,820 --> 00:02:22,230
+So if we run git pull, Git is
+going to download the new commit
+
+37
+00:02:22,230 --> 00:02:25,620
+in our GitHub repository, and
+then perform a three way merge
+
+38
+00:02:25,710 --> 00:02:33,060
+to bring those changes into our
+master, take a look. So here's
+
+39
+00:02:33,060 --> 00:02:35,340
+the default message for our
+merge commit, we're going to
+
+40
+00:02:35,340 --> 00:02:35,910
+accept it.
+
+41
+00:02:37,500 --> 00:02:40,290
+Now back in the terminal. Let's
+look at the log one more time.
+
+42
+00:02:41,730 --> 00:02:45,270
+There you go. Here's our merge
+commit that combines the changes
+
+43
+00:02:45,600 --> 00:02:49,890
+in origin slash master and
+master. So we ended up with
+
+44
+00:02:49,890 --> 00:02:53,640
+nonlinear history. Here, we can
+use rebasing to create linear
+
+45
+00:02:53,640 --> 00:02:56,850
+history. But before doing so,
+I'm going to undo it this last
+
+46
+00:02:56,850 --> 00:03:00,630
+merge commit, so we end up in
+the previous state. So we type
+
+47
+00:03:00,810 --> 00:03:07,410
+Git reset, dash dash heart, head
+till the one. Okay, let's look
+
+48
+00:03:07,410 --> 00:03:10,950
+at our log. So we're in the
+previous state before the merge
+
+49
+00:03:10,950 --> 00:03:14,190
+commit, our branches have
+diverse. Now we can run git pull
+
+50
+00:03:14,190 --> 00:03:18,240
+rebase to replay our local
+changes, in this case, adding
+
+51
+00:03:18,240 --> 00:03:22,140
+this file on top of the changes
+in origin slash master. So we
+
+52
+00:03:22,140 --> 00:03:28,650
+type Git pull dash dash rebase.
+Alright, now, let's look at the
+
+53
+00:03:28,650 --> 00:03:32,700
+log one more time. Now we have
+simple linear history. This
+
+54
+00:03:32,700 --> 00:03:36,360
+commit that we have in master
+for adding file one is added on
+
+55
+00:03:36,360 --> 00:03:39,990
+top of the last commit we made
+on GitHub. Now look over here,
+
+56
+00:03:40,380 --> 00:03:42,930
+my terminal window is saying
+that I have one commit to push
+
+57
+00:03:42,930 --> 00:03:45,180
+to origin. I'll show you how to
+do that, next.
+

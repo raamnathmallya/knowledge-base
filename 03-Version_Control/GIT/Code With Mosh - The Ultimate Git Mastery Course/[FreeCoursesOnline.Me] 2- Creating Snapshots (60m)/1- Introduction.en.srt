@@ -1,0 +1,45 @@
+1
+00:00:01,410 --> 00:00:04,380
+The first thing you need to know
+to use Git effectively is how to
+
+2
+00:00:04,380 --> 00:00:06,840
+take snapshots of your project,
+which is what we're going to
+
+3
+00:00:06,840 --> 00:00:09,360
+talk about. In this section,
+we'll be talking about the
+
+4
+00:00:09,360 --> 00:00:13,470
+fundamental concepts of Git that
+are often misunderstood. So make
+
+5
+00:00:13,470 --> 00:00:16,110
+sure to watch every lesson in
+this section. Even if you think
+
+6
+00:00:16,110 --> 00:00:19,020
+you know the basics. A lot of
+people use the basic Git
+
+7
+00:00:19,020 --> 00:00:22,620
+commands without having a proper
+understanding of how Git works,
+
+8
+00:00:22,710 --> 00:00:26,070
+and that's why they constantly
+get stuck. So watch every lesson
+
+9
+00:00:26,070 --> 00:00:28,590
+in this section. Now let's jump
+in and get started.
+

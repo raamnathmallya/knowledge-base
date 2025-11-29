@@ -1,0 +1,105 @@
+1
+00:00:03,990 --> 00:00:06,960
+One of the common questions a
+lot of beginners have is, do we
+
+2
+00:00:06,960 --> 00:00:10,290
+always have to state our changes
+before committing them? Well,
+
+3
+00:00:10,350 --> 00:00:12,960
+the answer is no. And in this
+video, I'm going to show you how
+
+4
+00:00:12,960 --> 00:00:16,110
+to skip the staging area. But do
+this only if you know what
+
+5
+00:00:16,110 --> 00:00:19,650
+you're doing. If you're 100%
+sure that your code your changes
+
+6
+00:00:19,650 --> 00:00:21,900
+don't need to be reviewed,
+because that's the whole point
+
+7
+00:00:21,900 --> 00:00:25,710
+of having a staging area. So
+let's modify find one and then
+
+8
+00:00:25,710 --> 00:00:30,600
+committed in one step. We're
+going to say echo test to file
+
+9
+00:00:30,600 --> 00:00:35,190
+one dot txt. Once again, we're
+appending this line to file one
+
+10
+00:00:35,190 --> 00:00:39,270
+dot txt, okay. All right. Now
+that we have a yellow indicator,
+
+11
+00:00:39,300 --> 00:00:43,050
+because our working directory is
+dirty, so instead of running git
+
+12
+00:00:43,080 --> 00:00:45,960
+add, and then committing an in
+two steps, we're going to
+
+13
+00:00:45,960 --> 00:00:49,680
+commit. Here we're going to
+supply the option dash a which
+
+14
+00:00:49,680 --> 00:00:54,060
+means all that means all modify
+files, and then just like before
+
+15
+00:00:54,060 --> 00:00:59,520
+we supply a message, or we can
+combine these two options. So a
+
+16
+00:00:59,520 --> 00:01:05,280
+supplier to fix the bug that
+prevented the users from signing
+
+17
+00:01:05,280 --> 00:01:10,500
+up. Let's go. Our code is
+committed. One file was changed,
+
+18
+00:01:10,650 --> 00:01:13,770
+and we have one insertion. So
+this is how we can skip the
+
+19
+00:01:13,770 --> 00:01:16,980
+staging area. But once again, do
+this only if you know what
+
+20
+00:01:16,980 --> 00:01:20,100
+you're doing 99% of the time,
+you should always state your
+
+21
+00:01:20,100 --> 00:01:22,350
+code before committing into the
+repository.
+

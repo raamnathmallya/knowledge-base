@@ -1,0 +1,254 @@
+1
+00:00:04,019 --> 00:00:07,229
+So far, we've been doing all the
+work on master. Now let's talk
+
+2
+00:00:07,229 --> 00:00:11,219
+about working with branches. So
+similar to tags, our branches
+
+3
+00:00:11,249 --> 00:00:14,849
+are private or local by default.
+So if you want to collaborate
+
+4
+00:00:14,849 --> 00:00:17,969
+with other team members using a
+branch, we have to explicitly
+
+5
+00:00:17,969 --> 00:00:21,329
+push that branch the same way we
+push tags. So I'm going to
+
+6
+00:00:21,329 --> 00:00:25,259
+create a new branch called
+feature slash Change Password.
+
+7
+00:00:26,549 --> 00:00:29,789
+Now, this is a private branch in
+my local repository. It doesn't
+
+8
+00:00:29,789 --> 00:00:33,779
+exist on GitHub. So if we run
+git push, we get this error
+
+9
+00:00:33,779 --> 00:00:38,159
+saying the current branch has no
+upstream branch. This basically
+
+10
+00:00:38,159 --> 00:00:42,119
+means that this branch is not
+linked to a branch in origin. So
+
+11
+00:00:42,119 --> 00:00:44,549
+Git is suggesting to run this
+command to solve the problem.
+
+12
+00:00:44,729 --> 00:00:50,489
+But before doing so, let's run
+git branch dash vv. So look,
+
+13
+00:00:50,729 --> 00:00:54,179
+here we can see our local and
+remote tracking branches. So
+
+14
+00:00:54,179 --> 00:00:57,749
+Master, which is a local branch
+is linked to origin slash
+
+15
+00:00:57,749 --> 00:01:01,589
+master. But features change
+password is not linked to a
+
+16
+00:01:01,589 --> 00:01:04,829
+remote tracking branch. Now to
+see all the remote tracking
+
+17
+00:01:04,829 --> 00:01:08,849
+branches, we can type git branch
+dash R. So currently, we have
+
+18
+00:01:09,089 --> 00:01:12,089
+only these two pointers, origin
+slash head and origin slash
+
+19
+00:01:12,089 --> 00:01:16,049
+master. So to link this private
+branch to a branch in origin,
+
+20
+00:01:16,769 --> 00:01:19,349
+the first time you want to push
+it, you have to type git push,
+
+21
+00:01:19,709 --> 00:01:23,819
+dash you that is the short form
+offset upstream and then we type
+
+22
+00:01:23,819 --> 00:01:26,429
+the remote in this case, origin,
+followed by the name of the
+
+23
+00:01:26,429 --> 00:01:33,029
+branch, so feature slash Change
+Password. Alright, beautiful,
+
+24
+00:01:33,059 --> 00:01:36,539
+our branches pushed, we can
+verify on GitHub. So let's
+
+25
+00:01:36,539 --> 00:01:41,189
+refresh this page. Now we have
+two branches. And here's our new
+
+26
+00:01:41,189 --> 00:01:44,879
+branch. The back to the
+terminal. If I type git branch
+
+27
+00:01:44,939 --> 00:01:49,619
+dash vv, you can see that this
+local branch is now linked with
+
+28
+00:01:49,619 --> 00:01:52,529
+this remote tracking branch
+origin slash feature slash
+
+29
+00:01:52,529 --> 00:01:56,519
+Change Password. Also, we can
+look at all the remote tracking
+
+30
+00:01:56,519 --> 00:02:00,719
+branches. So now we have a new
+remote tracking branch. Perfect.
+
+31
+00:02:01,079 --> 00:02:03,869
+Now we can start working with
+this branch the same way we work
+
+32
+00:02:03,869 --> 00:02:07,079
+with Master so we can make new
+commits here and then push them
+
+33
+00:02:07,079 --> 00:02:10,229
+to origin. At some point when
+you're done, we want to remove
+
+34
+00:02:10,229 --> 00:02:14,519
+this rat. To do that we type git
+push that previously we use
+
+35
+00:02:14,669 --> 00:02:18,329
+Dashiell and now we're going to
+use dash D for delete. Then we
+
+36
+00:02:18,329 --> 00:02:21,809
+type the remote followed by the
+branch name, feature slash
+
+37
+00:02:21,959 --> 00:02:27,509
+Change Password. Now this branch
+is deleted from origin, we can
+
+38
+00:02:27,509 --> 00:02:31,259
+verify it right here. So
+refresh, we only have a single
+
+39
+00:02:31,259 --> 00:02:35,909
+branch. Now let's type git
+branch dash our our remote
+
+40
+00:02:35,909 --> 00:02:38,759
+tracking branch has gone
+beautiful. But what if we type
+
+41
+00:02:38,759 --> 00:02:43,829
+git branch dash vv, we still
+have this local branch that is
+
+42
+00:02:43,829 --> 00:02:48,359
+linked to origin slash feature
+slash Change Password. But right
+
+43
+00:02:48,389 --> 00:02:52,019
+in front of this remote tracking
+branch we have gone. So even
+
+44
+00:02:52,019 --> 00:02:55,139
+though we removed this branch
+from origin, our local branch is
+
+45
+00:02:55,139 --> 00:02:59,279
+still there. So if we type git
+branch, we can see it's right
+
+46
+00:02:59,279 --> 00:03:02,039
+here. And we're currently on
+this branch so we cannot delete
+
+47
+00:03:02,039 --> 00:03:06,419
+it. So we have to switch to
+master and then type git branch
+
+48
+00:03:06,569 --> 00:03:12,119
+dash D feature slash Change
+Password. So this is how we can
+
+49
+00:03:12,119 --> 00:03:15,509
+create and delete branches in a
+remote repository. Next, I'm
+
+50
+00:03:15,509 --> 00:03:18,329
+going to walk you through a real
+collaboration scenario using
+
+51
+00:03:18,329 --> 00:03:18,899
+branches
+

@@ -1,0 +1,263 @@
+1
+00:00:04,019 --> 00:00:06,989
+Now look at these three commits,
+render restaurants on the map,
+
+2
+00:00:07,259 --> 00:00:11,189
+fix a typo, and change the color
+of restaurant icons. All these
+
+3
+00:00:11,189 --> 00:00:14,939
+changes are logically part of
+the same unit of work. So
+
+4
+00:00:14,969 --> 00:00:17,849
+ideally, we should have
+encapsulated all these changes
+
+5
+00:00:18,059 --> 00:00:21,509
+inside a single snapshot. But
+sometimes that's not possible,
+
+6
+00:00:21,659 --> 00:00:24,749
+because we work incrementally.
+And as we learn more about a
+
+7
+00:00:24,749 --> 00:00:28,379
+problem, our solution changes.
+So we end up with several
+
+8
+00:00:28,379 --> 00:00:31,979
+commits that are logically part
+of the same unit of work. So
+
+9
+00:00:31,979 --> 00:00:35,279
+let's see how we can combine
+these commits together. So
+
+10
+00:00:35,309 --> 00:00:37,949
+here's the first commit we want
+to work on, we're going to start
+
+11
+00:00:38,069 --> 00:00:41,069
+with the parent of this commit,
+which is this commit over here.
+
+12
+00:00:41,489 --> 00:00:47,909
+So copy this, git rebase dash I.
+Alright, so here's our first
+
+13
+00:00:47,909 --> 00:00:51,719
+commit render restaurants on the
+map. For the second command, I'm
+
+14
+00:00:51,719 --> 00:00:55,589
+going to replace the pig command
+with squash. With this, I guess
+
+15
+00:00:55,589 --> 00:00:59,189
+we'll combine this commit with
+the previous commit. Now for the
+
+16
+00:00:59,189 --> 00:01:01,739
+third commit, once again, we're
+going to use the squash command
+
+17
+00:01:02,039 --> 00:01:05,159
+to combine this commit with the
+previous commit, which is the
+
+18
+00:01:05,159 --> 00:01:08,129
+combination of these two
+commits. Now if the commits that
+
+19
+00:01:08,129 --> 00:01:11,129
+we want to squash are not
+directly next to each other, we
+
+20
+00:01:11,129 --> 00:01:15,479
+can reorder them first, and then
+squash them. So let's save the
+
+21
+00:01:15,479 --> 00:01:20,279
+changes and close. Now, Git is
+suggesting this commit message,
+
+22
+00:01:20,549 --> 00:01:23,489
+which is the combination of the
+messages for all these three
+
+23
+00:01:23,489 --> 00:01:26,309
+commits. So we have render
+restaurants on the map, fix a
+
+24
+00:01:26,309 --> 00:01:30,269
+typo and change the color, I'm
+going to discard this commit
+
+25
+00:01:30,269 --> 00:01:36,179
+messages and keep the original
+message, save, close. And we're
+
+26
+00:01:36,179 --> 00:01:40,889
+done with the rebase operation.
+Let's look at our history. Our
+
+27
+00:01:40,889 --> 00:01:44,219
+history is much cleaner. Now, we
+have a reference to Google Map
+
+28
+00:01:44,219 --> 00:01:48,089
+SDK. After that, we render
+restaurants on the map, then we
+
+29
+00:01:48,089 --> 00:01:51,509
+update Terms of Service and so
+on. Now, we have another command
+
+30
+00:01:51,509 --> 00:01:55,679
+similar to squash called fix up,
+let me show you how it works. So
+
+31
+00:01:55,709 --> 00:01:59,009
+first, I want to restore our
+history to the state before we
+
+32
+00:01:59,009 --> 00:02:04,649
+started the squash operation. So
+we bring up our F log, look what
+
+33
+00:02:04,649 --> 00:02:08,129
+we have here. The last entry
+represents the completion of the
+
+34
+00:02:08,129 --> 00:02:12,209
+rebase operation. Before that we
+had rebase, pick rebase pick
+
+35
+00:02:12,209 --> 00:02:16,469
+again, followed by a couple of
+squashes. And this is where we
+
+36
+00:02:16,469 --> 00:02:19,289
+started our rebase operation.
+Now we want to go to the
+
+37
+00:02:19,289 --> 00:02:22,739
+previous state in history. So
+after we finished the previous
+
+38
+00:02:22,739 --> 00:02:27,899
+rebase operation, so I'm going
+to copy this command ID. Now
+
+39
+00:02:29,129 --> 00:02:34,169
+let's reset the head. Good. So
+to verify, let's look at our
+
+40
+00:02:34,169 --> 00:02:37,499
+history one more time, we can
+see our original commits, like
+
+41
+00:02:37,499 --> 00:02:41,069
+fix a typo and change the color
+of restaurants. Now let's start
+
+42
+00:02:41,069 --> 00:02:44,579
+the rebase operation one more
+time. So I'm going to grab this
+
+43
+00:02:44,579 --> 00:02:45,239
+coming id
+
+44
+00:02:46,530 --> 00:02:48,690
+and start an interactive rebase.
+
+45
+00:02:50,280 --> 00:02:53,730
+So just like before, we're going
+to pick that first commit. But
+
+46
+00:02:53,730 --> 00:02:57,000
+for the second commit, instead
+of squash, I'm going to use fix
+
+47
+00:02:57,000 --> 00:03:00,360
+up. Let me use fix up. Git
+doesn't take the message of this
+
+48
+00:03:00,360 --> 00:03:04,950
+command. So let us fix up for
+the third command as well. Same.
+
+49
+00:03:05,310 --> 00:03:08,400
+Now when I close this, it will
+take the message from the first
+
+50
+00:03:08,400 --> 00:03:11,460
+commit and apply it to the
+commit that combines all these
+
+51
+00:03:11,460 --> 00:03:14,580
+three commits, so we don't have
+a chance to craft a new message.
+
+52
+00:03:14,730 --> 00:03:20,520
+Take a look close is
+successfully completed rebasing.
+
+53
+00:03:20,970 --> 00:03:23,100
+Next I'm going to show you how
+to split a commit
+

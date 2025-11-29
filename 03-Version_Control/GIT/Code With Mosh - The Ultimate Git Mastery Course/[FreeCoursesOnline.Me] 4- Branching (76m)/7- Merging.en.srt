@@ -1,0 +1,285 @@
+1
+00:00:03,990 --> 00:00:06,540
+Merging is all about bringing
+changes from one branch to
+
+2
+00:00:06,540 --> 00:00:09,840
+another. In git, we have two
+types of merges, fast forward
+
+3
+00:00:09,840 --> 00:00:13,020
+merges and three way merges.
+Let's look at each of these
+
+4
+00:00:13,020 --> 00:00:16,740
+merges using a real example. So
+here's the master branch with
+
+5
+00:00:16,740 --> 00:00:20,250
+three commits. And we create a
+new branch called bug fix, as I
+
+6
+00:00:20,250 --> 00:00:23,580
+told you before, and get a
+branch is just a pointer to a
+
+7
+00:00:23,580 --> 00:00:27,510
+commit. So in this case, both
+master and bug fix pointers are
+
+8
+00:00:27,510 --> 00:00:30,600
+pointing to the same commit. Now
+we'll switch to the bug fix
+
+9
+00:00:30,600 --> 00:00:33,690
+branch and make a couple of
+commits. And we're done here.
+
+10
+00:00:33,690 --> 00:00:36,840
+And now we need to bring the
+changes back to master. Now,
+
+11
+00:00:36,840 --> 00:00:40,290
+because these branches have not
+diverged, and there is a direct
+
+12
+00:00:40,350 --> 00:00:43,920
+linear path from bug fix to
+master, all good has to do to
+
+13
+00:00:43,920 --> 00:00:47,760
+merge the changes is to bring
+the master pointer forward. This
+
+14
+00:00:47,760 --> 00:00:51,330
+is what we call a fast forward
+merge. If you're confused about
+
+15
+00:00:51,330 --> 00:00:54,840
+this, let me give you a simple
+example. So forget about gift
+
+16
+00:00:54,840 --> 00:00:58,680
+for a second. Imagine we have a
+directory called master. And the
+
+17
+00:00:58,680 --> 00:01:02,430
+code in this directory is at
+version 1.0. We take a copy of
+
+18
+00:01:02,430 --> 00:01:06,120
+this directory and call it bug
+fix. At this point in time, the
+
+19
+00:01:06,120 --> 00:01:09,540
+code in this directory is are
+identical, right? Now we start
+
+20
+00:01:09,540 --> 00:01:12,780
+making some changes to the bug
+fix directory. So we get to
+
+21
+00:01:12,780 --> 00:01:16,710
+version 1.2. We're done here. We
+want to bring the changes back
+
+22
+00:01:16,710 --> 00:01:20,970
+to master. How do we do this?
+Well, one way is to copy all the
+
+23
+00:01:20,970 --> 00:01:24,390
+files from bug fix into master.
+But this is not the best way to
+
+24
+00:01:24,390 --> 00:01:27,360
+solve this problem. What if you
+have thousands of files, this
+
+25
+00:01:27,360 --> 00:01:30,450
+copy operation might take a few
+seconds, there is a better way,
+
+26
+00:01:30,870 --> 00:01:33,540
+since we don't have any
+additional changes in master.
+
+27
+00:01:33,630 --> 00:01:36,900
+And essentially what we have in
+master is the first version of
+
+28
+00:01:36,900 --> 00:01:40,860
+bug fix, we can simply rename
+bug fix to master. So from this
+
+29
+00:01:40,860 --> 00:01:44,970
+point forward, we can say this
+is our new master directory died
+
+30
+00:01:44,970 --> 00:01:48,810
+of a fast forward merge and Git
+is very similar. So if two
+
+31
+00:01:48,810 --> 00:01:52,230
+branches have not diverged, and
+there is a direct linear path
+
+32
+00:01:52,320 --> 00:01:56,010
+from the target branch to the
+source branch, git runs a fast
+
+33
+00:01:56,010 --> 00:01:58,890
+forward merge, it simply brings
+the pointer of the source branch
+
+34
+00:01:58,890 --> 00:02:02,040
+forward. Now that we're done
+with the bug fix branch, we can
+
+35
+00:02:02,040 --> 00:02:05,340
+simply remove it, which removes
+the pointer. Now let's look at
+
+36
+00:02:05,340 --> 00:02:08,400
+an example of a three way
+merge. In this example, our bu
+
+37
+00:02:08,400 --> 00:02:11,880
+fix branch is two commits ah
+ad of master. But before we me
+
+38
+00:02:11,880 --> 00:02:15,030
+ge it with Master, let's go ba
+k to master and add an ad
+
+39
+00:02:15,030 --> 00:02:18,810
+itional commit. Now our br
+nches are diverged. So we ha
+
+40
+00:02:18,810 --> 00:02:22,230
+e some changes in master that do
+'t exist in the bug fix sc
+
+41
+00:02:22,230 --> 00:02:25,530
+atch. So if you run a merge, gi
+cannot move the master po
+
+42
+00:02:25,530 --> 00:02:28,890
+nter forward and have it po
+nt to the same commit as bug fi
+
+43
+00:02:28,890 --> 00:02:31,800
+, because otherwise we'll lo
+e the latest commit in the ma
+
+44
+00:02:31,800 --> 00:02:36,090
+ter branch. So when we run a me
+ge, git creates a new commit th
+
+45
+00:02:36,090 --> 00:02:39,600
+t combines the changes from th
+se two branches. The reason th
+
+46
+00:02:39,600 --> 00:02:42,660
+s is called a three way merge is
+because this new commit is ba
+
+47
+00:02:42,660 --> 00:02:46,350
+ed on three different commits th
+common ancestor of our br
+
+48
+00:02:46,350 --> 00:02:50,550
+nches, which includes the be
+ore code, and the tips of our br
+
+49
+00:02:50,550 --> 00:02:53,520
+nches, which contains the af
+er code. So Git looks at th
+
+50
+00:02:53,520 --> 00:02:56,850
+ee different snapshots, the be
+ore snapshot, and after sn
+
+51
+00:02:56,850 --> 00:03:00,240
+pshots and based on these, it wi
+l figure out how we should co
+
+52
+00:03:00,240 --> 00:03:03,210
+bine the changes. So we cr
+ate this new commit, which is ca
+
+53
+00:03:03,210 --> 00:03:07,560
+led a merge commit. So to re
+ap, in Git we have two types of
+
+54
+00:03:07,560 --> 00:03:11,160
+merges. Fast forward merges, wh
+ch happen if branches have no
+
+55
+00:03:11,160 --> 00:03:14,460
+diverse and three way me
+ges, which happen if branches ha
+
+56
+00:03:14,460 --> 00:03:17,160
+e diverged. Over the next few vi
+eos, we're going to see ex
+
+57
+00:03:17,160 --> 00:03:18,930
+mples of these merges in ac
+ion.
+

@@ -1,0 +1,345 @@
+1
+00:00:03,990 --> 00:00:06,270
+Let's see how we can use VS code
+to view the history of our
+
+2
+00:00:06,270 --> 00:00:09,270
+project. To do that, you have to
+install an extension called
+
+3
+00:00:09,420 --> 00:00:13,890
+GitLens. So go to the extensions
+panel and search for GitLens.
+
+4
+00:00:14,100 --> 00:00:17,490
+It's right here. This is a very
+popular extension, look at the
+
+5
+00:00:17,490 --> 00:00:20,760
+number of downloads, it's over 6
+million times. So once you
+
+6
+00:00:20,760 --> 00:00:24,330
+install this, you're going to
+see a new icon over here. That
+
+7
+00:00:24,330 --> 00:00:29,310
+is GitLens. Now on the top,
+let's go to repositories. Here's
+
+8
+00:00:29,310 --> 00:00:32,400
+our Venice repository. And we're
+currently on the master branch.
+
+9
+00:00:32,910 --> 00:00:35,940
+Let's open the master branch.
+Here are the commits on this
+
+10
+00:00:35,940 --> 00:00:39,330
+branch. For each commit, we can
+see the message we can see the
+
+11
+00:00:39,330 --> 00:00:42,090
+author and we can see the number
+of files that were added,
+
+12
+00:00:42,330 --> 00:00:47,820
+modified, and deleted. Now if we
+expand any of these commits, we
+
+13
+00:00:47,820 --> 00:00:51,330
+can see all the files that were
+changed in that commit. If we
+
+14
+00:00:51,330 --> 00:00:54,840
+click on any of these files, we
+can see a diff of the changes.
+
+15
+00:00:55,110 --> 00:00:58,440
+So this line was removed. And
+these two lines were added.
+
+16
+00:00:58,650 --> 00:01:04,710
+Pretty helpful. Now, let me
+close the master branch. So over
+
+17
+00:01:04,710 --> 00:01:07,320
+here, we can see all the
+branches, we have, we'll look at
+
+18
+00:01:07,320 --> 00:01:10,980
+branches. In the next section,
+we can see the contributors. So
+
+19
+00:01:11,820 --> 00:01:14,790
+here are all the people who have
+contributed to this repository.
+
+20
+00:01:15,180 --> 00:01:17,940
+In this case, I'm listed twice,
+because I've created some of
+
+21
+00:01:17,940 --> 00:01:21,030
+these commits on another machine
+with a different email. So that
+
+22
+00:01:21,030 --> 00:01:26,310
+is why I'm listed twice here.
+Now, we also have our tags.
+
+23
+00:01:26,580 --> 00:01:30,390
+Currently, we have a single tag,
+version 1.0 that is referencing
+
+24
+00:01:30,390 --> 00:01:35,310
+this commit. Now let's look at
+some File History. So this File
+
+25
+00:01:35,310 --> 00:01:41,190
+History panel works when we have
+a file open in the editor. So
+
+26
+00:01:41,190 --> 00:01:45,360
+I'm going to open our table of
+content file. Now back to
+
+27
+00:01:45,360 --> 00:01:50,700
+GitLens. In a File History
+panel, we can see all the
+
+28
+00:01:50,700 --> 00:01:54,090
+commits that have touched this
+file. Once again, if you click
+
+29
+00:01:54,090 --> 00:01:57,180
+on any of this commits, we can
+see the lines that were added or
+
+30
+00:01:57,180 --> 00:02:01,920
+deleted. Now let's see how we
+can compare commits. So we click
+
+31
+00:02:01,920 --> 00:02:05,250
+on this, we have to select two
+commits. Here, we can type a
+
+32
+00:02:05,250 --> 00:02:08,670
+commit ID or a relative
+reference using head I want to
+
+33
+00:02:08,670 --> 00:02:14,490
+comprehend with head till
+they're six. So these are all
+
+34
+00:02:14,490 --> 00:02:17,490
+the files that have been changed
+across these two commits. If you
+
+35
+00:02:17,490 --> 00:02:20,730
+click on any of these files, we
+can see the exact lines are
+
+36
+00:02:20,730 --> 00:02:26,580
+added or deleted. Now let's look
+at search commands. So we can
+
+37
+00:02:26,580 --> 00:02:31,590
+search by message, author commit
+ID files, or changes. So let's
+
+38
+00:02:31,590 --> 00:02:35,700
+search by a message. So after
+message for type, a keyword,
+
+39
+00:02:36,060 --> 00:02:39,840
+let's say GUI. This is the only
+commit that has the word GUI in
+
+40
+00:02:39,840 --> 00:02:42,630
+its message. Now earlier in the
+course, I told you that all
+
+41
+00:02:42,630 --> 00:02:45,660
+these GUI tools have some
+limitations. For example, here,
+
+42
+00:02:45,660 --> 00:02:48,960
+we cannot apply a second filter,
+we can only search by a single
+
+43
+00:02:48,960 --> 00:02:52,710
+filter, like message, author,
+and so on. If I have so many
+
+44
+00:02:52,710 --> 00:02:55,830
+commits with a particular
+keyword in their message, and
+
+45
+00:02:55,830 --> 00:02:58,890
+then I want to filter the range
+to a particular date range, I
+
+46
+00:02:58,890 --> 00:03:01,830
+cannot do that here, I have to
+go back to the terminal. Another
+
+47
+00:03:01,830 --> 00:03:05,160
+limitation we have here is the
+lack of bisect command, so we
+
+48
+00:03:05,160 --> 00:03:08,610
+cannot use bisect to quickly
+find a bad commit. For that,
+
+49
+00:03:08,610 --> 00:03:11,400
+again, we have to go back to the
+terminal. That is the reason why
+
+50
+00:03:11,400 --> 00:03:14,160
+I'm personally not a fan of GUI
+tools, I prefer to do things
+
+51
+00:03:14,280 --> 00:03:17,100
+mostly on the terminal. GUI
+tools are great for diffing s
+
+52
+00:03:17,160 --> 00:03:20,130
+eing exactly how the code is m
+dified from one commit to a
+
+53
+00:03:20,130 --> 00:03:23,310
+other. Now, one last thing b
+fore we finish this lesson, l
+
+54
+00:03:23,550 --> 00:03:26,910
+t me show you how to create a
+d delete tags. So we have to
+
+55
+00:03:26,910 --> 00:03:30,240
+ring up the command palette. On
+ac the shortcut is shift
+
+56
+00:03:30,270 --> 00:03:34,890
+ommand and P and on Windows is
+robaby shift control NP. If t
+
+57
+00:03:34,890 --> 00:03:37,410
+is doesn't work on your m
+chine, go to the View menu on t
+
+58
+00:03:37,410 --> 00:03:40,710
+e top and find the command p
+lette. It's the first item. U
+
+59
+00:03:40,890 --> 00:03:43,320
+fortunately, it's not visible i
+my recording window right n
+
+60
+00:03:43,320 --> 00:03:47,190
+w. So let's bring up the c
+mmand palette, and type get t
+
+61
+00:03:47,370 --> 00:03:51,060
+g. Now we can see all the c
+mmands related to tags. So we c
+
+62
+00:03:51,060 --> 00:03:54,330
+n create, delete, or push t
+gs. We'll talk about pushing t
+
+63
+00:03:54,360 --> 00:03:58,050
+gs in the future. So let's c
+eate a tag. We give it a name, l
+
+64
+00:03:58,080 --> 00:04:03,510
+t's say version 1.2. We type a m
+ssage. And now we have a new t
+
+65
+00:04:03,510 --> 00:04:06,990
+g associated with the latest c
+mmit. So if you go to r
+
+66
+00:04:06,990 --> 00:04:12,390
+positories, and tags, here's o
+r tag. If you want to create a t
+
+67
+00:04:12,390 --> 00:04:16,170
+g for an earlier commit, you h
+ve to find that commit first. S
+
+68
+00:04:16,710 --> 00:04:20,220
+let's say we want to add a t
+g to this commit right here. W
+
+69
+00:04:20,580 --> 00:04:23,490
+right click and select Create t
+g.
+

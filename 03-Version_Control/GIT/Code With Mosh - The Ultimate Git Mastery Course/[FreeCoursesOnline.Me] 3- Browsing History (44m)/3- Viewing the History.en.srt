@@ -1,0 +1,184 @@
+1
+00:00:04,049 --> 00:00:06,359
+The first thing we're going to
+look at is the lock command that
+
+2
+00:00:06,359 --> 00:00:08,369
+you learned about in the
+previous section. In this
+
+3
+00:00:08,369 --> 00:00:10,229
+lesson, we're going to study
+this command in a bit more
+
+4
+00:00:10,229 --> 00:00:15,629
+detail. So here in the Venus
+directory, let's run git log. so
+
+5
+00:00:15,629 --> 00:00:18,629
+here we can see all the commits
+in this repository. For each
+
+6
+00:00:18,629 --> 00:00:22,169
+commit, we can see its unique
+identifier or hash, we can see
+
+7
+00:00:22,169 --> 00:00:26,309
+its author, the author, name,
+and email, the date and time it
+
+8
+00:00:26,309 --> 00:00:30,419
+was created, and the one liner
+message or subject. Now by
+
+9
+00:00:30,419 --> 00:00:32,879
+default, all these commits are
+listed from the newest to the
+
+10
+00:00:32,879 --> 00:00:35,969
+oldest. So here's our last
+commit. Now, because we have
+
+11
+00:00:35,969 --> 00:00:39,089
+multiple pages here, we can
+press space to go to the next
+
+12
+00:00:39,089 --> 00:00:43,709
+page, we can also use the up and
+down arrows to go up and down
+
+13
+00:00:44,159 --> 00:00:49,289
+like this. Now to quit, we press
+Q. Okay. Now let's look at some
+
+14
+00:00:49,289 --> 00:00:52,889
+of the interesting options of
+this command. So git log, one of
+
+15
+00:00:52,889 --> 00:00:55,889
+them that you already know is
+one line, which gives us a
+
+16
+00:00:55,889 --> 00:00:59,699
+summary of all his commands, we
+can add additional options here.
+
+17
+00:00:59,909 --> 00:01:02,519
+For example, if you want to see
+all the files that have been
+
+18
+00:01:02,519 --> 00:01:08,219
+changed in each commit, we can
+use the stat option, take a
+
+19
+00:01:08,219 --> 00:01:12,029
+look. So in our last commit,
+five files have been changed.
+
+20
+00:01:12,209 --> 00:01:14,669
+Here, you can see the name of
+these files, we have audience
+
+21
+00:01:14,669 --> 00:01:18,569
+dot txt, objectives and so on.
+In front of each file, you can
+
+22
+00:01:18,569 --> 00:01:22,319
+see the number of changes. So
+for audience dot txt, we have
+
+23
+00:01:22,439 --> 00:01:26,849
+four changes, we have three
+insertions and one deletion. So
+
+24
+00:01:26,849 --> 00:01:30,239
+three lines were inserted and
+one line was deleted. In total,
+
+25
+00:01:30,239 --> 00:01:33,149
+five files have been changed.
+several lines have been inserted
+
+26
+00:01:33,149 --> 00:01:35,669
+and four lines have been
+deleted. Now, we don't
+
+27
+00:01:35,669 --> 00:01:38,459
+necessarily have to use this
+option with the one line option.
+
+28
+00:01:38,909 --> 00:01:44,099
+For example, we can run git log
+stat. Now we have the full
+
+29
+00:01:44,099 --> 00:01:47,189
+details about each commit. Okay?
+Now what if you want to see the
+
+30
+00:01:47,189 --> 00:01:51,449
+actual changes in each commit,
+we can use the patch option. So
+
+31
+00:01:52,079 --> 00:01:58,979
+git log, I'm going to use one
+line and then patch. So in our
+
+32
+00:01:58,979 --> 00:02:04,139
+last commit, here, we can see a
+diff of audience dot txt. So
+
+33
+00:02:04,169 --> 00:02:09,089
+hese two lines were inserted.
+his line was removed, and then
+
+34
+00:02:09,509 --> 00:02:13,319
+his line was added. Right after
+hat we have a diff of another
+
+35
+00:02:13,319 --> 00:02:16,559
+ile. So for each file, we can
+ee exactly what lines have been
+
+36
+00:02:16,559 --> 00:02:18,989
+hanged and in the next lesson,
+'m going to show you how to
+
+37
+00:02:18,989 --> 00:02:19,949
+ilter the history
+

@@ -1,0 +1,210 @@
+1
+00:00:01,170 --> 00:00:05,400
+So what is Git? And why is it so
+popular? Git is the most popular
+
+2
+00:00:05,400 --> 00:00:08,790
+version control system in the
+world. A version control system
+
+3
+00:00:08,850 --> 00:00:12,150
+records the changes made to our
+code over time, in a special
+
+4
+00:00:12,150 --> 00:00:15,660
+database called repository, we
+can look at our project history
+
+5
+00:00:15,690 --> 00:00:19,710
+and see who has made, what
+changes, when and why. And if we
+
+6
+00:00:19,710 --> 00:00:22,770
+screw something up, we can
+easily revert our project back
+
+7
+00:00:22,770 --> 00:00:26,340
+to an earlier state. Without a
+version control system will have
+
+8
+00:00:26,340 --> 00:00:29,850
+to constantly store copies of
+the entire project in various
+
+9
+00:00:29,850 --> 00:00:33,540
+folders. This is very slow and
+doesn't scale at all, especially
+
+10
+00:00:33,540 --> 00:00:36,840
+if multiple people have to work
+on the same project, you will
+
+11
+00:00:36,840 --> 00:00:40,290
+have to constantly toss around
+the latest code by email or some
+
+12
+00:00:40,320 --> 00:00:44,100
+other mechanisms, and then
+manually merge the changes. So
+
+13
+00:00:44,100 --> 00:00:47,640
+in a nutshell, with a version
+control system, we can track our
+
+14
+00:00:47,640 --> 00:00:50,850
+project history and work
+together. Now, version control
+
+15
+00:00:50,850 --> 00:00:54,750
+systems fall into two
+categories, centralized and
+
+16
+00:00:54,750 --> 00:00:58,800
+distributed. In a centralized
+system, all team members connect
+
+17
+00:00:58,800 --> 00:01:02,340
+to a central server to get the
+latest copy of the code, and to
+
+18
+00:01:02,340 --> 00:01:05,880
+share the changes with others.
+So version and Microsoft Team
+
+19
+00:01:05,880 --> 00:01:09,330
+Foundation Server are examples
+of centralized version control
+
+20
+00:01:09,330 --> 00:01:12,540
+systems. The problem with the
+centralized architecture is the
+
+21
+00:01:12,540 --> 00:01:16,350
+single point of failure. If the
+server goes offline, we cannot
+
+22
+00:01:16,350 --> 00:01:20,100
+collaborate or save snapshots of
+our project. So we have to wait
+
+23
+00:01:20,130 --> 00:01:23,670
+until the server comes back
+online. In distributed systems,
+
+24
+00:01:23,820 --> 00:01:27,030
+we don't have these problems.
+Every team member has a copy of
+
+25
+00:01:27,030 --> 00:01:30,270
+the project with his history on
+their machine, so we can save
+
+26
+00:01:30,270 --> 00:01:33,930
+snapshots of our project locally
+on our machine. If the central
+
+27
+00:01:33,930 --> 00:01:36,930
+server is offline, we can
+synchronize our work directly
+
+28
+00:01:36,930 --> 00:01:40,710
+with others. Git and Mercurial
+are examples of distributed
+
+29
+00:01:40,710 --> 00:01:44,580
+version control systems. Out of
+all these, Git is the most
+
+30
+00:01:44,610 --> 00:01:47,730
+popular version control system
+in the world because it's free,
+
+31
+00:01:47,970 --> 00:01:51,780
+open source, super fast and
+scalable. Operations like
+
+32
+00:01:51,780 --> 00:01:54,810
+branching and merging are slow
+and painful in other version
+
+33
+00:01:54,810 --> 00:01:58,620
+control systems, like subversion
+or TFS. But they're very fast
+
+34
+00:01:58,620 --> 00:02:02,010
+in Git we'll talk about this
+ater. So Git is almost
+
+35
+00:02:02,010 --> 00:02:05,130
+verywhere. More than 90% of
+oftware projects in the world
+
+36
+00:02:05,130 --> 00:02:08,850
+se Git. That's why almost every
+ob description for software
+
+37
+00:02:08,850 --> 00:02:12,240
+eveloper mentions Git. So if
+ou're looking for a job as a
+
+38
+00:02:12,240 --> 00:02:15,240
+oftware developer Git is one of
+the skills you must have on yo
+
+39
+00:02:15,240 --> 00:02:18,360
+r resume. You should know it in
+ide out. You should know how it
+
+40
+00:02:18,360 --> 00:02:21,660
+works, and how to use it to tr
+ck your project history and co
+
+41
+00:02:21,660 --> 00:02:24,990
+laborate with others ef
+ectively. And that's exactly wh
+
+42
+00:02:24,990 --> 00:02:26,460
+t you're going to learn in th
+s course.
+

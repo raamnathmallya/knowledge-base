@@ -1,0 +1,95 @@
+1
+00:00:03,990 --> 00:00:06,780
+Sometimes we need to find all
+the people who have contributed
+
+2
+00:00:06,780 --> 00:00:09,990
+to our project, we have a
+special command for that get
+
+3
+00:00:10,200 --> 00:00:14,220
+short log. so here we can see
+y name, the number of commits
+
+4
+00:00:14,220 --> 00:00:18,060
+'ve created, and a summary of
+ommit messages. Here we have
+
+5
+00:00:18,060 --> 00:00:23,280
+arious interesting options. So
+et's run git short log dash H.
+
+6
+00:00:24,060 --> 00:00:27,690
+or example, we can use dash n
+r dash dash numbered, whatever
+
+7
+00:00:27,690 --> 00:00:31,230
+ou prefer. to sort the output
+ased on the number of commits
+
+8
+00:00:31,230 --> 00:00:35,550
+er author, we can use dash s to
+uppress commit descriptions,
+
+9
+00:00:35,970 --> 00:00:39,600
+nd dash E to show email a
+dresses. For example, we can s
+
+10
+00:00:39,600 --> 00:00:44,940
+y get short log dash n. Now t
+is is sorted based on the n
+
+11
+00:00:44,940 --> 00:00:47,640
+mber of commits per author. In t
+is repository, we have a s
+
+12
+00:00:47,640 --> 00:00:50,730
+ngle author, so the output d
+esn't really change, but we c
+
+13
+00:00:50,730 --> 00:00:55,950
+n add a dash s to suppress the c
+mmit messages. Now we can only s
+
+14
+00:00:55,950 --> 00:00:59,220
+e the number of commits per a
+thor. Now in addition to this, w
+
+15
+00:00:59,220 --> 00:01:03,240
+can pass dash e to the email a
+dress of each author. So with t
+
+16
+00:01:03,240 --> 00:01:06,810
+is we can easily find the most a
+tive contributors. Here we can a
+
+17
+00:01:06,810 --> 00:01:11,190
+so filter the list for e
+ample, we can use before and o
+
+18
+00:01:11,190 --> 00:01:14,340
+after options that we talked a
+out earlier, to view the c
+
+19
+00:01:14,340 --> 00:01:16,020
+ntributors per given date r
+nge.
+
